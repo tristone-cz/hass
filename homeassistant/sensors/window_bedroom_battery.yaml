@@ -1,0 +1,7 @@
+platform: template
+sensors:
+  window_bedroom_battery:
+    friendly_name: Baterie - okno, ložnice
+    value_template: '{{ states.binary_sensor.door_window_sensor_158d0001f406fb.attributes.battery_level }}'
+    unit_of_measurement: '%'
+    icon_template: mdi:battery-60

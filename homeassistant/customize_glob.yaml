@@ -1,0 +1,150 @@
+    "*.*":
+      custom_ui_state_card: state-card-custom-ui
+    binary_sensor.water_leak*:
+      templates:
+        hs_color: >
+          if (state == "off") {
+            return [107,33];
+          } else {
+            return [8,100];
+          }
+        brightness: >
+          if (state == "off") {
+            return 47;
+          } else {
+            return 38;
+          }
+        icon: >
+          if (state == "off") {
+            return "mdi:verified";
+          } else {
+            return "mdi:alarm-light";
+          }
+    binary_sensor.smoke_sensor*:
+      templates:
+        hs_color: >
+          if (state == "off") {
+            return [107,33];
+          } else {
+            return [8,100];
+          }
+        brightness: >
+          if (state == "off") {
+            return 47;
+          } else {
+            return 38;
+          }
+        icon: >
+          if (state == "off") {
+            return "mdi:verified";
+          } else {
+            return "mdi:alarm-light";
+          }
+    binary_sensor.door_window_sensor*:
+      templates:
+        hs_color: >
+          if (state == "off") {
+            return [209,40];
+          } else {
+            return [49,98];
+          }
+        brightness: >
+          if (state == "off") {
+            return 44;
+          } else {
+            return 90;
+          }
+        icon: >
+          if (state == "off") {
+            return "mdi:door-closed";
+          } else {
+            return "mdi:door-open";
+          }
+    sensor.*_battery:
+      templates:
+        hs_color: >
+          if (state > 40) {
+            return [107,33];
+          } else if (state >= 20 ) {
+            return [25,85];
+          } else {
+            return [8,1000];
+          }
+        brightness: >
+          if (state > 40) {
+            return 47;
+          } else if (state >= 20 ) {
+            return 58;
+          } else {
+            return 38;
+          }
+    input_boolean.*_keepauto:
+      confirm_controls_show_lock: true
+      templates:
+        hs_color: >
+          if (state == "on") {
+            return [107,33];
+          } else {
+            return [8,100];
+          }
+        brightness: >
+          if (state == "on") {
+            return 47;
+          } else {
+            return 38;
+          }
+        icon: >
+          if (state == "on") {
+            return 'mdi:approval';
+          } else {
+            return 'mdi:alert-decagram';
+          }
+        extra_data_template: >
+          if (state == "on") {
+            return 'V provozu';
+          } else {
+            return 'Dočasně vyřazena';
+          }
+
+    input_boolean.*_active:
+      confirm_controls_show_lock: true
+      templates:
+        hs_color: >
+          if (state == "on") {
+            return [107,33];
+          } else {
+            return [8,100];
+          }
+        brightness: >
+          if (state == "on") {
+            return 47;
+          } else {
+            return 38;
+          }
+        icon: >
+          if (state == "on") {
+            return 'mdi:toggle-switch';
+          } else {
+            return 'mdi:toggle-switch-off';
+          }
+
+    input_boolean.vacation_mode:
+      confirm_controls_show_lock: true
+    input_boolean.heating_season:
+      confirm_controls_show_lock: true
+    input_boolean.heating_enabled:
+      confirm_controls_show_lock: true
+    sensor.heating_enabled:
+      templates:
+        hs_color: >
+          if (state == "on") {
+            return [107,33];
+          } else {
+            return [8,100];
+          }
+        brightness: >
+          if (state == "on") {
+            return 47;
+          } else {
+            return 38;
+          }

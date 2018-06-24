@@ -1,0 +1,15 @@
+# Heaty
+alias: "Reschedule Heaty every 10 minutes (kids)"
+trigger:
+- platform: time
+  minutes: '/10'
+  seconds: 40
+condition:
+- condition: state
+  entity_id: 'input_boolean.thermostat_kids_keepauto'
+  state: 'on'
+action:
+  - event: heaty_reschedule
+    event_data:
+      room_name: kids
+

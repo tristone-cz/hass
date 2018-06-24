@@ -1,0 +1,13 @@
+# Xiaomi Button click toggle gateway light
+# Testing purpose only :)
+alias: Toggle Gateway light with button click
+trigger:
+  platform: event
+  event_type: click
+  event_data:
+    entity_id: binary_sensor.switch_158d0002030217
+    click_type: single
+action:
+  service: light.toggle
+  data:
+    entity_id: light.gateway_light_7811dcb1f507

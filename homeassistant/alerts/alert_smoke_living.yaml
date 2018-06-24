@@ -1,0 +1,18 @@
+name: Ohen - kour v obyvaku
+done_message: VYRESENO - Ohen - kour v obyvaku
+entity_id: binary_sensor.smoke_sensor_158d0001b79326
+state: 'on'
+can_acknowledge: true
+repeat:
+  - 1
+  - 2
+  - 3
+  - 5
+  - 10
+  - 15
+  - 30
+  - 60
+notifiers:
+  - pushbullet
+  - pushbullet_jirka
+

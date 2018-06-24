@@ -1,0 +1,49 @@
+vacation_mode:
+  name: Prázdniny
+  icon: mdi:airport
+
+heating_season:
+  name: Topná sezona
+  icon: mdi:weather-snowy
+
+heating_enabled:
+  icon: mdi:hot-tub
+
+thermostat_bedroom_keepauto:
+  name: Ložnice - automatika
+
+bedroom_work_first_active:
+  name: Ložnice - 1. interval
+bedroom_work_second_active:
+  name: Ložnice - 2. interval
+
+bedroom_free_first_active:
+  name: Ložnice - 1. interval
+bedroom_free_second_active:
+  name: Ložnice - 2. interval
+
+thermostat_kids_keepauto:
+  name: Pokojíček - automatika
+
+kids_work_first_active:
+  name: Pokojíček - 1. interval
+kids_work_second_active:
+  name: Pokojíček - 2. interval
+
+kids_free_first_active:
+  name: Pokojíček - 1. interval
+kids_free_second_active:
+  name: Pokojíček - 2. interval
+
+thermostat_living_keepauto:
+  name: Obývák - automatika
+
+living_work_first_active:
+  name: Obývák - 1. interval
+living_work_second_active:
+  name: Obývák - 2. interval
+
+living_free_first_active:
+  name: Obývák - 1. interval
+living_free_second_active:
+  name: Obývák - 2. interval

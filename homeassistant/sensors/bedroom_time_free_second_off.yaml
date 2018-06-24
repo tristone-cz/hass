@@ -1,0 +1,6 @@
+platform: template
+sensors:
+  bedroom_free_second_off:
+    friendly_name: 'Druhý čas vypnutí'
+    icon_template: mdi:timer-sand
+    value_template: '{{ states("input_number.bedroom_free_hour_second_off")|int * 60 + states("input_number.bedroom_free_minute_second_off")|int }}'

@@ -1,0 +1,7 @@
+platform: template
+sensors:
+  heating_enabled:
+    friendly_name: Topení v provozu
+    value_template: "{{ states('input_boolean.heating_enabled') }}"
+    unit_of_measurement: ''
+    icon_template: mdi:hot-tub

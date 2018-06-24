@@ -1,0 +1,6 @@
+platform: template
+sensors:
+  bedroom_work_first_on:
+    friendly_name: 'První čas zapnutí'
+    icon_template: mdi:timer-sand
+    value_template: '{{ states("input_number.bedroom_hour_first_on")|int * 60 + states("input_number.bedroom_minute_first_on")|int }}'

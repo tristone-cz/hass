@@ -1,0 +1,5 @@
+platform: template
+sensors:
+  thermostat_kids_target_temperature:
+    friendly_name: Termostat - pokojíček, cílová teplota
+    value_template: '{{ states.climate.eurotronic_eur_spiritz_wall_radiator_thermostat_heat_2.attributes.temperature }}'

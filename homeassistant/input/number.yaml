@@ -1,0 +1,343 @@
+# Bedroom - temperature values
+bedroom_high_temperature:
+  name: "Topení"
+  min: 14
+  max: 28
+  step: 1
+  icon: mdi:temperature-celsius
+bedroom_low_temperature:
+  name: "Temperace"
+  min: 6
+  max: 20
+  step: 1
+  icon: mdi:temperature-celsius
+
+# Bedroom - schedule inputs - work days
+bedroom_hour_first_on:
+  name: "1. hodiny - On"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+bedroom_minute_first_on:
+  name: "1. minuty - On"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+bedroom_hour_first_off:
+  name: "1. hodiny - Off"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+bedroom_minute_first_off:
+  name: "1. minuty - Off"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+bedroom_hour_second_on:
+  name: "2. hodiny - On"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+bedroom_minute_second_on:
+  name: "2. minuty - On"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+bedroom_hour_second_off:
+  name: "2. hodiny - Off"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+bedroom_minute_second_off:
+  name: "2. minuty - Off"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+
+
+# Bedroom - schedule inputs - free days
+bedroom_free_hour_first_on:
+  name: "1. hodiny - On"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+bedroom_free_minute_first_on:
+  name: "1. minuty - On"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+bedroom_free_hour_first_off:
+  name: "1. hodiny - Off"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+bedroom_free_minute_first_off:
+  name: "1. minuty - Off"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+bedroom_free_hour_second_on:
+  name: "2. hodiny - On"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+bedroom_free_minute_second_on:
+  name: "2. minuty - On"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+bedroom_free_hour_second_off:
+  name: "2. hodiny - Off"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+bedroom_free_minute_second_off:
+  name: "2. minuty - Off"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+
+# Kids - temperature values
+kids_high_temperature:
+  name: "Topení"
+  min: 14
+  max: 28
+  step: 1
+  icon: mdi:temperature-celsius
+kids_low_temperature:
+  name: "Temperace"
+  min: 6
+  max: 20
+  step: 1
+  icon: mdi:temperature-celsius
+
+# Kids - schedule inputs - work days
+kids_hour_first_on:
+  name: "1. hodiny - On"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+kids_minute_first_on:
+  name: "1. minuty - On"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+kids_hour_first_off:
+  name: "1. hodiny - Off"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+kids_minute_first_off:
+  name: "1. minuty - Off"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+kids_hour_second_on:
+  name: "2. hodiny - On"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+kids_minute_second_on:
+  name: "2. minuty - On"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+kids_hour_second_off:
+  name: "2. hodiny - Off"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+kids_minute_second_off:
+  name: "2. minuty - Off"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+
+
+# Kids - schedule inputs - free days
+kids_free_hour_first_on:
+  name: "1. hodiny - On"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+kids_free_minute_first_on:
+  name: "1. minuty - On"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+kids_free_hour_first_off:
+  name: "1. hodiny - Off"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+kids_free_minute_first_off:
+  name: "1. minuty - Off"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+kids_free_hour_second_on:
+  name: "2. hodiny - On"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+kids_free_minute_second_on:
+  name: "2. minuty - On"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+kids_free_hour_second_off:
+  name: "2. hodiny - Off"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+kids_free_minute_second_off:
+  name: "2. minuty - Off"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+
+# Living - temperature values
+living_high_temperature:
+  name: "Topení"
+  min: 14
+  max: 28
+  step: 1
+  icon: mdi:temperature-celsius
+living_low_temperature:
+  name: "Temperace"
+  min: 6
+  max: 20
+  step: 1
+  icon: mdi:temperature-celsius
+
+# Living - schedule inputs - work days
+living_hour_first_on:
+  name: "1. hodiny - On"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+living_minute_first_on:
+  name: "1. minuty - On"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+living_hour_first_off:
+  name: "1. hodiny - Off"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+living_minute_first_off:
+  name: "1. minuty - Off"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+living_hour_second_on:
+  name: "2. hodiny - On"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+living_minute_second_on:
+  name: "2. minuty - On"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+living_hour_second_off:
+  name: "2. hodiny - Off"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+living_minute_second_off:
+  name: "2. minuty - Off"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+
+# Living - schedule inputs - free days
+living_free_hour_first_on:
+  name: "1. hodiny - On"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+living_free_minute_first_on:
+  name: "1. minuty - On"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+living_free_hour_first_off:
+  name: "1. hodiny - Off"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+living_free_minute_first_off:
+  name: "1. minuty - Off"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+living_free_hour_second_on:
+  name: "2. hodiny - On"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+living_free_minute_second_on:
+  name: "2. minuty - On"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+living_free_hour_second_off:
+  name: "2. hodiny - Off"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+living_free_minute_second_off:
+  name: "2. minuty - Off"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10

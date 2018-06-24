@@ -1,0 +1,10 @@
+# Xiaomi Gateway turn by Sun movement
+#- id: sunrise_gw_off
+alias: Turn off Gateway at sunrise
+trigger:
+  platform: sun
+  event: sunrise
+action:
+  service: light.turn_off
+  data:
+    entity_id: light.gateway_light_7811dcb1f507

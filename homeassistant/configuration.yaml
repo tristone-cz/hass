@@ -1,0 +1,104 @@
+homeassistant:
+  name: Domov
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  unit_system: metric
+  time_zone: Europe/Prague
+  # Customization file
+  customize: !include customize.yaml
+  customize_glob: !include customize_glob.yaml
+
+customizer:
+  custom_ui: local
+
+# Enables the frontend
+frontend:
+  javascript_version: latest
+  extra_html_url:
+    - "/local/custom_ui/state-card-hline.html"
+
+# Enables configuration UI
+config:
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  ssl_certificate: /etc/letsencrypt/fullchain.crt
+  ssl_key: /etc/letsencrypt/host.key
+
+# Checks for available updates
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  include_used_components: true
+
+#logger:
+#  default: debug
+
+# Discover some devices automatically
+discovery:
+
+# Enables support for tracking state changes over time
+history:
+
+# Tracked history is kept for 10 days
+recorder:
+  purge_keep_days: 60
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+# Xiaomi Gateway
+xiaomi_aqara:
+  discovery_retry: 5
+  gateways:
+    - key: !secret xiaomigw_key
+      host: !secret xiaomigw_ip
+
+# Z-Wave stick
+zwave:
+  usb_path: /dev/usbzwave
+  network_key: !secret zwavenetwork_key
+
+notify:
+  - name: pushbullet
+    platform: pushbullet
+    api_key: !secret pushbullet_apikey
+  - name: pushbullet_jirka
+    platform: pushbullet
+    api_key: !secret pushbullet_apikey_jirka
+
+group: !include groups.yaml
+automation: !include_dir_list automation 
+script: !include scripts.yaml
+
+input_boolean: !include input/boolean.yaml
+#input_select: !include input/select.yaml
+input_number: !include input/number.yaml
+
+alert: !include_dir_named alerts
+
+sensor: !include_dir_list sensors
+binary_sensor:
+  - platform: workday
+    country: CZ
+    workdays: [ tue, wed, thu ]
+  - platform: template
+    sensors:
+      smoke_sensor_kitchen:
+        device_class: smoke
+        value_template: "{{ states('sensor.temperature_158d0001fa6e13')|float > 50}}" 
+
+device_tracker:
+  - platform: luci
+    host: !secret dt_host
+    username: !secret dt_username
+    password: !secret dt_password
+    interval_seconds: 60
+    consider_home: 180
+    track_new_devices: no

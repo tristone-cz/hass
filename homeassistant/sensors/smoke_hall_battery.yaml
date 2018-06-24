@@ -1,0 +1,7 @@
+platform: template
+sensors:
+  smoke_hall_battery:
+    friendly_name: Baterie - kouř, chodba
+    value_template: '{{ states.binary_sensor.smoke_sensor_158d0001b7d5c8.attributes.battery_level }}'
+    unit_of_measurement: '%'
+    icon_template: mdi:battery-60

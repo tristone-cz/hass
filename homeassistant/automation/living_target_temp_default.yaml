@@ -1,0 +1,14 @@
+alias: "Handle living temperature override off"
+trigger:
+- platform: state
+  entity_id: sensor.thermostat_living_target_temperature
+condition:
+  condition: or
+  conditions:
+    - condition: template
+      value_template: '{{ states.sensor.thermostat_living_target_temperature.state == states.input_number.living_high_temperature.state }}'
+    - condition: template
+      value_template: '{{ states.sensor.thermostat_living_target_temperature.state == states.input_number.living_low_temperature.state }}'
+action:
+  service: input_boolean.turn_on
+  entity_id: input_boolean.thermostat_living_keepauto

@@ -1,0 +1,5 @@
+platform: template
+sensors:
+  today_minutes:
+    friendly_name: 'Minuty'
+    value_template: '{{ now().hour|int * 60 + now().minute|int }}'

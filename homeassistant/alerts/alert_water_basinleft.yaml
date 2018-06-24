@@ -1,0 +1,17 @@
+name: Voda - unik pod umyvadlem vlevo
+done_message: VYRESENO - Voda - pod umyvadlem vlevo
+entity_id: binary_sensor.water_leak_sensor_158d0001bb383d
+state: 'on'
+can_acknowledge: true
+repeat:
+  - 1
+  - 3
+  - 5
+  - 10
+  - 15
+  - 30
+  - 60
+notifiers:
+  - pushbullet
+  - pushbullet_jirka
+

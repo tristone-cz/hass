@@ -1,0 +1,7 @@
+platform: template
+sensors:
+  xiaomi_button_battery:
+    friendly_name: Baterie - tlačítko, Xiaomi
+    value_template: '{{ states.binary_sensor.switch_158d0002030217.attributes.battery_level }}'
+    unit_of_measurement: '%'
+    icon_template: mdi:battery-60

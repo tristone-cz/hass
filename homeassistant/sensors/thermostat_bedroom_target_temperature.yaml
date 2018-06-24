@@ -1,0 +1,5 @@
+platform: template
+sensors:
+  thermostat_bedroom_target_temperature:
+    friendly_name: Termostat - ložnice, cílová teplota
+    value_template: '{{ states.climate.eurotronic_eur_spiritz_wall_radiator_thermostat_heat.attributes.temperature }}'

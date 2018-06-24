@@ -1,0 +1,6 @@
+platform: template
+sensors:
+  kids_free_second_on:
+    friendly_name: 'Druhý čas zapnutí'
+    icon_template: mdi:timer-sand
+    value_template: '{{ states("input_number.kids_free_hour_second_on")|int * 60 + states("input_number.kids_free_minute_second_on")|int }}'
