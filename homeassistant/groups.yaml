@@ -91,12 +91,6 @@ thermostat_living:
     - climate.eurotronic_eur_spiritz_wall_radiator_thermostat_heat_3
     - zwave.eurotronic_eur_spiritz_wall_radiator_thermostat_3
 
-presence:
-  name: Přítomnost osob
-  entities:
-    - device_tracker.041b6dc8628f
-    - device_tracker.d85b2a84b225
-
 settings:
   name: Nastavení
   control: hidden
@@ -229,7 +223,6 @@ default_view:
   entities:
     - group.watter_sensors
     - group.smoke_sensors
-    - group.presence
     - group.thermostat_living
     - group.thermostat_bedroom
     - group.thermostat_kids

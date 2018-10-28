@@ -1,3 +1,16 @@
+HassStatesSave:
+  module: hass_states_save
+  class: HassStatesSave
+  path: /home/homeassistant/.homeassistant/hass_saved_states.ini
+  isloaded_switch: input_boolean.hass_saved_states_loaded
+  constrain_input_boolean: input_boolean.hass_saved_states_loaded
+
+HassStatesLoad:
+  module: hass_states_load
+  class: HassStatesLoad
+  path: /home/homeassistant/.homeassistant/hass_saved_states.ini
+  isloaded_switch: input_boolean.hass_saved_states_loaded
+
 heaty:
   module: hass_apps_loader
   class: HeatyApp
@@ -17,16 +30,16 @@ heaty:
         end: "10:28"
 
       # Work day, first interval of high temperature
-      - temp: app.get_state("input_number.bedroom_high_temperature") if (app.get_state("input_boolean.bedroom_work_first_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "on") and (time.hour*60+time.minute+1) in range(int(app.get_state("sensor.bedroom_work_first_on")), int(app.get_state("sensor.bedroom_work_first_off"))) else Ignore()
+      - temp: app.get_state("input_number.bedroom_high_temperature") if (app.get_state("input_boolean.bedroom_work_first_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "on") and (time.hour*60+time.minute+1) in range(int(app.get_state("sensor.bedroom_work_first_on")), int(app.get_state("sensor.bedroom_work_first_off"))) else Skip()
 
       # Work day, second interval of high temperature
-      - temp: app.get_state("input_number.bedroom_high_temperature") if (app.get_state("input_boolean.bedroom_work_second_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "on") and (time.hour*60+time.minute+1) in range(int(app.get_state("sensor.bedroom_work_second_on")), int(app.get_state("sensor.bedroom_work_second_off"))) else Ignore()
+      - temp: app.get_state("input_number.bedroom_high_temperature") if (app.get_state("input_boolean.bedroom_work_second_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "on") and (time.hour*60+time.minute+1) in range(int(app.get_state("sensor.bedroom_work_second_on")), int(app.get_state("sensor.bedroom_work_second_off"))) else Skip()
 
       # Free day, first interval of high temperature
-      - temp: app.get_state("input_number.bedroom_high_temperature") if (app.get_state("input_boolean.bedroom_free_first_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "off") and (time.hour*60+time.minute+1) in range(int(app.get_state("sensor.bedroom_free_first_on")), int(app.get_state("sensor.bedroom_free_first_off"))) else Ignore()
+      - temp: app.get_state("input_number.bedroom_high_temperature") if (app.get_state("input_boolean.bedroom_free_first_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "off") and (time.hour*60+time.minute+1) in range(int(app.get_state("sensor.bedroom_free_first_on")), int(app.get_state("sensor.bedroom_free_first_off"))) else Skip()
 
       # Free day, second interval of high temperature
-      - temp: app.get_state("input_number.bedroom_high_temperature") if (app.get_state("input_boolean.bedroom_free_second_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "off") and (time.hour*60+time.minute+1)in range(int(app.get_state("sensor.bedroom_free_second_on")), int(app.get_state("sensor.bedroom_free_second_off"))) else Ignore()
+      - temp: app.get_state("input_number.bedroom_high_temperature") if (app.get_state("input_boolean.bedroom_free_second_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "off") and (time.hour*60+time.minute+1)in range(int(app.get_state("sensor.bedroom_free_second_on")), int(app.get_state("sensor.bedroom_free_second_off"))) else Skip()
 
       # At all other times, set temperature to low value
       - temp: app.get_state("input_number.bedroom_low_temperature")
@@ -47,16 +60,16 @@ heaty:
         end: "10:28"
 
       # Work day, first interval of high temperature
-      - temp: app.get_state("input_number.kids_high_temperature") if (app.get_state("input_boolean.kids_work_first_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "on") and (time.hour*60+time.minute+1) in range(int(app.get_state("sensor.kids_work_first_on")), int(app.get_state("sensor.kids_work_first_off"))) else Ignore()
+      - temp: app.get_state("input_number.kids_high_temperature") if (app.get_state("input_boolean.kids_work_first_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "on") and (time.hour*60+time.minute+1) in range(int(app.get_state("sensor.kids_work_first_on")), int(app.get_state("sensor.kids_work_first_off"))) else Skip()
 
       # Work day, second interval of high temperature
-      - temp: app.get_state("input_number.kids_high_temperature") if (app.get_state("input_boolean.kids_work_second_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "on") and (time.hour*60+time.minute+1) in range(int(app.get_state("sensor.kids_work_second_on")), int(app.get_state("sensor.kids_work_second_off"))) else Ignore()
+      - temp: app.get_state("input_number.kids_high_temperature") if (app.get_state("input_boolean.kids_work_second_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "on") and (time.hour*60+time.minute+1) in range(int(app.get_state("sensor.kids_work_second_on")), int(app.get_state("sensor.kids_work_second_off"))) else Skip()
 
       # Free day, first interval of high temperature
-      - temp: app.get_state("input_number.kids_high_temperature") if (app.get_state("input_boolean.kids_free_first_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "off") and (time.hour*60+time.minute+1) in range(int(app.get_state("sensor.kids_free_first_on")), int(app.get_state("sensor.kids_free_first_off"))) else Ignore()
+      - temp: app.get_state("input_number.kids_high_temperature") if (app.get_state("input_boolean.kids_free_first_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "off") and (time.hour*60+time.minute+1) in range(int(app.get_state("sensor.kids_free_first_on")), int(app.get_state("sensor.kids_free_first_off"))) else Skip()
 
       # Free day, second interval of high temperature
-      - temp: app.get_state("input_number.kids_high_temperature") if (app.get_state("input_boolean.kids_free_second_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "off") and (time.hour*60+time.minute+1)in range(int(app.get_state("sensor.kids_free_second_on")), int(app.get_state("sensor.kids_free_second_off"))) else Ignore()
+      - temp: app.get_state("input_number.kids_high_temperature") if (app.get_state("input_boolean.kids_free_second_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "off") and (time.hour*60+time.minute+1)in range(int(app.get_state("sensor.kids_free_second_on")), int(app.get_state("sensor.kids_free_second_off"))) else Skip()
 
       # At all other times, set temperature to low value
       - temp: app.get_state("input_number.kids_low_temperature")
@@ -77,16 +90,16 @@ heaty:
         end: "10:28"
 
       # Work day, first interval of high temperature
-      - temp: app.get_state("input_number.living_high_temperature") if (app.get_state("input_boolean.living_work_first_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "on") and (time.hour*60+time.minute+1) in range(int(app.get_state("sensor.living_work_first_on")), int(app.get_state("sensor.living_work_first_off"))) else Ignore()
+      - temp: app.get_state("input_number.living_high_temperature") if (app.get_state("input_boolean.living_work_first_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "on") and (time.hour*60+time.minute+1) in range(int(app.get_state("sensor.living_work_first_on")), int(app.get_state("sensor.living_work_first_off"))) else Skip()
 
       # Work day, second interval of high temperature
-      - temp: app.get_state("input_number.living_high_temperature") if (app.get_state("input_boolean.living_work_second_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "on") and (time.hour*60+time.minute+1) in range(int(app.get_state("sensor.living_work_second_on")), int(app.get_state("sensor.living_work_second_off"))) else Ignore()
+      - temp: app.get_state("input_number.living_high_temperature") if (app.get_state("input_boolean.living_work_second_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "on") and (time.hour*60+time.minute+1) in range(int(app.get_state("sensor.living_work_second_on")), int(app.get_state("sensor.living_work_second_off"))) else Skip()
 
       # Free day, first interval of high temperature
-      - temp: app.get_state("input_number.living_high_temperature") if (app.get_state("input_boolean.living_free_first_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "off") and (time.hour*60+time.minute+1) in range(int(app.get_state("sensor.living_free_first_on")), int(app.get_state("sensor.living_free_first_off"))) else Ignore()
+      - temp: app.get_state("input_number.living_high_temperature") if (app.get_state("input_boolean.living_free_first_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "off") and (time.hour*60+time.minute+1) in range(int(app.get_state("sensor.living_free_first_on")), int(app.get_state("sensor.living_free_first_off"))) else Skip()
 
       # Free day, second interval of high temperature
-      - temp: app.get_state("input_number.living_high_temperature") if (app.get_state("input_boolean.living_free_second_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "off") and (time.hour*60+time.minute+1)in range(int(app.get_state("sensor.living_free_second_on")), int(app.get_state("sensor.living_free_second_off"))) else Ignore()
+      - temp: app.get_state("input_number.living_high_temperature") if (app.get_state("input_boolean.living_free_second_active") == "on") and (app.get_state("binary_sensor.workday_sensor") == "off") and (time.hour*60+time.minute+1)in range(int(app.get_state("sensor.living_free_second_on")), int(app.get_state("sensor.living_free_second_off"))) else Skip()
 
       # At all other times, set temperature to low value
       - temp: app.get_state("input_number.living_low_temperature")

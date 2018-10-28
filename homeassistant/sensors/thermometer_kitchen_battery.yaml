@@ -2,6 +2,7 @@ platform: template
 sensors:
   thermometer_kitchen_battery:
     friendly_name: Baterie - teploměr, kuchyně
+    entity_id: sensor.temperature_158d0001fa6e13
     value_template: '{{ states.sensor.temperature_158d0001fa6e13.attributes.battery_level }}'
     unit_of_measurement: '%'
     icon_template: mdi:battery-60

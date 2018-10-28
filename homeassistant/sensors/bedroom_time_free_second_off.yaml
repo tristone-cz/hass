@@ -3,4 +3,7 @@ sensors:
   bedroom_free_second_off:
     friendly_name: 'Druhý čas vypnutí'
     icon_template: mdi:timer-sand
+    entity_id:
+      - input_number.bedroom_free_hour_second_off
+      - input_number.bedroom_free_minute_second_off
     value_template: '{{ states("input_number.bedroom_free_hour_second_off")|int * 60 + states("input_number.bedroom_free_minute_second_off")|int }}'

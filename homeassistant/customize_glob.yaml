@@ -95,16 +95,16 @@
           }
         icon: >
           if (state == "on") {
-            return 'mdi:approval';
+            return 'mdi:check-decagram';
           } else {
             return 'mdi:alert-decagram';
           }
-        extra_data_template: >
-          if (state == "on") {
-            return 'V provozu';
-          } else {
-            return 'Dočasně vyřazena';
-          }
+#        extra_data_template: >
+#          if (state == "on") {
+#            return 'V provozu';
+#          } else {
+#            return 'Dočasně vyřazena';
+#          }
 
     input_boolean.*_active:
       confirm_controls_show_lock: true

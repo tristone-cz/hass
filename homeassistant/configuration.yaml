@@ -17,7 +17,11 @@ customizer:
 frontend:
   javascript_version: latest
   extra_html_url:
-    - "/local/custom_ui/state-card-hline.html"
+    - /local/custom_ui/state-card-hline.html
+#    - /local/custom_ui/state-card-custom-ui.html
+  extra_html_url_es5:
+    - /local/custom_ui/state-card-hline_es5.html
+#    - /local/custom_ui/state-card-custom-ui-es5.html
 
 # Enables configuration UI
 config:
@@ -26,8 +30,8 @@ http:
   # Secrets are defined in the file secrets.yaml
   api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  ssl_certificate: /etc/letsencrypt/fullchain.crt
-  ssl_key: /etc/letsencrypt/host.key
+  #ssl_certificate: /etc/letsencrypt/fullchain.crt
+  #ssl_key: /etc/letsencrypt/host.key
 
 # Checks for available updates
 updater:
@@ -39,13 +43,6 @@ updater:
 
 # Discover some devices automatically
 discovery:
-
-# Enables support for tracking state changes over time
-history:
-
-# Tracked history is kept for 10 days
-recorder:
-  purge_keep_days: 60
 
 # View all events in a logbook
 logbook:
@@ -94,11 +91,215 @@ binary_sensor:
         device_class: smoke
         value_template: "{{ states('sensor.temperature_158d0001fa6e13')|float > 50}}" 
 
-device_tracker:
-  - platform: luci
-    host: !secret dt_host
-    username: !secret dt_username
-    password: !secret dt_password
-    interval_seconds: 60
-    consider_home: 180
-    track_new_devices: no
+# Enables support for tracking state changes over time
+history:
+  include:
+    entities:
+      - sensor.door_kids_battery
+      - sensor.door_living_battery
+      - sensor.smoke_bedroom_battery
+      - sensor.smoke_children_battery
+      - sensor.smoke_hall_battery
+      - sensor.smoke_living_battery
+      - sensor.thermometer_bedroom_battery
+      - sensor.thermometer_kids_battery
+      - sensor.thermometer_kitchen_battery
+      - sensor.thermostat_bedroom_battery
+      - sensor.thermostat_kids_battery
+      - sensor.thermostat_living_battery
+      - sensor.water_basinleft_battery
+      - sensor.water_basinright_battery
+      - sensor.water_kitchen_battery
+      - sensor.water_washmachine_battery
+      - sensor.window_bedroom_battery
+      - sensor.window_kids_battery
+      - sensor.window_living_battery
+      - sensor.thermostat_bedroom_target_temperature
+      - sensor.thermostat_kids_target_temperature
+      - sensor.thermostat_living_target_temperature
+      - binary_sensor.door_window_sensor_158d0001b7bc15
+      - binary_sensor.door_window_sensor_158d0001b959d8
+      - binary_sensor.door_window_sensor_158d0001b95a13
+      - binary_sensor.door_window_sensor_158d0001de657f
+      - binary_sensor.door_window_sensor_158d0001f406fb
+      - binary_sensor.smoke_sensor_158d0001b71c0f
+      - binary_sensor.smoke_sensor_158d0001b79326
+      - binary_sensor.smoke_sensor_158d0001b7d5c8
+      - binary_sensor.smoke_sensor_158d0001b7f68b
+      - binary_sensor.smoke_sensor_kitchen
+      - binary_sensor.water_leak_sensor_158d0001bb383d
+      - binary_sensor.water_leak_sensor_158d0001bb71f5
+      - binary_sensor.water_leak_sensor_158d0001bb7219
+      - binary_sensor.water_leak_sensor_158d0001bb7a09
+      - sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_2
+      - sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_3
+      - sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_4
+      - sensor.humidity_158d0001fa6e13
+      - sensor.humidity_158d00020186c6
+      - sensor.humidity_158d00020187f6
+      - sensor.illumination_7811dcb1f507
+      - sensor.pressure_158d0001fa6e13
+      - sensor.pressure_158d00020186c6
+      - sensor.pressure_158d00020187f6
+      - sensor.temperature_158d0001fa6e13
+      - sensor.temperature_158d00020186c6
+      - sensor.temperature_158d00020187f6
+
+# Tracked history is kept for 10 days
+recorder:
+  purge_keep_days: 180
+  include:
+    entities:
+      - sensor.door_kids_battery
+      - sensor.door_living_battery
+      - sensor.heating_enabled
+      - sensor.smoke_bedroom_battery
+      - sensor.smoke_children_battery
+      - sensor.smoke_hall_battery
+      - sensor.smoke_living_battery
+      - sensor.thermometer_bedroom_battery
+      - sensor.thermometer_kids_battery
+      - sensor.thermometer_kitchen_battery
+      - sensor.thermostat_bedroom_battery
+      - sensor.thermostat_bedroom_target_temperature
+      - sensor.thermostat_kids_battery
+      - sensor.thermostat_kids_target_temperature
+      - sensor.thermostat_living_battery
+      - sensor.thermostat_living_target_temperature
+      - sensor.water_basinleft_battery
+      - sensor.water_basinright_battery
+      - sensor.water_kitchen_battery
+      - sensor.water_washmachine_battery
+      - sensor.window_bedroom_battery
+      - sensor.window_kids_battery
+      - sensor.window_living_battery
+      - input_boolean.vacation_mode
+      - input_boolean.heating_season
+      - input_boolean.heating_enabled
+      - input_boolean.thermostat_bedroom_keepauto
+      - input_boolean.bedroom_work_first_active
+      - input_boolean.bedroom_work_second_active
+      - input_boolean.bedroom_free_first_active
+      - input_boolean.bedroom_free_second_active
+      - input_boolean.thermostat_kids_keepauto
+      - input_boolean.kids_work_first_active
+      - input_boolean.kids_work_second_active
+      - input_boolean.kids_free_first_active
+      - input_boolean.kids_free_second_active
+      - input_boolean.thermostat_living_keepauto
+      - input_boolean.living_work_first_active
+      - input_boolean.living_work_second_active
+      - input_boolean.living_free_first_active
+      - input_boolean.living_free_second_active
+      - input_number.bedroom_high_temperature
+      - input_number.bedroom_low_temperature
+      - input_number.bedroom_hour_first_on
+      - input_number.bedroom_minute_first_on
+      - input_number.bedroom_hour_first_off
+      - input_number.bedroom_minute_first_off
+      - input_number.bedroom_hour_second_on
+      - input_number.bedroom_minute_second_on
+      - input_number.bedroom_hour_second_off
+      - input_number.bedroom_minute_second_off
+      - input_number.bedroom_free_hour_first_on
+      - input_number.bedroom_free_minute_first_on
+      - input_number.bedroom_free_hour_first_off
+      - input_number.bedroom_free_minute_first_off
+      - input_number.bedroom_free_hour_second_on
+      - input_number.bedroom_free_minute_second_on
+      - input_number.bedroom_free_hour_second_off
+      - input_number.bedroom_free_minute_second_off
+      - input_number.kids_high_temperature
+      - input_number.kids_low_temperature
+      - input_number.kids_hour_first_on
+      - input_number.kids_minute_first_on
+      - input_number.kids_hour_first_off
+      - input_number.kids_minute_first_off
+      - input_number.kids_hour_second_on
+      - input_number.kids_minute_second_on
+      - input_number.kids_hour_second_off
+      - input_number.kids_minute_second_off
+      - input_number.kids_free_hour_first_on
+      - input_number.kids_free_minute_first_on
+      - input_number.kids_free_hour_first_off
+      - input_number.kids_free_minute_first_off
+      - input_number.kids_free_hour_second_on
+      - input_number.kids_free_minute_second_on
+      - input_number.kids_free_hour_second_off
+      - input_number.kids_free_minute_second_off
+      - input_number.living_high_temperature
+      - input_number.living_low_temperature
+      - input_number.living_hour_first_on
+      - input_number.living_minute_first_on
+      - input_number.living_hour_first_off
+      - input_number.living_minute_first_off
+      - input_number.living_hour_second_on
+      - input_number.living_minute_second_on
+      - input_number.living_hour_second_off
+      - input_number.living_minute_second_off
+      - input_number.living_free_hour_first_on
+      - input_number.living_free_minute_first_on
+      - input_number.living_free_hour_first_off
+      - input_number.living_free_minute_first_off
+      - input_number.living_free_hour_second_on
+      - input_number.living_free_minute_second_on
+      - input_number.living_free_hour_second_off
+      - input_number.living_free_minute_second_off
+      - alert.alert_smoke_bedroom
+      - alert.alert_smoke_hall
+      - alert.alert_smoke_kids
+      - alert.alert_smoke_living
+      - alert.alert_temperature_kitchen
+      - alert.alert_water_basinleft
+      - alert.alert_water_basinright
+      - alert.alert_water_kitchen
+      - alert.alert_water_washmachine
+      - binary_sensor.door_window_sensor_158d0001b7bc15
+      - binary_sensor.door_window_sensor_158d0001b959d8
+      - binary_sensor.door_window_sensor_158d0001b95a13
+      - binary_sensor.door_window_sensor_158d0001de657f
+      - binary_sensor.door_window_sensor_158d0001f406fb
+      - binary_sensor.smoke_sensor_158d0001b71c0f
+      - binary_sensor.smoke_sensor_158d0001b79326
+      - binary_sensor.smoke_sensor_158d0001b7d5c8
+      - binary_sensor.smoke_sensor_158d0001b7f68b
+      - binary_sensor.smoke_sensor_kitchen
+      - binary_sensor.water_leak_sensor_158d0001bb383d
+      - binary_sensor.water_leak_sensor_158d0001bb71f5
+      - binary_sensor.water_leak_sensor_158d0001bb7219
+      - binary_sensor.water_leak_sensor_158d0001bb7a09
+      - sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_2
+      - sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_3
+      - sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_4
+      - sensor.humidity_158d0001fa6e13
+      - sensor.humidity_158d00020186c6
+      - sensor.humidity_158d00020187f6
+      - sensor.illumination_7811dcb1f507
+      - sensor.pressure_158d0001fa6e13
+      - sensor.pressure_158d00020186c6
+      - sensor.pressure_158d00020187f6
+      - sensor.smoke_bedroom_battery
+      - sensor.smoke_children_battery
+      - sensor.smoke_hall_battery
+      - sensor.smoke_living_battery
+      - sensor.temperature_158d0001fa6e13
+      - sensor.temperature_158d00020186c6
+      - sensor.temperature_158d00020187f6
+      - sensor.thermometer_bedroom_battery
+      - sensor.thermometer_kids_battery
+      - sensor.thermometer_kitchen_battery
+      - sensor.thermostat_bedroom_battery
+      - sensor.thermostat_bedroom_target_temperature
+      - sensor.thermostat_kids_battery
+      - sensor.thermostat_kids_target_temperature
+      - sensor.thermostat_living_battery
+      - sensor.thermostat_living_target_temperature
+      - sensor.water_basinleft_battery
+      - sensor.water_basinright_battery
+      - sensor.water_kitchen_battery
+      - sensor.water_washmachine_battery
+      - sensor.window_bedroom_battery
+      - sensor.window_kids_battery
+      - sensor.window_living_battery
+
+

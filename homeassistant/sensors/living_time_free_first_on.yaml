@@ -3,4 +3,7 @@ sensors:
   living_free_first_on:
     friendly_name: 'První čas zapnutí'
     icon_template: mdi:timer-sand
+    entity_id:
+      - input_number.living_free_hour_first_on
+      - input_number.living_free_minute_first_on
     value_template: '{{ states("input_number.living_free_hour_first_on")|int * 60 + states("input_number.living_free_minute_first_on")|int }}'

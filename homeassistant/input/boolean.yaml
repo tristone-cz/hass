@@ -47,3 +47,7 @@ living_free_first_active:
   name: Obývák - 1. interval
 living_free_second_active:
   name: Obývák - 2. interval
+
+# Helping inputs
+hass_saved_states_loaded:
+  name: For HassState helper
