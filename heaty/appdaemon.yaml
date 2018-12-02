@@ -5,7 +5,10 @@ appdaemon:
     HASS:
       type: hass
       ha_url: !secret ha_url
-      ha_key: !secret ha_key
+      token: !secret ha_token
 
+log:
+  logfile: /var/log/appdaemon
+  errorfile: /var/log/appdaemon.error
 hadashboard:
   dash_url: !secret dash_url

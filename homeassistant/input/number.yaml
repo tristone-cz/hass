@@ -11,6 +11,12 @@ bedroom_low_temperature:
   max: 20
   step: 1
   icon: mdi:temperature-celsius
+bedroom_override_temperature:
+  name: "Vlastni teplota"
+  min: 0
+  max: 32
+  step: 1
+  icon: mdi:temperature-celsius
 
 # Bedroom - schedule inputs - work days
 bedroom_hour_first_on:
@@ -126,6 +132,12 @@ kids_low_temperature:
   max: 20
   step: 1
   icon: mdi:temperature-celsius
+kids_override_temperature:
+  name: "Vlastni teplota"
+  min: 0
+  max: 32
+  step: 1
+  icon: mdi:temperature-celsius
 
 # Kids - schedule inputs - work days
 kids_hour_first_on:
@@ -239,6 +251,12 @@ living_low_temperature:
   name: "Temperace"
   min: 6
   max: 20
+  step: 1
+  icon: mdi:temperature-celsius
+living_override_temperature:
+  name: "Vlastni teplota"
+  min: 0
+  max: 32
   step: 1
   icon: mdi:temperature-celsius
 

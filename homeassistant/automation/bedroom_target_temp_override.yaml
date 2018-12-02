@@ -10,5 +10,14 @@ condition:
     - condition: template
       value_template: '{{ states.sensor.thermostat_bedroom_target_temperature.state != states.input_number.bedroom_low_temperature.state }}'
 action:
-  service: input_boolean.turn_off
-  entity_id: input_boolean.thermostat_bedroom_keepauto
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.thermostat_bedroom_keepauto
+  - service: input_number.set_value
+    data_template:
+      entity_id: input_number.bedroom_override_temperature
+      value: '{{ states.sensor.thermostat_bedroom_target_temperature.state | float }}'
+  - event: heaty_set_temp
+    event_data:
+      room_name: bedroom
+      value: 'app.get_state("climate.eurotronic_eur_spiritz_wall_radiator_thermostat_heat", attribute = "temperature")'
+
