@@ -1,0 +1,1556 @@
+{
+    "data": {
+        "entities": [
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.water_leak_sensor_158d0001bb383d",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d0001bb383d"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.water_leak_sensor_158d0001bb7a09",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d0001bb7a09"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.smoke_sensor_158d0001b79326",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "alarm158d0001b79326"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.switch_158d0002030217",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d0002030217"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.water_leak_sensor_158d0001bb7219",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d0001bb7219"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.illumination_7811dcb1f507",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "illumination7811dcb1f507"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "light.gateway_light_7811dcb1f507",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "rgb7811dcb1f507"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "2-72057594076479506"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_dry_air",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "2-72057594076774530"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_cooling_1",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "2-72057594076774434"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_alarm_type",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "2-72057594077528065"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_alarm_level",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "2-72057594077528081"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_sourcenodeid",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "2-72057594077528097"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_power_management",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "2-72057594077528241"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_system",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "2-72057594077528257"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "392ded3d2fde40148ff13ca424b97354",
+                "disabled_by": null,
+                "entity_id": "switch.switch",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "3-72057594093060096"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "392ded3d2fde40148ff13ca424b97354",
+                "disabled_by": null,
+                "entity_id": "sensor.unknown",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "3-72057594093273090"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "392ded3d2fde40148ff13ca424b97354",
+                "disabled_by": null,
+                "entity_id": "sensor.alarm_type",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "3-72057594094305281"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "392ded3d2fde40148ff13ca424b97354",
+                "disabled_by": null,
+                "entity_id": "sensor.alarm_level",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "3-72057594094305297"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "cc44814d02824448a70cb2b3e09981e6",
+                "disabled_by": null,
+                "entity_id": "switch.fibaro_system_fgs223_double_relay_switch",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "3-144115188130988032"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "cc44814d02824448a70cb2b3e09981e6",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgs223_double_relay_unknown",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "3-144115188131201026"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "392ded3d2fde40148ff13ca424b97354",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgs223_double_relay_power",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "3-72057594093273218"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "392ded3d2fde40148ff13ca424b97354",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgs223_double_relay_exporting",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "3-72057594093273600"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "cc44814d02824448a70cb2b3e09981e6",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgs223_double_relay_power_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "3-144115188131201154"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "cc44814d02824448a70cb2b3e09981e6",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgs223_double_relay_exporting_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "3-144115188131201536"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "392ded3d2fde40148ff13ca424b97354",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgs223_double_relay_sourcenodeid",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "3-72057594094305313"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "392ded3d2fde40148ff13ca424b97354",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgs223_double_relay_heat",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "3-72057594094305393"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "392ded3d2fde40148ff13ca424b97354",
+                "disabled_by": null,
+                "entity_id": "sensor.fibaro_system_fgs223_double_relay_power_management",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "3-72057594094305457"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "5f876a98340844d79a53d042bc9259e2",
+                "disabled_by": null,
+                "entity_id": "sensor.alarm_type_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111082497"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "5f876a98340844d79a53d042bc9259e2",
+                "disabled_by": null,
+                "entity_id": "sensor.alarm_level_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111082513"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "5f876a98340844d79a53d042bc9259e2",
+                "disabled_by": null,
+                "entity_id": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_heat",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594110328850"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "5f876a98340844d79a53d042bc9259e2",
+                "disabled_by": null,
+                "entity_id": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_heat_eco",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594110329010"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "5f876a98340844d79a53d042bc9259e2",
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594110033938"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "5f876a98340844d79a53d042bc9259e2",
+                "disabled_by": null,
+                "entity_id": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_furnace",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594110328946"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "5f876a98340844d79a53d042bc9259e2",
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_sourcenodeid_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111082529"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "5f876a98340844d79a53d042bc9259e2",
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_power_management_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111082673"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "5f876a98340844d79a53d042bc9259e2",
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_system_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111082689"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.door_window_sensor_158d0001f406fb",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d0001f406fb"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.smoke_sensor_158d0001b71c0f",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "alarm158d0001b71c0f"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.smoke_sensor_158d0001b7f68b",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "alarm158d0001b7f68b"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.smoke_sensor_158d0001b7d5c8",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "alarm158d0001b7d5c8"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.water_leak_sensor_158d0001bb71f5",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d0001bb71f5"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.humidity_158d0001fa6e13",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "humidity158d0001fa6e13"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.pressure_158d0001fa6e13",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "pressure158d0001fa6e13"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.temperature_158d0001fa6e13",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "temperature158d0001fa6e13"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "420d3421c5ae46c683c6be185090c153",
+                "disabled_by": null,
+                "entity_id": "sensor.alarm_type_3",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127859713"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "420d3421c5ae46c683c6be185090c153",
+                "disabled_by": null,
+                "entity_id": "sensor.alarm_level_3",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127859729"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "420d3421c5ae46c683c6be185090c153",
+                "disabled_by": null,
+                "entity_id": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_heat_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127106066"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "420d3421c5ae46c683c6be185090c153",
+                "disabled_by": null,
+                "entity_id": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_heat_eco_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127106226"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "420d3421c5ae46c683c6be185090c153",
+                "disabled_by": null,
+                "entity_id": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_furnace_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127106162"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "420d3421c5ae46c683c6be185090c153",
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_sourcenodeid_3",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127859745"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "420d3421c5ae46c683c6be185090c153",
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_power_management_3",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127859889"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "420d3421c5ae46c683c6be185090c153",
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_system_3",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127859905"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "420d3421c5ae46c683c6be185090c153",
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_3",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594126811154"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "d0c558cafdbd46d5b51a88378085bf87",
+                "disabled_by": null,
+                "entity_id": "switch.switch_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594143391744"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "d0c558cafdbd46d5b51a88378085bf87",
+                "disabled_by": null,
+                "entity_id": "sensor.alarm_type_4",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144636929"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "d0c558cafdbd46d5b51a88378085bf87",
+                "disabled_by": null,
+                "entity_id": "sensor.alarm_level_4",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144636945"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "d0c558cafdbd46d5b51a88378085bf87",
+                "disabled_by": null,
+                "entity_id": "sensor.everspring_an180_plugin_onoff_module_sourcenodeid",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144636961"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "d0c558cafdbd46d5b51a88378085bf87",
+                "disabled_by": null,
+                "entity_id": "sensor.everspring_an180_plugin_onoff_module_power_management",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144637105"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "26a093826bcd434ba940b16746e02faa",
+                "disabled_by": null,
+                "entity_id": "switch.switch_3",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "7-72057594160168960"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "26a093826bcd434ba940b16746e02faa",
+                "disabled_by": null,
+                "entity_id": "sensor.alarm_type_5",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "7-72057594161414145"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "26a093826bcd434ba940b16746e02faa",
+                "disabled_by": null,
+                "entity_id": "sensor.alarm_level_5",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "7-72057594161414161"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "26a093826bcd434ba940b16746e02faa",
+                "disabled_by": null,
+                "entity_id": "sensor.everspring_an180_plugin_onoff_module_sourcenodeid_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "7-72057594161414177"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "26a093826bcd434ba940b16746e02faa",
+                "disabled_by": null,
+                "entity_id": "sensor.everspring_an180_plugin_onoff_module_power_management_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "7-72057594161414321"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "83bda27a19674ffa80460d0daf677fcb",
+                "disabled_by": null,
+                "entity_id": "sensor.alarm_type_6",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594178191361"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "83bda27a19674ffa80460d0daf677fcb",
+                "disabled_by": null,
+                "entity_id": "sensor.alarm_level_6",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594178191377"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "83bda27a19674ffa80460d0daf677fcb",
+                "disabled_by": null,
+                "entity_id": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_heat_3",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594177437714"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "83bda27a19674ffa80460d0daf677fcb",
+                "disabled_by": null,
+                "entity_id": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_heat_eco_3",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594177437874"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "83bda27a19674ffa80460d0daf677fcb",
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_4",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594177142802"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "83bda27a19674ffa80460d0daf677fcb",
+                "disabled_by": null,
+                "entity_id": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_furnace_3",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594177437810"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "83bda27a19674ffa80460d0daf677fcb",
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_sourcenodeid_4",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594178191393"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "83bda27a19674ffa80460d0daf677fcb",
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_power_management_4",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594178191537"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "83bda27a19674ffa80460d0daf677fcb",
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_system_4",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594178191553"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "9d991e8336894542a605d4444a890351",
+                "disabled_by": null,
+                "entity_id": "zwave.zwaveme_zme_uzb1_usb_stick",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-1"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "392ded3d2fde40148ff13ca424b97354",
+                "disabled_by": null,
+                "entity_id": "zwave.fibaro_system_fgs223_double_relay",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-3"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "5f876a98340844d79a53d042bc9259e2",
+                "disabled_by": null,
+                "entity_id": "zwave.eurotronic_eur_spiritz_wall_radiator_thermostat",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-4"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "420d3421c5ae46c683c6be185090c153",
+                "disabled_by": null,
+                "entity_id": "zwave.eurotronic_eur_spiritz_wall_radiator_thermostat_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-5"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "d0c558cafdbd46d5b51a88378085bf87",
+                "disabled_by": null,
+                "entity_id": "zwave.everspring_an180_plugin_onoff_module",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-6"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "26a093826bcd434ba940b16746e02faa",
+                "disabled_by": null,
+                "entity_id": "zwave.everspring_an180_plugin_onoff_module_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-7"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "83bda27a19674ffa80460d0daf677fcb",
+                "disabled_by": null,
+                "entity_id": "zwave.eurotronic_eur_spiritz_wall_radiator_thermostat_3",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-8"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.temperature_158d00020186c6",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "temperature158d00020186c6"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.humidity_158d00020186c6",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "humidity158d00020186c6"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.pressure_158d00020186c6",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "pressure158d00020186c6"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.door_window_sensor_158d0001de657f",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d0001de657f"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.door_window_sensor_158d0001b7bc15",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d0001b7bc15"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.door_window_sensor_158d0001b95a13",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d0001b95a13"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.door_window_sensor_158d0001b959d8",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d0001b959d8"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.temperature_158d00020187f6",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "temperature158d00020187f6"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.humidity_158d00020187f6",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "humidity158d00020187f6"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.pressure_158d00020187f6",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "pressure158d00020187f6"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "969317cbe94f4961a05dd7e35d8d351e",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0002030217_click",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0002030217_click_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "969317cbe94f4961a05dd7e35d8d351e",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0002030217_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0002030217_battery_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "969317cbe94f4961a05dd7e35d8d351e",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0002030217_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0002030217_linkquality_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "2ce68baa779f45acbbb4482dc2786576",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.qubino_goap_zmnhadx_flush_1_relay_int2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594193903616"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "7a97217ff138495490cf064854deef22",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.qubino_goap_zmnhadx_flush_1_relay_int3",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-144115188231831552"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "2ce68baa779f45acbbb4482dc2786576",
+                "disabled_by": null,
+                "entity_id": "switch.qubino_goap_zmnhadx_flush_1_relay_switch",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594193723392"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "2ce68baa779f45acbbb4482dc2786576",
+                "disabled_by": null,
+                "entity_id": "zwave.qubino_goap_zmnhadx_flush_1_relay",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-9"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "2ce68baa779f45acbbb4482dc2786576",
+                "disabled_by": null,
+                "entity_id": "sensor.qubino_goap_zmnhadx_flush_1_relay_power",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594193936514"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "2ce68baa779f45acbbb4482dc2786576",
+                "disabled_by": null,
+                "entity_id": "sensor.qubino_goap_zmnhadx_flush_1_relay_exporting",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594193936896"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "2ce68baa779f45acbbb4482dc2786576",
+                "disabled_by": null,
+                "entity_id": "sensor.qubino_goap_zmnhadx_flush_1_relay_energy",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594193936386"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "2ce68baa779f45acbbb4482dc2786576",
+                "disabled_by": null,
+                "entity_id": "sensor.qubino_goap_zmnhadx_flush_1_relay_alarm_type",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594194968577"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "2ce68baa779f45acbbb4482dc2786576",
+                "disabled_by": null,
+                "entity_id": "sensor.qubino_goap_zmnhadx_flush_1_relay_alarm_level",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594194968593"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "2ce68baa779f45acbbb4482dc2786576",
+                "disabled_by": null,
+                "entity_id": "sensor.qubino_goap_zmnhadx_flush_1_relay_sourcenodeid",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594194968609"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "2ce68baa779f45acbbb4482dc2786576",
+                "disabled_by": null,
+                "entity_id": "sensor.qubino_goap_zmnhadx_flush_1_relay_power_management",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594194968753"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "2ce68baa779f45acbbb4482dc2786576",
+                "disabled_by": null,
+                "entity_id": "sensor.qubino_goap_zmnhadx_flush_1_relay_previous_reading",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594193936402"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "2ce68baa779f45acbbb4482dc2786576",
+                "disabled_by": null,
+                "entity_id": "sensor.qubino_goap_zmnhadx_flush_1_relay_interval",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594193936419"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.hacs",
+                "name": null,
+                "platform": "hacs",
+                "unique_id": "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "c2397dd679244809950e566d2687ece4",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.0x00158d0001bb7219_water_leak",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001bb7219_water_leak_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "c2397dd679244809950e566d2687ece4",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001bb7219_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001bb7219_battery_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "c2397dd679244809950e566d2687ece4",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001bb7219_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001bb7219_linkquality_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "43215cd228b2437c9a11c1326bf12b6a",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.0x00158d0001bb383d_water_leak",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001bb383d_water_leak_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "43215cd228b2437c9a11c1326bf12b6a",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001bb383d_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001bb383d_battery_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "43215cd228b2437c9a11c1326bf12b6a",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001bb383d_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001bb383d_linkquality_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "077827a458ab4cc98b600581cff56d74",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.0x00158d0001bb71f5_water_leak",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001bb71f5_water_leak_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "077827a458ab4cc98b600581cff56d74",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001bb71f5_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001bb71f5_battery_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "077827a458ab4cc98b600581cff56d74",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001bb71f5_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001bb71f5_linkquality_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "ffe829648c484066aa19360452cf33da",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.0x00158d0001b7d5c8_smoke",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b7d5c8_smoke_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "ffe829648c484066aa19360452cf33da",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001b7d5c8_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b7d5c8_battery_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "ffe829648c484066aa19360452cf33da",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001b7d5c8_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b7d5c8_linkquality_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "52ffa5ecbf6142f19200edfe987822d1",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.0x00158d0001bb7a09_water_leak",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001bb7a09_water_leak_zigbee2mqtt01"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "52ffa5ecbf6142f19200edfe987822d1",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001bb7a09_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001bb7a09_battery_zigbee2mqtt01"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "52ffa5ecbf6142f19200edfe987822d1",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001bb7a09_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001bb7a09_linkquality_zigbee2mqtt01"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "2a03b69e0df54e5d84b5b4671245579f",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.0x00158d0001b79326_smoke",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b79326_smoke_zigbee2mqtt01"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "2a03b69e0df54e5d84b5b4671245579f",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001b79326_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b79326_battery_zigbee2mqtt01"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "2a03b69e0df54e5d84b5b4671245579f",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001b79326_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b79326_linkquality_zigbee2mqtt01"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "a8e6d21b40d342419ec997a1bebce02c",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001fa6e13_temperature",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001fa6e13_temperature_zigbee2mqtt01"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "a8e6d21b40d342419ec997a1bebce02c",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001fa6e13_humidity",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001fa6e13_humidity_zigbee2mqtt01"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "a8e6d21b40d342419ec997a1bebce02c",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001fa6e13_pressure",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001fa6e13_pressure_zigbee2mqtt01"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "a8e6d21b40d342419ec997a1bebce02c",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001fa6e13_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001fa6e13_battery_zigbee2mqtt01"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "a8e6d21b40d342419ec997a1bebce02c",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001fa6e13_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001fa6e13_linkquality_zigbee2mqtt01"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "ecbd9ec26b804f8482523993167b1062",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.0x00158d0001b95a13_contact",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b95a13_contact_zigbee2mqtt01"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "ecbd9ec26b804f8482523993167b1062",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001b95a13_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b95a13_battery_zigbee2mqtt01"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "ecbd9ec26b804f8482523993167b1062",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001b95a13_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b95a13_linkquality_zigbee2mqtt01"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "c17504c94461466aa2e741d9752ca64e",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.0x00158d0001b959d8_contact",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b959d8_contact_zigbee2mqtt01"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "c17504c94461466aa2e741d9752ca64e",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001b959d8_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b959d8_battery_zigbee2mqtt01"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "c17504c94461466aa2e741d9752ca64e",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001b959d8_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b959d8_linkquality_zigbee2mqtt01"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "5b8ec84e29124e4b92107c87accd27f1",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d00020187f6_temperature",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d00020187f6_temperature_zigbee2mqtt02"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "5b8ec84e29124e4b92107c87accd27f1",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d00020187f6_humidity",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d00020187f6_humidity_zigbee2mqtt02"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "5b8ec84e29124e4b92107c87accd27f1",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d00020187f6_pressure",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d00020187f6_pressure_zigbee2mqtt02"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "5b8ec84e29124e4b92107c87accd27f1",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d00020187f6_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d00020187f6_battery_zigbee2mqtt02"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "5b8ec84e29124e4b92107c87accd27f1",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d00020187f6_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d00020187f6_linkquality_zigbee2mqtt02"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "3dfc7584f7c54aa7a70370642118115f",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.0x00158d0001f406fb_contact",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001f406fb_contact_zigbee2mqtt02"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "3dfc7584f7c54aa7a70370642118115f",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001f406fb_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001f406fb_battery_zigbee2mqtt02"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "3dfc7584f7c54aa7a70370642118115f",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001f406fb_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001f406fb_linkquality_zigbee2mqtt02"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "c0ef63d0cca54b66a4ab92229f34306b",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.0x00158d0001b7f68b_smoke",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b7f68b_smoke_zigbee2mqtt02"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "c0ef63d0cca54b66a4ab92229f34306b",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001b7f68b_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b7f68b_battery_zigbee2mqtt02"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "c0ef63d0cca54b66a4ab92229f34306b",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001b7f68b_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b7f68b_linkquality_zigbee2mqtt02"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "6845419a400540dbbc08936c6aa3f3d3",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d00020186c6_temperature",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d00020186c6_temperature_zigbee2mqtt03"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "6845419a400540dbbc08936c6aa3f3d3",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d00020186c6_humidity",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d00020186c6_humidity_zigbee2mqtt03"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "6845419a400540dbbc08936c6aa3f3d3",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d00020186c6_pressure",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d00020186c6_pressure_zigbee2mqtt03"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "6845419a400540dbbc08936c6aa3f3d3",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d00020186c6_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d00020186c6_battery_zigbee2mqtt03"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "6845419a400540dbbc08936c6aa3f3d3",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d00020186c6_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d00020186c6_linkquality_zigbee2mqtt03"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "00d722bdd42348f4a9fa0ab062bb12b2",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.0x00158d0001b7bc15_contact",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b7bc15_contact_zigbee2mqtt03"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "00d722bdd42348f4a9fa0ab062bb12b2",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001b7bc15_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b7bc15_battery_zigbee2mqtt03"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "00d722bdd42348f4a9fa0ab062bb12b2",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001b7bc15_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b7bc15_linkquality_zigbee2mqtt03"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "211b0827293648109cddaa8df18ebae4",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.0x00158d0001de657f_contact",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001de657f_contact_zigbee2mqtt03"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "211b0827293648109cddaa8df18ebae4",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001de657f_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001de657f_battery_zigbee2mqtt03"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "211b0827293648109cddaa8df18ebae4",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001de657f_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001de657f_linkquality_zigbee2mqtt03"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "64ef6aac17a74154912ced27cf1e1976",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.0x00158d0001b71c0f_smoke",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b71c0f_smoke_zigbee2mqtt03"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "64ef6aac17a74154912ced27cf1e1976",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001b71c0f_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b71c0f_battery_zigbee2mqtt03"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "64ef6aac17a74154912ced27cf1e1976",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001b71c0f_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b71c0f_linkquality_zigbee2mqtt03"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.updater",
+                "name": null,
+                "platform": "updater",
+                "unique_id": "updater"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "5f876a98340844d79a53d042bc9259e2",
+                "disabled_by": null,
+                "entity_id": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594110279684"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "5f876a98340844d79a53d042bc9259e2",
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_battery_level",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111328257"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "420d3421c5ae46c683c6be185090c153",
+                "disabled_by": null,
+                "entity_id": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127056900"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "420d3421c5ae46c683c6be185090c153",
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_battery_level_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594128105473"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "83bda27a19674ffa80460d0daf677fcb",
+                "disabled_by": null,
+                "entity_id": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_3",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594177388548"
+            },
+            {
+                "config_entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "device_id": "83bda27a19674ffa80460d0daf677fcb",
+                "disabled_by": null,
+                "entity_id": "sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_battery_level_3",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "8-72057594178437121"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "ffe829648c484066aa19360452cf33da",
+                "disabled_by": null,
+                "entity_id": "sensor.smoke_hall_sensitivity",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b7d5c8_sensitivity_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "ffe829648c484066aa19360452cf33da",
+                "disabled_by": null,
+                "entity_id": "sensor.smoke_hall_smoke_density",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b7d5c8_smoke_density_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "2a03b69e0df54e5d84b5b4671245579f",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001b79326_sensitivity",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b79326_sensitivity_zigbee2mqtt01"
+            },
+            {
+                "config_entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "device_id": "2a03b69e0df54e5d84b5b4671245579f",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d0001b79326_smoke_density",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d0001b79326_smoke_density_zigbee2mqtt01"
+            }
+        ]
+    },
+    "key": "core.entity_registry",
+    "version": 1
+}

@@ -1,0 +1,12 @@
+{
+    "data": [
+        {
+            "acknowledged": true,
+            "link": "https://github.com/hacs/default/pull/2",
+            "reason": "Security issues, known to steal auth tokens.",
+            "repository": "test/test"
+        }
+    ],
+    "key": "hacs.critical",
+    "version": "6"
+}

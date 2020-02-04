@@ -1,6 +1,0 @@
-platform: template
-sensors:
-  thermostat_living_target_temperature:
-    friendly_name: Termostat - ložnice, cílová teplota
-    entity_id: climate.eurotronic_eur_spiritz_wall_radiator_thermostat_heat_3
-    value_template: '{{ states.climate.eurotronic_eur_spiritz_wall_radiator_thermostat_heat_3.attributes.temperature }}'

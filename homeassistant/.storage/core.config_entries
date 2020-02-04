@@ -1,0 +1,41 @@
+{
+    "data": {
+        "entries": [
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "network_key": "",
+                    "usb_path": "/dev/usbzwave"
+                },
+                "domain": "zwave",
+                "entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "options": {},
+                "source": "import",
+                "title": "Z-Wave (import from configuration.yaml)",
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {},
+                "domain": "mqtt",
+                "entry_id": "22684bb071ec41678f1fc12f294caee5",
+                "options": {},
+                "source": "import",
+                "title": "configuration.yaml",
+                "version": 1
+            },
+            {
+                "connection_class": "cloud_poll",
+                "data": {},
+                "domain": "hacs",
+                "entry_id": "230525ee78984120a28d7e084b2e638f",
+                "options": {},
+                "source": "import",
+                "title": "configuration.yaml",
+                "version": 1
+            }
+        ]
+    },
+    "key": "core.config_entries",
+    "version": 1
+}

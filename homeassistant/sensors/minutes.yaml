@@ -1,6 +1,6 @@
 platform: template
 sensors:
   today_minutes:
-    friendly_name: 'Minuty'
-    entity_id: sun.sun
+    friendly_name: 'Minutes'
+    entity_id: sensor.time
     value_template: '{{ now().hour|int * 60 + now().minute|int }}'

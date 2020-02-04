@@ -1,0 +1,1869 @@
+{
+    "data": [
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Force workday today",
+                    "icon": "mdi:laptop-windows"
+                },
+                "context": {
+                    "id": "5b8a9c301ca947dd966fae7dffce7771",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.force_workday",
+                "last_changed": "2020-02-02T10:11:59.068486+00:00",
+                "last_updated": "2020-02-02T10:11:59.068486+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "For HassState helper"
+                },
+                "context": {
+                    "id": "ae3ece3e0a0043b998d3c0eba4ceb4ad",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.hass_saved_states_loaded",
+                "last_changed": "2020-02-02T10:11:59.068981+00:00",
+                "last_updated": "2020-02-02T10:11:59.068981+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Force free day today",
+                    "icon": "mdi:flower"
+                },
+                "context": {
+                    "id": "2ab9390157e14ad6acd0834262c3fef3",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.force_freeday",
+                "last_changed": "2020-02-02T10:11:59.069406+00:00",
+                "last_updated": "2020-02-02T10:11:59.069406+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Kids room - 1. interval",
+                    "templates": {
+                        "icon": "if (state == \"on\") {\n  return 'mdi:check-circle';\n} else {\n  return 'mdi:close-circle';\n}\n",
+                        "icon_color": "if (state == \"on\") {\n  return 'rgb(22, 200, 38)';\n} else {\n  return 'rgb(255, 22, 38)';\n}\n"
+                    }
+                },
+                "context": {
+                    "id": "34f031afd4764c93a5676675fbf19e72",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.kids_free_first_active",
+                "last_changed": "2020-02-02T10:11:59.069838+00:00",
+                "last_updated": "2020-02-02T10:11:59.069838+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Kids room - 2. interval",
+                    "templates": {
+                        "icon": "if (state == \"on\") {\n  return 'mdi:check-circle';\n} else {\n  return 'mdi:close-circle';\n}\n",
+                        "icon_color": "if (state == \"on\") {\n  return 'rgb(22, 200, 38)';\n} else {\n  return 'rgb(255, 22, 38)';\n}\n"
+                    }
+                },
+                "context": {
+                    "id": "18b6036d659c4f9586659d5f0d025b68",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.kids_free_second_active",
+                "last_changed": "2020-02-02T10:11:59.070318+00:00",
+                "last_updated": "2020-02-02T10:11:59.070318+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Bedroom - 1. interval",
+                    "templates": {
+                        "icon": "if (state == \"on\") {\n  return 'mdi:check-circle';\n} else {\n  return 'mdi:close-circle';\n}\n",
+                        "icon_color": "if (state == \"on\") {\n  return 'rgb(22, 200, 38)';\n} else {\n  return 'rgb(255, 22, 38)';\n}\n"
+                    }
+                },
+                "context": {
+                    "id": "b62d882499944658952fd68b134eb8d5",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.bedroom_work_first_active",
+                "last_changed": "2020-02-02T10:11:59.070743+00:00",
+                "last_updated": "2020-02-02T10:11:59.070743+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Bedroom - 2. interval",
+                    "templates": {
+                        "icon": "if (state == \"on\") {\n  return 'mdi:check-circle';\n} else {\n  return 'mdi:close-circle';\n}\n",
+                        "icon_color": "if (state == \"on\") {\n  return 'rgb(22, 200, 38)';\n} else {\n  return 'rgb(255, 22, 38)';\n}\n"
+                    }
+                },
+                "context": {
+                    "id": "4f143f2c1e7448b4b1c7195bf45a3681",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.bedroom_work_second_active",
+                "last_changed": "2020-02-02T10:11:59.071154+00:00",
+                "last_updated": "2020-02-02T10:11:59.071154+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Kids room - 1. interval",
+                    "templates": {
+                        "icon": "if (state == \"on\") {\n  return 'mdi:check-circle';\n} else {\n  return 'mdi:close-circle';\n}\n",
+                        "icon_color": "if (state == \"on\") {\n  return 'rgb(22, 200, 38)';\n} else {\n  return 'rgb(255, 22, 38)';\n}\n"
+                    }
+                },
+                "context": {
+                    "id": "8d359c7a115c4b488a1bc4fa958cc4a5",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.kids_work_first_active",
+                "last_changed": "2020-02-02T10:11:59.071555+00:00",
+                "last_updated": "2020-02-02T10:11:59.071555+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Living room - 1. interval",
+                    "templates": {
+                        "icon": "if (state == \"on\") {\n  return 'mdi:check-circle';\n} else {\n  return 'mdi:close-circle';\n}\n",
+                        "icon_color": "if (state == \"on\") {\n  return 'rgb(22, 200, 38)';\n} else {\n  return 'rgb(255, 22, 38)';\n}\n"
+                    }
+                },
+                "context": {
+                    "id": "f92e0b02d81b47cd91ecd2ff30e6d0f4",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.living_work_first_active",
+                "last_changed": "2020-02-02T10:11:59.071960+00:00",
+                "last_updated": "2020-02-02T10:11:59.071960+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Living room - 2. interval",
+                    "templates": {
+                        "icon": "if (state == \"on\") {\n  return 'mdi:check-circle';\n} else {\n  return 'mdi:close-circle';\n}\n",
+                        "icon_color": "if (state == \"on\") {\n  return 'rgb(22, 200, 38)';\n} else {\n  return 'rgb(255, 22, 38)';\n}\n"
+                    }
+                },
+                "context": {
+                    "id": "8c98ce38ceb9433aa3f43acef8a48fde",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.living_work_second_active",
+                "last_changed": "2020-02-02T10:11:59.072361+00:00",
+                "last_updated": "2020-02-02T10:11:59.072361+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Vacation",
+                    "icon": "mdi:airport"
+                },
+                "context": {
+                    "id": "c50ce7c311aa4b53a62efbbeff4bd111",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.vacation_mode",
+                "last_changed": "2020-02-02T10:11:59.072747+00:00",
+                "last_updated": "2020-02-02T10:11:59.072747+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Bedroom - 1. interval",
+                    "templates": {
+                        "icon": "if (state == \"on\") {\n  return 'mdi:check-circle';\n} else {\n  return 'mdi:close-circle';\n}\n",
+                        "icon_color": "if (state == \"on\") {\n  return 'rgb(22, 200, 38)';\n} else {\n  return 'rgb(255, 22, 38)';\n}\n"
+                    }
+                },
+                "context": {
+                    "id": "c75020ded8494a48acb74ab30eb3eda7",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.bedroom_free_first_active",
+                "last_changed": "2020-02-02T10:11:59.073154+00:00",
+                "last_updated": "2020-02-02T10:11:59.073154+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Bedroom - 2. interval",
+                    "templates": {
+                        "icon": "if (state == \"on\") {\n  return 'mdi:check-circle';\n} else {\n  return 'mdi:close-circle';\n}\n",
+                        "icon_color": "if (state == \"on\") {\n  return 'rgb(22, 200, 38)';\n} else {\n  return 'rgb(255, 22, 38)';\n}\n"
+                    }
+                },
+                "context": {
+                    "id": "8674d1d4902c43dc845a05fb4959ce18",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.bedroom_free_second_active",
+                "last_changed": "2020-02-02T10:11:59.073556+00:00",
+                "last_updated": "2020-02-02T10:11:59.073556+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Heating season",
+                    "icon": "mdi:weather-snowy"
+                },
+                "context": {
+                    "id": "01fa1261abf04bfcbb584ffecb0a691f",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.heating_season",
+                "last_changed": "2020-02-02T10:11:59.073942+00:00",
+                "last_updated": "2020-02-02T10:11:59.073942+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Living room - 1. interval",
+                    "templates": {
+                        "icon": "if (state == \"on\") {\n  return 'mdi:check-circle';\n} else {\n  return 'mdi:close-circle';\n}\n",
+                        "icon_color": "if (state == \"on\") {\n  return 'rgb(22, 200, 38)';\n} else {\n  return 'rgb(255, 22, 38)';\n}\n"
+                    }
+                },
+                "context": {
+                    "id": "e97f235ec7d64fd489fc048e097249a2",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.living_free_first_active",
+                "last_changed": "2020-02-02T10:11:59.074338+00:00",
+                "last_updated": "2020-02-02T10:11:59.074338+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Living room - 2. interval",
+                    "templates": {
+                        "icon": "if (state == \"on\") {\n  return 'mdi:check-circle';\n} else {\n  return 'mdi:close-circle';\n}\n",
+                        "icon_color": "if (state == \"on\") {\n  return 'rgb(22, 200, 38)';\n} else {\n  return 'rgb(255, 22, 38)';\n}\n"
+                    }
+                },
+                "context": {
+                    "id": "09f91e6b88bb42588ef202d3df0a6ba4",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.living_free_second_active",
+                "last_changed": "2020-02-02T10:11:59.074733+00:00",
+                "last_updated": "2020-02-02T10:11:59.074733+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Cooling season",
+                    "icon": "mdi:weather-sunny"
+                },
+                "context": {
+                    "id": "c9669d8ae10d4c6599892fa038ecc308",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.cooling_season",
+                "last_changed": "2020-02-02T10:11:59.075119+00:00",
+                "last_updated": "2020-02-02T10:11:59.075119+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Kids room - 2. interval",
+                    "templates": {
+                        "icon": "if (state == \"on\") {\n  return 'mdi:check-circle';\n} else {\n  return 'mdi:close-circle';\n}\n",
+                        "icon_color": "if (state == \"on\") {\n  return 'rgb(22, 200, 38)';\n} else {\n  return 'rgb(255, 22, 38)';\n}\n"
+                    }
+                },
+                "context": {
+                    "id": "2300b175ba4c44d6b70cdcd93e8f58dc",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.kids_work_second_active",
+                "last_changed": "2020-02-02T10:11:59.075519+00:00",
+                "last_updated": "2020-02-02T10:11:59.075519+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. minutes - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "d645be9a361347d1a467ec544339d374",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.living_free_minute_first_off",
+                "last_changed": "2020-02-02T10:11:59.075987+00:00",
+                "last_updated": "2020-02-02T10:11:59.075987+00:00",
+                "state": "30.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. minutes - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "ebc135dc0454448898c5b841a2100b63",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.kids_minute_first_on",
+                "last_changed": "2020-02-02T10:11:59.076418+00:00",
+                "last_updated": "2020-02-02T10:11:59.076418+00:00",
+                "state": "10.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. hours - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "21128486038141049231b7480ad52cc7",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.living_free_hour_second_on",
+                "last_changed": "2020-02-02T10:11:59.076848+00:00",
+                "last_updated": "2020-02-02T10:11:59.076848+00:00",
+                "state": "14.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. hours - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "445ffc67ea614f82a51f092710f30082",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.kids_hour_first_off",
+                "last_changed": "2020-02-02T10:11:59.077259+00:00",
+                "last_updated": "2020-02-02T10:11:59.077259+00:00",
+                "state": "7.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. minutes - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "83d1cbc6143d49f18f9f6ed979e19796",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.living_free_minute_second_on",
+                "last_changed": "2020-02-02T10:11:59.077676+00:00",
+                "last_updated": "2020-02-02T10:11:59.077676+00:00",
+                "state": "0.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. minutes - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "24fd0afe6aa54f93bd2d61f1c6549aba",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.kids_minute_first_off",
+                "last_changed": "2020-02-02T10:11:59.078094+00:00",
+                "last_updated": "2020-02-02T10:11:59.078094+00:00",
+                "state": "0.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. hours - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "69417855b7224a48a4a84726dfe4803e",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.living_free_hour_second_off",
+                "last_changed": "2020-02-02T10:11:59.078507+00:00",
+                "last_updated": "2020-02-02T10:11:59.078507+00:00",
+                "state": "22.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. hours - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "56554d470fbb470baa200f925b1040fe",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.kids_hour_second_on",
+                "last_changed": "2020-02-02T10:11:59.078909+00:00",
+                "last_updated": "2020-02-02T10:11:59.078909+00:00",
+                "state": "15.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. minutes - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "0d5f1c9e6269415488a432378f473afb",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.living_free_minute_second_off",
+                "last_changed": "2020-02-02T10:11:59.079324+00:00",
+                "last_updated": "2020-02-02T10:11:59.079324+00:00",
+                "state": "0.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. minutes - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "64f63702d8c54220877ff201fefdae8a",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.kids_minute_second_on",
+                "last_changed": "2020-02-02T10:11:59.079741+00:00",
+                "last_updated": "2020-02-02T10:11:59.079741+00:00",
+                "state": "30.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. hours - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "288231f36b6d4613a46f232d913accfe",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.kids_hour_second_off",
+                "last_changed": "2020-02-02T10:11:59.080216+00:00",
+                "last_updated": "2020-02-02T10:11:59.080216+00:00",
+                "state": "19.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. minutes - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "bf68c5d20bbc4abbb6ddaf0749a09815",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.kids_minute_second_off",
+                "last_changed": "2020-02-02T10:11:59.080659+00:00",
+                "last_updated": "2020-02-02T10:11:59.080659+00:00",
+                "state": "0.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Heating",
+                    "icon": "mdi:temperature-celsius",
+                    "initial": null,
+                    "max": 28.0,
+                    "min": 14.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "116b7781f5bc49aa9c5635469597445e",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.bedroom_high_temperature",
+                "last_changed": "2020-02-02T10:11:59.081077+00:00",
+                "last_updated": "2020-02-02T10:11:59.081077+00:00",
+                "state": "21.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. hours - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "08d2ce8dba644c5094408fd29b43f914",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.kids_free_hour_first_on",
+                "last_changed": "2020-02-02T10:11:59.081491+00:00",
+                "last_updated": "2020-02-02T10:11:59.081491+00:00",
+                "state": "6.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Maintenance",
+                    "icon": "mdi:temperature-celsius",
+                    "initial": null,
+                    "max": 20.0,
+                    "min": 6.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "6d9477eb6a0b4d43bd9c66ec189ba5b1",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.bedroom_low_temperature",
+                "last_changed": "2020-02-02T10:11:59.081923+00:00",
+                "last_updated": "2020-02-02T10:11:59.081923+00:00",
+                "state": "16.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. minutes - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "78ff737e27aa466e8c0b17d380b71705",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.kids_free_minute_first_on",
+                "last_changed": "2020-02-02T10:11:59.082331+00:00",
+                "last_updated": "2020-02-02T10:11:59.082331+00:00",
+                "state": "0.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. hours - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "6e550fe1fa834e02b2a6b40da6bc201c",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.bedroom_hour_first_on",
+                "last_changed": "2020-02-02T10:11:59.082725+00:00",
+                "last_updated": "2020-02-02T10:11:59.082725+00:00",
+                "state": "5.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. hours - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "44b2672e2bb8452dbb2f26d276f22888",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.kids_free_hour_first_off",
+                "last_changed": "2020-02-02T10:11:59.083140+00:00",
+                "last_updated": "2020-02-02T10:11:59.083140+00:00",
+                "state": "12.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. minutes - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "f99aeaff5fd1424ea56a5531bb94fb57",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.bedroom_minute_first_on",
+                "last_changed": "2020-02-02T10:11:59.083564+00:00",
+                "last_updated": "2020-02-02T10:11:59.083564+00:00",
+                "state": "10.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. minutes - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "e97d37f42b2c463c80035e2e1868b7c6",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.kids_free_minute_first_off",
+                "last_changed": "2020-02-02T10:11:59.083974+00:00",
+                "last_updated": "2020-02-02T10:11:59.083974+00:00",
+                "state": "0.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. hours - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "d43e9236bbe8476cb726861f0c9210cb",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.bedroom_hour_first_off",
+                "last_changed": "2020-02-02T10:11:59.084567+00:00",
+                "last_updated": "2020-02-02T10:11:59.084567+00:00",
+                "state": "7.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. hours - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "a8e322eb383e43abb513f7dbc833f527",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.kids_free_hour_second_on",
+                "last_changed": "2020-02-02T10:11:59.085110+00:00",
+                "last_updated": "2020-02-02T10:11:59.085110+00:00",
+                "state": "14.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. minutes - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "868d4aee6c6f4280991139bdcbc0f076",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.bedroom_minute_first_off",
+                "last_changed": "2020-02-02T10:11:59.085556+00:00",
+                "last_updated": "2020-02-02T10:11:59.085556+00:00",
+                "state": "0.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. minutes - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "e2bb00556f5d434ca110c37c2eaae0e5",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.kids_free_minute_second_on",
+                "last_changed": "2020-02-02T10:11:59.087703+00:00",
+                "last_updated": "2020-02-02T10:11:59.087703+00:00",
+                "state": "0.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. hours - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "5bd897def0b94c87b2e696da1268ad73",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.bedroom_hour_second_on",
+                "last_changed": "2020-02-02T10:11:59.088860+00:00",
+                "last_updated": "2020-02-02T10:11:59.088860+00:00",
+                "state": "16.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. hours - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "41b2b32c0bf146a894481fb75fec69ea",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.kids_free_hour_second_off",
+                "last_changed": "2020-02-02T10:11:59.089581+00:00",
+                "last_updated": "2020-02-02T10:11:59.089581+00:00",
+                "state": "19.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. minutes - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "711a6c4eef6d4dc99a6700c71419f0fa",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.bedroom_minute_second_on",
+                "last_changed": "2020-02-02T10:11:59.090138+00:00",
+                "last_updated": "2020-02-02T10:11:59.090138+00:00",
+                "state": "30.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. minutes - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "24fd874cda884c9fa5779b17d5a96ec1",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.kids_free_minute_second_off",
+                "last_changed": "2020-02-02T10:11:59.090634+00:00",
+                "last_updated": "2020-02-02T10:11:59.090634+00:00",
+                "state": "0.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. hours - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "f4b943d8bc8345a58467c972833465f6",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.bedroom_hour_second_off",
+                "last_changed": "2020-02-02T10:11:59.095952+00:00",
+                "last_updated": "2020-02-02T10:11:59.095952+00:00",
+                "state": "21.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Heating",
+                    "icon": "mdi:temperature-celsius",
+                    "initial": null,
+                    "max": 28.0,
+                    "min": 14.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "4cbf165a327e4081908fc709e3e04404",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.living_high_temperature",
+                "last_changed": "2020-02-02T10:11:59.096571+00:00",
+                "last_updated": "2020-02-02T10:11:59.096571+00:00",
+                "state": "22.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. minutes - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "45a3cb501da742de912d85985922c7ec",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.bedroom_minute_second_off",
+                "last_changed": "2020-02-02T10:11:59.100570+00:00",
+                "last_updated": "2020-02-02T10:11:59.100570+00:00",
+                "state": "0.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Maintenance",
+                    "icon": "mdi:temperature-celsius",
+                    "initial": null,
+                    "max": 20.0,
+                    "min": 6.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "8110ca56ae594a73b85986284971c633",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.living_low_temperature",
+                "last_changed": "2020-02-02T10:11:59.101192+00:00",
+                "last_updated": "2020-02-02T10:11:59.101192+00:00",
+                "state": "16.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. hours - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "b45182620ef342eb8a24513c578fb4fe",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.bedroom_free_hour_first_on",
+                "last_changed": "2020-02-02T10:11:59.102107+00:00",
+                "last_updated": "2020-02-02T10:11:59.102107+00:00",
+                "state": "6.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. hours - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "f738b3bcf6b640bb92f6d3239bb2e915",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.living_hour_first_on",
+                "last_changed": "2020-02-02T10:11:59.102762+00:00",
+                "last_updated": "2020-02-02T10:11:59.102762+00:00",
+                "state": "5.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. minutes - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "0cbd0bbdfcad4f87a5dd7582e9e8f66c",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.bedroom_free_minute_first_on",
+                "last_changed": "2020-02-02T10:11:59.103320+00:00",
+                "last_updated": "2020-02-02T10:11:59.103320+00:00",
+                "state": "40.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. minutes - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "4cb06b9bca7c4c868840f700af0e431c",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.living_minute_first_on",
+                "last_changed": "2020-02-02T10:11:59.103845+00:00",
+                "last_updated": "2020-02-02T10:11:59.103845+00:00",
+                "state": "10.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. hours - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "7847e5c41964412ebcc08fe512dfb5a6",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.bedroom_free_hour_first_off",
+                "last_changed": "2020-02-02T10:11:59.104356+00:00",
+                "last_updated": "2020-02-02T10:11:59.104356+00:00",
+                "state": "11.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. hours - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "a56b3aec0a0b426fa41f18bc3412672d",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.living_hour_first_off",
+                "last_changed": "2020-02-02T10:11:59.104865+00:00",
+                "last_updated": "2020-02-02T10:11:59.104865+00:00",
+                "state": "7.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. minutes - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "6a42f122a428422eb5db526d4142c49e",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.bedroom_free_minute_first_off",
+                "last_changed": "2020-02-02T10:11:59.105382+00:00",
+                "last_updated": "2020-02-02T10:11:59.105382+00:00",
+                "state": "20.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. minutes - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "127029b916f94c5880e9b1c3d3ba7fcb",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.living_minute_first_off",
+                "last_changed": "2020-02-02T10:11:59.105922+00:00",
+                "last_updated": "2020-02-02T10:11:59.105922+00:00",
+                "state": "0.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. hours - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "4ea21b1f6354401983fde21bd20f9b62",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.bedroom_free_hour_second_on",
+                "last_changed": "2020-02-02T10:11:59.106405+00:00",
+                "last_updated": "2020-02-02T10:11:59.106405+00:00",
+                "state": "14.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. hours - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "56f5e51353da4741a10e9d69238652ec",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.living_hour_second_on",
+                "last_changed": "2020-02-02T10:11:59.106839+00:00",
+                "last_updated": "2020-02-02T10:11:59.106839+00:00",
+                "state": "15.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. minutes - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "22a5bb7115784b66b30ef64a5a1d22a6",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.bedroom_free_minute_second_on",
+                "last_changed": "2020-02-02T10:11:59.107266+00:00",
+                "last_updated": "2020-02-02T10:11:59.107266+00:00",
+                "state": "0.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. minutes - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "d6e451d2bdab44c99d62768110aab470",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.living_minute_second_on",
+                "last_changed": "2020-02-02T10:11:59.107678+00:00",
+                "last_updated": "2020-02-02T10:11:59.107678+00:00",
+                "state": "30.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. hours - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "b5f32a2f0a50440a88f0d38d69776c36",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.bedroom_free_hour_second_off",
+                "last_changed": "2020-02-02T10:11:59.108091+00:00",
+                "last_updated": "2020-02-02T10:11:59.108091+00:00",
+                "state": "21.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. hours - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "52102d81792b48a09371a84543cb4dad",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.living_hour_second_off",
+                "last_changed": "2020-02-02T10:11:59.108497+00:00",
+                "last_updated": "2020-02-02T10:11:59.108497+00:00",
+                "state": "22.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. minutes - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "8b6836f439274910bda6588965b87ee3",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.bedroom_free_minute_second_off",
+                "last_changed": "2020-02-02T10:11:59.108905+00:00",
+                "last_updated": "2020-02-02T10:11:59.108905+00:00",
+                "state": "0.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "2. minutes - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "92e03ee25a2c47f59419bcd8fd7677b7",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.living_minute_second_off",
+                "last_changed": "2020-02-02T10:11:59.109340+00:00",
+                "last_updated": "2020-02-02T10:11:59.109340+00:00",
+                "state": "0.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Heating",
+                    "icon": "mdi:temperature-celsius",
+                    "initial": null,
+                    "max": 28.0,
+                    "min": 14.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "a4f0a6bea4ab48b1a2c84bc7d460e4e8",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.kids_high_temperature",
+                "last_changed": "2020-02-02T10:11:59.109752+00:00",
+                "last_updated": "2020-02-02T10:11:59.109752+00:00",
+                "state": "22.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. hours - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "d5f35045e604477d97425ec00c2deeb9",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.living_free_hour_first_on",
+                "last_changed": "2020-02-02T10:11:59.110225+00:00",
+                "last_updated": "2020-02-02T10:11:59.110225+00:00",
+                "state": "5.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Maintenance",
+                    "icon": "mdi:temperature-celsius",
+                    "initial": null,
+                    "max": 20.0,
+                    "min": 6.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "1480c0d10169432390b643ddd8590a2b",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.kids_low_temperature",
+                "last_changed": "2020-02-02T10:11:59.110651+00:00",
+                "last_updated": "2020-02-02T10:11:59.110651+00:00",
+                "state": "16.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. minutes - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 50.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 10.0
+                },
+                "context": {
+                    "id": "31533a55ad4a4413bf994ae3bc2614fe",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.living_free_minute_first_on",
+                "last_changed": "2020-02-02T10:11:59.111067+00:00",
+                "last_updated": "2020-02-02T10:11:59.111067+00:00",
+                "state": "30.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. hours - On",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "9cb622b3be00408bbdb8d2c1e20c1eb6",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.kids_hour_first_on",
+                "last_changed": "2020-02-02T10:11:59.111469+00:00",
+                "last_updated": "2020-02-02T10:11:59.111469+00:00",
+                "state": "5.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "1. hours - Off",
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 23.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "f320e551426d4b02ade7c7aa79151fde",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.living_free_hour_first_off",
+                "last_changed": "2020-02-02T10:11:59.111876+00:00",
+                "last_updated": "2020-02-02T10:11:59.111876+00:00",
+                "state": "10.0"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Set HA theme for day and night",
+                    "last_triggered": "2020-02-03T06:32:37.135989+00:00"
+                },
+                "context": {
+                    "id": "3dca6bdf56bd47bba9876fc8ef93f396",
+                    "parent_id": "16b0c43d318e4d3d94b17f316d6dd456",
+                    "user_id": null
+                },
+                "entity_id": "automation.set_ha_theme_for_day_and_night",
+                "last_changed": "2020-02-02T10:11:59.369075+00:00",
+                "last_updated": "2020-02-03T06:32:37.136329+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Turning off force free",
+                    "last_triggered": "2020-02-01T18:42:55.447690+00:00"
+                },
+                "context": {
+                    "id": "3c8a05dae90b4dfc83df84aa0b5129d9",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.turning_off_force_free",
+                "last_changed": "2020-02-02T10:11:59.369739+00:00",
+                "last_updated": "2020-02-02T10:11:59.369739+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Turning off any force setting for working days",
+                    "last_triggered": "2020-02-02T22:59:30.022129+00:00"
+                },
+                "context": {
+                    "id": "72b7622abf9a4e8fa32bb311379184ca",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.turning_off_any_force_setting_for_working_days",
+                "last_changed": "2020-02-02T10:11:59.370458+00:00",
+                "last_updated": "2020-02-02T22:59:30.022699+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "TRV maintenance - boost",
+                    "last_triggered": "2020-01-30T09:21:00.031282+00:00"
+                },
+                "context": {
+                    "id": "5a4a1ecc0bf44c20bc84c6821171f71f",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.trv_maintenance_boost",
+                "last_changed": "2020-02-02T10:11:59.371089+00:00",
+                "last_updated": "2020-02-02T10:11:59.371089+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Turn off Gateway at sunrise",
+                    "last_triggered": "2020-02-03T06:32:37.146339+00:00"
+                },
+                "context": {
+                    "id": "3403270f2a6c42c6becfd782ab63c35a",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.turn_off_gateway_at_sunrise",
+                "last_changed": "2020-02-02T10:11:59.371690+00:00",
+                "last_updated": "2020-02-03T06:32:37.146627+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Compute minutes",
+                    "last_triggered": "2020-02-03T13:43:10.025659+00:00"
+                },
+                "context": {
+                    "id": "1bd5fb8527d44da88225f3ba105a2393",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.compute_minutes",
+                "last_changed": "2020-02-02T10:11:59.372268+00:00",
+                "last_updated": "2020-02-03T13:43:10.026182+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "TRV maintenance - normal",
+                    "last_triggered": "2020-01-30T09:29:00.025219+00:00"
+                },
+                "context": {
+                    "id": "9a10735fafb448f299961fafebe89877",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.trv_maintenance_normal",
+                "last_changed": "2020-02-02T10:11:59.372846+00:00",
+                "last_updated": "2020-02-02T10:11:59.372846+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Turn on Gateway at sunset",
+                    "last_triggered": "2020-02-02T15:56:55.078671+00:00"
+                },
+                "context": {
+                    "id": "6764d4c707c245df9122d69838a07189",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.turn_on_gateway_at_sunset",
+                "last_changed": "2020-02-02T10:11:59.373423+00:00",
+                "last_updated": "2020-02-02T15:56:55.079210+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Toggle Gateway light with button click",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "74f9e89c4049417282527c88a92ad361",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.toggle_gateway_light_with_button_click",
+                "last_changed": "2020-02-02T10:11:59.373960+00:00",
+                "last_updated": "2020-02-02T10:11:59.373960+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-02-03T13:43:49.005613+00:00",
+            "state": {
+                "attributes": {
+                    "custom_ui_state_card": "state-card-custom-ui",
+                    "friendly_name": "Turning off force work",
+                    "last_triggered": "2020-01-21T12:39:37.645654+00:00"
+                },
+                "context": {
+                    "id": "7cc9d0ec37c24ffabc206d6bcdd7df43",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.turning_off_force_work",
+                "last_changed": "2020-02-02T10:11:59.375225+00:00",
+                "last_updated": "2020-02-02T10:11:59.375225+00:00",
+                "state": "on"
+            }
+        }
+    ],
+    "key": "core.restore_state",
+    "version": 1
+}

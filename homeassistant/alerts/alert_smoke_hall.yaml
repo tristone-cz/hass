@@ -1,6 +1,6 @@
 name: Ohen - kour v chodbe
 done_message: VYRESENO - Ohen - kour v chodbe
-entity_id: binary_sensor.smoke_sensor_158d0001b7d5c8
+entity_id: binary_sensor.0x00158d0001b7d5c8_smoke
 state: 'on'
 can_acknowledge: true
 repeat:

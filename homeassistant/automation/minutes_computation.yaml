@@ -1,0 +1,8 @@
+alias: Compute minutes
+trigger:
+  - platform: time_pattern
+    minutes: '/1'
+    seconds: 10
+action:
+  - service: homeassistant.update_entity
+    entity_id: sensor.today_minutes

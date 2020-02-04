@@ -13,22 +13,25 @@ homeassistant:
 customizer:
   custom_ui: local
 
+hacs:
+  token: 263f9b741494794fa3e139dcdf60d2f83d2d73dc
+  theme: true
+  appdaemon: true
+
 # Enables the frontend
 frontend:
   javascript_version: latest
-  extra_html_url:
-    - /local/custom_ui/state-card-hline.html
-#    - /local/custom_ui/state-card-custom-ui.html
-  extra_html_url_es5:
-    - /local/custom_ui/state-card-hline_es5.html
-#    - /local/custom_ui/state-card-custom-ui-es5.html
+  #themes: !include themes.yaml
+  themes: !include_dir_merge_named themes
 
 # Enables configuration UI
 config:
 
+system_health:
+
 http:
   # Secrets are defined in the file secrets.yaml
-  api_password: !secret http_password
+  # api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   #ssl_certificate: /etc/letsencrypt/fullchain.crt
   #ssl_key: /etc/letsencrypt/host.key
@@ -38,8 +41,8 @@ updater:
   # Optional, allows Home Assistant developers to focus on popular components.
   include_used_components: true
 
-#logger:
-#  default: debug
+logger:
+  default: info
 
 # Discover some devices automatically
 discovery:
@@ -62,6 +65,22 @@ zwave:
   usb_path: /dev/usbzwave
   network_key: !secret zwavenetwork_key
 
+
+mqtt:
+  discovery: true
+  broker: 192.168.10.200
+  certificate: /home/homeassistant/MQTTCAcert.pem
+  client_id: homeassistant
+  client_key: /home/homeassistant/MQTThassClient.key
+  client_cert: /home/homeassistant/MQTThassClient.pem
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'
+
+
 notify:
   - name: pushbullet
     platform: pushbullet
@@ -70,7 +89,7 @@ notify:
     platform: pushbullet
     api_key: !secret pushbullet_apikey_jirka
 
-group: !include groups.yaml
+#group: !include groups.yaml
 automation: !include_dir_list automation 
 script: !include scripts.yaml
 
@@ -81,15 +100,7 @@ input_number: !include input/number.yaml
 alert: !include_dir_named alerts
 
 sensor: !include_dir_list sensors
-binary_sensor:
-  - platform: workday
-    country: CZ
-    workdays: [ tue, wed, thu ]
-  - platform: template
-    sensors:
-      smoke_sensor_kitchen:
-        device_class: smoke
-        value_template: "{{ states('sensor.temperature_158d0001fa6e13')|float > 50}}" 
+binary_sensor: !include_dir_list binary_sensors
 
 # Enables support for tracking state changes over time
 history:
@@ -117,37 +128,58 @@ history:
       - sensor.thermostat_bedroom_target_temperature
       - sensor.thermostat_kids_target_temperature
       - sensor.thermostat_living_target_temperature
-      - binary_sensor.door_window_sensor_158d0001b7bc15
-      - binary_sensor.door_window_sensor_158d0001b959d8
-      - binary_sensor.door_window_sensor_158d0001b95a13
-      - binary_sensor.door_window_sensor_158d0001de657f
-      - binary_sensor.door_window_sensor_158d0001f406fb
+#      - binary_sensor.door_window_sensor_158d0001b7bc15
+      - binary_sensor.0x00158d0001b7bc15_contact
+#      - binary_sensor.door_window_sensor_158d0001b959d8
+#      - binary_sensor.door_window_sensor_158d0001b95a13
+      - binary_sensor.0x00158d0001b959d8_contact
+      - binary_sensor.0x00158d0001b95a13_contact
+#      - binary_sensor.door_window_sensor_158d0001de657f
+      - binary_sensor.0x00158d0001de657f_contact
+#      - binary_sensor.door_window_sensor_158d0001f406fb
+      - binary_sensor.0x00158d0001f406fb_contact
       - binary_sensor.smoke_sensor_158d0001b71c0f
-      - binary_sensor.smoke_sensor_158d0001b79326
-      - binary_sensor.smoke_sensor_158d0001b7d5c8
-      - binary_sensor.smoke_sensor_158d0001b7f68b
+#      - binary_sensor.smoke_sensor_158d0001b79326
+      - binary_sensor.0x00158d0001b79326_smoke
+#      - binary_sensor.smoke_sensor_158d0001b7d5c8
+      - binary_sensor.0x00158d0001b7d5c8_smoke
+#      - binary_sensor.smoke_sensor_158d0001b7f68b
+      - binary_sensor.0x00158d0001b7f68b_smoke
       - binary_sensor.smoke_sensor_kitchen
-      - binary_sensor.water_leak_sensor_158d0001bb383d
-      - binary_sensor.water_leak_sensor_158d0001bb71f5
-      - binary_sensor.water_leak_sensor_158d0001bb7219
-      - binary_sensor.water_leak_sensor_158d0001bb7a09
+#      - binary_sensor.water_leak_sensor_158d0001bb383d
+#      - binary_sensor.water_leak_sensor_158d0001bb71f5
+#      - binary_sensor.water_leak_sensor_158d0001bb7219
+#      - binary_sensor.water_leak_sensor_158d0001bb7a09
+      - binary_sensor.0x00158d0001bb383d_water_leak
+      - binary_sensor.0x00158d0001bb71f5_water_leak
+      - binary_sensor.0x00158d0001bb7219_water_leak
+      - binary_sensor.0x00158d0001bb7a09_water_leak
       - sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_2
       - sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_3
       - sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_4
-      - sensor.humidity_158d0001fa6e13
-      - sensor.humidity_158d00020186c6
-      - sensor.humidity_158d00020187f6
+#      - sensor.humidity_158d0001fa6e13
+      - sensor.0x00158d0001fa6e13_humidity
+#      - sensor.humidity_158d00020186c6
+      - sensor.0x00158d00020186c6_humidity
+#      - sensor.humidity_158d00020187f6
+      - sensor.0x00158d00020187f6_humidity
       - sensor.illumination_7811dcb1f507
-      - sensor.pressure_158d0001fa6e13
-      - sensor.pressure_158d00020186c6
-      - sensor.pressure_158d00020187f6
-      - sensor.temperature_158d0001fa6e13
-      - sensor.temperature_158d00020186c6
-      - sensor.temperature_158d00020187f6
+#      - sensor.pressure_158d0001fa6e13
+      - sensor.0x00158d0001fa6e13_pressure
+#      - sensor.pressure_158d00020186c6
+      - sensor.0x00158d00020186c6_pressure
+#      - sensor.pressure_158d00020187f6
+      - sensor.0x00158d00020187f6_pressure
+#      - sensor.temperature_158d0001fa6e13
+      - sensor.0x00158d0001fa6e13_temperature
+#      - sensor.temperature_158d00020186c6
+      - sensor.0x00158d00020186c6_temperature
+#      - sensor.temperature_158d00020187f6
+      - sensor.0x00158d00020187f6_temperature
 
 # Tracked history is kept for 10 days
 recorder:
-  purge_keep_days: 180
+  purge_keep_days: 30
   include:
     entities:
       - sensor.door_kids_battery
@@ -175,7 +207,7 @@ recorder:
       - sensor.window_living_battery
       - input_boolean.vacation_mode
       - input_boolean.heating_season
-      - input_boolean.heating_enabled
+      - binary_sensor.heating_enabled
       - input_boolean.thermostat_bedroom_keepauto
       - input_boolean.bedroom_work_first_active
       - input_boolean.bedroom_work_second_active
@@ -254,37 +286,59 @@ recorder:
       - alert.alert_water_basinright
       - alert.alert_water_kitchen
       - alert.alert_water_washmachine
-      - binary_sensor.door_window_sensor_158d0001b7bc15
-      - binary_sensor.door_window_sensor_158d0001b959d8
-      - binary_sensor.door_window_sensor_158d0001b95a13
-      - binary_sensor.door_window_sensor_158d0001de657f
-      - binary_sensor.door_window_sensor_158d0001f406fb
+#      - binary_sensor.door_window_sensor_158d0001b7bc15
+      - binary_sensor.0x00158d0001b7bc15_contact
+#      - binary_sensor.door_window_sensor_158d0001b959d8
+#      - binary_sensor.door_window_sensor_158d0001b95a13
+      - binary_sensor.0x00158d0001b959d8_contact
+      - binary_sensor.0x00158d0001b95a13_contact
+#      - binary_sensor.door_window_sensor_158d0001de657f
+      - binary_sensor.0x00158d0001de657f_contact
+#      - binary_sensor.door_window_sensor_158d0001f406fb
+      - binary_sensor.0x00158d0001f406fb_contact
       - binary_sensor.smoke_sensor_158d0001b71c0f
-      - binary_sensor.smoke_sensor_158d0001b79326
-      - binary_sensor.smoke_sensor_158d0001b7d5c8
-      - binary_sensor.smoke_sensor_158d0001b7f68b
+#      - binary_sensor.smoke_sensor_158d0001b79326
+      - binary_sensor.0x00158d0001b79326_smoke
+#      - binary_sensor.smoke_sensor_158d0001b7d5c8
+      - binary_sensor.0x00158d0001b7d5c8_smoke
+#      - binary_sensor.smoke_sensor_158d0001b7f68b
+      - binary_sensor.0x00158d0001b7f68b_smoke
       - binary_sensor.smoke_sensor_kitchen
-      - binary_sensor.water_leak_sensor_158d0001bb383d
-      - binary_sensor.water_leak_sensor_158d0001bb71f5
-      - binary_sensor.water_leak_sensor_158d0001bb7219
-      - binary_sensor.water_leak_sensor_158d0001bb7a09
+#      - binary_sensor.water_leak_sensor_158d0001bb383d
+#      - binary_sensor.water_leak_sensor_158d0001bb71f5
+#      - binary_sensor.water_leak_sensor_158d0001bb7219
+#      - binary_sensor.water_leak_sensor_158d0001bb7a09
+      - binary_sensor.0x00158d0001bb383d_water_leak
+      - binary_sensor.0x00158d0001bb71f5_water_leak
+      - binary_sensor.0x00158d0001bb7219_water_leak
+      - binary_sensor.0x00158d0001bb7a09_water_leak
       - sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_2
       - sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_3
       - sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_4
-      - sensor.humidity_158d0001fa6e13
-      - sensor.humidity_158d00020186c6
-      - sensor.humidity_158d00020187f6
       - sensor.illumination_7811dcb1f507
-      - sensor.pressure_158d0001fa6e13
-      - sensor.pressure_158d00020186c6
-      - sensor.pressure_158d00020187f6
+#      - sensor.humidity_158d0001fa6e13
+      - sensor.0x00158d0001fa6e13_humidity
+#      - sensor.humidity_158d00020186c6
+      - sensor.0x00158d00020186c6_humidity
+#      - sensor.humidity_158d00020187f6
+      - sensor.0x00158d00020187f6_humidity
+      - sensor.illumination_7811dcb1f507
+#      - sensor.pressure_158d0001fa6e13
+      - sensor.0x00158d0001fa6e13_pressure
+#      - sensor.pressure_158d00020186c6
+      - sensor.0x00158d00020186c6_pressure
+#      - sensor.pressure_158d00020187f6
+      - sensor.0x00158d00020187f6_pressure
+#      - sensor.temperature_158d0001fa6e13
+      - sensor.0x00158d0001fa6e13_temperature
+#      - sensor.temperature_158d00020186c6
+      - sensor.0x00158d00020186c6_temperature
+#      - sensor.temperature_158d00020187f6
+      - sensor.0x00158d00020187f6_temperature
       - sensor.smoke_bedroom_battery
       - sensor.smoke_children_battery
       - sensor.smoke_hall_battery
       - sensor.smoke_living_battery
-      - sensor.temperature_158d0001fa6e13
-      - sensor.temperature_158d00020186c6
-      - sensor.temperature_158d00020187f6
       - sensor.thermometer_bedroom_battery
       - sensor.thermometer_kids_battery
       - sensor.thermometer_kitchen_battery

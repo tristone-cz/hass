@@ -1,8 +1,0 @@
-platform: template
-sensors:
-  thermometer_kids_battery:
-    friendly_name: Baterie - teploměr, pokojíček
-    entity_id: sensor.temperature_158d00020186c6
-    value_template: '{{ states.sensor.temperature_158d00020186c6.attributes.battery_level }}'
-    unit_of_measurement: '%'
-    icon_template: mdi:battery-60

@@ -1,0 +1,11 @@
+alias: Turning off any force setting for working days
+trigger:
+  - platform: time_pattern
+    hours: 23
+    minutes: 59
+    seconds: 30
+action:
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.force_workday
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.force_freeday

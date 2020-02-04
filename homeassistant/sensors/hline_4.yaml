@@ -1,4 +1,0 @@
-platform: template
-sensors:
-  hline_4:
-    value_template: hline

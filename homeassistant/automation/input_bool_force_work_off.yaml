@@ -1,0 +1,8 @@
+alias: Turning off force work
+trigger:
+  platform: state
+  entity_id: input_boolean.force_freeday
+  to: 'on'
+action:
+  service: input_boolean.turn_off
+  entity_id: input_boolean.force_workday

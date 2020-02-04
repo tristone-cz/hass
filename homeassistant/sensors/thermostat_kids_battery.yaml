@@ -1,7 +1,7 @@
 platform: template
 sensors:
   thermostat_kids_battery:
-    friendly_name: Baterie - termostat, pokojíček
+    friendly_name: Thermostat - kids room
     entity_id: zwave.eurotronic_eur_spiritz_wall_radiator_thermostat_2
     value_template: '{{ states.zwave.eurotronic_eur_spiritz_wall_radiator_thermostat_2.attributes.battery_level }}'
     unit_of_measurement: '%'

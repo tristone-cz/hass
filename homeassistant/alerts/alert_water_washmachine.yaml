@@ -1,6 +1,6 @@
 name: Voda - unik za prackou
 done_message: VYRESENO - Voda - za prackou
-entity_id: binary_sensor.water_leak_sensor_158d0001bb7219
+entity_id: binary_sensor.0x00158d0001bb7219_water_leak
 state: 'on'
 can_acknowledge: true
 repeat:

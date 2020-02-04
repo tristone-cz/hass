@@ -1,0 +1,28 @@
+{
+    "data": {
+        "areas": [
+            {
+                "id": "cbc82bfc46c844cf85eefbb10ebbb867",
+                "name": "Hall"
+            },
+            {
+                "id": "4971682dfcb9444994b6aba9884694cf",
+                "name": "Bathroom"
+            },
+            {
+                "id": "298d882356634a30aeb7fccbacdad0e5",
+                "name": "Living room"
+            },
+            {
+                "id": "1e30cee584734a59b01a4c2cd357312f",
+                "name": "Bedroom"
+            },
+            {
+                "id": "8a5441ef60f5424d9b23fe04dba6fb2c",
+                "name": "Kids room"
+            }
+        ]
+    },
+    "key": "core.area_registry",
+    "version": 1
+}

@@ -1,0 +1,3 @@
+platform: workday
+country: CZ
+workdays: [ mon, tue, wed, thu ]

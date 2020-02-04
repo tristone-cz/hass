@@ -1,0 +1,35 @@
+{
+    "data": {
+        "nervetattoo/simple-thermostat": {
+            "version_type": "version",
+            "version_installed": "0.31.0",
+            "version_available": "0.31.0"
+        },
+        "maykar/compact-custom-header": {
+            "version_type": "version",
+            "version_installed": "1.4.9",
+            "version_available": "1.4.9"
+        },
+        "kalkih/mini-graph-card": {
+            "version_type": "version",
+            "version_installed": "v0.8.2",
+            "version_available": "v0.8.2"
+        },
+        "custom-cards/button-card": {
+            "version_type": "version",
+            "version_installed": "2.0.5",
+            "version_available": "3.0.0"
+        },
+        "custom-cards/monster-card": {
+            "version_type": "version",
+            "version_installed": "0.2.5",
+            "version_available": "0.2.5"
+        },
+        "thomasloven/lovelace-toggle-lock-entity-row": {
+            "version_type": "commit",
+            "version_installed": "a57ac15",
+            "version_available": "a57ac15"
+        }
+    },
+    "schema": "5"
+}

@@ -1,0 +1,550 @@
+{
+    "data": {
+        "devices": [
+            {
+                "area_id": null,
+                "config_entries": [
+                    "444c41ba243f4a21b652e1312c769cb5"
+                ],
+                "connections": [],
+                "id": "392ded3d2fde40148ff13ca424b97354",
+                "identifiers": [
+                    [
+                        "zwave",
+                        3
+                    ]
+                ],
+                "manufacturer": "FIBARO System",
+                "model": "FGS223 Double Relay",
+                "name": "FIBARO System FGS223 Double Relay",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": "9d991e8336894542a605d4444a890351"
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "444c41ba243f4a21b652e1312c769cb5"
+                ],
+                "connections": [],
+                "id": "5f876a98340844d79a53d042bc9259e2",
+                "identifiers": [
+                    [
+                        "zwave",
+                        4
+                    ]
+                ],
+                "manufacturer": "EUROtronic",
+                "model": "EUR_SPIRITZ Wall Radiator Thermostat",
+                "name": "EUROtronic EUR_SPIRITZ Wall Radiator Thermostat",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": "9d991e8336894542a605d4444a890351"
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "444c41ba243f4a21b652e1312c769cb5"
+                ],
+                "connections": [],
+                "id": "420d3421c5ae46c683c6be185090c153",
+                "identifiers": [
+                    [
+                        "zwave",
+                        5
+                    ]
+                ],
+                "manufacturer": "EUROtronic",
+                "model": "EUR_SPIRITZ Wall Radiator Thermostat",
+                "name": "EUROtronic EUR_SPIRITZ Wall Radiator Thermostat",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": "9d991e8336894542a605d4444a890351"
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "444c41ba243f4a21b652e1312c769cb5"
+                ],
+                "connections": [],
+                "id": "d0c558cafdbd46d5b51a88378085bf87",
+                "identifiers": [
+                    [
+                        "zwave",
+                        6
+                    ]
+                ],
+                "manufacturer": "Everspring",
+                "model": "AN180 Plug-in ON/OFF Module",
+                "name": "Everspring AN180 Plug-in ON/OFF Module",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": "9d991e8336894542a605d4444a890351"
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "444c41ba243f4a21b652e1312c769cb5"
+                ],
+                "connections": [],
+                "id": "26a093826bcd434ba940b16746e02faa",
+                "identifiers": [
+                    [
+                        "zwave",
+                        7
+                    ]
+                ],
+                "manufacturer": "Everspring",
+                "model": "AN180 Plug-in ON/OFF Module",
+                "name": "Everspring AN180 Plug-in ON/OFF Module",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": "9d991e8336894542a605d4444a890351"
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "444c41ba243f4a21b652e1312c769cb5"
+                ],
+                "connections": [],
+                "id": "83bda27a19674ffa80460d0daf677fcb",
+                "identifiers": [
+                    [
+                        "zwave",
+                        8
+                    ]
+                ],
+                "manufacturer": "EUROtronic",
+                "model": "EUR_SPIRITZ Wall Radiator Thermostat",
+                "name": "EUROtronic EUR_SPIRITZ Wall Radiator Thermostat",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": "9d991e8336894542a605d4444a890351"
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "444c41ba243f4a21b652e1312c769cb5"
+                ],
+                "connections": [],
+                "id": "9d991e8336894542a605d4444a890351",
+                "identifiers": [
+                    [
+                        "zwave",
+                        1
+                    ]
+                ],
+                "manufacturer": "Z-Wave.Me",
+                "model": "ZME_UZB1 USB Stick",
+                "name": "Z-Wave.Me ZME_UZB1 USB Stick",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "444c41ba243f4a21b652e1312c769cb5"
+                ],
+                "connections": [],
+                "id": "cc44814d02824448a70cb2b3e09981e6",
+                "identifiers": [
+                    [
+                        "zwave",
+                        3,
+                        2
+                    ]
+                ],
+                "manufacturer": "FIBARO System",
+                "model": "FGS223 Double Relay",
+                "name": "FIBARO System FGS223 Double Relay (2)",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": "392ded3d2fde40148ff13ca424b97354"
+            },
+            {
+                "area_id": "cbc82bfc46c844cf85eefbb10ebbb867",
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "id": "969317cbe94f4961a05dd7e35d8d351e",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d0002030217"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "MiJia wireless switch (WXKG01LM)",
+                "name": "xiaomi_button",
+                "name_by_user": null,
+                "sw_version": "Zigbee2mqtt 1.8.0",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "444c41ba243f4a21b652e1312c769cb5"
+                ],
+                "connections": [],
+                "id": "2ce68baa779f45acbbb4482dc2786576",
+                "identifiers": [
+                    [
+                        "zwave",
+                        9
+                    ]
+                ],
+                "manufacturer": "Qubino (Goap)",
+                "model": "ZMNHADx Flush 1 Relay",
+                "name": "Qubino (Goap) ZMNHADx Flush 1 Relay",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": "9d991e8336894542a605d4444a890351"
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "444c41ba243f4a21b652e1312c769cb5"
+                ],
+                "connections": [],
+                "id": "7a97217ff138495490cf064854deef22",
+                "identifiers": [
+                    [
+                        "zwave",
+                        9,
+                        2
+                    ]
+                ],
+                "manufacturer": "Qubino (Goap)",
+                "model": "ZMNHADx Flush 1 Relay",
+                "name": "Qubino (Goap) ZMNHADx Flush 1 Relay (2)",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": "2ce68baa779f45acbbb4482dc2786576"
+            },
+            {
+                "area_id": "4971682dfcb9444994b6aba9884694cf",
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "id": "c2397dd679244809950e566d2687ece4",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d0001bb7219"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "Aqara water leak sensor (SJCGQ11LM)",
+                "name": "water_washmachine",
+                "name_by_user": "water_washmachine",
+                "sw_version": "Zigbee2mqtt 1.8.0",
+                "via_device_id": null
+            },
+            {
+                "area_id": "4971682dfcb9444994b6aba9884694cf",
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "id": "43215cd228b2437c9a11c1326bf12b6a",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d0001bb383d"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "Aqara water leak sensor (SJCGQ11LM)",
+                "name": "water_leftbasin",
+                "name_by_user": "water_leftbasin",
+                "sw_version": "Zigbee2mqtt 1.8.0",
+                "via_device_id": null
+            },
+            {
+                "area_id": "4971682dfcb9444994b6aba9884694cf",
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "id": "077827a458ab4cc98b600581cff56d74",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d0001bb71f5"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "Aqara water leak sensor (SJCGQ11LM)",
+                "name": "water_rightbasin",
+                "name_by_user": "water_rightbasin",
+                "sw_version": "Zigbee2mqtt 1.8.0",
+                "via_device_id": null
+            },
+            {
+                "area_id": "cbc82bfc46c844cf85eefbb10ebbb867",
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "id": "ffe829648c484066aa19360452cf33da",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d0001b7d5c8"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "MiJia Honeywell smoke detector (JTYJ-GD-01LM/BW)",
+                "name": "smoke_hall",
+                "name_by_user": "smoke_hall",
+                "sw_version": "Zigbee2mqtt 1.8.0",
+                "via_device_id": null
+            },
+            {
+                "area_id": "298d882356634a30aeb7fccbacdad0e5",
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "id": "52ffa5ecbf6142f19200edfe987822d1",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d0001bb7a09"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "Aqara water leak sensor (SJCGQ11LM)",
+                "name": "0x00158d0001bb7a09",
+                "name_by_user": "water_sink",
+                "sw_version": "Zigbee2mqtt 1.8.0",
+                "via_device_id": null
+            },
+            {
+                "area_id": "298d882356634a30aeb7fccbacdad0e5",
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "id": "2a03b69e0df54e5d84b5b4671245579f",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d0001b79326"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "MiJia Honeywell smoke detector (JTYJ-GD-01LM/BW)",
+                "name": "0x00158d0001b79326",
+                "name_by_user": "smoke_living",
+                "sw_version": "Zigbee2mqtt 1.8.0",
+                "via_device_id": null
+            },
+            {
+                "area_id": "298d882356634a30aeb7fccbacdad0e5",
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "id": "a8e6d21b40d342419ec997a1bebce02c",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d0001fa6e13"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "Aqara temperature, humidity and pressure sensor (WSDCGQ11LM)",
+                "name": "0x00158d0001fa6e13",
+                "name_by_user": "sensors_kitchen",
+                "sw_version": "Zigbee2mqtt 1.8.0",
+                "via_device_id": null
+            },
+            {
+                "area_id": "298d882356634a30aeb7fccbacdad0e5",
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "id": "ecbd9ec26b804f8482523993167b1062",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d0001b95a13"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "Aqara door & window contact sensor (MCCGQ11LM)",
+                "name": "0x00158d0001b95a13",
+                "name_by_user": "door_living",
+                "sw_version": "Zigbee2mqtt 1.8.0",
+                "via_device_id": null
+            },
+            {
+                "area_id": "298d882356634a30aeb7fccbacdad0e5",
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "id": "c17504c94461466aa2e741d9752ca64e",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d0001b959d8"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "Aqara door & window contact sensor (MCCGQ11LM)",
+                "name": "0x00158d0001b959d8",
+                "name_by_user": "window_living",
+                "sw_version": "Zigbee2mqtt 1.8.0",
+                "via_device_id": null
+            },
+            {
+                "area_id": "1e30cee584734a59b01a4c2cd357312f",
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "id": "5b8ec84e29124e4b92107c87accd27f1",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d00020187f6"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "Aqara temperature, humidity and pressure sensor (WSDCGQ11LM)",
+                "name": "0x00158d00020187f6",
+                "name_by_user": "sensors_bedroom",
+                "sw_version": "Zigbee2mqtt 1.6.0",
+                "via_device_id": null
+            },
+            {
+                "area_id": "1e30cee584734a59b01a4c2cd357312f",
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "id": "3dfc7584f7c54aa7a70370642118115f",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d0001f406fb"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "MiJia door & window contact sensor (MCCGQ01LM)",
+                "name": "0x00158d0001f406fb",
+                "name_by_user": "window_bedroom",
+                "sw_version": "Zigbee2mqtt 1.6.0",
+                "via_device_id": null
+            },
+            {
+                "area_id": "1e30cee584734a59b01a4c2cd357312f",
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "id": "c0ef63d0cca54b66a4ab92229f34306b",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d0001b7f68b"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "MiJia Honeywell smoke detector (JTYJ-GD-01LM/BW)",
+                "name": "0x00158d0001b7f68b",
+                "name_by_user": "smoke_bedroom",
+                "sw_version": "Zigbee2mqtt 1.6.0",
+                "via_device_id": null
+            },
+            {
+                "area_id": "8a5441ef60f5424d9b23fe04dba6fb2c",
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "id": "6845419a400540dbbc08936c6aa3f3d3",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d00020186c6"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "Aqara temperature, humidity and pressure sensor (WSDCGQ11LM)",
+                "name": "0x00158d00020186c6",
+                "name_by_user": "sensors_kids",
+                "sw_version": "Zigbee2mqtt 1.5.1",
+                "via_device_id": null
+            },
+            {
+                "area_id": "8a5441ef60f5424d9b23fe04dba6fb2c",
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "id": "00d722bdd42348f4a9fa0ab062bb12b2",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d0001b7bc15"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "Aqara door & window contact sensor (MCCGQ11LM)",
+                "name": "0x00158d0001b7bc15",
+                "name_by_user": "door_kids",
+                "sw_version": "Zigbee2mqtt 1.5.1",
+                "via_device_id": null
+            },
+            {
+                "area_id": "8a5441ef60f5424d9b23fe04dba6fb2c",
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "id": "211b0827293648109cddaa8df18ebae4",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d0001de657f"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "Aqara door & window contact sensor (MCCGQ11LM)",
+                "name": "0x00158d0001de657f",
+                "name_by_user": "windows_kids",
+                "sw_version": "Zigbee2mqtt 1.5.1",
+                "via_device_id": null
+            },
+            {
+                "area_id": "8a5441ef60f5424d9b23fe04dba6fb2c",
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "id": "64ef6aac17a74154912ced27cf1e1976",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d0001b71c0f"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "MiJia Honeywell smoke detector (JTYJ-GD-01LM/BW)",
+                "name": "0x00158d0001b71c0f",
+                "name_by_user": "smoke_kids",
+                "sw_version": "Zigbee2mqtt 1.5.1",
+                "via_device_id": null
+            }
+        ]
+    },
+    "key": "core.device_registry",
+    "version": 1
+}
