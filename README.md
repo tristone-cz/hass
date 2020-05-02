@@ -15,7 +15,7 @@ Once main goals are fulfilled few more goals appears (2019) :wink:
  - Do not send data to China or anywhere else if it can be avoided
 
 And then air-conditioning comes in place (2020)  :snowflake:
- - Integrade air-conditioning and let it be autonomous
+ - Integrate air-conditioning and let it be autonomous
  - Different logic needed compared to heating
  - Let UI show either heating or cooling settings only based on seasons
 
@@ -32,8 +32,8 @@ On software side:
 
 On HW side:
 
- - Xiomi gateway (ZigBee hub) - *no longer acting as a hub, just night light
- - TI C1352R-2 (USB dev board for Zibee network)
+ - Xiomi gateway (ZigBee hub) - *no longer acting as a hub, just night light*
+ - TI C1352R-2 (USB dev board for Zigbee network)
  - various Xiaomi Aqara detectors (smoke sensors, flood sensors, door contacts, thermometers)
  - Z-Wave Me UZB (USB stick for Z-Wave network)
  - EUROtronic Spirit Z-Wave (TRVs)
@@ -68,8 +68,8 @@ Everything related to schedules is again dynamically set in UI. It is possible t
 In addtion to air-conditioning a lot of changes happend under the hood of Lovelace UI. As heating and cooling are happening in different seasons there is no need to show all controls in UI at the same time. Now there is defined interval when cooling controls shall be displayed instead of heating ones. A lot of conditional cards are used in the UI same as many vertical stacks to keep everything in the right positions.
 
 ---
-Decision diagram for each room looks like that:
-![Heating schema](https://raw.githubusercontent.com/tristone-cz/hass/master/mediafiles/heating.png)
+Decision diagram for each room looks like this:
+![Heating schema](https://raw.githubusercontent.com/tristone-cz/hass/master/mediafiles/logic.png)
 
 ## Screenshots
 
