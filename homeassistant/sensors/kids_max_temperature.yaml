@@ -1,0 +1,15 @@
+platform: template
+sensors:
+  kids_max_temperature:
+    entity_id: sensor.0x00158d00020186c6_temperature
+    value_template: >-
+      {% if (now().hour)|int == 6 %}
+        0
+      {% elif is_state('sensor.kids_max_temperature', 'unknown') %}
+        {{ states('sensor.0x00158d00020186c6_temperature') }}
+      {% elif states('sensor.0x00158d00020186c6_temperature')|float > states('sensor.kids_max_temperature')|float %}
+        {{ states('sensor.0x00158d00020186c6_temperature') }}
+      {% else %}
+        {{ states('sensor.kids_max_temperature') }}
+      {% endif %}
+

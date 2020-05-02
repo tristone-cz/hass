@@ -1,0 +1,13 @@
+alias: Max temperatures cleanup
+trigger:
+  - platform: time_pattern
+    hours: 6
+    minutes: 16
+    seconds: 26
+action:
+  - service: homeassistant.update_entity
+    entity_id: sensor.bedroom_max_temperature
+  - service: homeassistant.update_entity
+    entity_id: sensor.kids_max_temperature
+  - service: homeassistant.update_entity
+    entity_id: sensor.living_max_temperature

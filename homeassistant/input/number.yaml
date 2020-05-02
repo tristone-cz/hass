@@ -1,4 +1,5 @@
 # Bedroom - temperature values
+# Heating
 bedroom_high_temperature:
   name: "Heating"
   min: 14
@@ -9,6 +10,19 @@ bedroom_low_temperature:
   name: "Maintenance"
   min: 6
   max: 20
+  step: 1
+  icon: mdi:temperature-celsius
+# A/C
+bedroom_ac_trigger_temperature:
+  name: "Trigger"
+  min: 22
+  max: 32
+  step: 1
+  icon: mdi:temperature-celsius
+bedroom_ac_cool_temperature:
+  name: "Cooling"
+  min: 18
+  max: 28
   step: 1
   icon: mdi:temperature-celsius
 
@@ -113,7 +127,59 @@ bedroom_free_minute_second_off:
   max: 50
   step: 10
 
+# Bedroom - A/C schedule inputs - work days
+bedroom_ac_hour_on:
+  name: "Hours - On"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+bedroom_ac_minute_on:
+  name: "Minutes - On"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+bedroom_ac_hour_off:
+  name: "Hours - Off"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+bedroom_ac_minute_off:
+  name: "Minutes - Off"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+# Bedroom - A/C schedule inputs - free days
+bedroom_ac_free_hour_on:
+  name: "Hours - On"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+bedroom_ac_free_minute_on:
+  name: "Minutes - On"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+bedroom_ac_free_hour_off:
+  name: "Hours - Off"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+bedroom_ac_free_minute_off:
+  name: "Minutes - Off"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+
 # Kids - temperature values
+# Heating
 kids_high_temperature:
   name: "Heating"
   min: 14
@@ -124,6 +190,19 @@ kids_low_temperature:
   name: "Maintenance"
   min: 6
   max: 20
+  step: 1
+  icon: mdi:temperature-celsius
+# A/C
+kids_ac_trigger_temperature:
+  name: "Trigger"
+  min: 22
+  max: 32
+  step: 1
+  icon: mdi:temperature-celsius
+kids_ac_cool_temperature:
+  name: "Cooling"
+  min: 18
+  max: 28
   step: 1
   icon: mdi:temperature-celsius
 
@@ -228,7 +307,59 @@ kids_free_minute_second_off:
   max: 50
   step: 10
 
+# Kids - A/C schedule inputs - work days
+kids_ac_hour_on:
+  name: "Hours - On"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+kids_ac_minute_on:
+  name: "Minutes - On"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+kids_ac_hour_off:
+  name: "Hours - Off"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+kids_ac_minute_off:
+  name: "Minutes - Off"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+# Kids - A/C schedule inputs - free days
+kids_ac_free_hour_on:
+  name: "Hours - On"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+kids_ac_free_minute_on:
+  name: "Minutes - On"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+kids_ac_free_hour_off:
+  name: "Hours - Off"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+kids_ac_free_minute_off:
+  name: "Minutes - Off"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+
 # Living - temperature values
+# Heating
 living_high_temperature:
   name: "Heating"
   min: 14
@@ -239,6 +370,19 @@ living_low_temperature:
   name: "Maintenance"
   min: 6
   max: 20
+  step: 1
+  icon: mdi:temperature-celsius
+# A/C
+living_ac_trigger_temperature:
+  name: "Trigger"
+  min: 22
+  max: 32
+  step: 1
+  icon: mdi:temperature-celsius
+living_ac_cool_temperature:
+  name: "Cooling"
+  min: 18
+  max: 28
   step: 1
   icon: mdi:temperature-celsius
 
@@ -337,6 +481,57 @@ living_free_hour_second_off:
   step: 1
 living_free_minute_second_off:
   name: "2. minutes - Off"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+
+# Living - A/C schedule inputs - work days
+living_ac_hour_on:
+  name: "Hours - On"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+living_ac_minute_on:
+  name: "Minutes - On"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+living_ac_hour_off:
+  name: "Hours - Off"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+living_ac_minute_off:
+  name: "Minutes - Off"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+# Living - A/C schedule inputs - free days
+living_ac_free_hour_on:
+  name: "Hours - On"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+living_ac_free_minute_on:
+  name: "Minutes - On"
+  icon: mdi:timer
+  min: 0
+  max: 50
+  step: 10
+living_ac_free_hour_off:
+  name: "Hours - Off"
+  icon: mdi:timer
+  min: 0
+  max: 23
+  step: 1
+living_ac_free_minute_off:
+  name: "Minutes - Off"
   icon: mdi:timer
   min: 0
   max: 50

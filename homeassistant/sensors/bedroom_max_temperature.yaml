@@ -1,0 +1,15 @@
+platform: template
+sensors:
+  bedroom_max_temperature:
+    entity_id: sensor.0x00158d00020187f6_temperature
+    value_template: >-
+      {% if (now().hour)|int == 6 %}
+        0
+      {% elif is_state('sensor.bedroom_max_temperature', 'unknown') %}
+        {{ states('sensor.0x00158d00020187f6_temperature') }}
+      {% elif states('sensor.0x00158d00020187f6_temperature')|float > states('sensor.bedroom_max_temperature')|float %}
+        {{ states('sensor.0x00158d00020187f6_temperature') }}
+      {% else %}
+        {{ states('sensor.bedroom_max_temperature') }}
+      {% endif %}
+

@@ -1,0 +1,461 @@
+{
+    "data": [
+        {
+            "acknowledged": true,
+            "link": "https://github.com/hacs/default/pull/2",
+            "reason": "Security issues, known to steal auth tokens.",
+            "removal_type": "critical",
+            "repository": "test/test"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "amaximus/bkk_stop_card"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "au190/au190_bkk_stop_card"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "au190/au190_lock_entity"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "au190/au190_thermostat_card"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "basnijholt/media_player.kef"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "benleb/ad-batterycheck"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "benleb/ad-ench-ad3"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "bieniu/ha-ad-airly"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "Boosik/discord_game"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "boralyl/hass-smartthinq"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-cards/boilerplate-card"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-cards/camera-card"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-cards/custom-card-helpers"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-cards/information"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-cards/marquee-state-element"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-cards/monster-card"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-cards/muuri-grid"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-cards/timer-card"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-cards/tracker-card"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/binary_sensor.hadockermon"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/blueprint"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/camera.multisource"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/cloudflare"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/complimentr"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/custom_cards"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/custom_components"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/custom_updater"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/google_keep"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/hassbian_config"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/information"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/lists"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/sensor.ctabustracker"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/sensor.custom_aftership"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/sensor.custom_cards"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/sensor.custom_components"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/sensor.geoip"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/sensor.launchlibrary"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/sensor.ruter"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/sensor.syncthing"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/sensor.tautulli"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/sensor.versions"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/sickchill"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/switch.hadockermon"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "custom-components/usps_mail"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "eifinger/here_travel_time"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "home-assistant-community-themes/template"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "home-assistant-community-themes/theme-request"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "keatontaylor/alexa_media_player"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "kethoth/green_slate_theme"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "ljmerza/waze-card"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "maykar/compact-custom-header"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "Michsior14/ha-kaiterra"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "Michsior14/ha-laser-egg"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "PTST/O365Calendar-HomeAssistant"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "Rocka84/dual-gauge-card"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "shaonianzhentan/ha-cloud-music"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "tenly2000/HomeAssistant-Places"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": null,
+            "removal_type": "blacklist",
+            "repository": "xaviml/z2m_ikea_controller"
+        },
+        {
+            "acknowledged": false,
+            "link": "https://github.com/hacs/integration/pull/1045",
+            "reason": "Request from author",
+            "removal_type": "blacklist",
+            "repository": "r-renato/hass-xiaomi-mi-flora-and-flower-care"
+        },
+        {
+            "acknowledged": false,
+            "link": null,
+            "reason": "Abandoned/Broken",
+            "removal_type": "stale",
+            "repository": "custom-cards/dual-gauge-card"
+        },
+        {
+            "acknowledged": false,
+            "link": "https://github.com/hacs/default/issues/318",
+            "reason": "Abandoned/Broken",
+            "removal_type": "stale",
+            "repository": "custom-cards/surveillance-card"
+        },
+        {
+            "acknowledged": false,
+            "link": "https://github.com/hacs/default/issues/344",
+            "reason": "Repository is archived",
+            "removal_type": "blacklist",
+            "repository": "robmarkcole/HASS-Sighthound"
+        },
+        {
+            "acknowledged": false,
+            "link": "https://github.com/hacs/default/issues/344",
+            "reason": "Repository is archived",
+            "removal_type": "blacklist",
+            "repository": "custom-cards/home-setter"
+        },
+        {
+            "acknowledged": false,
+            "link": "https://github.com/hacs/default/issues/347",
+            "reason": "Repository is archived",
+            "removal_type": "blacklist",
+            "repository": "pippyn/Home-Assistant-Sensor-Ophaalkalender"
+        }
+    ],
+    "key": "hacs.removed",
+    "version": "6"
+}

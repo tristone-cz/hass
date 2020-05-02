@@ -28,7 +28,7 @@
           } else {
             return "mdi:alarm-light";
           }
-    binary_sensor.*_contact:
+    binary_sensor.*_contact*:
       templates:
         icon_color: >
           if (state == "off") {
@@ -54,33 +54,7 @@
           } else {
             return "mdi:door-open";
           }
-    binary_sensor.door_window_sensor*:
-      templates:
-        icon_color: >
-          if (state == "off") {
-            return 'rgb(53, 130, 181)';
-          } else {
-            return 'rgb(234, 175, 37)';
-          }
-        hs_color: >
-          if (state == "off") {
-            return [204, 71];
-          } else {
-            return [42, 84];
-          }
-        brightness: >
-          if (state == "off") {
-            return 71;
-          } else {
-            return 92;
-          }
-        icon: >
-          if (state == "off") {
-            return "mdi:door-closed";
-          } else {
-            return "mdi:door-open";
-          }
-    sensor.*_battery:
+    sensor.*_battery*:
       templates:
         icon_color: >
           if (state > 40) {

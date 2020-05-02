@@ -29,6 +29,11 @@ bedroom_free_first_active:
 bedroom_free_second_active:
   name: Bedroom - 2. interval
 
+bedroom_work_ac_active:
+  name: Bedroom - interval
+bedroom_free_ac_active:
+  name: Bedroom - interval
+
 kids_work_first_active:
   name: Kids room - 1. interval
 kids_work_second_active:
@@ -39,6 +44,11 @@ kids_free_first_active:
 kids_free_second_active:
   name: Kids room - 2. interval
 
+kids_work_ac_active:
+  name: Kids room - interval
+kids_free_ac_active:
+  name: Kids room - interval
+
 living_work_first_active:
   name: Living room - 1. interval
 living_work_second_active:
@@ -48,6 +58,11 @@ living_free_first_active:
   name: Living room - 1. interval
 living_free_second_active:
   name: Living room - 2. interval
+
+living_work_ac_active:
+  name: Living room - interval
+living_free_ac_active:
+  name: Living room - interval
 
 # Helping inputs
 hass_saved_states_loaded:

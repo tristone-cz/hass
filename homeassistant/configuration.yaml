@@ -65,6 +65,39 @@ zwave:
   usb_path: /dev/usbzwave
   network_key: !secret zwavenetwork_key
 
+# Broadlink IR for Air Conditioning
+switch:
+  # Bedroom
+  - platform: broadlink
+    host: !secret broadlink_bedroom_host
+    mac: !secret broadlink_bedroom_mac
+  # Kids
+  - platform: broadlink
+    host: !secret broadlink_kids_host
+    mac: !secret broadlink_kids_mac
+  # Living
+  - platform: broadlink
+    host: !secret broadlink_living_host
+    mac: !secret broadlink_living_mac
+
+climate:
+  - platform: smartir
+    name: AC_bedroom
+    unique_id: ac_bedroom
+    device_code: 1402
+    controller_data: !secret broadlink_bedroom_host
+  - platform: smartir
+    name: AC_kids
+    unique_id: ac_kids
+    device_code: 1402
+    controller_data: !secret broadlink_kids_host
+  - platform: smartir
+    name: AC_living
+    unique_id: ac_living
+    device_code: 1402
+    controller_data: !secret broadlink_living_host
+
+smartir:
 
 mqtt:
   discovery: true
@@ -88,6 +121,11 @@ notify:
   - name: pushbullet_jirka
     platform: pushbullet
     api_key: !secret pushbullet_apikey_jirka
+  - name: pushover
+    platform: pushover
+    api_key: !secret pushover_apikey
+    user_key: !secret pushover_userkey
+
 
 #group: !include groups.yaml
 automation: !include_dir_list automation 
@@ -96,6 +134,7 @@ script: !include scripts.yaml
 input_boolean: !include input/boolean.yaml
 #input_select: !include input/select.yaml
 input_number: !include input/number.yaml
+input_datetime: !include input/datetime.yaml
 
 alert: !include_dir_named alerts
 
@@ -104,256 +143,14 @@ binary_sensor: !include_dir_list binary_sensors
 
 # Enables support for tracking state changes over time
 history:
-  include:
-    entities:
-      - sensor.door_kids_battery
-      - sensor.door_living_battery
-      - sensor.smoke_bedroom_battery
-      - sensor.smoke_children_battery
-      - sensor.smoke_hall_battery
-      - sensor.smoke_living_battery
-      - sensor.thermometer_bedroom_battery
-      - sensor.thermometer_kids_battery
-      - sensor.thermometer_kitchen_battery
-      - sensor.thermostat_bedroom_battery
-      - sensor.thermostat_kids_battery
-      - sensor.thermostat_living_battery
-      - sensor.water_basinleft_battery
-      - sensor.water_basinright_battery
-      - sensor.water_kitchen_battery
-      - sensor.water_washmachine_battery
-      - sensor.window_bedroom_battery
-      - sensor.window_kids_battery
-      - sensor.window_living_battery
-      - sensor.thermostat_bedroom_target_temperature
-      - sensor.thermostat_kids_target_temperature
-      - sensor.thermostat_living_target_temperature
-#      - binary_sensor.door_window_sensor_158d0001b7bc15
-      - binary_sensor.0x00158d0001b7bc15_contact
-#      - binary_sensor.door_window_sensor_158d0001b959d8
-#      - binary_sensor.door_window_sensor_158d0001b95a13
-      - binary_sensor.0x00158d0001b959d8_contact
-      - binary_sensor.0x00158d0001b95a13_contact
-#      - binary_sensor.door_window_sensor_158d0001de657f
-      - binary_sensor.0x00158d0001de657f_contact
-#      - binary_sensor.door_window_sensor_158d0001f406fb
-      - binary_sensor.0x00158d0001f406fb_contact
-      - binary_sensor.smoke_sensor_158d0001b71c0f
-#      - binary_sensor.smoke_sensor_158d0001b79326
-      - binary_sensor.0x00158d0001b79326_smoke
-#      - binary_sensor.smoke_sensor_158d0001b7d5c8
-      - binary_sensor.0x00158d0001b7d5c8_smoke
-#      - binary_sensor.smoke_sensor_158d0001b7f68b
-      - binary_sensor.0x00158d0001b7f68b_smoke
-      - binary_sensor.smoke_sensor_kitchen
-#      - binary_sensor.water_leak_sensor_158d0001bb383d
-#      - binary_sensor.water_leak_sensor_158d0001bb71f5
-#      - binary_sensor.water_leak_sensor_158d0001bb7219
-#      - binary_sensor.water_leak_sensor_158d0001bb7a09
-      - binary_sensor.0x00158d0001bb383d_water_leak
-      - binary_sensor.0x00158d0001bb71f5_water_leak
-      - binary_sensor.0x00158d0001bb7219_water_leak
-      - binary_sensor.0x00158d0001bb7a09_water_leak
-      - sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_2
-      - sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_3
-      - sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_4
-#      - sensor.humidity_158d0001fa6e13
-      - sensor.0x00158d0001fa6e13_humidity
-#      - sensor.humidity_158d00020186c6
-      - sensor.0x00158d00020186c6_humidity
-#      - sensor.humidity_158d00020187f6
-      - sensor.0x00158d00020187f6_humidity
-      - sensor.illumination_7811dcb1f507
-#      - sensor.pressure_158d0001fa6e13
-      - sensor.0x00158d0001fa6e13_pressure
-#      - sensor.pressure_158d00020186c6
-      - sensor.0x00158d00020186c6_pressure
-#      - sensor.pressure_158d00020187f6
-      - sensor.0x00158d00020187f6_pressure
-#      - sensor.temperature_158d0001fa6e13
-      - sensor.0x00158d0001fa6e13_temperature
-#      - sensor.temperature_158d00020186c6
-      - sensor.0x00158d00020186c6_temperature
-#      - sensor.temperature_158d00020187f6
-      - sensor.0x00158d00020187f6_temperature
 
 # Tracked history is kept for 10 days
 recorder:
   purge_keep_days: 30
-  include:
-    entities:
-      - sensor.door_kids_battery
-      - sensor.door_living_battery
-      - sensor.heating_enabled
-      - sensor.smoke_bedroom_battery
-      - sensor.smoke_children_battery
-      - sensor.smoke_hall_battery
-      - sensor.smoke_living_battery
-      - sensor.thermometer_bedroom_battery
-      - sensor.thermometer_kids_battery
-      - sensor.thermometer_kitchen_battery
-      - sensor.thermostat_bedroom_battery
-      - sensor.thermostat_bedroom_target_temperature
-      - sensor.thermostat_kids_battery
-      - sensor.thermostat_kids_target_temperature
-      - sensor.thermostat_living_battery
-      - sensor.thermostat_living_target_temperature
-      - sensor.water_basinleft_battery
-      - sensor.water_basinright_battery
-      - sensor.water_kitchen_battery
-      - sensor.water_washmachine_battery
-      - sensor.window_bedroom_battery
-      - sensor.window_kids_battery
-      - sensor.window_living_battery
-      - input_boolean.vacation_mode
-      - input_boolean.heating_season
-      - binary_sensor.heating_enabled
-      - input_boolean.thermostat_bedroom_keepauto
-      - input_boolean.bedroom_work_first_active
-      - input_boolean.bedroom_work_second_active
-      - input_boolean.bedroom_free_first_active
-      - input_boolean.bedroom_free_second_active
-      - input_boolean.thermostat_kids_keepauto
-      - input_boolean.kids_work_first_active
-      - input_boolean.kids_work_second_active
-      - input_boolean.kids_free_first_active
-      - input_boolean.kids_free_second_active
-      - input_boolean.thermostat_living_keepauto
-      - input_boolean.living_work_first_active
-      - input_boolean.living_work_second_active
-      - input_boolean.living_free_first_active
-      - input_boolean.living_free_second_active
-      - input_number.bedroom_high_temperature
-      - input_number.bedroom_low_temperature
-      - input_number.bedroom_hour_first_on
-      - input_number.bedroom_minute_first_on
-      - input_number.bedroom_hour_first_off
-      - input_number.bedroom_minute_first_off
-      - input_number.bedroom_hour_second_on
-      - input_number.bedroom_minute_second_on
-      - input_number.bedroom_hour_second_off
-      - input_number.bedroom_minute_second_off
-      - input_number.bedroom_free_hour_first_on
-      - input_number.bedroom_free_minute_first_on
-      - input_number.bedroom_free_hour_first_off
-      - input_number.bedroom_free_minute_first_off
-      - input_number.bedroom_free_hour_second_on
-      - input_number.bedroom_free_minute_second_on
-      - input_number.bedroom_free_hour_second_off
-      - input_number.bedroom_free_minute_second_off
-      - input_number.kids_high_temperature
-      - input_number.kids_low_temperature
-      - input_number.kids_hour_first_on
-      - input_number.kids_minute_first_on
-      - input_number.kids_hour_first_off
-      - input_number.kids_minute_first_off
-      - input_number.kids_hour_second_on
-      - input_number.kids_minute_second_on
-      - input_number.kids_hour_second_off
-      - input_number.kids_minute_second_off
-      - input_number.kids_free_hour_first_on
-      - input_number.kids_free_minute_first_on
-      - input_number.kids_free_hour_first_off
-      - input_number.kids_free_minute_first_off
-      - input_number.kids_free_hour_second_on
-      - input_number.kids_free_minute_second_on
-      - input_number.kids_free_hour_second_off
-      - input_number.kids_free_minute_second_off
-      - input_number.living_high_temperature
-      - input_number.living_low_temperature
-      - input_number.living_hour_first_on
-      - input_number.living_minute_first_on
-      - input_number.living_hour_first_off
-      - input_number.living_minute_first_off
-      - input_number.living_hour_second_on
-      - input_number.living_minute_second_on
-      - input_number.living_hour_second_off
-      - input_number.living_minute_second_off
-      - input_number.living_free_hour_first_on
-      - input_number.living_free_minute_first_on
-      - input_number.living_free_hour_first_off
-      - input_number.living_free_minute_first_off
-      - input_number.living_free_hour_second_on
-      - input_number.living_free_minute_second_on
-      - input_number.living_free_hour_second_off
-      - input_number.living_free_minute_second_off
-      - alert.alert_smoke_bedroom
-      - alert.alert_smoke_hall
-      - alert.alert_smoke_kids
-      - alert.alert_smoke_living
-      - alert.alert_temperature_kitchen
-      - alert.alert_water_basinleft
-      - alert.alert_water_basinright
-      - alert.alert_water_kitchen
-      - alert.alert_water_washmachine
-#      - binary_sensor.door_window_sensor_158d0001b7bc15
-      - binary_sensor.0x00158d0001b7bc15_contact
-#      - binary_sensor.door_window_sensor_158d0001b959d8
-#      - binary_sensor.door_window_sensor_158d0001b95a13
-      - binary_sensor.0x00158d0001b959d8_contact
-      - binary_sensor.0x00158d0001b95a13_contact
-#      - binary_sensor.door_window_sensor_158d0001de657f
-      - binary_sensor.0x00158d0001de657f_contact
-#      - binary_sensor.door_window_sensor_158d0001f406fb
-      - binary_sensor.0x00158d0001f406fb_contact
-      - binary_sensor.smoke_sensor_158d0001b71c0f
-#      - binary_sensor.smoke_sensor_158d0001b79326
-      - binary_sensor.0x00158d0001b79326_smoke
-#      - binary_sensor.smoke_sensor_158d0001b7d5c8
-      - binary_sensor.0x00158d0001b7d5c8_smoke
-#      - binary_sensor.smoke_sensor_158d0001b7f68b
-      - binary_sensor.0x00158d0001b7f68b_smoke
-      - binary_sensor.smoke_sensor_kitchen
-#      - binary_sensor.water_leak_sensor_158d0001bb383d
-#      - binary_sensor.water_leak_sensor_158d0001bb71f5
-#      - binary_sensor.water_leak_sensor_158d0001bb7219
-#      - binary_sensor.water_leak_sensor_158d0001bb7a09
-      - binary_sensor.0x00158d0001bb383d_water_leak
-      - binary_sensor.0x00158d0001bb71f5_water_leak
-      - binary_sensor.0x00158d0001bb7219_water_leak
-      - binary_sensor.0x00158d0001bb7a09_water_leak
-      - sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_2
-      - sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_3
-      - sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_4
-      - sensor.illumination_7811dcb1f507
-#      - sensor.humidity_158d0001fa6e13
-      - sensor.0x00158d0001fa6e13_humidity
-#      - sensor.humidity_158d00020186c6
-      - sensor.0x00158d00020186c6_humidity
-#      - sensor.humidity_158d00020187f6
-      - sensor.0x00158d00020187f6_humidity
-      - sensor.illumination_7811dcb1f507
-#      - sensor.pressure_158d0001fa6e13
-      - sensor.0x00158d0001fa6e13_pressure
-#      - sensor.pressure_158d00020186c6
-      - sensor.0x00158d00020186c6_pressure
-#      - sensor.pressure_158d00020187f6
-      - sensor.0x00158d00020187f6_pressure
-#      - sensor.temperature_158d0001fa6e13
-      - sensor.0x00158d0001fa6e13_temperature
-#      - sensor.temperature_158d00020186c6
-      - sensor.0x00158d00020186c6_temperature
-#      - sensor.temperature_158d00020187f6
-      - sensor.0x00158d00020187f6_temperature
-      - sensor.smoke_bedroom_battery
-      - sensor.smoke_children_battery
-      - sensor.smoke_hall_battery
-      - sensor.smoke_living_battery
-      - sensor.thermometer_bedroom_battery
-      - sensor.thermometer_kids_battery
-      - sensor.thermometer_kitchen_battery
-      - sensor.thermostat_bedroom_battery
-      - sensor.thermostat_bedroom_target_temperature
-      - sensor.thermostat_kids_battery
-      - sensor.thermostat_kids_target_temperature
-      - sensor.thermostat_living_battery
-      - sensor.thermostat_living_target_temperature
-      - sensor.water_basinleft_battery
-      - sensor.water_basinright_battery
-      - sensor.water_kitchen_battery
-      - sensor.water_washmachine_battery
-      - sensor.window_bedroom_battery
-      - sensor.window_kids_battery
-      - sensor.window_living_battery
+  purge_interval: 1
 
-
+panel_custom:
+  - name: zwavegraph2
+    sidebar_title: Z-Wave Graph
+    sidebar_icon: mdi:access-point-network
+    url_path: zwave

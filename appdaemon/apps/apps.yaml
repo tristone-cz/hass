@@ -1,20 +1,28 @@
-HassStatesSave:
-  module: hass_states_save
-  class: HassStatesSave
-  path: /home/homeassistant/.homeassistant/hass_saved_states.ini
-  isloaded_switch: input_boolean.hass_saved_states_loaded
-  constrain_input_boolean: input_boolean.hass_saved_states_loaded
+#HassStatesSave:
+#  module: hass_states_save
+#  class: HassStatesSave
+#  path: /home/homeassistant/.homeassistant/hass_saved_states.ini
+#  isloaded_switch: input_boolean.hass_saved_states_loaded
+#  constrain_input_boolean: input_boolean.hass_saved_states_loaded
 
-HassStatesLoad:
-  module: hass_states_load
-  class: HassStatesLoad
-  path: /home/homeassistant/.homeassistant/hass_saved_states.ini
-  isloaded_switch: input_boolean.hass_saved_states_loaded
+#HassStatesLoad:
+#  module: hass_states_load
+#  class: HassStatesLoad
+#  path: /home/homeassistant/.homeassistant/hass_saved_states.ini
+#  isloaded_switch: input_boolean.hass_saved_states_loaded
 
 schedy_heating:
   module: hass_apps_loader
   class: SchedyApp
   debug: false
+
+  # Helper function to handle time intervals crossing midnight
+  expression_environment: |
+    def time_between(start, end):
+        current = time.hour * 60 + time.minute + 1
+        if start >= end:
+            return current >= start or current < end
+        return current >= start and current < end
 
   actor_type: thermostat
 
@@ -23,12 +31,12 @@ schedy_heating:
   # -----------------------------------------------
   schedule_prepend:
   # Valve maintenance
-# Replaced by HA automation and setting climate presets; kept for evidence
-#  - v: 28
-#    rules:
-#    - weekdays: 4
-#      rules:
-#      - { start: "10:21", end: "10:29" }
+  # Replaced by HA automation and setting climate presets; kept for evidence
+  #  - v: 28
+  #    rules:
+  #    - weekdays: 4
+  #      rules:
+  #      - { start: "10:21", end: "10:29" }
   # Master switch
   - x: "OFF if is_off('binary_sensor.heating_enabled') else Next()"
   # Open windows / doors
@@ -49,7 +57,6 @@ schedy_heating:
         climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode:
 
       watched_entities:
-      #- binary_sensor.0x00158d0001f406fb_contact
       - binary_sensor.bedroom_window_delayed
       - input_number.bedroom_high_temperature
       - input_number.bedroom_low_temperature
@@ -68,19 +75,20 @@ schedy_heating:
 
       schedule:
       # Work day, first interval of high temperature
-      - x: state("input_number.bedroom_high_temperature") if (state("input_boolean.bedroom_work_first_active") == "on") and (state("binary_sensor.workday_status") == "on") and (time.hour*60+time.minute+1) in range(int(state("sensor.bedroom_work_first_on")), int(state("sensor.bedroom_work_first_off"))) else Next()
+      - x: state("input_number.bedroom_high_temperature") if (state("input_boolean.bedroom_work_first_active") == "on") and (state("binary_sensor.workday_status") == "on") and time_between(int(state('sensor.bedroom_work_first_on')), int(state('sensor.bedroom_work_first_off'))) else Next()
 
       # Work day, second interval of high temperature
-      - x: state("input_number.bedroom_high_temperature") if (state("input_boolean.bedroom_work_second_active") == "on") and (state("binary_sensor.workday_status") == "on") and (time.hour*60+time.minute+1) in range(int(state("sensor.bedroom_work_second_on")), int(state("sensor.bedroom_work_second_off"))) else Next()
+      - x: state("input_number.bedroom_high_temperature") if (state("input_boolean.bedroom_work_second_active") == "on") and (state("binary_sensor.workday_status") == "on") and time_between(int(state('sensor.bedroom_work_second_on')), int(state('sensor.bedroom_work_second_off'))) else Next()
 
       # Free day, first interval of high temperature
-      - x: state("input_number.bedroom_high_temperature") if (state("input_boolean.bedroom_free_first_active") == "on") and (state("binary_sensor.workday_status") == "off") and (time.hour*60+time.minute+1) in range(int(state("sensor.bedroom_free_first_on")), int(state("sensor.bedroom_free_first_off"))) else Next()
+      - x: state("input_number.bedroom_high_temperature") if (state("input_boolean.bedroom_free_first_active") == "on") and (state("binary_sensor.workday_status") == "off") and time_between(int(state('sensor.bedroom_free_first_on')), int(state('sensor.bedroom_free_first_off'))) else Next()
 
       # Free day, second interval of high temperature
-      - x: state("input_number.bedroom_high_temperature") if (state("input_boolean.bedroom_free_second_active") == "on") and (state("binary_sensor.workday_status") == "off") and (time.hour*60+time.minute+1)in range(int(state("sensor.bedroom_free_second_on")), int(state("sensor.bedroom_free_second_off"))) else Next()
+      - x: state("input_number.bedroom_high_temperature") if (state("input_boolean.bedroom_free_second_active") == "on") and (state("binary_sensor.workday_status") == "off") and time_between(int(state('sensor.bedroom_free_second_on')), int(state('sensor.bedroom_free_second_off'))) else Next()
 
       # At all other times, set temperature to low value
       - x: state("input_number.bedroom_low_temperature")
+
 
     # -----------------------------------------------
     # Plan for living room
@@ -91,8 +99,6 @@ schedy_heating:
         climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_3:
 
       watched_entities:
-      #- binary_sensor.0x00158d0001b95a13_contact
-      #- binary_sensor.0x00158d0001b959d8_contact
       - binary_sensor.living_window_delayed
       - binary_sensor.living_door_delayed
       - input_number.living_high_temperature
@@ -112,16 +118,16 @@ schedy_heating:
 
       schedule:
       # Work day, first interval of high temperature
-      - x: state("input_number.living_high_temperature") if (state("input_boolean.living_work_first_active") == "on") and (state("binary_sensor.workday_status") == "on") and (time.hour*60+time.minute+1) in range(int(state("sensor.living_work_first_on")), int(state("sensor.living_work_first_off"))) else Next()
+      - x: state("input_number.living_high_temperature") if (state("input_boolean.living_work_first_active") == "on") and (state("binary_sensor.workday_status") == "on") and time_between(int(state('sensor.living_work_first_on')), int(state('sensor.living_work_first_off'))) else Next()
 
       # Work day, second interval of high temperature
-      - x: state("input_number.living_high_temperature") if (state("input_boolean.living_work_second_active") == "on") and (state("binary_sensor.workday_status") == "on") and (time.hour*60+time.minute+1) in range(int(state("sensor.living_work_second_on")), int(state("sensor.living_work_second_off"))) else Next()
+      - x: state("input_number.living_high_temperature") if (state("input_boolean.living_work_second_active") == "on") and (state("binary_sensor.workday_status") == "on") and time_between(int(state('sensor.living_work_second_on')), int(state('sensor.living_work_second_off'))) else Next()
 
       # Free day, first interval of high temperature
-      - x: state("input_number.living_high_temperature") if (state("input_boolean.living_free_first_active") == "on") and (state("binary_sensor.workday_status") == "off") and (time.hour*60+time.minute+1) in range(int(state("sensor.living_free_first_on")), int(state("sensor.living_free_first_off"))) else Next()
+      - x: state("input_number.living_high_temperature") if (state("input_boolean.living_free_first_active") == "on") and (state("binary_sensor.workday_status") == "off") and time_between(int(state('sensor.living_free_first_on')), int(state('sensor.living_free_first_off'))) else Next()
 
       # Free day, second interval of high temperature
-      - x: state("input_number.living_high_temperature") if (state("input_boolean.living_free_second_active") == "on") and (state("binary_sensor.workday_status") == "off") and (time.hour*60+time.minute+1)in range(int(state("sensor.living_free_second_on")), int(state("sensor.living_free_second_off"))) else Next()
+      - x: state("input_number.living_high_temperature") if (state("input_boolean.living_free_second_active") == "on") and (state("binary_sensor.workday_status") == "off") and time_between(int(state('sensor.living_free_second_on')), int(state('sensor.living_free_second_off'))) else Next()
 
       # At all other times, set temperature to low value
       - x: state("input_number.living_low_temperature")
@@ -135,8 +141,6 @@ schedy_heating:
         climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_2:
 
       watched_entities:
-      #- binary_sensor.door_window_sensor_158d0001b7bc15
-      #- binary_sensor.door_window_sensor_158d0001de657f
       - binary_sensor.kids_window_delayed
       - binary_sensor.kids_door_delayed
       - input_number.kids_high_temperature
@@ -156,16 +160,131 @@ schedy_heating:
 
       schedule:
       # Work day, first interval of high temperature
-      - x: state("input_number.kids_high_temperature") if (state("input_boolean.kids_work_first_active") == "on") and (state("binary_sensor.workday_status") == "on") and (time.hour*60+time.minute+1) in range(int(state("sensor.kids_work_first_on")), int(state("sensor.kids_work_first_off"))) else Next()
+      - x: state("input_number.kids_high_temperature") if (state("input_boolean.kids_work_first_active") == "on") and (state("binary_sensor.workday_status") == "on") and time_between(int(state('sensor.kids_work_first_on')), int(state('sensor.kids_work_first_off'))) else Next()
 
       # Work day, second interval of high temperature
-      - x: state("input_number.kids_high_temperature") if (state("input_boolean.kids_work_second_active") == "on") and (state("binary_sensor.workday_status") == "on") and (time.hour*60+time.minute+1) in range(int(state("sensor.kids_work_second_on")), int(state("sensor.kids_work_second_off"))) else Next()
+      - x: state("input_number.kids_high_temperature") if (state("input_boolean.kids_work_second_active") == "on") and (state("binary_sensor.workday_status") == "on") and time_between(int(state('sensor.kids_work_second_on')), int(state('sensor.kids_work_second_off'))) else Next()
 
       # Free day, first interval of high temperature
-      - x: state("input_number.kids_high_temperature") if (state("input_boolean.kids_free_first_active") == "on") and (state("binary_sensor.workday_status") == "off") and (time.hour*60+time.minute+1) in range(int(state("sensor.kids_free_first_on")), int(state("sensor.kids_free_first_off"))) else Next()
+      - x: state("input_number.kids_high_temperature") if (state("input_boolean.kids_free_first_active") == "on") and (state("binary_sensor.workday_status") == "off") and time_between(int(state('sensor.kids_free_first_on')), int(state('sensor.kids_free_first_off'))) else Next()
 
       # Free day, second interval of high temperature
-      - x: state("input_number.kids_high_temperature") if (state("input_boolean.kids_free_second_active") == "on") and (state("binary_sensor.workday_status") == "off") and (time.hour*60+time.minute+1)in range(int(state("sensor.kids_free_second_on")), int(state("sensor.kids_free_second_off"))) else Next()
+      - x: state("input_number.kids_high_temperature") if (state("input_boolean.kids_free_second_active") == "on") and (state("binary_sensor.workday_status") == "off") and time_between(int(state('sensor.kids_free_second_on')), int(state('sensor.kids_free_second_off'))) else Next()
 
       # At all other times, set temperature to low value
       - x: state("input_number.kids_low_temperature")
+
+schedy_cooling:
+  module: hass_apps_loader
+  class: SchedyApp
+  debug: false
+
+  # Helper function to handle time intervals crossing midnight
+  expression_environment: |
+    def time_between(start, end):
+        current = time.hour * 60 + time.minute + 1
+        if start >= end:
+            return current >= start or current < end
+        return current >= start and current < end
+
+  actor_type: thermostat
+
+  # -----------------------------------------------
+  # Common for all rooms
+  # -----------------------------------------------
+  schedule_prepend:
+  # Master switch
+  - x: "OFF if is_off('binary_sensor.cooling_enabled') else Next()"
+
+  watched_entities:
+  - binary_sensor.cooling_enabled
+  - binary_sensor.workday_status
+  - sensor.today_minutes
+
+  rooms:
+    # -----------------------------------------------
+    # Plan for bedroom
+    # -----------------------------------------------
+    bedroom:
+      actors:
+        climate.bedroom_ac:
+          hvac_mode_on: cool
+
+      watched_entities:
+      - input_number.bedroom_ac_trigger_temperature
+      - input_number.bedroom_ac_cool_temperature
+      - input_boolean.bedroom_work_ac_active
+      - input_boolean.bedroom_free_ac_active
+      - sensor.bedroom_ac_on
+      - sensor.bedroom_ac_off
+      - sensor.bedroom_free_ac_on
+      - sensor.bedroom_free_ac_off
+      - sensor.bedroom_max_temperature
+
+      schedule:
+      # Work day
+      - x: state("input_number.bedroom_ac_cool_temperature") if (state("input_boolean.bedroom_work_ac_active") == "on") and (state("binary_sensor.workday_status") == "on") and time_between(int(state("sensor.bedroom_ac_on")), int(state("sensor.bedroom_ac_off"))) and (float(state("sensor.bedroom_max_temperature")) >= float(state("input_number.bedroom_ac_trigger_temperature"))) else Next()
+
+      # Free day
+      - x: state("input_number.bedroom_ac_cool_temperature") if (state("input_boolean.bedroom_free_ac_active") == "on") and (state("binary_sensor.workday_status") == "off") and time_between(int(state("sensor.bedroom_free_ac_on")), int(state("sensor.bedroom_free_ac_off"))) and (float(state("sensor.bedroom_max_temperature")) >= float(state("input_number.bedroom_ac_trigger_temperature"))) else Next()
+
+      # At all other times, set temperature to low value
+      - v: "OFF"
+
+    # -----------------------------------------------
+    # Plan for living room
+    # -----------------------------------------------
+    living:
+      actors:
+        climate.ac_living:
+          hvac_mode_on: cool
+
+      watched_entities:
+      - input_number.living_ac_trigger_temperature
+      - input_number.living_ac_cool_temperature
+      - input_boolean.living_work_ac_active
+      - input_boolean.living_free_ac_active
+      - sensor.living_ac_on
+      - sensor.living_ac_off
+      - sensor.living_free_ac_on
+      - sensor.living_free_ac_off
+      - sensor.living_max_temperature
+
+      schedule:
+      # Work day
+      - x: state("input_number.living_ac_cool_temperature") if (state("input_boolean.living_work_ac_active") == "on") and (state("binary_sensor.workday_status") == "on") and time_between(int(state("sensor.living_ac_on")), int(state("sensor.living_ac_off"))) and (float(state("sensor.living_max_temperature")) >= float(state("input_number.living_ac_trigger_temperature"))) else Next()
+
+      # Free day
+      - x: state("input_number.living_ac_cool_temperature") if (state("input_boolean.living_free_ac_active") == "on") and (state("binary_sensor.workday_status") == "off") and time_between(int(state("sensor.living_free_ac_on")), int(state("sensor.living_free_ac_off"))) and (float(state("sensor.living_max_temperature")) >= float(state("input_number.living_ac_trigger_temperature"))) else Next()
+
+      # At all other times, set temperature to low value
+      - v: "OFF"
+
+    # -----------------------------------------------
+    # Plan for kids room
+    # -----------------------------------------------
+    kids:
+      actors:
+        climate.ac_kids:
+          hvac_mode_on: cool
+
+      watched_entities:
+      - input_number.kids_ac_trigger_temperature
+      - input_number.kids_ac_cool_temperature
+      - input_boolean.kids_work_ac_active
+      - input_boolean.kids_free_ac_active
+      - sensor.kids_ac_on
+      - sensor.kids_ac_off
+      - sensor.kids_free_ac_on
+      - sensor.kids_free_ac_off
+      - sensor.kids_max_temperature
+
+      schedule:
+      # Work day
+      - x: state("input_number.kids_ac_cool_temperature") if (state("input_boolean.kids_work_ac_active") == "on") and (state("binary_sensor.workday_status") == "on") and time_between(int(state("sensor.kids_ac_on")), int(state("sensor.kids_ac_off"))) and (float(state("sensor.kids_max_temperature")) >= float(state("input_number.kids_ac_trigger_temperature"))) else Next()
+
+      # Free day
+      - x: state("input_number.kids_ac_cool_temperature") if (state("input_boolean.kids_free_ac_active") == "on") and (state("binary_sensor.workday_status") == "off") and time_between(int(state("sensor.kids_free_ac_on")), int(state("sensor.kids_free_ac_off"))) and (float(state("sensor.kids_max_temperature")) >= float(state("input_number.kids_ac_trigger_temperature"))) else Next()
+
+      # At all other times, set temperature to low value
+      - v: "OFF"

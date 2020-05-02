@@ -177,7 +177,7 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "MiJia wireless switch (WXKG01LM)",
-                "name": "xiaomi_button",
+                "name": "0x00158d0002030217",
                 "name_by_user": null,
                 "sw_version": "Zigbee2mqtt 1.8.0",
                 "via_device_id": null
@@ -238,7 +238,7 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "Aqara water leak sensor (SJCGQ11LM)",
-                "name": "water_washmachine",
+                "name": "0x00158d0001bb7219",
                 "name_by_user": "water_washmachine",
                 "sw_version": "Zigbee2mqtt 1.8.0",
                 "via_device_id": null
@@ -258,7 +258,7 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "Aqara water leak sensor (SJCGQ11LM)",
-                "name": "water_leftbasin",
+                "name": "0x00158d0001bb383d",
                 "name_by_user": "water_leftbasin",
                 "sw_version": "Zigbee2mqtt 1.8.0",
                 "via_device_id": null
@@ -278,7 +278,7 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "Aqara water leak sensor (SJCGQ11LM)",
-                "name": "water_rightbasin",
+                "name": "0x00158d0001bb71f5",
                 "name_by_user": "water_rightbasin",
                 "sw_version": "Zigbee2mqtt 1.8.0",
                 "via_device_id": null
@@ -298,7 +298,7 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "MiJia Honeywell smoke detector (JTYJ-GD-01LM/BW)",
-                "name": "smoke_hall",
+                "name": "0x00158d0001b7d5c8",
                 "name_by_user": "smoke_hall",
                 "sw_version": "Zigbee2mqtt 1.8.0",
                 "via_device_id": null
@@ -420,7 +420,7 @@
                 "model": "Aqara temperature, humidity and pressure sensor (WSDCGQ11LM)",
                 "name": "0x00158d00020187f6",
                 "name_by_user": "sensors_bedroom",
-                "sw_version": "Zigbee2mqtt 1.6.0",
+                "sw_version": "Zigbee2mqtt 1.8.0",
                 "via_device_id": null
             },
             {
@@ -440,7 +440,7 @@
                 "model": "MiJia door & window contact sensor (MCCGQ01LM)",
                 "name": "0x00158d0001f406fb",
                 "name_by_user": "window_bedroom",
-                "sw_version": "Zigbee2mqtt 1.6.0",
+                "sw_version": "Zigbee2mqtt 1.8.0",
                 "via_device_id": null
             },
             {
@@ -460,7 +460,7 @@
                 "model": "MiJia Honeywell smoke detector (JTYJ-GD-01LM/BW)",
                 "name": "0x00158d0001b7f68b",
                 "name_by_user": "smoke_bedroom",
-                "sw_version": "Zigbee2mqtt 1.6.0",
+                "sw_version": "Zigbee2mqtt 1.8.0",
                 "via_device_id": null
             },
             {
@@ -480,7 +480,7 @@
                 "model": "Aqara temperature, humidity and pressure sensor (WSDCGQ11LM)",
                 "name": "0x00158d00020186c6",
                 "name_by_user": "sensors_kids",
-                "sw_version": "Zigbee2mqtt 1.5.1",
+                "sw_version": "Zigbee2mqtt 1.8.0",
                 "via_device_id": null
             },
             {
@@ -500,7 +500,7 @@
                 "model": "Aqara door & window contact sensor (MCCGQ11LM)",
                 "name": "0x00158d0001b7bc15",
                 "name_by_user": "door_kids",
-                "sw_version": "Zigbee2mqtt 1.5.1",
+                "sw_version": "Zigbee2mqtt 1.8.0",
                 "via_device_id": null
             },
             {
@@ -520,7 +520,7 @@
                 "model": "Aqara door & window contact sensor (MCCGQ11LM)",
                 "name": "0x00158d0001de657f",
                 "name_by_user": "windows_kids",
-                "sw_version": "Zigbee2mqtt 1.5.1",
+                "sw_version": "Zigbee2mqtt 1.8.0",
                 "via_device_id": null
             },
             {
@@ -540,7 +540,27 @@
                 "model": "MiJia Honeywell smoke detector (JTYJ-GD-01LM/BW)",
                 "name": "0x00158d0001b71c0f",
                 "name_by_user": "smoke_kids",
-                "sw_version": "Zigbee2mqtt 1.5.1",
+                "sw_version": "Zigbee2mqtt 1.8.0",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "id": "60d57377d1024da7943e59ba5b3a2461",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d0001f5367e"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "Aqara temperature, humidity and pressure sensor (WSDCGQ11LM)",
+                "name": "0x00158d0001f5367e",
+                "name_by_user": null,
+                "sw_version": "Zigbee2mqtt 1.8.0",
                 "via_device_id": null
             }
         ]

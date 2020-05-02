@@ -1,0 +1,11 @@
+date_show_ac:
+  name: "Date to show A/C controls"
+  icon: mdi:air-conditioner
+  has_date: true
+  has_time: false
+date_hide_ac:
+  name: "Date to hide A/C controls"
+  icon: mdi:air-conditioner
+  has_date: true
+  has_time: false
+

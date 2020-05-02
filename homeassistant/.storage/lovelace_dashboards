@@ -1,0 +1,17 @@
+{
+    "data": {
+        "items": [
+            {
+                "icon": "mdi:tablet-android",
+                "id": "lovelace_kiosk",
+                "mode": "storage",
+                "require_admin": false,
+                "show_in_sidebar": true,
+                "title": "Kiosk",
+                "url_path": "lovelace-kiosk"
+            }
+        ]
+    },
+    "key": "lovelace_dashboards",
+    "version": 1
+}

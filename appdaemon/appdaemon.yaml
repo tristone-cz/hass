@@ -1,11 +1,23 @@
 appdaemon:
   threads: 10
   disable_apps: 0
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  time_zone: Europe/Prague
   plugins:
     HASS:
       type: hass
       ha_url: !secret ha_url
       token: !secret ha_token
-log:
-  logfile: /var/log/appdaemon
-  errorfile: /var/log/appdaemon.error
+logs:
+  main_log:
+    filename: /var/log/appdaemon
+  error_log:
+    filename: /var/log/appdaemon.error
+  access_log:
+    filename: /var/log/appdaemon.access
+  diag_log:
+    filename: /var/log/appdaemon.diag
+http:
+    url: http://127.0.0.1:5050

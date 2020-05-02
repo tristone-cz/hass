@@ -13,6 +13,5 @@ repeat:
   - 30
   - 60
 notifiers:
-  - pushbullet
-  - pushbullet_jirka
+  - pushover
 

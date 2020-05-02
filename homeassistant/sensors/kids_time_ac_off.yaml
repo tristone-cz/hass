@@ -1,0 +1,9 @@
+platform: template
+sensors:
+  kids_ac_off:
+    friendly_name: 'Čas vypnutí'
+    icon_template: mdi:timer-sand
+    entity_id:
+      - input_number.kids_ac_hour_off
+      - input_number.kids_ac_minute_off
+    value_template: '{{ states("input_number.kids_ac_hour_off")|int * 60 + states("kids_ac_minute_off")|int }}'

@@ -1,0 +1,48 @@
+{
+    "data": {
+        "items": [
+            {
+                "id": "6de11d54ead542809cf528982cb69918",
+                "type": "module",
+                "url": "/hacsfiles/mini-graph-card/mini-graph-card-bundle.js"
+            },
+            {
+                "id": "3829649ec0564ef0be0fa7030d7ea533",
+                "type": "module",
+                "url": "/hacsfiles/button-card/button-card.js"
+            },
+            {
+                "id": "db5c4d09796b4fbf8f88ca445b63b292",
+                "type": "module",
+                "url": "/hacsfiles/simple-thermostat/simple-thermostat.js"
+            },
+            {
+                "id": "7f5ab24b43d24b27a16d59009fabc997",
+                "type": "module",
+                "url": "/hacsfiles/lovelace-card-mod/card-mod.js"
+            },
+            {
+                "id": "f6ff2edd13964e82bed279ea37ffc765",
+                "type": "module",
+                "url": "/hacsfiles/lovelace-auto-entities/auto-entities.js"
+            },
+            {
+                "id": "e56b0a9fded2405ab118d259e39c6945",
+                "type": "module",
+                "url": "/hacsfiles/lovelace-state-switch/state-switch.js"
+            },
+            {
+                "id": "501dbf05fdfa4790b51cd01e53e7e953",
+                "type": "module",
+                "url": "/hacsfiles/custom-header/custom-header.js"
+            },
+            {
+                "id": "5886c2a33db34987960ba034d634d737",
+                "type": "module",
+                "url": "/hacsfiles/restriction-card/restriction-card.js"
+            }
+        ]
+    },
+    "key": "lovelace_resources",
+    "version": 1
+}

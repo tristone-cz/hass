@@ -1,0 +1,9 @@
+platform: template
+sensors:
+  living_free_ac_off:
+    friendly_name: 'Čas vypnutí'
+    icon_template: mdi:timer-sand
+    entity_id:
+      - input_number.living_ac_free_hour_off
+      - input_number.living_ac_free_minute_off
+    value_template: '{{ states("input_number.living_ac_free_hour_off")|int * 60 + states("living_ac_free_minute_off")|int }}'

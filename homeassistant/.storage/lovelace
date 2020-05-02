@@ -42,399 +42,545 @@
                 "hide_help": true,
                 "voice_hide": true
             },
-            "resources": [
-                {
-                    "type": "module",
-                    "url": "/community_plugin/mini-graph-card/mini-graph-card-bundle.js"
-                },
-                {
-                    "type": "module",
-                    "url": "/community_plugin/button-card/button-card.js"
-                },
-                {
-                    "type": "module",
-                    "url": "/community_plugin/simple-thermostat/simple-thermostat.js"
-                },
-                {
-                    "type": "module",
-                    "url": "/community_plugin/lovelace-card-mod/card-mod.js"
-                },
-                {
-                    "type": "module",
-                    "url": "/community_plugin/lovelace-auto-entities/auto-entities.js"
-                },
-                {
-                    "type": "module",
-                    "url": "/community_plugin/lovelace-state-switch/state-switch.js"
-                },
-                {
-                    "type": "module",
-                    "url": "/community_plugin/custom-header/custom-header.js"
-                },
-                {
-                    "type": "module",
-                    "url": "/community_plugin/restriction-card/restriction-card.js"
-                }
-            ],
-            "title": "Domov",
+            "title": "Home",
             "views": [
                 {
                     "background": "var(--background-image)",
                     "badges": [],
                     "cards": [
                         {
-                            "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_3",
-                            "fallback": "OFF",
-                            "sensors": [
-                                {
-                                    "entity": "sensor.thermostat_bedroom_battery",
-                                    "name": "Battery"
-                                }
-                            ],
-                            "step_size": 0.5,
-                            "style": ".mode-item.active {\n  color: #ff6d17 !important;\n}\n",
-                            "type": "custom:simple-thermostat"
-                        },
-                        {
                             "cards": [
                                 {
-                                    "cards": [
+                                    "card": {
+                                        "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_3",
+                                        "fallback": "OFF",
+                                        "sensors": [
+                                            {
+                                                "entity": "sensor.thermostat_living_battery",
+                                                "name": "Battery"
+                                            }
+                                        ],
+                                        "step_size": 0.5,
+                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "type": "custom:simple-thermostat"
+                                    },
+                                    "conditions": [
                                         {
-                                            "color_thresholds": [
-                                                {
-                                                    "color": "#1090f2",
-                                                    "value": 10
-                                                },
-                                                {
-                                                    "color": "#f39c12",
-                                                    "value": 16
-                                                },
-                                                {
-                                                    "color": "#c0392b",
-                                                    "value": 25
-                                                }
-                                            ],
-                                            "color_thresholds_transition": "hard",
-                                            "decimals": 1,
-                                            "entities": [
-                                                "sensor.0x00158d0001fa6e13_temperature"
-                                            ],
-                                            "hour24": true,
-                                            "points_per_hour": 1,
-                                            "show": {
-                                                "fill": false
-                                            },
-                                            "type": "custom:mini-graph-card"
-                                        },
-                                        {
-                                            "color_thresholds": [
-                                                {
-                                                    "color": "#f39c12",
-                                                    "value": 10
-                                                },
-                                                {
-                                                    "color": "#00C617",
-                                                    "value": 40
-                                                },
-                                                {
-                                                    "color": "#1090f2",
-                                                    "value": 60
-                                                }
-                                            ],
-                                            "color_thresholds_transition": "hard",
-                                            "decimals": 0,
-                                            "entities": [
-                                                "sensor.0x00158d0001fa6e13_humidity"
-                                            ],
-                                            "hour24": true,
-                                            "points_per_hour": 1,
-                                            "show": {
-                                                "fill": false
-                                            },
-                                            "type": "custom:mini-graph-card"
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "off"
                                         }
                                     ],
-                                    "type": "horizontal-stack"
+                                    "type": "conditional"
+                                },
+                                {
+                                    "card": {
+                                        "control": {
+                                            "_headings": true,
+                                            "fan": {
+                                                "2step": {
+                                                    "icon": "mdi:trending-down",
+                                                    "name": "2-Step"
+                                                },
+                                                "high": false,
+                                                "low": false,
+                                                "med": false,
+                                                "quiet": {
+                                                    "icon": "mdi:ear-hearing-off",
+                                                    "name": "Quiet"
+                                                },
+                                                "turbo": false,
+                                                "windfree": {
+                                                    "icon": "mdi:weather-windy",
+                                                    "name": "Wind Free"
+                                                }
+                                            },
+                                            "hvac": {
+                                                "dry": false,
+                                                "fan_only": false,
+                                                "heat": false,
+                                                "heat_cool": false
+                                            }
+                                        },
+                                        "entity": "climate.ac_living",
+                                        "hide": {
+                                            "temperature": true
+                                        },
+                                        "name": "Air conditioning - living room",
+                                        "step_size": 1,
+                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "type": "custom:simple-thermostat"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "on"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 },
                                 {
                                     "cards": [
                                         {
-                                            "entity": "binary_sensor.0x00158d0001b959d8_contact",
-                                            "hold_action": {
-                                                "action": "none"
-                                            },
-                                            "icon_height": "75px",
-                                            "show_icon": true,
-                                            "show_name": true,
-                                            "type": "entity-button"
+                                            "cards": [
+                                                {
+                                                    "color_thresholds": [
+                                                        {
+                                                            "color": "#1090f2",
+                                                            "value": 10
+                                                        },
+                                                        {
+                                                            "color": "#f39c12",
+                                                            "value": 16
+                                                        },
+                                                        {
+                                                            "color": "#c0392b",
+                                                            "value": 25
+                                                        }
+                                                    ],
+                                                    "color_thresholds_transition": "hard",
+                                                    "decimals": 1,
+                                                    "entities": [
+                                                        "sensor.0x00158d0001fa6e13_temperature"
+                                                    ],
+                                                    "hour24": true,
+                                                    "points_per_hour": 1,
+                                                    "show": {
+                                                        "fill": false
+                                                    },
+                                                    "type": "custom:mini-graph-card"
+                                                },
+                                                {
+                                                    "color_thresholds": [
+                                                        {
+                                                            "color": "#f39c12",
+                                                            "value": 10
+                                                        },
+                                                        {
+                                                            "color": "#00C617",
+                                                            "value": 40
+                                                        },
+                                                        {
+                                                            "color": "#1090f2",
+                                                            "value": 60
+                                                        }
+                                                    ],
+                                                    "color_thresholds_transition": "hard",
+                                                    "decimals": 0,
+                                                    "entities": [
+                                                        "sensor.0x00158d0001fa6e13_humidity"
+                                                    ],
+                                                    "hour24": true,
+                                                    "points_per_hour": 1,
+                                                    "show": {
+                                                        "fill": false
+                                                    },
+                                                    "type": "custom:mini-graph-card"
+                                                }
+                                            ],
+                                            "type": "horizontal-stack"
                                         },
                                         {
-                                            "entity": "binary_sensor.0x00158d0001b95a13_contact",
-                                            "hold_action": {
-                                                "action": "none"
-                                            },
-                                            "icon_height": "75px",
-                                            "show_icon": true,
-                                            "show_name": true,
-                                            "type": "entity-button"
+                                            "cards": [
+                                                {
+                                                    "entity": "binary_sensor.0x00158d0001b959d8_contact",
+                                                    "hold_action": {
+                                                        "action": "none"
+                                                    },
+                                                    "icon_height": "75px",
+                                                    "show_icon": true,
+                                                    "show_name": true,
+                                                    "type": "entity-button"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.0x00158d0001b95a13_contact",
+                                                    "hold_action": {
+                                                        "action": "none"
+                                                    },
+                                                    "icon_height": "75px",
+                                                    "show_icon": true,
+                                                    "show_name": true,
+                                                    "type": "entity-button"
+                                                }
+                                            ],
+                                            "type": "horizontal-stack"
                                         }
                                     ],
-                                    "type": "horizontal-stack"
+                                    "type": "vertical-stack"
+                                },
+                                {
+                                    "columns": 3,
+                                    "entities": [
+                                        {
+                                            "entity": "binary_sensor.0x00158d0001b71c0f_smoke"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.0x00158d0001b79326_smoke"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.0x00158d0001b7f68b_smoke"
+                                        }
+                                    ],
+                                    "type": "glance"
                                 }
                             ],
                             "type": "vertical-stack"
                         },
                         {
-                            "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode",
-                            "fallback": "OFF",
-                            "sensors": [
-                                {
-                                    "entity": "sensor.thermostat_living_battery",
-                                    "name": "Battery"
-                                }
-                            ],
-                            "step_size": 0.5,
-                            "style": ".mode-item.active {\n  color: #ff6d17 !important;\n}\n",
-                            "type": "custom:simple-thermostat"
-                        },
-                        {
                             "cards": [
                                 {
-                                    "cards": [
+                                    "card": {
+                                        "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode",
+                                        "fallback": "OFF",
+                                        "sensors": [
+                                            {
+                                                "entity": "sensor.thermostat_bedroom_battery",
+                                                "name": "Battery"
+                                            }
+                                        ],
+                                        "step_size": 0.5,
+                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "type": "custom:simple-thermostat"
+                                    },
+                                    "conditions": [
                                         {
-                                            "color_thresholds": [
-                                                {
-                                                    "color": "#1090f2",
-                                                    "value": 10
-                                                },
-                                                {
-                                                    "color": "#f39c12",
-                                                    "value": 16
-                                                },
-                                                {
-                                                    "color": "#c0392b",
-                                                    "value": 25
-                                                }
-                                            ],
-                                            "color_thresholds_transition": "hard",
-                                            "decimals": 1,
-                                            "entities": [
-                                                "sensor.0x00158d00020187f6_temperature"
-                                            ],
-                                            "hour24": true,
-                                            "points_per_hour": 1,
-                                            "show": {
-                                                "fill": false
-                                            },
-                                            "type": "custom:mini-graph-card"
-                                        },
-                                        {
-                                            "color_thresholds": [
-                                                {
-                                                    "color": "#f39c12",
-                                                    "value": 10
-                                                },
-                                                {
-                                                    "color": "#00C617",
-                                                    "value": 40
-                                                },
-                                                {
-                                                    "color": "#1090f2",
-                                                    "value": 60
-                                                }
-                                            ],
-                                            "color_thresholds_transition": "hard",
-                                            "decimals": 0,
-                                            "entities": [
-                                                "sensor.0x00158d00020187f6_humidity"
-                                            ],
-                                            "hour24": true,
-                                            "points_per_hour": 1,
-                                            "show": {
-                                                "fill": false
-                                            },
-                                            "type": "custom:mini-graph-card"
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "off"
                                         }
                                     ],
-                                    "type": "horizontal-stack"
+                                    "type": "conditional"
+                                },
+                                {
+                                    "card": {
+                                        "control": {
+                                            "_headings": true,
+                                            "fan": {
+                                                "2step": {
+                                                    "icon": "mdi:trending-down",
+                                                    "name": "2-Step"
+                                                },
+                                                "high": false,
+                                                "low": false,
+                                                "med": false,
+                                                "quiet": {
+                                                    "icon": "mdi:ear-hearing-off",
+                                                    "name": "Quiet"
+                                                },
+                                                "turbo": false,
+                                                "windfree": {
+                                                    "icon": "mdi:weather-windy",
+                                                    "name": "Wind Free"
+                                                }
+                                            },
+                                            "hvac": {
+                                                "dry": false,
+                                                "fan_only": false,
+                                                "heat": false,
+                                                "heat_cool": false
+                                            }
+                                        },
+                                        "entity": "climate.bedroom_ac",
+                                        "hide": {
+                                            "temperature": true
+                                        },
+                                        "name": "Air conditioning - bedroom",
+                                        "step_size": 1,
+                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "type": "custom:simple-thermostat"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "on"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 },
                                 {
                                     "cards": [
                                         {
-                                            "entity": "binary_sensor.0x00158d0001f406fb_contact",
-                                            "hold_action": {
-                                                "action": "none"
-                                            },
-                                            "icon_height": "75px",
-                                            "show_icon": true,
-                                            "show_name": true,
-                                            "type": "entity-button"
+                                            "cards": [
+                                                {
+                                                    "color_thresholds": [
+                                                        {
+                                                            "color": "#1090f2",
+                                                            "value": 10
+                                                        },
+                                                        {
+                                                            "color": "#f39c12",
+                                                            "value": 16
+                                                        },
+                                                        {
+                                                            "color": "#c0392b",
+                                                            "value": 25
+                                                        }
+                                                    ],
+                                                    "color_thresholds_transition": "hard",
+                                                    "decimals": 1,
+                                                    "entities": [
+                                                        "sensor.0x00158d00020187f6_temperature"
+                                                    ],
+                                                    "hour24": true,
+                                                    "points_per_hour": 1,
+                                                    "show": {
+                                                        "fill": false
+                                                    },
+                                                    "type": "custom:mini-graph-card"
+                                                },
+                                                {
+                                                    "color_thresholds": [
+                                                        {
+                                                            "color": "#f39c12",
+                                                            "value": 10
+                                                        },
+                                                        {
+                                                            "color": "#00C617",
+                                                            "value": 40
+                                                        },
+                                                        {
+                                                            "color": "#1090f2",
+                                                            "value": 60
+                                                        }
+                                                    ],
+                                                    "color_thresholds_transition": "hard",
+                                                    "decimals": 0,
+                                                    "entities": [
+                                                        "sensor.0x00158d00020187f6_humidity"
+                                                    ],
+                                                    "hour24": true,
+                                                    "points_per_hour": 1,
+                                                    "show": {
+                                                        "fill": false
+                                                    },
+                                                    "type": "custom:mini-graph-card"
+                                                }
+                                            ],
+                                            "type": "horizontal-stack"
                                         },
                                         {
-                                            "entity": "binary_sensor.0x00158d0001f406fb_contact",
-                                            "hold_action": {
-                                                "action": "none"
-                                            },
-                                            "icon_height": "75px",
-                                            "show_icon": false,
-                                            "show_name": false,
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "type": "entity-button"
+                                            "cards": [
+                                                {
+                                                    "entity": "binary_sensor.0x00158d0001f406fb_contact",
+                                                    "hold_action": {
+                                                        "action": "none"
+                                                    },
+                                                    "icon_height": "75px",
+                                                    "show_icon": true,
+                                                    "show_name": true,
+                                                    "type": "entity-button"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.0x00158d0001f406fb_contact",
+                                                    "hold_action": {
+                                                        "action": "none"
+                                                    },
+                                                    "icon_height": "75px",
+                                                    "show_icon": false,
+                                                    "show_name": false,
+                                                    "tap_action": {
+                                                        "action": "none"
+                                                    },
+                                                    "type": "entity-button"
+                                                }
+                                            ],
+                                            "type": "horizontal-stack"
                                         }
                                     ],
-                                    "type": "horizontal-stack"
+                                    "type": "vertical-stack"
+                                },
+                                {
+                                    "columns": 3,
+                                    "entities": [
+                                        {
+                                            "entity": "binary_sensor.0x00158d0001b7d5c8_smoke"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.smoke_sensor_kitchen"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.0x00158d0001bb7219_water_leak"
+                                        }
+                                    ],
+                                    "type": "glance"
                                 }
                             ],
                             "type": "vertical-stack"
                         },
                         {
-                            "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_2",
-                            "fallback": "OFF",
-                            "sensors": [
-                                {
-                                    "entity": "sensor.thermostat_kids_battery",
-                                    "name": "Battery"
-                                }
-                            ],
-                            "step_size": 0.5,
-                            "style": ".mode-item.active {\n  color: #ff6d17 !important;\n}\n",
-                            "type": "custom:simple-thermostat"
-                        },
-                        {
                             "cards": [
                                 {
-                                    "cards": [
+                                    "card": {
+                                        "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_2",
+                                        "fallback": "OFF",
+                                        "sensors": [
+                                            {
+                                                "entity": "sensor.thermostat_kids_battery",
+                                                "name": "Battery"
+                                            }
+                                        ],
+                                        "step_size": 0.5,
+                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "type": "custom:simple-thermostat"
+                                    },
+                                    "conditions": [
                                         {
-                                            "color_thresholds": [
-                                                {
-                                                    "color": "#1090f2",
-                                                    "value": 10
-                                                },
-                                                {
-                                                    "color": "#f39c12",
-                                                    "value": 16
-                                                },
-                                                {
-                                                    "color": "#c0392b",
-                                                    "value": 25
-                                                }
-                                            ],
-                                            "color_thresholds_transition": "hard",
-                                            "decimals": 1,
-                                            "entities": [
-                                                "sensor.0x00158d00020186c6_temperature"
-                                            ],
-                                            "hour24": true,
-                                            "points_per_hour": 1,
-                                            "show": {
-                                                "fill": false
-                                            },
-                                            "type": "custom:mini-graph-card"
-                                        },
-                                        {
-                                            "color_thresholds": [
-                                                {
-                                                    "color": "#f39c12",
-                                                    "value": 10
-                                                },
-                                                {
-                                                    "color": "#00C617",
-                                                    "value": 40
-                                                },
-                                                {
-                                                    "color": "#1090f2",
-                                                    "value": 60
-                                                }
-                                            ],
-                                            "color_thresholds_transition": "hard",
-                                            "decimals": 0,
-                                            "entities": [
-                                                "sensor.0x00158d00020186c6_humidity"
-                                            ],
-                                            "hour24": true,
-                                            "points_per_hour": 1,
-                                            "show": {
-                                                "fill": false
-                                            },
-                                            "type": "custom:mini-graph-card"
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "off"
                                         }
                                     ],
-                                    "type": "horizontal-stack"
+                                    "type": "conditional"
+                                },
+                                {
+                                    "card": {
+                                        "control": {
+                                            "_headings": true,
+                                            "fan": {
+                                                "2step": {
+                                                    "icon": "mdi:trending-down",
+                                                    "name": "2-Step"
+                                                },
+                                                "high": false,
+                                                "low": false,
+                                                "med": false,
+                                                "quiet": {
+                                                    "icon": "mdi:ear-hearing-off",
+                                                    "name": "Quiet"
+                                                },
+                                                "turbo": false,
+                                                "windfree": {
+                                                    "icon": "mdi:weather-windy",
+                                                    "name": "Wind Free"
+                                                }
+                                            },
+                                            "hvac": {
+                                                "dry": false,
+                                                "fan_only": false,
+                                                "heat": false,
+                                                "heat_cool": false
+                                            }
+                                        },
+                                        "entity": "climate.ac_kids",
+                                        "hide": {
+                                            "temperature": true
+                                        },
+                                        "name": "Air conditioning - kids room",
+                                        "step_size": 1,
+                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "type": "custom:simple-thermostat"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "on"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 },
                                 {
                                     "cards": [
                                         {
-                                            "entity": "binary_sensor.0x00158d0001de657f_contact",
-                                            "hold_action": {
-                                                "action": "none"
-                                            },
-                                            "icon_height": "75px",
-                                            "show_icon": true,
-                                            "show_name": true,
-                                            "type": "entity-button"
+                                            "cards": [
+                                                {
+                                                    "color_thresholds": [
+                                                        {
+                                                            "color": "#1090f2",
+                                                            "value": 10
+                                                        },
+                                                        {
+                                                            "color": "#f39c12",
+                                                            "value": 16
+                                                        },
+                                                        {
+                                                            "color": "#c0392b",
+                                                            "value": 25
+                                                        }
+                                                    ],
+                                                    "color_thresholds_transition": "hard",
+                                                    "decimals": 1,
+                                                    "entities": [
+                                                        "sensor.0x00158d00020186c6_temperature"
+                                                    ],
+                                                    "hour24": true,
+                                                    "points_per_hour": 1,
+                                                    "show": {
+                                                        "fill": false
+                                                    },
+                                                    "type": "custom:mini-graph-card"
+                                                },
+                                                {
+                                                    "color_thresholds": [
+                                                        {
+                                                            "color": "#f39c12",
+                                                            "value": 10
+                                                        },
+                                                        {
+                                                            "color": "#00C617",
+                                                            "value": 40
+                                                        },
+                                                        {
+                                                            "color": "#1090f2",
+                                                            "value": 60
+                                                        }
+                                                    ],
+                                                    "color_thresholds_transition": "hard",
+                                                    "decimals": 0,
+                                                    "entities": [
+                                                        "sensor.0x00158d00020186c6_humidity"
+                                                    ],
+                                                    "hour24": true,
+                                                    "points_per_hour": 1,
+                                                    "show": {
+                                                        "fill": false
+                                                    },
+                                                    "type": "custom:mini-graph-card"
+                                                }
+                                            ],
+                                            "type": "horizontal-stack"
                                         },
                                         {
-                                            "entity": "binary_sensor.0x00158d0001b7bc15_contact",
-                                            "hold_action": {
-                                                "action": "none"
-                                            },
-                                            "icon_height": "75px",
-                                            "show_icon": true,
-                                            "show_name": true,
-                                            "type": "entity-button"
+                                            "cards": [
+                                                {
+                                                    "entity": "binary_sensor.0x00158d0001de657f_contact",
+                                                    "hold_action": {
+                                                        "action": "none"
+                                                    },
+                                                    "icon_height": "75px",
+                                                    "show_icon": true,
+                                                    "show_name": true,
+                                                    "type": "entity-button"
+                                                },
+                                                {
+                                                    "entity": "binary_sensor.0x00158d0001b7bc15_contact",
+                                                    "hold_action": {
+                                                        "action": "none"
+                                                    },
+                                                    "icon_height": "75px",
+                                                    "show_icon": true,
+                                                    "show_name": true,
+                                                    "type": "entity-button"
+                                                }
+                                            ],
+                                            "type": "horizontal-stack"
                                         }
                                     ],
-                                    "type": "horizontal-stack"
+                                    "type": "vertical-stack"
+                                },
+                                {
+                                    "columns": 3,
+                                    "entities": [
+                                        {
+                                            "entity": "binary_sensor.0x00158d0001bb7a09_water_leak"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.0x00158d0001bb383d_water_leak"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.0x00158d0001bb71f5_water_leak"
+                                        }
+                                    ],
+                                    "type": "glance"
                                 }
                             ],
                             "type": "vertical-stack"
-                        },
-                        {
-                            "columns": 3,
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.0x00158d0001b71c0f_smoke"
-                                },
-                                {
-                                    "entity": "binary_sensor.0x00158d0001b79326_smoke"
-                                },
-                                {
-                                    "entity": "binary_sensor.0x00158d0001b7f68b_smoke"
-                                }
-                            ],
-                            "type": "glance"
-                        },
-                        {
-                            "columns": 3,
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.0x00158d0001b7d5c8_smoke"
-                                },
-                                {
-                                    "entity": "binary_sensor.smoke_sensor_kitchen"
-                                },
-                                {
-                                    "entity": "binary_sensor.0x00158d0001bb7219_water_leak"
-                                }
-                            ],
-                            "type": "glance"
-                        },
-                        {
-                            "columns": 3,
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.0x00158d0001bb7a09_water_leak"
-                                },
-                                {
-                                    "entity": "binary_sensor.0x00158d0001bb383d_water_leak"
-                                },
-                                {
-                                    "entity": "binary_sensor.0x00158d0001bb71f5_water_leak"
-                                }
-                            ],
-                            "type": "glance"
                         }
                     ],
                     "icon": "mdi:home",
@@ -446,105 +592,220 @@
                     "badges": [],
                     "cards": [
                         {
-                            "entities": [
-                                "input_number.bedroom_high_temperature",
-                                "input_number.bedroom_low_temperature"
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Bedroom - temperatures",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
+                            "cards": [
                                 {
                                     "card": {
-                                        "entity": "input_boolean.bedroom_work_first_active"
+                                        "entities": [
+                                            "input_number.bedroom_high_temperature",
+                                            "input_number.bedroom_low_temperature"
+                                        ],
+                                        "icon": "mdi:radiator",
+                                        "show_header_toggle": false,
+                                        "title": "Bedroom - heating temperatures",
+                                        "type": "entities"
                                     },
-                                    "row": true,
-                                    "type": "custom:restriction-card"
-                                },
-                                "input_number.bedroom_hour_first_on",
-                                "input_number.bedroom_minute_first_on",
-                                "input_number.bedroom_hour_first_off",
-                                "input_number.bedroom_minute_first_off",
-                                {
-                                    "type": "divider"
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "off"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 },
                                 {
                                     "card": {
-                                        "entity": "input_boolean.bedroom_work_second_active"
+                                        "entities": [
+                                            "input_number.bedroom_ac_trigger_temperature",
+                                            "input_number.bedroom_ac_cool_temperature"
+                                        ],
+                                        "icon": "mdi:air-conditioner",
+                                        "show_header_toggle": false,
+                                        "title": "Bedroom - cooling temperatures",
+                                        "type": "entities"
                                     },
-                                    "row": true,
-                                    "type": "custom:restriction-card"
-                                },
-                                "input_number.bedroom_hour_second_on",
-                                "input_number.bedroom_minute_second_on",
-                                "input_number.bedroom_hour_second_off",
-                                "input_number.bedroom_minute_second_off"
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Bedroom - schedule for workdays",
-                            "type": "entities"
-                        },
-                        {
-                            "color_thresholds": [
-                                {
-                                    "color": "#1090f2",
-                                    "value": 10
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "on"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 },
                                 {
-                                    "color": "#f39c12",
-                                    "value": 16
+                                    "card": {
+                                        "entities": [
+                                            {
+                                                "card": {
+                                                    "entity": "input_boolean.bedroom_work_first_active"
+                                                },
+                                                "row": true,
+                                                "type": "custom:restriction-card"
+                                            },
+                                            "input_number.bedroom_hour_first_on",
+                                            "input_number.bedroom_minute_first_on",
+                                            "input_number.bedroom_hour_first_off",
+                                            "input_number.bedroom_minute_first_off",
+                                            {
+                                                "type": "divider"
+                                            },
+                                            {
+                                                "card": {
+                                                    "entity": "input_boolean.bedroom_work_second_active"
+                                                },
+                                                "row": true,
+                                                "type": "custom:restriction-card"
+                                            },
+                                            "input_number.bedroom_hour_second_on",
+                                            "input_number.bedroom_minute_second_on",
+                                            "input_number.bedroom_hour_second_off",
+                                            "input_number.bedroom_minute_second_off"
+                                        ],
+                                        "icon": "mdi:radiator",
+                                        "show_header_toggle": false,
+                                        "title": "Bedroom - schedule for workdays",
+                                        "type": "entities"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "off"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 },
                                 {
-                                    "color": "#c0392b",
-                                    "value": 25
+                                    "card": {
+                                        "entities": [
+                                            {
+                                                "card": {
+                                                    "entity": "input_boolean.bedroom_work_ac_active"
+                                                },
+                                                "row": true,
+                                                "type": "custom:restriction-card"
+                                            },
+                                            "input_number.bedroom_ac_hour_on",
+                                            "input_number.bedroom_ac_minute_on",
+                                            "input_number.bedroom_ac_hour_off",
+                                            "input_number.bedroom_ac_minute_off"
+                                        ],
+                                        "icon": "mdi:air-conditioner",
+                                        "show_header_toggle": false,
+                                        "title": "Bedroom - schedule for workdays",
+                                        "type": "entities"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "on"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 }
                             ],
-                            "color_thresholds_transition": "hard",
-                            "decimals": 1,
-                            "entities": [
-                                "sensor.0x00158d00020187f6_temperature"
-                            ],
-                            "hour24": true,
-                            "hours_to_show": 72,
-                            "points_per_hour": 1,
-                            "show": {
-                                "fill": false
-                            },
-                            "type": "custom:mini-graph-card"
+                            "type": "vertical-stack"
                         },
                         {
-                            "entities": [
+                            "cards": [
+                                {
+                                    "color_thresholds": [
+                                        {
+                                            "color": "#1090f2",
+                                            "value": 10
+                                        },
+                                        {
+                                            "color": "#f39c12",
+                                            "value": 16
+                                        },
+                                        {
+                                            "color": "#c0392b",
+                                            "value": 25
+                                        }
+                                    ],
+                                    "color_thresholds_transition": "hard",
+                                    "decimals": 1,
+                                    "entities": [
+                                        "sensor.0x00158d00020187f6_temperature"
+                                    ],
+                                    "hour24": true,
+                                    "hours_to_show": 72,
+                                    "points_per_hour": 1,
+                                    "show": {
+                                        "fill": false
+                                    },
+                                    "type": "custom:mini-graph-card"
+                                },
                                 {
                                     "card": {
-                                        "entity": "input_boolean.bedroom_free_first_active"
+                                        "entities": [
+                                            {
+                                                "card": {
+                                                    "entity": "input_boolean.bedroom_free_first_active"
+                                                },
+                                                "row": true,
+                                                "type": "custom:restriction-card"
+                                            },
+                                            "input_number.bedroom_free_hour_first_on",
+                                            "input_number.bedroom_free_minute_first_on",
+                                            "input_number.bedroom_free_hour_first_off",
+                                            "input_number.bedroom_free_minute_first_off",
+                                            {
+                                                "type": "divider"
+                                            },
+                                            {
+                                                "card": {
+                                                    "entity": "input_boolean.bedroom_free_second_active"
+                                                },
+                                                "row": true,
+                                                "type": "custom:restriction-card"
+                                            },
+                                            "input_number.bedroom_free_hour_second_on",
+                                            "input_number.bedroom_free_minute_second_on",
+                                            "input_number.bedroom_free_hour_second_off",
+                                            "input_number.bedroom_free_minute_second_off"
+                                        ],
+                                        "icon": "mdi:radiator",
+                                        "show_header_toggle": false,
+                                        "title": "Bedroom - schedule for free days",
+                                        "type": "entities"
                                     },
-                                    "row": true,
-                                    "type": "custom:restriction-card"
-                                },
-                                "input_number.bedroom_free_hour_first_on",
-                                "input_number.bedroom_free_minute_first_on",
-                                "input_number.bedroom_free_hour_first_off",
-                                "input_number.bedroom_free_minute_first_off",
-                                {
-                                    "type": "divider"
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "off"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 },
                                 {
                                     "card": {
-                                        "entity": "input_boolean.bedroom_free_second_active"
+                                        "entities": [
+                                            {
+                                                "card": {
+                                                    "entity": "input_boolean.bedroom_free_ac_active"
+                                                },
+                                                "row": true,
+                                                "type": "custom:restriction-card"
+                                            },
+                                            "input_number.bedroom_ac_free_hour_on",
+                                            "input_number.bedroom_ac_free_minute_on",
+                                            "input_number.bedroom_ac_free_hour_off",
+                                            "input_number.bedroom_ac_free_minute_off"
+                                        ],
+                                        "icon": "mdi:air-conditioner",
+                                        "show_header_toggle": false,
+                                        "title": "Bedroom - schedule for free days",
+                                        "type": "entities"
                                     },
-                                    "row": true,
-                                    "type": "custom:restriction-card"
-                                },
-                                "input_number.bedroom_free_hour_second_on",
-                                "input_number.bedroom_free_minute_second_on",
-                                "input_number.bedroom_free_hour_second_off",
-                                "input_number.bedroom_free_minute_second_off"
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "on"
+                                        }
+                                    ],
+                                    "type": "conditional"
+                                }
                             ],
-                            "show_header_toggle": false,
-                            "title": "Bedroom - schedule for free days",
-                            "type": "entities"
+                            "type": "vertical-stack"
                         }
                     ],
                     "icon": "mdi:hotel",
@@ -556,105 +817,220 @@
                     "badges": [],
                     "cards": [
                         {
-                            "entities": [
-                                "input_number.kids_high_temperature",
-                                "input_number.kids_low_temperature"
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Kids room - temperature",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
+                            "cards": [
                                 {
                                     "card": {
-                                        "entity": "input_boolean.kids_work_first_active"
+                                        "entities": [
+                                            "input_number.kids_high_temperature",
+                                            "input_number.kids_low_temperature"
+                                        ],
+                                        "icon": "mdi:radiator",
+                                        "show_header_toggle": false,
+                                        "title": "Kids room - heating temperatures",
+                                        "type": "entities"
                                     },
-                                    "row": true,
-                                    "type": "custom:restriction-card"
-                                },
-                                "input_number.kids_hour_first_on",
-                                "input_number.kids_minute_first_on",
-                                "input_number.kids_hour_first_off",
-                                "input_number.kids_minute_first_off",
-                                {
-                                    "type": "divider"
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "off"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 },
                                 {
                                     "card": {
-                                        "entity": "input_boolean.kids_work_second_active"
+                                        "entities": [
+                                            "input_number.kids_ac_trigger_temperature",
+                                            "input_number.kids_ac_cool_temperature"
+                                        ],
+                                        "icon": "mdi:air-conditioner",
+                                        "show_header_toggle": false,
+                                        "title": "Kids room - cooling temperatures",
+                                        "type": "entities"
                                     },
-                                    "row": true,
-                                    "type": "custom:restriction-card"
-                                },
-                                "input_number.kids_hour_second_on",
-                                "input_number.kids_minute_second_on",
-                                "input_number.kids_hour_second_off",
-                                "input_number.kids_minute_second_off"
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Kids room - schedule for workdays",
-                            "type": "entities"
-                        },
-                        {
-                            "color_thresholds": [
-                                {
-                                    "color": "#1090f2",
-                                    "value": 10
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "on"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 },
                                 {
-                                    "color": "#f39c12",
-                                    "value": 16
+                                    "card": {
+                                        "entities": [
+                                            {
+                                                "card": {
+                                                    "entity": "input_boolean.kids_work_first_active"
+                                                },
+                                                "row": true,
+                                                "type": "custom:restriction-card"
+                                            },
+                                            "input_number.kids_hour_first_on",
+                                            "input_number.kids_minute_first_on",
+                                            "input_number.kids_hour_first_off",
+                                            "input_number.kids_minute_first_off",
+                                            {
+                                                "type": "divider"
+                                            },
+                                            {
+                                                "card": {
+                                                    "entity": "input_boolean.kids_work_second_active"
+                                                },
+                                                "row": true,
+                                                "type": "custom:restriction-card"
+                                            },
+                                            "input_number.kids_hour_second_on",
+                                            "input_number.kids_minute_second_on",
+                                            "input_number.kids_hour_second_off",
+                                            "input_number.kids_minute_second_off"
+                                        ],
+                                        "icon": "mdi:radiator",
+                                        "show_header_toggle": false,
+                                        "title": "Kids room - schedule for workdays",
+                                        "type": "entities"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "off"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 },
                                 {
-                                    "color": "#c0392b",
-                                    "value": 25
+                                    "card": {
+                                        "entities": [
+                                            {
+                                                "card": {
+                                                    "entity": "input_boolean.kids_work_ac_active"
+                                                },
+                                                "row": true,
+                                                "type": "custom:restriction-card"
+                                            },
+                                            "input_number.kids_ac_hour_on",
+                                            "input_number.kids_ac_minute_on",
+                                            "input_number.kids_ac_hour_off",
+                                            "input_number.kids_ac_minute_off"
+                                        ],
+                                        "icon": "mdi:air-conditioner",
+                                        "show_header_toggle": false,
+                                        "title": "Kids room - schedule for workdays",
+                                        "type": "entities"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "on"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 }
                             ],
-                            "color_thresholds_transition": "hard",
-                            "decimals": 1,
-                            "entities": [
-                                "sensor.0x00158d00020186c6_temperature"
-                            ],
-                            "hour24": true,
-                            "hours_to_show": 72,
-                            "points_per_hour": 1,
-                            "show": {
-                                "fill": false
-                            },
-                            "type": "custom:mini-graph-card"
+                            "type": "vertical-stack"
                         },
                         {
-                            "entities": [
+                            "cards": [
+                                {
+                                    "color_thresholds": [
+                                        {
+                                            "color": "#1090f2",
+                                            "value": 10
+                                        },
+                                        {
+                                            "color": "#f39c12",
+                                            "value": 16
+                                        },
+                                        {
+                                            "color": "#c0392b",
+                                            "value": 25
+                                        }
+                                    ],
+                                    "color_thresholds_transition": "hard",
+                                    "decimals": 1,
+                                    "entities": [
+                                        "sensor.0x00158d00020186c6_temperature"
+                                    ],
+                                    "hour24": true,
+                                    "hours_to_show": 72,
+                                    "points_per_hour": 1,
+                                    "show": {
+                                        "fill": false
+                                    },
+                                    "type": "custom:mini-graph-card"
+                                },
                                 {
                                     "card": {
-                                        "entity": "input_boolean.kids_free_first_active"
+                                        "entities": [
+                                            {
+                                                "card": {
+                                                    "entity": "input_boolean.kids_free_first_active"
+                                                },
+                                                "row": true,
+                                                "type": "custom:restriction-card"
+                                            },
+                                            "input_number.kids_free_hour_first_on",
+                                            "input_number.kids_free_minute_first_on",
+                                            "input_number.kids_free_hour_first_off",
+                                            "input_number.kids_free_minute_first_off",
+                                            {
+                                                "type": "divider"
+                                            },
+                                            {
+                                                "card": {
+                                                    "entity": "input_boolean.kids_free_second_active"
+                                                },
+                                                "row": true,
+                                                "type": "custom:restriction-card"
+                                            },
+                                            "input_number.kids_free_hour_second_on",
+                                            "input_number.kids_free_minute_second_on",
+                                            "input_number.kids_free_hour_second_off",
+                                            "input_number.kids_free_minute_second_off"
+                                        ],
+                                        "icon": "mdi:radiator",
+                                        "show_header_toggle": false,
+                                        "title": "Kids room - schedule for free days",
+                                        "type": "entities"
                                     },
-                                    "row": true,
-                                    "type": "custom:restriction-card"
-                                },
-                                "input_number.kids_free_hour_first_on",
-                                "input_number.kids_free_minute_first_on",
-                                "input_number.kids_free_hour_first_off",
-                                "input_number.kids_free_minute_first_off",
-                                {
-                                    "type": "divider"
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "off"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 },
                                 {
                                     "card": {
-                                        "entity": "input_boolean.kids_free_second_active"
+                                        "entities": [
+                                            {
+                                                "card": {
+                                                    "entity": "input_boolean.kids_free_ac_active"
+                                                },
+                                                "row": true,
+                                                "type": "custom:restriction-card"
+                                            },
+                                            "input_number.kids_ac_free_hour_on",
+                                            "input_number.kids_ac_free_minute_on",
+                                            "input_number.kids_ac_free_hour_off",
+                                            "input_number.kids_ac_free_minute_off"
+                                        ],
+                                        "icon": "mdi:air-conditioner",
+                                        "show_header_toggle": false,
+                                        "title": "Kids room - schedule for free days",
+                                        "type": "entities"
                                     },
-                                    "row": true,
-                                    "type": "custom:restriction-card"
-                                },
-                                "input_number.kids_free_hour_second_on",
-                                "input_number.kids_free_minute_second_on",
-                                "input_number.kids_free_hour_second_off",
-                                "input_number.kids_free_minute_second_off"
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "on"
+                                        }
+                                    ],
+                                    "type": "conditional"
+                                }
                             ],
-                            "show_header_toggle": false,
-                            "title": "Kids room - schedule for free days",
-                            "type": "entities"
+                            "type": "vertical-stack"
                         }
                     ],
                     "icon": "mdi:human-female-girl",
@@ -666,105 +1042,220 @@
                     "badges": [],
                     "cards": [
                         {
-                            "entities": [
-                                "input_number.living_high_temperature",
-                                "input_number.living_low_temperature"
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Living room - temperatures",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
+                            "cards": [
                                 {
                                     "card": {
-                                        "entity": "input_boolean.living_work_first_active"
+                                        "entities": [
+                                            "input_number.living_high_temperature",
+                                            "input_number.living_low_temperature"
+                                        ],
+                                        "icon": "mdi:radiator",
+                                        "show_header_toggle": false,
+                                        "title": "Living room - heating temperatures",
+                                        "type": "entities"
                                     },
-                                    "row": true,
-                                    "type": "custom:restriction-card"
-                                },
-                                "input_number.living_hour_first_on",
-                                "input_number.living_minute_first_on",
-                                "input_number.living_hour_first_off",
-                                "input_number.living_minute_first_off",
-                                {
-                                    "type": "divider"
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "off"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 },
                                 {
                                     "card": {
-                                        "entity": "input_boolean.living_work_second_active"
+                                        "entities": [
+                                            "input_number.living_ac_trigger_temperature",
+                                            "input_number.living_ac_cool_temperature"
+                                        ],
+                                        "icon": "mdi:air-conditioner",
+                                        "show_header_toggle": false,
+                                        "title": "Living room - cooling temperatures",
+                                        "type": "entities"
                                     },
-                                    "row": true,
-                                    "type": "custom:restriction-card"
-                                },
-                                "input_number.living_hour_second_on",
-                                "input_number.living_minute_second_on",
-                                "input_number.living_hour_second_off",
-                                "input_number.living_minute_second_off"
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Living room - schedule for workdays",
-                            "type": "entities"
-                        },
-                        {
-                            "color_thresholds": [
-                                {
-                                    "color": "#1090f2",
-                                    "value": 10
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "on"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 },
                                 {
-                                    "color": "#f39c12",
-                                    "value": 16
+                                    "card": {
+                                        "entities": [
+                                            {
+                                                "card": {
+                                                    "entity": "input_boolean.living_work_first_active"
+                                                },
+                                                "row": true,
+                                                "type": "custom:restriction-card"
+                                            },
+                                            "input_number.living_hour_first_on",
+                                            "input_number.living_minute_first_on",
+                                            "input_number.living_hour_first_off",
+                                            "input_number.living_minute_first_off",
+                                            {
+                                                "type": "divider"
+                                            },
+                                            {
+                                                "card": {
+                                                    "entity": "input_boolean.living_work_second_active"
+                                                },
+                                                "row": true,
+                                                "type": "custom:restriction-card"
+                                            },
+                                            "input_number.living_hour_second_on",
+                                            "input_number.living_minute_second_on",
+                                            "input_number.living_hour_second_off",
+                                            "input_number.living_minute_second_off"
+                                        ],
+                                        "icon": "mdi:radiator",
+                                        "show_header_toggle": false,
+                                        "title": "Living room - schedule for workdays",
+                                        "type": "entities"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "off"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 },
                                 {
-                                    "color": "#c0392b",
-                                    "value": 25
+                                    "card": {
+                                        "entities": [
+                                            {
+                                                "card": {
+                                                    "entity": "input_boolean.living_work_ac_active"
+                                                },
+                                                "row": true,
+                                                "type": "custom:restriction-card"
+                                            },
+                                            "input_number.living_ac_hour_on",
+                                            "input_number.living_ac_minute_on",
+                                            "input_number.living_ac_hour_off",
+                                            "input_number.living_ac_minute_off"
+                                        ],
+                                        "icon": "mdi:air-conditioner",
+                                        "show_header_toggle": false,
+                                        "title": "Living room - schedule for workdays",
+                                        "type": "entities"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "on"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 }
                             ],
-                            "color_thresholds_transition": "hard",
-                            "decimals": 1,
-                            "entities": [
-                                "sensor.0x00158d0001fa6e13_temperature"
-                            ],
-                            "hour24": true,
-                            "hours_to_show": 72,
-                            "points_per_hour": 1,
-                            "show": {
-                                "fill": false
-                            },
-                            "type": "custom:mini-graph-card"
+                            "type": "vertical-stack"
                         },
                         {
-                            "entities": [
+                            "cards": [
+                                {
+                                    "color_thresholds": [
+                                        {
+                                            "color": "#1090f2",
+                                            "value": 10
+                                        },
+                                        {
+                                            "color": "#f39c12",
+                                            "value": 16
+                                        },
+                                        {
+                                            "color": "#c0392b",
+                                            "value": 25
+                                        }
+                                    ],
+                                    "color_thresholds_transition": "hard",
+                                    "decimals": 1,
+                                    "entities": [
+                                        "sensor.0x00158d0001fa6e13_temperature"
+                                    ],
+                                    "hour24": true,
+                                    "hours_to_show": 72,
+                                    "points_per_hour": 1,
+                                    "show": {
+                                        "fill": false
+                                    },
+                                    "type": "custom:mini-graph-card"
+                                },
                                 {
                                     "card": {
-                                        "entity": "input_boolean.living_free_first_active"
+                                        "entities": [
+                                            {
+                                                "card": {
+                                                    "entity": "input_boolean.living_free_first_active"
+                                                },
+                                                "row": true,
+                                                "type": "custom:restriction-card"
+                                            },
+                                            "input_number.living_free_hour_first_on",
+                                            "input_number.living_free_minute_first_on",
+                                            "input_number.living_free_hour_first_off",
+                                            "input_number.living_free_minute_first_off",
+                                            {
+                                                "type": "divider"
+                                            },
+                                            {
+                                                "card": {
+                                                    "entity": "input_boolean.living_free_second_active"
+                                                },
+                                                "row": true,
+                                                "type": "custom:restriction-card"
+                                            },
+                                            "input_number.living_free_hour_second_on",
+                                            "input_number.living_free_minute_second_on",
+                                            "input_number.living_free_hour_second_off",
+                                            "input_number.living_free_minute_second_off"
+                                        ],
+                                        "icon": "mdi:radiator",
+                                        "show_header_toggle": false,
+                                        "title": "Living room - schedule for free days",
+                                        "type": "entities"
                                     },
-                                    "row": true,
-                                    "type": "custom:restriction-card"
-                                },
-                                "input_number.living_free_hour_first_on",
-                                "input_number.living_free_minute_first_on",
-                                "input_number.living_free_hour_first_off",
-                                "input_number.living_free_minute_first_off",
-                                {
-                                    "type": "divider"
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "off"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 },
                                 {
                                     "card": {
-                                        "entity": "input_boolean.living_free_second_active"
+                                        "entities": [
+                                            {
+                                                "card": {
+                                                    "entity": "input_boolean.living_free_ac_active"
+                                                },
+                                                "row": true,
+                                                "type": "custom:restriction-card"
+                                            },
+                                            "input_number.living_ac_free_hour_on",
+                                            "input_number.living_ac_free_minute_on",
+                                            "input_number.living_ac_free_hour_off",
+                                            "input_number.living_ac_free_minute_off"
+                                        ],
+                                        "icon": "mdi:air-conditioner",
+                                        "show_header_toggle": false,
+                                        "title": "Living room - schedule for free days",
+                                        "type": "entities"
                                     },
-                                    "row": true,
-                                    "type": "custom:restriction-card"
-                                },
-                                "input_number.living_free_hour_second_on",
-                                "input_number.living_free_minute_second_on",
-                                "input_number.living_free_hour_second_off",
-                                "input_number.living_free_minute_second_off"
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "on"
+                                        }
+                                    ],
+                                    "type": "conditional"
+                                }
                             ],
-                            "show_header_toggle": false,
-                            "title": "Living room - schedule for free days",
-                            "type": "entities"
+                            "type": "vertical-stack"
                         }
                     ],
                     "icon": "mdi:television-classic",
@@ -829,6 +1320,15 @@
                                 },
                                 {
                                     "entity": "binary_sensor.cooling_enabled"
+                                },
+                                {
+                                    "type": "divider"
+                                },
+                                {
+                                    "entity": "input_datetime.date_show_ac"
+                                },
+                                {
+                                    "entity": "input_datetime.date_hide_ac"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -937,61 +1437,244 @@
                     "badges": [],
                     "cards": [
                         {
-                            "control": [
-                                "hvac",
+                            "cards": [
                                 {
-                                    "preset": false
+                                    "card": {
+                                        "control": [
+                                            "hvac",
+                                            {
+                                                "preset": false
+                                            }
+                                        ],
+                                        "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_3",
+                                        "fallback": "OFF",
+                                        "sensors": [
+                                            {
+                                                "entity": "sensor.thermostat_living_battery",
+                                                "name": "Battery"
+                                            }
+                                        ],
+                                        "step_size": 0.5,
+                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "type": "custom:simple-thermostat"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "off"
+                                        }
+                                    ],
+                                    "type": "conditional"
+                                },
+                                {
+                                    "card": {
+                                        "control": {
+                                            "_headings": true,
+                                            "fan": {
+                                                "2step": {
+                                                    "icon": "mdi:trending-down",
+                                                    "name": "2-Step"
+                                                },
+                                                "high": false,
+                                                "low": false,
+                                                "med": false,
+                                                "quiet": {
+                                                    "icon": "mdi:ear-hearing-off",
+                                                    "name": "Quiet"
+                                                },
+                                                "turbo": false,
+                                                "windfree": {
+                                                    "icon": "mdi:weather-windy",
+                                                    "name": "Wind Free"
+                                                }
+                                            },
+                                            "hvac": {
+                                                "dry": false,
+                                                "fan_only": false,
+                                                "heat": false,
+                                                "heat_cool": false
+                                            }
+                                        },
+                                        "entity": "climate.ac_living",
+                                        "hide": {
+                                            "temperature": true
+                                        },
+                                        "name": "Air conditioning - living room",
+                                        "step_layout": "row",
+                                        "step_size": 1,
+                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "type": "custom:simple-thermostat"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "on"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 }
                             ],
-                            "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_3",
-                            "fallback": "OFF",
-                            "sensors": [
-                                {
-                                    "entity": "sensor.thermostat_bedroom_battery",
-                                    "name": "Battery"
-                                }
-                            ],
-                            "step_size": 0.5,
-                            "style": ".mode-item.active {\n  color: #ff6d17 !important;\n}\n",
-                            "type": "custom:simple-thermostat"
+                            "type": "vertical-stack"
                         },
                         {
-                            "control": [
-                                "hvac",
+                            "cards": [
                                 {
-                                    "preset": false
+                                    "card": {
+                                        "control": [
+                                            "hvac",
+                                            {
+                                                "preset": false
+                                            }
+                                        ],
+                                        "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode",
+                                        "fallback": "OFF",
+                                        "sensors": [
+                                            {
+                                                "entity": "sensor.thermostat_bedroom_battery",
+                                                "name": "Battery"
+                                            }
+                                        ],
+                                        "step_size": 0.5,
+                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "type": "custom:simple-thermostat"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "off"
+                                        }
+                                    ],
+                                    "type": "conditional"
+                                },
+                                {
+                                    "card": {
+                                        "control": {
+                                            "_headings": true,
+                                            "fan": {
+                                                "2step": {
+                                                    "icon": "mdi:trending-down",
+                                                    "name": "2-Step"
+                                                },
+                                                "high": false,
+                                                "low": false,
+                                                "med": false,
+                                                "quiet": {
+                                                    "icon": "mdi:ear-hearing-off",
+                                                    "name": "Quiet"
+                                                },
+                                                "turbo": false,
+                                                "windfree": {
+                                                    "icon": "mdi:weather-windy",
+                                                    "name": "Wind Free"
+                                                }
+                                            },
+                                            "hvac": {
+                                                "dry": false,
+                                                "fan_only": false,
+                                                "heat": false,
+                                                "heat_cool": false
+                                            }
+                                        },
+                                        "entity": "climate.bedroom_ac",
+                                        "hide": {
+                                            "temperature": true
+                                        },
+                                        "name": "Air conditioning - bedroom",
+                                        "step_layout": "row",
+                                        "step_size": 1,
+                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "type": "custom:simple-thermostat"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "on"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 }
                             ],
-                            "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode",
-                            "fallback": "OFF",
-                            "sensors": [
-                                {
-                                    "entity": "sensor.thermostat_living_battery",
-                                    "name": "Battery"
-                                }
-                            ],
-                            "step_size": 0.5,
-                            "style": ".mode-item.active {\n  color: #ff6d17 !important;\n}\n",
-                            "type": "custom:simple-thermostat"
+                            "type": "vertical-stack"
                         },
                         {
-                            "control": [
-                                "hvac",
+                            "cards": [
                                 {
-                                    "preset": false
+                                    "card": {
+                                        "control": [
+                                            "hvac",
+                                            {
+                                                "preset": false
+                                            }
+                                        ],
+                                        "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_2",
+                                        "fallback": "OFF",
+                                        "sensors": [
+                                            {
+                                                "entity": "sensor.thermostat_kids_battery",
+                                                "name": "Battery"
+                                            }
+                                        ],
+                                        "step_size": 0.5,
+                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "type": "custom:simple-thermostat"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "off"
+                                        }
+                                    ],
+                                    "type": "conditional"
+                                },
+                                {
+                                    "card": {
+                                        "control": {
+                                            "_headings": true,
+                                            "fan": {
+                                                "2step": {
+                                                    "icon": "mdi:trending-down",
+                                                    "name": "2-Step"
+                                                },
+                                                "high": false,
+                                                "low": false,
+                                                "med": false,
+                                                "quiet": {
+                                                    "icon": "mdi:ear-hearing-off",
+                                                    "name": "Quiet"
+                                                },
+                                                "turbo": false,
+                                                "windfree": {
+                                                    "icon": "mdi:weather-windy",
+                                                    "name": "Wind Free"
+                                                }
+                                            },
+                                            "hvac": {
+                                                "dry": false,
+                                                "fan_only": false,
+                                                "heat": false,
+                                                "heat_cool": false
+                                            }
+                                        },
+                                        "entity": "climate.ac_kids",
+                                        "hide": {
+                                            "temperature": true
+                                        },
+                                        "name": "Air conditioning - kids room",
+                                        "step_layout": "row",
+                                        "step_size": 1,
+                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "type": "custom:simple-thermostat"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "binary_sensor.show_ac",
+                                            "state": "on"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 }
                             ],
-                            "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_2",
-                            "fallback": "OFF",
-                            "sensors": [
-                                {
-                                    "entity": "sensor.thermostat_kids_battery",
-                                    "name": "Battery"
-                                }
-                            ],
-                            "step_size": 0.5,
-                            "style": ".mode-item.active {\n  color: #ff6d17 !important;\n}\n",
-                            "type": "custom:simple-thermostat"
+                            "type": "vertical-stack"
                         }
                     ],
                     "icon": "mdi:home",
@@ -1359,974 +2042,6 @@
                     "icon": "mdi:view-module",
                     "path": "mobilstatus",
                     "title": "MobilStatus"
-                },
-                {
-                    "background": "var(--background-image)",
-                    "badges": [],
-                    "cards": [],
-                    "panel": false,
-                    "title": "KIOSK ->"
-                },
-                {
-                    "background": "var(--background-image)",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "control": [
-                                "hvac",
-                                {
-                                    "preset": false
-                                }
-                            ],
-                            "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_3",
-                            "fallback": "OFF",
-                            "sensors": [
-                                {
-                                    "entity": "sensor.thermostat_bedroom_battery",
-                                    "name": "Battery"
-                                }
-                            ],
-                            "step_size": 0.5,
-                            "style": "ha-card {\n  --st-font-size-xl: 36px;\n}\n.mode-item {\n  flex-direction: row !important;\n  font-size: 125%;\n}\n.mode-item.active {\n  color: #ff6d17 !important;\n}\n",
-                            "type": "custom:simple-thermostat"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "cards": [
-                                        {
-                                            "color_thresholds": [
-                                                {
-                                                    "color": "#1090f2",
-                                                    "value": 10
-                                                },
-                                                {
-                                                    "color": "#f39c12",
-                                                    "value": 16
-                                                },
-                                                {
-                                                    "color": "#c0392b",
-                                                    "value": 25
-                                                }
-                                            ],
-                                            "color_thresholds_transition": "hard",
-                                            "decimals": 1,
-                                            "entities": [
-                                                "sensor.0x00158d0001fa6e13_temperature"
-                                            ],
-                                            "hour24": true,
-                                            "points_per_hour": 1,
-                                            "show": {
-                                                "fill": false
-                                            },
-                                            "type": "custom:mini-graph-card"
-                                        },
-                                        {
-                                            "color_thresholds": [
-                                                {
-                                                    "color": "#f39c12",
-                                                    "value": 10
-                                                },
-                                                {
-                                                    "color": "#00C617",
-                                                    "value": 40
-                                                },
-                                                {
-                                                    "color": "#1090f2",
-                                                    "value": 60
-                                                }
-                                            ],
-                                            "color_thresholds_transition": "hard",
-                                            "decimals": 0,
-                                            "entities": [
-                                                "sensor.0x00158d0001fa6e13_humidity"
-                                            ],
-                                            "hour24": true,
-                                            "points_per_hour": 1,
-                                            "show": {
-                                                "fill": false
-                                            },
-                                            "type": "custom:mini-graph-card"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "entity": "binary_sensor.0x00158d0001b959d8_contact",
-                                            "hold_action": {
-                                                "action": "none"
-                                            },
-                                            "icon_height": "75px",
-                                            "show_icon": true,
-                                            "show_name": true,
-                                            "type": "entity-button"
-                                        },
-                                        {
-                                            "entity": "binary_sensor.0x00158d0001b95a13_contact",
-                                            "hold_action": {
-                                                "action": "none"
-                                            },
-                                            "icon_height": "75px",
-                                            "show_icon": true,
-                                            "show_name": true,
-                                            "type": "entity-button"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        },
-                        {
-                            "control": [
-                                "hvac",
-                                {
-                                    "preset": false
-                                }
-                            ],
-                            "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode",
-                            "fallback": "OFF",
-                            "sensors": [
-                                {
-                                    "entity": "sensor.thermostat_living_battery",
-                                    "name": "Battery"
-                                }
-                            ],
-                            "step_size": 0.5,
-                            "style": "ha-card {\n  --st-font-size-xl: 36px;\n}\n.mode-item {\n  flex-direction: row !important;\n  font-size: 125%;\n}\n.mode-item.active {\n  color: #ff6d17 !important;\n}\n",
-                            "type": "custom:simple-thermostat"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "cards": [
-                                        {
-                                            "color_thresholds": [
-                                                {
-                                                    "color": "#1090f2",
-                                                    "value": 10
-                                                },
-                                                {
-                                                    "color": "#f39c12",
-                                                    "value": 16
-                                                },
-                                                {
-                                                    "color": "#c0392b",
-                                                    "value": 25
-                                                }
-                                            ],
-                                            "color_thresholds_transition": "hard",
-                                            "decimals": 1,
-                                            "entities": [
-                                                "sensor.0x00158d00020187f6_temperature"
-                                            ],
-                                            "hour24": true,
-                                            "points_per_hour": 1,
-                                            "show": {
-                                                "fill": false
-                                            },
-                                            "type": "custom:mini-graph-card"
-                                        },
-                                        {
-                                            "color_thresholds": [
-                                                {
-                                                    "color": "#f39c12",
-                                                    "value": 10
-                                                },
-                                                {
-                                                    "color": "#00C617",
-                                                    "value": 40
-                                                },
-                                                {
-                                                    "color": "#1090f2",
-                                                    "value": 60
-                                                }
-                                            ],
-                                            "color_thresholds_transition": "hard",
-                                            "decimals": 0,
-                                            "entities": [
-                                                "sensor.0x00158d00020187f6_humidity"
-                                            ],
-                                            "hour24": true,
-                                            "points_per_hour": 1,
-                                            "show": {
-                                                "fill": false
-                                            },
-                                            "type": "custom:mini-graph-card"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "entity": "binary_sensor.0x00158d0001f406fb_contact",
-                                            "hold_action": {
-                                                "action": "none"
-                                            },
-                                            "icon_height": "75px",
-                                            "show_icon": true,
-                                            "show_name": true,
-                                            "type": "entity-button"
-                                        },
-                                        {
-                                            "color": "var(--paper-item-icon-active-color)",
-                                            "icon": "mdi:arrow-right-bold-hexagon-outline",
-                                            "name": "Go To Settings",
-                                            "size": "75px",
-                                            "tap_action": {
-                                                "action": "navigate",
-                                                "navigation_path": "/lovelace/kiosksettings"
-                                            },
-                                            "type": "custom:button-card"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        },
-                        {
-                            "control": [
-                                "hvac",
-                                {
-                                    "preset": false
-                                }
-                            ],
-                            "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_2",
-                            "fallback": "OFF",
-                            "sensors": [
-                                {
-                                    "entity": "sensor.thermostat_kids_battery",
-                                    "name": "Battery"
-                                }
-                            ],
-                            "step_size": 0.5,
-                            "style": "ha-card {\n  --st-font-size-xl: 36px;\n}\n.mode-item {\n  flex-direction: row !important;\n  font-size: 125%;\n}\n.mode-item.active {\n  color: #ff6d17 !important;\n}\n",
-                            "type": "custom:simple-thermostat"
-                        },
-                        {
-                            "aspect_ratio": "150%",
-                            "type": "iframe",
-                            "url": "https://embed.windy.com/embed2.html?lat=49.997&lon=14.414&zoom=8&level=surface&overlay=radar&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=51.207&detailLon=13.052&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "cards": [
-                                        {
-                                            "color_thresholds": [
-                                                {
-                                                    "color": "#1090f2",
-                                                    "value": 10
-                                                },
-                                                {
-                                                    "color": "#f39c12",
-                                                    "value": 16
-                                                },
-                                                {
-                                                    "color": "#c0392b",
-                                                    "value": 25
-                                                }
-                                            ],
-                                            "color_thresholds_transition": "hard",
-                                            "decimals": 1,
-                                            "entities": [
-                                                "sensor.0x00158d00020186c6_temperature"
-                                            ],
-                                            "hour24": true,
-                                            "points_per_hour": 1,
-                                            "show": {
-                                                "fill": false
-                                            },
-                                            "type": "custom:mini-graph-card"
-                                        },
-                                        {
-                                            "color_thresholds": [
-                                                {
-                                                    "color": "#f39c12",
-                                                    "value": 10
-                                                },
-                                                {
-                                                    "color": "#00C617",
-                                                    "value": 40
-                                                },
-                                                {
-                                                    "color": "#1090f2",
-                                                    "value": 60
-                                                }
-                                            ],
-                                            "color_thresholds_transition": "hard",
-                                            "decimals": 0,
-                                            "entities": [
-                                                "sensor.0x00158d00020186c6_humidity"
-                                            ],
-                                            "hour24": true,
-                                            "points_per_hour": 1,
-                                            "show": {
-                                                "fill": false
-                                            },
-                                            "type": "custom:mini-graph-card"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "entity": "binary_sensor.0x00158d0001de657f_contact",
-                                            "hold_action": {
-                                                "action": "none"
-                                            },
-                                            "icon_height": "75px",
-                                            "show_icon": true,
-                                            "show_name": true,
-                                            "type": "entity-button"
-                                        },
-                                        {
-                                            "entity": "binary_sensor.0x00158d0001b7bc15_contact",
-                                            "hold_action": {
-                                                "action": "none"
-                                            },
-                                            "icon_height": "75px",
-                                            "show_icon": true,
-                                            "show_name": true,
-                                            "type": "entity-button"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        }
-                    ],
-                    "icon": "mdi:home",
-                    "panel": false,
-                    "path": "kioskhome",
-                    "title": "KioskHome"
-                },
-                {
-                    "background": "var(--background-image)",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "cards": [
-                                {
-                                    "color_type": "label-card",
-                                    "icon": "mdi:airplane",
-                                    "layout": "icon_name",
-                                    "name": "VACATION",
-                                    "size": "15%",
-                                    "type": "custom:button-card"
-                                },
-                                {
-                                    "card": {
-                                        "entity": "input_boolean.vacation_mode",
-                                        "layout": "icon_label",
-                                        "show_label": true,
-                                        "show_name": false,
-                                        "show_state": false,
-                                        "state": [
-                                            {
-                                                "color": "rgb(22, 200, 38)",
-                                                "label": "Vacation mode ENABLED",
-                                                "value": "on"
-                                            },
-                                            {
-                                                "color": "rgb(255, 22, 38)",
-                                                "label": "Vacation mode DISABLED",
-                                                "value": "off"
-                                            }
-                                        ],
-                                        "type": "custom:button-card"
-                                    },
-                                    "type": "custom:restriction-card"
-                                },
-                                {
-                                    "color_type": "label-card",
-                                    "icon": "mdi:laptop-windows",
-                                    "layout": "icon_name",
-                                    "name": "WORKING DAYS",
-                                    "size": "15%",
-                                    "type": "custom:button-card"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "card": {
-                                                "entity": "input_boolean.force_workday",
-                                                "icon": "mdi:laptop-windows",
-                                                "label": "Force work day",
-                                                "show_label": true,
-                                                "show_name": false,
-                                                "show_state": false,
-                                                "state": [
-                                                    {
-                                                        "color": "rgb(22, 200, 38)",
-                                                        "value": "on"
-                                                    },
-                                                    {
-                                                        "color": "rgb(255, 22, 38)",
-                                                        "value": "off"
-                                                    }
-                                                ],
-                                                "type": "custom:button-card"
-                                            },
-                                            "type": "custom:restriction-card"
-                                        },
-                                        {
-                                            "dbltap_action": [
-                                                {
-                                                    "action": "none"
-                                                }
-                                            ],
-                                            "entity": "binary_sensor.workday_status",
-                                            "hold_action": [
-                                                {
-                                                    "action": "none"
-                                                }
-                                            ],
-                                            "show_label": true,
-                                            "show_name": false,
-                                            "show_state": false,
-                                            "state": [
-                                                {
-                                                    "icon": "mdi:laptop",
-                                                    "label": "Working Day",
-                                                    "value": "on"
-                                                },
-                                                {
-                                                    "icon": "mdi:laptop-off",
-                                                    "label": "Non Working Day",
-                                                    "value": "off"
-                                                }
-                                            ],
-                                            "tap_action": [
-                                                {
-                                                    "action": "none"
-                                                }
-                                            ],
-                                            "type": "custom:button-card"
-                                        },
-                                        {
-                                            "card": {
-                                                "entity": "input_boolean.force_freeday",
-                                                "icon": "mdi:flower",
-                                                "label": "Force free day",
-                                                "show_label": true,
-                                                "show_name": false,
-                                                "show_state": false,
-                                                "state": [
-                                                    {
-                                                        "color": "rgb(22, 200, 38)",
-                                                        "value": "on"
-                                                    },
-                                                    {
-                                                        "color": "rgb(255, 22, 38)",
-                                                        "value": "off"
-                                                    }
-                                                ],
-                                                "type": "custom:button-card"
-                                            },
-                                            "type": "custom:restriction-card"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "color_type": "label-card",
-                                    "icon": "mdi:radiator",
-                                    "layout": "icon_name",
-                                    "name": "HEATING",
-                                    "size": "15%",
-                                    "type": "custom:button-card"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "card": {
-                                                "entity": "input_boolean.heating_season",
-                                                "show_label": true,
-                                                "show_name": false,
-                                                "show_state": false,
-                                                "state": [
-                                                    {
-                                                        "color": "rgb(22, 200, 38)",
-                                                        "label": "Heating season is ON",
-                                                        "value": "on"
-                                                    },
-                                                    {
-                                                        "color": "rgb(255, 22, 38)",
-                                                        "label": "Heating season is OFF",
-                                                        "value": "off"
-                                                    }
-                                                ],
-                                                "type": "custom:button-card"
-                                            },
-                                            "type": "custom:restriction-card"
-                                        },
-                                        {
-                                            "dbltap_action": [
-                                                {
-                                                    "action": "none"
-                                                }
-                                            ],
-                                            "entity": "binary_sensor.heating_enabled",
-                                            "hold_action": [
-                                                {
-                                                    "action": "none"
-                                                }
-                                            ],
-                                            "show_label": true,
-                                            "show_name": false,
-                                            "show_state": false,
-                                            "state": [
-                                                {
-                                                    "icon": "mdi:radiator",
-                                                    "label": "Heating is ENABLED",
-                                                    "value": "on"
-                                                },
-                                                {
-                                                    "icon": "mdi:radiator-off",
-                                                    "label": "Heating is DISABLED",
-                                                    "value": "off"
-                                                }
-                                            ],
-                                            "tap_action": [
-                                                {
-                                                    "action": "none"
-                                                }
-                                            ],
-                                            "type": "custom:button-card"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "color_type": "label-card",
-                                    "icon": "mdi:air-conditioner",
-                                    "layout": "icon_name",
-                                    "name": "AIR CONDITIONING",
-                                    "size": "15%",
-                                    "type": "custom:button-card"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "card": {
-                                                "entity": "input_boolean.cooling_season",
-                                                "show_label": true,
-                                                "show_name": false,
-                                                "show_state": false,
-                                                "state": [
-                                                    {
-                                                        "color": "rgb(22, 200, 38)",
-                                                        "label": "Cooling season is ON",
-                                                        "value": "on"
-                                                    },
-                                                    {
-                                                        "color": "rgb(255, 22, 38)",
-                                                        "label": "Cooling season is OFF",
-                                                        "value": "off"
-                                                    }
-                                                ],
-                                                "type": "custom:button-card"
-                                            },
-                                            "type": "custom:restriction-card"
-                                        },
-                                        {
-                                            "dbltap_action": [
-                                                {
-                                                    "action": "none"
-                                                }
-                                            ],
-                                            "entity": "binary_sensor.cooling_enabled",
-                                            "hold_action": [
-                                                {
-                                                    "action": "none"
-                                                }
-                                            ],
-                                            "show_label": true,
-                                            "show_name": false,
-                                            "show_state": false,
-                                            "state": [
-                                                {
-                                                    "icon": "mdi:air-conditioner",
-                                                    "label": "Air conditioning is ENABLED",
-                                                    "value": "on"
-                                                },
-                                                {
-                                                    "icon": "mdi:air-conditioner",
-                                                    "label": "Air conditioning is DISABLED",
-                                                    "value": "off"
-                                                }
-                                            ],
-                                            "tap_action": [
-                                                {
-                                                    "action": "none"
-                                                }
-                                            ],
-                                            "type": "custom:button-card"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "color_type": "label-card",
-                                    "icon": "mdi:battery-charging-wireless-alert",
-                                    "layout": "icon_name",
-                                    "name": "CRITICAL BATTERIES",
-                                    "size": "15%",
-                                    "type": "custom:button-card"
-                                },
-                                {
-                                    "card": {
-                                        "columns": 3,
-                                        "type": "glance"
-                                    },
-                                    "filter": {
-                                        "include": [
-                                            {
-                                                "entity_id": "*_battery",
-                                                "state": "<= 25"
-                                            }
-                                        ]
-                                    },
-                                    "type": "custom:auto-entities"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        }
-                    ],
-                    "icon": "mdi:settings",
-                    "path": "kiosksettings",
-                    "title": "KioskSettings"
-                },
-                {
-                    "background": "var(--background-image)",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "cards": [
-                                {
-                                    "color_type": "label-card",
-                                    "icon": "mdi:hotel",
-                                    "layout": "icon_name",
-                                    "name": "Bedroom - temperatures",
-                                    "size": "15%",
-                                    "type": "custom:button-card"
-                                },
-                                {
-                                    "entities": [
-                                        "input_number.bedroom_high_temperature",
-                                        "input_number.bedroom_low_temperature"
-                                    ],
-                                    "show_header_toggle": false,
-                                    "type": "entities"
-                                },
-                                {
-                                    "color_type": "label-card",
-                                    "icon": "mdi:hotel",
-                                    "layout": "icon_name",
-                                    "name": "Workdays schedule",
-                                    "size": "15%",
-                                    "type": "custom:button-card"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "card": {
-                                                "entity": "input_boolean.bedroom_work_first_active"
-                                            },
-                                            "row": true,
-                                            "type": "custom:restriction-card"
-                                        },
-                                        "input_number.bedroom_hour_first_on",
-                                        "input_number.bedroom_minute_first_on",
-                                        "input_number.bedroom_hour_first_off",
-                                        "input_number.bedroom_minute_first_off",
-                                        {
-                                            "type": "divider"
-                                        },
-                                        {
-                                            "card": {
-                                                "entity": "input_boolean.bedroom_work_second_active"
-                                            },
-                                            "row": true,
-                                            "type": "custom:restriction-card"
-                                        },
-                                        "input_number.bedroom_hour_second_on",
-                                        "input_number.bedroom_minute_second_on",
-                                        "input_number.bedroom_hour_second_off",
-                                        "input_number.bedroom_minute_second_off"
-                                    ],
-                                    "show_header_toggle": false,
-                                    "type": "entities"
-                                },
-                                {
-                                    "color_type": "label-card",
-                                    "icon": "mdi:hotel",
-                                    "layout": "icon_name",
-                                    "name": "Free days schedule",
-                                    "size": "15%",
-                                    "type": "custom:button-card"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "card": {
-                                                "entity": "input_boolean.bedroom_free_first_active"
-                                            },
-                                            "row": true,
-                                            "type": "custom:restriction-card"
-                                        },
-                                        "input_number.bedroom_free_hour_first_on",
-                                        "input_number.bedroom_free_minute_first_on",
-                                        "input_number.bedroom_free_hour_first_off",
-                                        "input_number.bedroom_free_minute_first_off",
-                                        {
-                                            "type": "divider"
-                                        },
-                                        {
-                                            "card": {
-                                                "entity": "input_boolean.bedroom_free_second_active"
-                                            },
-                                            "row": true,
-                                            "type": "custom:restriction-card"
-                                        },
-                                        "input_number.bedroom_free_hour_second_on",
-                                        "input_number.bedroom_free_minute_second_on",
-                                        "input_number.bedroom_free_hour_second_off",
-                                        "input_number.bedroom_free_minute_second_off"
-                                    ],
-                                    "show_header_toggle": false,
-                                    "type": "entities"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        }
-                    ],
-                    "icon": "mdi:hotel",
-                    "path": "kioskbedroom",
-                    "title": "KioskBedroom"
-                },
-                {
-                    "background": "var(--background-image)",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "cards": [
-                                {
-                                    "color_type": "label-card",
-                                    "icon": "mdi:human-female-girl",
-                                    "layout": "icon_name",
-                                    "name": "Kids room - temperatures",
-                                    "size": "15%",
-                                    "type": "custom:button-card"
-                                },
-                                {
-                                    "entities": [
-                                        "input_number.kids_high_temperature",
-                                        "input_number.kids_low_temperature"
-                                    ],
-                                    "show_header_toggle": false,
-                                    "type": "entities"
-                                },
-                                {
-                                    "color_type": "label-card",
-                                    "icon": "mdi:human-female-girl",
-                                    "layout": "icon_name",
-                                    "name": "Workdays schedule",
-                                    "size": "15%",
-                                    "type": "custom:button-card"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "card": {
-                                                "entity": "input_boolean.kids_work_first_active"
-                                            },
-                                            "row": true,
-                                            "type": "custom:restriction-card"
-                                        },
-                                        "input_number.kids_hour_first_on",
-                                        "input_number.kids_minute_first_on",
-                                        "input_number.kids_hour_first_off",
-                                        "input_number.kids_minute_first_off",
-                                        {
-                                            "type": "divider"
-                                        },
-                                        {
-                                            "card": {
-                                                "entity": "input_boolean.kids_work_second_active"
-                                            },
-                                            "row": true,
-                                            "type": "custom:restriction-card"
-                                        },
-                                        "input_number.kids_hour_second_on",
-                                        "input_number.kids_minute_second_on",
-                                        "input_number.kids_hour_second_off",
-                                        "input_number.kids_minute_second_off"
-                                    ],
-                                    "show_header_toggle": false,
-                                    "type": "entities"
-                                },
-                                {
-                                    "color_type": "label-card",
-                                    "icon": "mdi:human-female-girl",
-                                    "layout": "icon_name",
-                                    "name": "Free days schedule",
-                                    "size": "15%",
-                                    "type": "custom:button-card"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "card": {
-                                                "entity": "input_boolean.kids_free_first_active"
-                                            },
-                                            "row": true,
-                                            "type": "custom:restriction-card"
-                                        },
-                                        "input_number.kids_free_hour_first_on",
-                                        "input_number.kids_free_minute_first_on",
-                                        "input_number.kids_free_hour_first_off",
-                                        "input_number.kids_free_minute_first_off",
-                                        {
-                                            "type": "divider"
-                                        },
-                                        {
-                                            "card": {
-                                                "entity": "input_boolean.kids_free_second_active"
-                                            },
-                                            "row": true,
-                                            "type": "custom:restriction-card"
-                                        },
-                                        "input_number.kids_free_hour_second_on",
-                                        "input_number.kids_free_minute_second_on",
-                                        "input_number.kids_free_hour_second_off",
-                                        "input_number.kids_free_minute_second_off"
-                                    ],
-                                    "show_header_toggle": false,
-                                    "type": "entities"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        }
-                    ],
-                    "icon": "mdi:human-female-girl",
-                    "path": "kioskkids",
-                    "title": "KioskKids"
-                },
-                {
-                    "background": "var(--background-image)",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "cards": [
-                                {
-                                    "color_type": "label-card",
-                                    "icon": "mdi:television-classic",
-                                    "layout": "icon_name",
-                                    "name": "Living room - temperatures",
-                                    "size": "15%",
-                                    "type": "custom:button-card"
-                                },
-                                {
-                                    "entities": [
-                                        "input_number.living_high_temperature",
-                                        "input_number.living_low_temperature"
-                                    ],
-                                    "show_header_toggle": false,
-                                    "type": "entities"
-                                },
-                                {
-                                    "color_type": "label-card",
-                                    "icon": "mdi:television-classic",
-                                    "layout": "icon_name",
-                                    "name": "Workdays schedule",
-                                    "size": "15%",
-                                    "type": "custom:button-card"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "card": {
-                                                "entity": "input_boolean.living_work_first_active"
-                                            },
-                                            "row": true,
-                                            "type": "custom:restriction-card"
-                                        },
-                                        "input_number.living_hour_first_on",
-                                        "input_number.living_minute_first_on",
-                                        "input_number.living_hour_first_off",
-                                        "input_number.living_minute_first_off",
-                                        {
-                                            "type": "divider"
-                                        },
-                                        {
-                                            "card": {
-                                                "entity": "input_boolean.living_work_second_active"
-                                            },
-                                            "row": true,
-                                            "type": "custom:restriction-card"
-                                        },
-                                        "input_number.living_hour_second_on",
-                                        "input_number.living_minute_second_on",
-                                        "input_number.living_hour_second_off",
-                                        "input_number.living_minute_second_off"
-                                    ],
-                                    "show_header_toggle": false,
-                                    "type": "entities"
-                                },
-                                {
-                                    "color_type": "label-card",
-                                    "icon": "mdi:television-classic",
-                                    "layout": "icon_name",
-                                    "name": "Free days schedule",
-                                    "size": "15%",
-                                    "type": "custom:button-card"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "card": {
-                                                "entity": "input_boolean.living_free_first_active"
-                                            },
-                                            "row": true,
-                                            "type": "custom:restriction-card"
-                                        },
-                                        "input_number.living_free_hour_first_on",
-                                        "input_number.living_free_minute_first_on",
-                                        "input_number.living_free_hour_first_off",
-                                        "input_number.living_free_minute_first_off",
-                                        {
-                                            "type": "divider"
-                                        },
-                                        {
-                                            "card": {
-                                                "entity": "input_boolean.living_free_second_active"
-                                            },
-                                            "row": true,
-                                            "type": "custom:restriction-card"
-                                        },
-                                        "input_number.living_free_hour_second_on",
-                                        "input_number.living_free_minute_second_on",
-                                        "input_number.living_free_hour_second_off",
-                                        "input_number.living_free_minute_second_off"
-                                    ],
-                                    "show_header_toggle": false,
-                                    "type": "entities"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        }
-                    ],
-                    "icon": "mdi:television-classic",
-                    "path": "kioskliving",
-                    "title": "KioskLiving"
                 }
             ]
         }

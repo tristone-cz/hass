@@ -1,0 +1,8 @@
+alias: Turning off cooling once heating goes on
+trigger:
+  platform: state
+  entity_id: input_boolean.heating_season
+  to: 'on'
+action:
+  service: input_boolean.turn_off
+  entity_id: input_boolean.cooling_season

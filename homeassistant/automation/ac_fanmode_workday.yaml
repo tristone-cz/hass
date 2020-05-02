@@ -1,0 +1,18 @@
+alias: Setting AC fan mode for workday
+trigger:
+  platform: state
+  entity_id: binary_sensor.workday_status
+  to: 'on'
+action:
+  - service: climate.set_fan_mode
+    data:
+      entity_id: climate.bedroom_ac
+      fan_mode: '2step'
+  - service: climate.set_fan_mode
+    data:
+      entity_id: climate.ac_kids
+      fan_mode: '2step'
+  - service: climate.set_fan_mode
+    data:
+      entity_id: climate.ac_living
+      fan_mode: '2step'
