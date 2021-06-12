@@ -1,10 +1,6 @@
 platform: template
 sensors:
   show_ac:
-    entity_id:
-      - sensor.date
-      - input_datetime.date_show_ac
-      - input_datetime.date_hide_ac
     value_template: >
       {% set today = states('sensor.date').split('-') %}
       {% set month = today[1]|int %}

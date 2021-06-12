@@ -1,8 +1,0 @@
-platform: template
-sensors:
-  thermostat_bedroom_battery:
-    friendly_name: Thermostat - bedroom
-    entity_id: zwave.eurotronic_eur_spiritz_wall_radiator_thermostat
-    value_template: '{{ states.zwave.eurotronic_eur_spiritz_wall_radiator_thermostat.attributes.battery_level }}'
-    unit_of_measurement: '%'
-    icon_template: mdi:battery-60

@@ -3,7 +3,4 @@ sensors:
   kids_ac_on:
     friendly_name: 'Čas zapnutí'
     icon_template: mdi:timer-sand
-    entity_id:
-      - input_number.kids_ac_hour_on
-      - input_number.kids_ac_minute_on
     value_template: '{{ states("input_number.kids_ac_hour_on")|int * 60 + states("kids_ac_minute_on")|int }}'

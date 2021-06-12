@@ -1,0 +1,12 @@
+alias: 'Christmas lights - On'
+trigger:
+  - platform: time
+    at: '16:30:00'
+  - platform: time
+    at: '6:30:00'
+action:
+  - service: switch.turn_on
+    entity_id: switch.0xccccccfffed72424_switch
+  - service: switch.turn_on
+    entity_id: switch.0xccccccfffed7291d_switch
+mode: single

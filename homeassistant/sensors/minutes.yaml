@@ -2,5 +2,6 @@ platform: template
 sensors:
   today_minutes:
     friendly_name: 'Minutes'
-    entity_id: sensor.time
-    value_template: '{{ now().hour|int * 60 + now().minute|int }}'
+    value_template: >
+      {% set cur_time = states('sensor.time') %}
+      {{ now().hour|int * 60 + now().minute|int }}

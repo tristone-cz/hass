@@ -3,7 +3,4 @@ sensors:
   living_free_ac_on:
     friendly_name: 'Čas zapnutí'
     icon_template: mdi:timer-sand
-    entity_id:
-      - input_number.living_ac_free_hour_on
-      - input_number.living_ac_free_minute_on
     value_template: '{{ states("input_number.living_ac_free_hour_on")|int * 60 + states("living_ac_free_minute_on")|int }}'

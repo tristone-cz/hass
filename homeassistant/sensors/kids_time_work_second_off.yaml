@@ -3,7 +3,4 @@ sensors:
   kids_work_second_off:
     friendly_name: 'Druhý čas vypnutí'
     icon_template: mdi:timer-sand
-    entity_id:
-      - input_number.kids_hour_second_off
-      - input_number.kids_minute_second_off
     value_template: '{{ states("input_number.kids_hour_second_off")|int * 60 + states("input_number.kids_minute_second_off")|int }}'

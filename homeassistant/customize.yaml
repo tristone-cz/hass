@@ -1,14 +1,16 @@
 sun.sun:
   hidden: true
-light.gateway_light_7811dcb1f507:
-  friendly_name: Xiaomi central
-sensor.illumination_7811dcb1f507:
-  friendly_name: Xiaomi light
 sensor.0x00158d0002030217_click:
   friendly_name: Xiaomi tlacitko
 sensor.0x00158d0002030217_battery:
   friendly_name: Xiaomi button
 
+binary_sensor.trv_living_battery_low:
+  friendly_name: TRV - living room
+binary_sensor.trv_bedroom_battery_low:
+  friendly_name: TRV - bedroom
+binary_sensor.trv_kids_battery_low:
+  friendly_name: TRV - kids room
 
 binary_sensor.0x00158d0001bb7a09_water_leak:
   friendly_name: Water - sink
@@ -71,6 +73,14 @@ sensor.0x00158d00020187f6_battery:
   friendly_name: Sensors - bedroom
 sensor.0x00158d00020187f6_pressure:
   hidden: true
+sensor.0x00158d0001f5367e_temperature:
+  friendly_name: Temperature - living room
+sensor.0x00158d0001f5367e_humidity:
+  friendly_name: Humidity - living room
+sensor.0x00158d0001f5367e_battery:
+  friendly_name: Sensors - living room
+sensor.0x00158d0001f5367e_pressure:
+  hidden: true
 
 binary_sensor.0x00158d0001f406fb_contact:
   friendly_name: Window - bedroom
@@ -98,104 +108,20 @@ binary_sensor.0x00158d0001b95a13_contact:
 sensor.0x00158d0001b95a13_battery:
   friendly_name: Door - living room
 
-zwave.zwaveme_zme_uzb1_usb_stick:
-  friendly_name: Z-Wave stick
-
-zwave.eurotronic_eur_spiritz_wall_radiator_thermostat:
-  friendly_name: Eurotronic - bedroom
-climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode:
-  friendly_name: Heating - bedroom
-climate.eurotronic_eur_spiritz_wall_radiator_thermostat_heat_eco:
-  hidden: true
-sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_2:
-  friendly_name: Thermostat bedroom temperature
-sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_sourcenodeid_2:
-  hidden: true
-sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_power_management_2:
-  hidden: true
-sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_system_2:
-  hidden: true
-climate.eurotronic_eur_spiritz_wall_radiator_thermostat_furnace:
-  hidden: true
-sensor.alarm_type_2:
-  hidden: true
-sensor.alarm_level_2:
-  hidden: true
-
-zwave.eurotronic_eur_spiritz_wall_radiator_thermostat_2:
-  friendly_name: Eurotronic - kids room
-climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_2:
-  friendly_name: Heating - kids room
-climate.eurotronic_eur_spiritz_wall_radiator_thermostat_heat_eco_2:
-  hidden: true
-sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_3:
-  friendly_name: Thermostat kids room temperature
-sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_sourcenodeid_3:
-  hidden: true
-sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_power_management_3:
-  hidden: true
-sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_system_3:
-  hidden: true
-climate.eurotronic_eur_spiritz_wall_radiator_thermostat_furnace_2:
-  hidden: true
-sensor.alarm_type_3:
-  hidden: true
-sensor.alarm_level_3:
-  hidden: true
-
-zwave.eurotronic_eur_spiritz_wall_radiator_thermostat_3:
-  friendly_name: Eurotronic - living room
-climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_3:
-  friendly_name: Heating - living room
-climate.eurotronic_eur_spiritz_wall_radiator_thermostat_heat_eco_3:
-  hidden: true
-sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_temperature_4:
-  friendly_name: Thermostat living room temperature
-sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_sourcenodeid_4:
-  hidden: true
-sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_power_management_4:
-  hidden: true
-sensor.eurotronic_eur_spiritz_wall_radiator_thermostat_system_4:
-  hidden: true
-climate.eurotronic_eur_spiritz_wall_radiator_thermostat_furnace_3:
-  hidden: true
-sensor.alarm_type_4:
-  hidden: true
-sensor.alarm_level_4:
-  hidden: true
-
-zwave.fibaro_system_fgs223_double_relay:
-  friendly_name: Fibaro switch - bedroom
-switch.switch:
-  friendly_name: Fibaro switch - bedroom
-  hidden: true
-sensor.alarm_type:
-  hidden: true
-sensor.alarm_level:
-  hidden: true
-sensor.fibaro_system_fgs223_double_relay_exporting:
-  hidden: true
-sensor.fibaro_system_fgs223_double_relay_exporting_2:
-  hidden: true
-sensor.fibaro_system_fgs223_double_relay_heat:
-  hidden: true
-sensor.fibaro_system_fgs223_double_relay_power_management:
-  hidden: true
-sensor.fibaro_system_fgs223_double_relay_sourcenodeid:
-  hidden: true
-sensor.fibaro_system_fgs223_double_relay_unknown:
-  hidden: true
-sensor.unknown:
-  hidden: true
-
-zwave.qubino_goap_zmnhadx_flush_1_relay:
-  friendly_name: Qubino switch - kids wardrobe
-
-
-zwave.everspring_an180_plugin_onoff_module:
-  friendly_name: Everspring socket - bedroom
-zwave.everspring_an180_plugin_onoff_module_2:
-  friendly_name: Everspring socket - living room
+switch.0x0017880108d870bc_switch:
+  friendly_name: Socket Hall
+switch.0x0017880108612b46_switch:
+  friendly_name: Socket Bedroom
+switch.0xccccccfffeeaa607_switch:
+  friendly_name: Socket IT
+switch.0xccccccfffed03819:
+  friendly_name: Scoket fridge
+switch.0xccccccfffeeaa663_switch:
+  friendly_name: Socket wine
+switch.0xccccccfffed7291d_switch:
+  friendly_name: Socket AC rooms
+switch.0xccccccfffed72424_switch:
+  friendly_name: Scoket AC living room
 
 binary_sensor.bedroom_window_delayed:
   window_room: bedroom
@@ -207,3 +133,4 @@ binary_sensor.kids_window_delayed:
   window_room: kids
 binary_sensor.kids_door_delayed:
   window_room: kids
+

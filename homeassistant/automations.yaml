@@ -1,0 +1,337 @@
+- alias: Setting AC fan mode for free day
+  trigger:
+    platform: state
+    entity_id: binary_sensor.workday_status
+    to: 'off'
+  action:
+  - service: climate.set_fan_mode
+    data:
+      entity_id: climate.bedroom_ac
+      fan_mode: windfree
+  - service: climate.set_fan_mode
+    data:
+      entity_id: climate.ac_kids
+      fan_mode: windfree
+  - service: climate.set_fan_mode
+    data:
+      entity_id: climate.ac_living
+      fan_mode: windfree
+  id: c6be32139a3d4bed9b3ff8ee89fc8840
+- alias: Setting AC fan mode for workday
+  trigger:
+    platform: state
+    entity_id: binary_sensor.workday_status
+    to: 'on'
+  action:
+  - service: climate.set_fan_mode
+    data:
+      entity_id: climate.bedroom_ac
+      fan_mode: 2step
+  - service: climate.set_fan_mode
+    data:
+      entity_id: climate.ac_kids
+      fan_mode: 2step
+  - service: climate.set_fan_mode
+    data:
+      entity_id: climate.ac_living
+      fan_mode: 2step
+  id: 3abb93f4300e47b5836f84ff721f2057
+- alias: Lights in bed - min both
+  description: ''
+  trigger:
+  - entity_id: sensor.0x00158d0002030217_click
+    platform: state
+    to: long
+  - entity_id: sensor.0x04cf8cdf3c7d4560_action
+    platform: state
+    to: button_4_hold
+  action:
+  - service: light.turn_on
+    entity_id:
+    - light.0x14b457fffe3f6c2c_light
+    - light.0x14b457fffe40d0c9_light
+    data:
+      brightness: 10
+  id: 00e876a5842f461ab341f8c60029da3b
+- alias: Lights in bed - Jarda down
+  description: ''
+  trigger:
+  - entity_id: sensor.0x04cf8cdf3c7d4560_action
+    platform: state
+    to: button_6_single
+  action:
+  - service: light.turn_on
+    entity_id: light.0x14b457fffe3f6c2c_light
+    data_template:
+      brightness: '{% set suggested = states.light[''0x14b457fffe3f6c2c_light''].attributes.brightness|int
+        - 50 %} {% if suggested > 10 %} {{ suggested }} {% else %} 10 {% endif %}
+
+        '
+  id: 3f60271feeb341ae831d58f5a0739c2e
+- alias: Lights in bed - Jarda max
+  description: ''
+  trigger:
+  - entity_id: sensor.0x04cf8cdf3c7d4560_action
+    platform: state
+    to: button_2_hold
+  action:
+  - service: light.turn_on
+    entity_id: light.0x14b457fffe3f6c2c_light
+    data:
+      brightness: 254
+  id: ec1bea2f5dc64582a433f4a811856fd6
+- alias: Lights in bed - Jarda min
+  description: ''
+  trigger:
+  - entity_id: sensor.0x04cf8cdf3c7d4560_action
+    platform: state
+    to: button_6_hold
+  action:
+  - service: light.turn_on
+    entity_id: light.0x14b457fffe3f6c2c_light
+    data:
+      brightness: 10
+  id: 6fdbc1a193514c02af441d406d1d632b
+- alias: Lights in bed - Jarda up
+  description: ''
+  trigger:
+  - entity_id: sensor.0x04cf8cdf3c7d4560_action
+    platform: state
+    to: button_2_single
+  action:
+  - service: light.turn_on
+    entity_id: light.0x14b457fffe3f6c2c_light
+    data_template:
+      brightness: '{% set suggested = states.light[''0x14b457fffe3f6c2c_light''].attributes.brightness|int
+        + 50 %} {% if suggested < 254 %} {{ suggested }} {% else %} 254 {% endif %}
+
+        '
+  id: 16d3bff5b85348648bc4bac2bea190be
+- id: e9b3c76c98584c43becbaea3c6d7bd6c
+  alias: Lights in bed - Jarda toggle power
+  description: ''
+  trigger:
+  - entity_id: sensor.0x04cf8cdf3c7d4560_action
+    platform: state
+    to: button_4_single
+  condition:
+  action:
+  - service: light.toggle
+    entity_id:
+    - light.0x14b457fffe3f6c2c_light
+  mode: single
+- alias: Lights in bed - Jirka down
+  description: ''
+  trigger:
+  - entity_id: sensor.0x04cf8cdf3c7d4560_action
+    platform: state
+    to: button_5_single
+  action:
+  - service: light.turn_on
+    entity_id: light.0x14b457fffe40d0c9_light
+    data_template:
+      brightness: '{% set suggested = states.light[''0x14b457fffe40d0c9_light''].attributes.brightness|int
+        - 50 %} {% if suggested > 10 %} {{ suggested }} {% else %} 10 {% endif %}
+
+        '
+  id: afd3bac4d929400d8f0ce0b9a9b10c1a
+- alias: Lights in bed - Jirka max
+  description: ''
+  trigger:
+  - entity_id: sensor.0x04cf8cdf3c7d4560_action
+    platform: state
+    to: button_1_hold
+  action:
+  - service: light.turn_on
+    entity_id: light.0x14b457fffe40d0c9_light
+    data:
+      brightness: 254
+  id: 11c29fa04f8848b689d259865691151d
+- alias: Lights in bed - Jirka min
+  description: ''
+  trigger:
+  - entity_id: sensor.0x04cf8cdf3c7d4560_action
+    platform: state
+    to: button_5_hold
+  - entity_id: sensor.0x000d6f000e1b7ce1_action
+    platform: state
+    to: down_hold
+  action:
+  - service: light.turn_on
+    entity_id: light.0x14b457fffe40d0c9_light
+    data:
+      brightness: 10
+  id: 7e14b700e72c453baa602dab625ab532
+- alias: Lights in bed - Jirka up
+  description: ''
+  trigger:
+  - entity_id: sensor.0x04cf8cdf3c7d4560_action
+    platform: state
+    to: button_1_single
+  action:
+  - service: light.turn_on
+    entity_id: light.0x14b457fffe40d0c9_light
+    data_template:
+      brightness: '{% set suggested = states.light[''0x14b457fffe40d0c9_light''].attributes.brightness|int
+        + 50 %} {% if suggested < 254 %} {{ suggested }} {% else %} 254 {% endif %}
+
+        '
+  id: 8e2a6bf3d4a74bf6a8a75b36546eabf4
+- alias: Lights in bed - Jirka toggle power
+  description: ''
+  trigger:
+  - entity_id: sensor.0x04cf8cdf3c7d4560_action
+    platform: state
+    to: button_3_single
+  condition:
+  action:
+  - service: light.toggle
+    entity_id:
+    - light.0x14b457fffe40d0c9_light
+  id: c17c42bdd5ef41ff8e348bf416c145ab
+- alias: Lights in bed - power off
+  description: ''
+  trigger:
+  - entity_id: sensor.0x00158d0002030217_click
+    platform: state
+    to: double
+  - entity_id: sensor.0x04cf8cdf3c7d4560_action
+    platform: state
+    to: button_3_hold
+  action:
+  - service: light.turn_off
+    entity_id: light.0x14b457fffe40d0c9_light
+  - service: light.turn_off
+    entity_id: light.0x14b457fffe3f6c2c_light
+  id: 6f5a250bafc949c5bd36450c24f05a6c
+- id: ac1b53d115504154bb7ddda092743b05
+  alias: Christmas lights - Off
+  trigger:
+  - platform: time
+    at: '23:00:00'
+  - platform: time
+    at: '8:00:00'
+  action:
+  - service: switch.turn_off
+    entity_id: switch.0xccccccfffed72424_switch
+  - service: switch.turn_off
+    entity_id: switch.0xccccccfffed7291d_switch
+  mode: single
+- alias: Christmas lights - On
+  trigger:
+  - platform: time
+    at: '16:30:00'
+  - platform: time
+    at: '6:30:00'
+  action:
+  - service: switch.turn_on
+    entity_id: switch.0xccccccfffed72424_switch
+  - service: switch.turn_on
+    entity_id: switch.0xccccccfffed7291d_switch
+  mode: single
+  id: a53a2377638944fc8ad4fe03429dab7c
+- alias: Turning off cooling once heating goes on
+  trigger:
+    platform: state
+    entity_id: input_boolean.heating_season
+    to: 'on'
+  action:
+    service: input_boolean.turn_off
+    entity_id: input_boolean.cooling_season
+  id: 59ab3ab0942040548d0a46938cd6e52c
+- alias: Turning off force free
+  trigger:
+    platform: state
+    entity_id: input_boolean.force_workday
+    to: 'on'
+  action:
+    service: input_boolean.turn_off
+    entity_id: input_boolean.force_freeday
+  id: 067150ed57de4435a583ba5617a4059e
+- alias: Turning off any force setting for working days
+  trigger:
+  - platform: time_pattern
+    hours: 23
+    minutes: 59
+    seconds: 30
+  action:
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.force_workday
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.force_freeday
+  id: 4d6f3dcfc43b44c2a697a45fffc44c2e
+- alias: Turning off force work
+  trigger:
+    platform: state
+    entity_id: input_boolean.force_freeday
+    to: 'on'
+  action:
+    service: input_boolean.turn_off
+    entity_id: input_boolean.force_workday
+  id: d4638013aa0a43a3a7b23fc1884a6f26
+- alias: Turning off heating once cooling goes on
+  trigger:
+    platform: state
+    entity_id: input_boolean.cooling_season
+    to: 'on'
+  action:
+    service: input_boolean.turn_off
+    entity_id: input_boolean.heating_season
+  id: 4ac84d7a6d4748c8ac4d4723958a9252
+- alias: Max temperatures cleanup
+  trigger:
+  - platform: time_pattern
+    hours: 6
+    minutes: 16
+    seconds: 26
+  action:
+  - service: homeassistant.update_entity
+    entity_id: sensor.bedroom_max_temperature
+  - service: homeassistant.update_entity
+    entity_id: sensor.kids_max_temperature
+  - service: homeassistant.update_entity
+    entity_id: sensor.living_max_temperature
+  id: 84bb0e94cc804a37a3675d0d0ca7ff20
+- alias: Compute minutes
+  trigger:
+  - platform: time_pattern
+    minutes: /1
+    seconds: 10
+  action:
+  - service: homeassistant.update_entity
+    entity_id: sensor.today_minutes
+  id: 0c5b2931a09a444ba7e0dff669a219c4
+- alias: Turn off night light at sunrise
+  trigger:
+    platform: sun
+    event: sunrise
+  action:
+    service: switch.turn_off
+    data:
+      entity_id: switch.0x0017880108d870bc_switch
+  id: 64cc52a5885f4446b171f079e2b98e34
+- alias: Turn on night light at sunset
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    service: switch.turn_on
+    data:
+      entity_id: switch.0x0017880108d870bc_switch
+  id: b2ce94afe3234781a5d6afbb43bd51f2
+- alias: Set HA theme for day and night
+  trigger:
+  - platform: homeassistant
+    event: start
+  - platform: state
+    entity_id: sun.sun
+    to: above_horizon
+  - platform: state
+    entity_id: sun.sun
+    to: below_horizon
+  action:
+  - service_template: frontend.set_theme
+    data_template:
+      name: "{% if states.sun.sun.state == \"above_horizon\" %}\n  clear\n{% else\
+        \ %}\n  clear-dark\n{% endif %}\n"
+  id: bb0bf6787e6642e482bb316cc6c55b64

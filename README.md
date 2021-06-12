@@ -32,12 +32,10 @@ On software side:
 
 On HW side:
 
- - Xiomi gateway (ZigBee hub) - *no longer acting as a hub, just night light*
  - TI C1352R-2 (USB dev board for Zigbee network)
  - various Xiaomi Aqara detectors (smoke sensors, flood sensors, door contacts, thermometers)
- - Z-Wave Me UZB (USB stick for Z-Wave network)
- - EUROtronic Spirit Z-Wave (TRVs)
- - few more Z-Wave devices to extend coverage
+ - Saswell Zigbee TRVs
+ - Zigbee sockets to extend coverage and meassure power (Hue, Immax)
  - Broadlink RM3 Mini (WiFi capable remote infra controller)
  - Samsung WindFree air-conditioner
 

@@ -10,36 +10,18 @@ homeassistant:
   customize: !include customize.yaml
   customize_glob: !include customize_glob.yaml
 
-customizer:
-  custom_ui: local
+#mobile_app:
 
-hacs:
-  token: 263f9b741494794fa3e139dcdf60d2f83d2d73dc
-  theme: true
-  appdaemon: true
-
-# Enables the frontend
 frontend:
-  javascript_version: latest
-  #themes: !include themes.yaml
   themes: !include_dir_merge_named themes
-
-# Enables configuration UI
 config:
-
 system_health:
-
 http:
-  # Secrets are defined in the file secrets.yaml
-  # api_password: !secret http_password
-  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  #ssl_certificate: /etc/letsencrypt/fullchain.crt
-  #ssl_key: /etc/letsencrypt/host.key
 
 # Checks for available updates
 updater:
   # Optional, allows Home Assistant developers to focus on popular components.
-  include_used_components: true
+  # include_used_components: true
 
 logger:
   default: info
@@ -53,51 +35,23 @@ logbook:
 # Track the sun
 sun:
 
-# Xiaomi Gateway
-xiaomi_aqara:
-  discovery_retry: 5
-  gateways:
-    - key: !secret xiaomigw_key
-      host: !secret xiaomigw_ip
-
-# Z-Wave stick
-zwave:
-  usb_path: /dev/usbzwave
-  network_key: !secret zwavenetwork_key
-
-# Broadlink IR for Air Conditioning
-switch:
-  # Bedroom
-  - platform: broadlink
-    host: !secret broadlink_bedroom_host
-    mac: !secret broadlink_bedroom_mac
-  # Kids
-  - platform: broadlink
-    host: !secret broadlink_kids_host
-    mac: !secret broadlink_kids_mac
-  # Living
-  - platform: broadlink
-    host: !secret broadlink_living_host
-    mac: !secret broadlink_living_mac
-
+smartir:
 climate:
   - platform: smartir
     name: AC_bedroom
     unique_id: ac_bedroom
     device_code: 1402
-    controller_data: !secret broadlink_bedroom_host
+    controller_data: remote.broadlink_bedroom_remote
   - platform: smartir
     name: AC_kids
     unique_id: ac_kids
     device_code: 1402
-    controller_data: !secret broadlink_kids_host
+    controller_data: remote.broadlink_kids_remote
   - platform: smartir
     name: AC_living
     unique_id: ac_living
     device_code: 1402
-    controller_data: !secret broadlink_living_host
-
-smartir:
+    controller_data: remote.broadlink_living_remote
 
 mqtt:
   discovery: true
@@ -115,21 +69,13 @@ mqtt:
 
 
 notify:
-  - name: pushbullet
-    platform: pushbullet
-    api_key: !secret pushbullet_apikey
-  - name: pushbullet_jirka
-    platform: pushbullet
-    api_key: !secret pushbullet_apikey_jirka
   - name: pushover
     platform: pushover
     api_key: !secret pushover_apikey
     user_key: !secret pushover_userkey
 
 
-#group: !include groups.yaml
-automation: !include_dir_list automation 
-script: !include scripts.yaml
+automation: !include automations.yaml
 
 input_boolean: !include input/boolean.yaml
 #input_select: !include input/select.yaml
@@ -143,14 +89,25 @@ binary_sensor: !include_dir_list binary_sensors
 
 # Enables support for tracking state changes over time
 history:
-
 # Tracked history is kept for 10 days
 recorder:
-  purge_keep_days: 30
   purge_interval: 1
+# Store data to InfluxDB
+influxdb:
+  username: !secret influx_user
+  password: !secret influx_password
+  tags_attributes:
+    - friendly_name
+  exclude:
+    domains:
+      - automation
 
-panel_custom:
-  - name: zwavegraph2
-    sidebar_title: Z-Wave Graph
-    sidebar_icon: mdi:access-point-network
-    url_path: zwave
+webhook:
+
+zigbee2mqtt_networkmap:
+   #topic: your topic (optional, default zigbee2mqtt)
+panel_iframe:
+  networkmap:
+    title: 'Zigbee Map'
+    url: '/local/community/zigbee2mqtt_networkmap/map.html'
+    icon: 'mdi:graphql'

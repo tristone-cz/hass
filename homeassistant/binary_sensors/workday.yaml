@@ -1,3 +1,4 @@
 platform: workday
 country: CZ
-workdays: [ mon, tue, wed, thu ]
+workdays: [  ]
+#workdays: [ mon, tue, wed, thu ]

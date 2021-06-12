@@ -9,7 +9,7 @@ bedroom_high_temperature:
 bedroom_low_temperature:
   name: "Maintenance"
   min: 6
-  max: 20
+  max: 28
   step: 1
   icon: mdi:temperature-celsius
 # A/C
@@ -189,7 +189,7 @@ kids_high_temperature:
 kids_low_temperature:
   name: "Maintenance"
   min: 6
-  max: 20
+  max: 28
   step: 1
   icon: mdi:temperature-celsius
 # A/C
@@ -369,7 +369,7 @@ living_high_temperature:
 living_low_temperature:
   name: "Maintenance"
   min: 6
-  max: 20
+  max: 28
   step: 1
   icon: mdi:temperature-celsius
 # A/C

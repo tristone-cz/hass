@@ -1,14 +1,13 @@
 platform: template
 sensors:
   living_max_temperature:
-    entity_id: sensor.0x00158d0001fa6e13_temperature
     value_template: >-
       {% if (now().hour)|int == 6 %}
         0
       {% elif is_state('sensor.living_max_temperature', 'unknown') %}
-        {{ states('sensor.0x00158d0001fa6e13_temperature') }}
-      {% elif states('sensor.0x00158d0001fa6e13_temperature')|float > states('sensor.living_max_temperature')|float %}
-        {{ states('  sensor.0x00158d0001fa6e13_temperature') }}
+        {{ states('sensor.0x00158d0001f5367e_temperature') }}
+      {% elif states('sensor.0x00158d0001f5367e_temperature')|float > states('sensor.living_max_temperature')|float %}
+        {{ states('  sensor.0x00158d0001f5367e_temperature') }}
       {% else %}
         {{ states('sensor.living_max_temperature') }}
       {% endif %}

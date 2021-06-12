@@ -3,9 +3,6 @@ sensors:
   heating_enabled:
     friendly_name: Heating enabled
     icon_template: mdi:hot-tub
-    entity_id:
-      - input_boolean.vacation_mode
-      - input_boolean.heating_season
     value_template: >-
       {{ is_state('input_boolean.vacation_mode', 'off') and is_state('input_boolean.heating_season', 'on') }}
 

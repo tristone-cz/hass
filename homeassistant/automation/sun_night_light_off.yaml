@@ -1,0 +1,9 @@
+# Night light controlled by Sun movement
+alias: Turn off night light at sunrise
+trigger:
+  platform: sun
+  event: sunrise
+action:
+  service: switch.turn_off
+  data:
+    entity_id: switch.0x0017880108d870bc_switch

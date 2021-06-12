@@ -1,0 +1,7 @@
+platform: integration
+name: power_consumption_IT
+source: sensor.0xccccccfffeeaa607_power
+unit_prefix: k
+unit: kWh
+unit_time: h
+round: 3

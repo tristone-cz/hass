@@ -1,13 +1,13 @@
 {
+    "version": 1,
+    "key": "core.device_registry",
     "data": {
         "devices": [
             {
-                "area_id": null,
                 "config_entries": [
                     "444c41ba243f4a21b652e1312c769cb5"
                 ],
                 "connections": [],
-                "id": "392ded3d2fde40148ff13ca424b97354",
                 "identifiers": [
                     [
                         "zwave",
@@ -17,17 +17,19 @@
                 "manufacturer": "FIBARO System",
                 "model": "FGS223 Double Relay",
                 "name": "FIBARO System FGS223 Double Relay",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": "9d991e8336894542a605d4444a890351"
+                "entry_type": null,
+                "id": "392ded3d2fde40148ff13ca424b97354",
+                "via_device_id": "9d991e8336894542a605d4444a890351",
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": "config_entry"
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "444c41ba243f4a21b652e1312c769cb5"
                 ],
                 "connections": [],
-                "id": "5f876a98340844d79a53d042bc9259e2",
                 "identifiers": [
                     [
                         "zwave",
@@ -37,17 +39,19 @@
                 "manufacturer": "EUROtronic",
                 "model": "EUR_SPIRITZ Wall Radiator Thermostat",
                 "name": "EUROtronic EUR_SPIRITZ Wall Radiator Thermostat",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": "9d991e8336894542a605d4444a890351"
+                "entry_type": null,
+                "id": "5f876a98340844d79a53d042bc9259e2",
+                "via_device_id": "9d991e8336894542a605d4444a890351",
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": "config_entry"
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "444c41ba243f4a21b652e1312c769cb5"
                 ],
                 "connections": [],
-                "id": "420d3421c5ae46c683c6be185090c153",
                 "identifiers": [
                     [
                         "zwave",
@@ -57,17 +61,19 @@
                 "manufacturer": "EUROtronic",
                 "model": "EUR_SPIRITZ Wall Radiator Thermostat",
                 "name": "EUROtronic EUR_SPIRITZ Wall Radiator Thermostat",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": "9d991e8336894542a605d4444a890351"
+                "entry_type": null,
+                "id": "420d3421c5ae46c683c6be185090c153",
+                "via_device_id": "9d991e8336894542a605d4444a890351",
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": "config_entry"
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "444c41ba243f4a21b652e1312c769cb5"
                 ],
                 "connections": [],
-                "id": "d0c558cafdbd46d5b51a88378085bf87",
                 "identifiers": [
                     [
                         "zwave",
@@ -77,17 +83,19 @@
                 "manufacturer": "Everspring",
                 "model": "AN180 Plug-in ON/OFF Module",
                 "name": "Everspring AN180 Plug-in ON/OFF Module",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": "9d991e8336894542a605d4444a890351"
+                "entry_type": null,
+                "id": "d0c558cafdbd46d5b51a88378085bf87",
+                "via_device_id": "9d991e8336894542a605d4444a890351",
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": "config_entry"
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "444c41ba243f4a21b652e1312c769cb5"
                 ],
                 "connections": [],
-                "id": "26a093826bcd434ba940b16746e02faa",
                 "identifiers": [
                     [
                         "zwave",
@@ -97,17 +105,19 @@
                 "manufacturer": "Everspring",
                 "model": "AN180 Plug-in ON/OFF Module",
                 "name": "Everspring AN180 Plug-in ON/OFF Module",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": "9d991e8336894542a605d4444a890351"
+                "entry_type": null,
+                "id": "26a093826bcd434ba940b16746e02faa",
+                "via_device_id": "9d991e8336894542a605d4444a890351",
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": "config_entry"
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "444c41ba243f4a21b652e1312c769cb5"
                 ],
                 "connections": [],
-                "id": "83bda27a19674ffa80460d0daf677fcb",
                 "identifiers": [
                     [
                         "zwave",
@@ -117,17 +127,19 @@
                 "manufacturer": "EUROtronic",
                 "model": "EUR_SPIRITZ Wall Radiator Thermostat",
                 "name": "EUROtronic EUR_SPIRITZ Wall Radiator Thermostat",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": "9d991e8336894542a605d4444a890351"
+                "entry_type": null,
+                "id": "83bda27a19674ffa80460d0daf677fcb",
+                "via_device_id": "9d991e8336894542a605d4444a890351",
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": "config_entry"
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "444c41ba243f4a21b652e1312c769cb5"
                 ],
                 "connections": [],
-                "id": "9d991e8336894542a605d4444a890351",
                 "identifiers": [
                     [
                         "zwave",
@@ -137,17 +149,19 @@
                 "manufacturer": "Z-Wave.Me",
                 "model": "ZME_UZB1 USB Stick",
                 "name": "Z-Wave.Me ZME_UZB1 USB Stick",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "9d991e8336894542a605d4444a890351",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": "config_entry"
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "444c41ba243f4a21b652e1312c769cb5"
                 ],
                 "connections": [],
-                "id": "cc44814d02824448a70cb2b3e09981e6",
                 "identifiers": [
                     [
                         "zwave",
@@ -158,17 +172,19 @@
                 "manufacturer": "FIBARO System",
                 "model": "FGS223 Double Relay",
                 "name": "FIBARO System FGS223 Double Relay (2)",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": "392ded3d2fde40148ff13ca424b97354"
+                "entry_type": null,
+                "id": "cc44814d02824448a70cb2b3e09981e6",
+                "via_device_id": "392ded3d2fde40148ff13ca424b97354",
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": "config_entry"
             },
             {
-                "area_id": "cbc82bfc46c844cf85eefbb10ebbb867",
                 "config_entries": [
                     "22684bb071ec41678f1fc12f294caee5"
                 ],
                 "connections": [],
-                "id": "969317cbe94f4961a05dd7e35d8d351e",
                 "identifiers": [
                     [
                         "mqtt",
@@ -177,18 +193,20 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "MiJia wireless switch (WXKG01LM)",
-                "name": "0x00158d0002030217",
+                "name": "Button_Xiaomi",
+                "sw_version": "Zigbee2MQTT 1.16.1",
+                "entry_type": null,
+                "id": "969317cbe94f4961a05dd7e35d8d351e",
+                "via_device_id": null,
+                "area_id": "cbc82bfc46c844cf85eefbb10ebbb867",
                 "name_by_user": null,
-                "sw_version": "Zigbee2mqtt 1.8.0",
-                "via_device_id": null
+                "disabled_by": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "444c41ba243f4a21b652e1312c769cb5"
                 ],
                 "connections": [],
-                "id": "2ce68baa779f45acbbb4482dc2786576",
                 "identifiers": [
                     [
                         "zwave",
@@ -198,17 +216,19 @@
                 "manufacturer": "Qubino (Goap)",
                 "model": "ZMNHADx Flush 1 Relay",
                 "name": "Qubino (Goap) ZMNHADx Flush 1 Relay",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": "9d991e8336894542a605d4444a890351"
+                "entry_type": null,
+                "id": "2ce68baa779f45acbbb4482dc2786576",
+                "via_device_id": "9d991e8336894542a605d4444a890351",
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": "config_entry"
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "444c41ba243f4a21b652e1312c769cb5"
                 ],
                 "connections": [],
-                "id": "7a97217ff138495490cf064854deef22",
                 "identifiers": [
                     [
                         "zwave",
@@ -219,17 +239,19 @@
                 "manufacturer": "Qubino (Goap)",
                 "model": "ZMNHADx Flush 1 Relay",
                 "name": "Qubino (Goap) ZMNHADx Flush 1 Relay (2)",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": "2ce68baa779f45acbbb4482dc2786576"
+                "entry_type": null,
+                "id": "7a97217ff138495490cf064854deef22",
+                "via_device_id": "2ce68baa779f45acbbb4482dc2786576",
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": "config_entry"
             },
             {
-                "area_id": "4971682dfcb9444994b6aba9884694cf",
                 "config_entries": [
                     "22684bb071ec41678f1fc12f294caee5"
                 ],
                 "connections": [],
-                "id": "c2397dd679244809950e566d2687ece4",
                 "identifiers": [
                     [
                         "mqtt",
@@ -238,18 +260,20 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "Aqara water leak sensor (SJCGQ11LM)",
-                "name": "0x00158d0001bb7219",
+                "name": "Water_Washmachine",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "c2397dd679244809950e566d2687ece4",
+                "via_device_id": null,
+                "area_id": "4971682dfcb9444994b6aba9884694cf",
                 "name_by_user": "water_washmachine",
-                "sw_version": "Zigbee2mqtt 1.8.0",
-                "via_device_id": null
+                "disabled_by": null
             },
             {
-                "area_id": "4971682dfcb9444994b6aba9884694cf",
                 "config_entries": [
                     "22684bb071ec41678f1fc12f294caee5"
                 ],
                 "connections": [],
-                "id": "43215cd228b2437c9a11c1326bf12b6a",
                 "identifiers": [
                     [
                         "mqtt",
@@ -258,18 +282,20 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "Aqara water leak sensor (SJCGQ11LM)",
-                "name": "0x00158d0001bb383d",
+                "name": "Water_BasinLeft",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "43215cd228b2437c9a11c1326bf12b6a",
+                "via_device_id": null,
+                "area_id": "4971682dfcb9444994b6aba9884694cf",
                 "name_by_user": "water_leftbasin",
-                "sw_version": "Zigbee2mqtt 1.8.0",
-                "via_device_id": null
+                "disabled_by": null
             },
             {
-                "area_id": "4971682dfcb9444994b6aba9884694cf",
                 "config_entries": [
                     "22684bb071ec41678f1fc12f294caee5"
                 ],
                 "connections": [],
-                "id": "077827a458ab4cc98b600581cff56d74",
                 "identifiers": [
                     [
                         "mqtt",
@@ -278,18 +304,20 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "Aqara water leak sensor (SJCGQ11LM)",
-                "name": "0x00158d0001bb71f5",
+                "name": "Water_BasinRight",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "077827a458ab4cc98b600581cff56d74",
+                "via_device_id": null,
+                "area_id": "4971682dfcb9444994b6aba9884694cf",
                 "name_by_user": "water_rightbasin",
-                "sw_version": "Zigbee2mqtt 1.8.0",
-                "via_device_id": null
+                "disabled_by": null
             },
             {
-                "area_id": "cbc82bfc46c844cf85eefbb10ebbb867",
                 "config_entries": [
                     "22684bb071ec41678f1fc12f294caee5"
                 ],
                 "connections": [],
-                "id": "ffe829648c484066aa19360452cf33da",
                 "identifiers": [
                     [
                         "mqtt",
@@ -298,18 +326,20 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "MiJia Honeywell smoke detector (JTYJ-GD-01LM/BW)",
-                "name": "0x00158d0001b7d5c8",
+                "name": "Smoke_Hall",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "ffe829648c484066aa19360452cf33da",
+                "via_device_id": null,
+                "area_id": "cbc82bfc46c844cf85eefbb10ebbb867",
                 "name_by_user": "smoke_hall",
-                "sw_version": "Zigbee2mqtt 1.8.0",
-                "via_device_id": null
+                "disabled_by": null
             },
             {
-                "area_id": "298d882356634a30aeb7fccbacdad0e5",
                 "config_entries": [
                     "22684bb071ec41678f1fc12f294caee5"
                 ],
                 "connections": [],
-                "id": "52ffa5ecbf6142f19200edfe987822d1",
                 "identifiers": [
                     [
                         "mqtt",
@@ -318,18 +348,20 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "Aqara water leak sensor (SJCGQ11LM)",
-                "name": "0x00158d0001bb7a09",
+                "name": "Water_Sink",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "52ffa5ecbf6142f19200edfe987822d1",
+                "via_device_id": null,
+                "area_id": "298d882356634a30aeb7fccbacdad0e5",
                 "name_by_user": "water_sink",
-                "sw_version": "Zigbee2mqtt 1.8.0",
-                "via_device_id": null
+                "disabled_by": null
             },
             {
-                "area_id": "298d882356634a30aeb7fccbacdad0e5",
                 "config_entries": [
                     "22684bb071ec41678f1fc12f294caee5"
                 ],
                 "connections": [],
-                "id": "2a03b69e0df54e5d84b5b4671245579f",
                 "identifiers": [
                     [
                         "mqtt",
@@ -338,18 +370,20 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "MiJia Honeywell smoke detector (JTYJ-GD-01LM/BW)",
-                "name": "0x00158d0001b79326",
+                "name": "Smoke_Living",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "2a03b69e0df54e5d84b5b4671245579f",
+                "via_device_id": null,
+                "area_id": "298d882356634a30aeb7fccbacdad0e5",
                 "name_by_user": "smoke_living",
-                "sw_version": "Zigbee2mqtt 1.8.0",
-                "via_device_id": null
+                "disabled_by": null
             },
             {
-                "area_id": "298d882356634a30aeb7fccbacdad0e5",
                 "config_entries": [
                     "22684bb071ec41678f1fc12f294caee5"
                 ],
                 "connections": [],
-                "id": "a8e6d21b40d342419ec997a1bebce02c",
                 "identifiers": [
                     [
                         "mqtt",
@@ -358,18 +392,20 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "Aqara temperature, humidity and pressure sensor (WSDCGQ11LM)",
-                "name": "0x00158d0001fa6e13",
+                "name": "Sensors_Kitchen",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "a8e6d21b40d342419ec997a1bebce02c",
+                "via_device_id": null,
+                "area_id": "298d882356634a30aeb7fccbacdad0e5",
                 "name_by_user": "sensors_kitchen",
-                "sw_version": "Zigbee2mqtt 1.8.0",
-                "via_device_id": null
+                "disabled_by": null
             },
             {
-                "area_id": "298d882356634a30aeb7fccbacdad0e5",
                 "config_entries": [
                     "22684bb071ec41678f1fc12f294caee5"
                 ],
                 "connections": [],
-                "id": "ecbd9ec26b804f8482523993167b1062",
                 "identifiers": [
                     [
                         "mqtt",
@@ -378,18 +414,20 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "Aqara door & window contact sensor (MCCGQ11LM)",
-                "name": "0x00158d0001b95a13",
+                "name": "Door_Living",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "ecbd9ec26b804f8482523993167b1062",
+                "via_device_id": null,
+                "area_id": "298d882356634a30aeb7fccbacdad0e5",
                 "name_by_user": "door_living",
-                "sw_version": "Zigbee2mqtt 1.8.0",
-                "via_device_id": null
+                "disabled_by": null
             },
             {
-                "area_id": "298d882356634a30aeb7fccbacdad0e5",
                 "config_entries": [
                     "22684bb071ec41678f1fc12f294caee5"
                 ],
                 "connections": [],
-                "id": "c17504c94461466aa2e741d9752ca64e",
                 "identifiers": [
                     [
                         "mqtt",
@@ -398,18 +436,20 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "Aqara door & window contact sensor (MCCGQ11LM)",
-                "name": "0x00158d0001b959d8",
+                "name": "Window_Living",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "c17504c94461466aa2e741d9752ca64e",
+                "via_device_id": null,
+                "area_id": "298d882356634a30aeb7fccbacdad0e5",
                 "name_by_user": "window_living",
-                "sw_version": "Zigbee2mqtt 1.8.0",
-                "via_device_id": null
+                "disabled_by": null
             },
             {
-                "area_id": "1e30cee584734a59b01a4c2cd357312f",
                 "config_entries": [
                     "22684bb071ec41678f1fc12f294caee5"
                 ],
                 "connections": [],
-                "id": "5b8ec84e29124e4b92107c87accd27f1",
                 "identifiers": [
                     [
                         "mqtt",
@@ -418,18 +458,20 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "Aqara temperature, humidity and pressure sensor (WSDCGQ11LM)",
-                "name": "0x00158d00020187f6",
+                "name": "Sensors_Bedroom",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "5b8ec84e29124e4b92107c87accd27f1",
+                "via_device_id": null,
+                "area_id": "1e30cee584734a59b01a4c2cd357312f",
                 "name_by_user": "sensors_bedroom",
-                "sw_version": "Zigbee2mqtt 1.8.0",
-                "via_device_id": null
+                "disabled_by": null
             },
             {
-                "area_id": "1e30cee584734a59b01a4c2cd357312f",
                 "config_entries": [
                     "22684bb071ec41678f1fc12f294caee5"
                 ],
                 "connections": [],
-                "id": "3dfc7584f7c54aa7a70370642118115f",
                 "identifiers": [
                     [
                         "mqtt",
@@ -438,18 +480,20 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "MiJia door & window contact sensor (MCCGQ01LM)",
-                "name": "0x00158d0001f406fb",
+                "name": "Window_Bedroom",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "3dfc7584f7c54aa7a70370642118115f",
+                "via_device_id": null,
+                "area_id": "1e30cee584734a59b01a4c2cd357312f",
                 "name_by_user": "window_bedroom",
-                "sw_version": "Zigbee2mqtt 1.8.0",
-                "via_device_id": null
+                "disabled_by": null
             },
             {
-                "area_id": "1e30cee584734a59b01a4c2cd357312f",
                 "config_entries": [
                     "22684bb071ec41678f1fc12f294caee5"
                 ],
                 "connections": [],
-                "id": "c0ef63d0cca54b66a4ab92229f34306b",
                 "identifiers": [
                     [
                         "mqtt",
@@ -458,18 +502,20 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "MiJia Honeywell smoke detector (JTYJ-GD-01LM/BW)",
-                "name": "0x00158d0001b7f68b",
+                "name": "Smoke_Bedroom",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "c0ef63d0cca54b66a4ab92229f34306b",
+                "via_device_id": null,
+                "area_id": "1e30cee584734a59b01a4c2cd357312f",
                 "name_by_user": "smoke_bedroom",
-                "sw_version": "Zigbee2mqtt 1.8.0",
-                "via_device_id": null
+                "disabled_by": null
             },
             {
-                "area_id": "8a5441ef60f5424d9b23fe04dba6fb2c",
                 "config_entries": [
                     "22684bb071ec41678f1fc12f294caee5"
                 ],
                 "connections": [],
-                "id": "6845419a400540dbbc08936c6aa3f3d3",
                 "identifiers": [
                     [
                         "mqtt",
@@ -478,18 +524,20 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "Aqara temperature, humidity and pressure sensor (WSDCGQ11LM)",
-                "name": "0x00158d00020186c6",
+                "name": "Sensors_Kids",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "6845419a400540dbbc08936c6aa3f3d3",
+                "via_device_id": null,
+                "area_id": "8a5441ef60f5424d9b23fe04dba6fb2c",
                 "name_by_user": "sensors_kids",
-                "sw_version": "Zigbee2mqtt 1.8.0",
-                "via_device_id": null
+                "disabled_by": null
             },
             {
-                "area_id": "8a5441ef60f5424d9b23fe04dba6fb2c",
                 "config_entries": [
                     "22684bb071ec41678f1fc12f294caee5"
                 ],
                 "connections": [],
-                "id": "00d722bdd42348f4a9fa0ab062bb12b2",
                 "identifiers": [
                     [
                         "mqtt",
@@ -498,18 +546,20 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "Aqara door & window contact sensor (MCCGQ11LM)",
-                "name": "0x00158d0001b7bc15",
+                "name": "Door_Kids",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "00d722bdd42348f4a9fa0ab062bb12b2",
+                "via_device_id": null,
+                "area_id": "8a5441ef60f5424d9b23fe04dba6fb2c",
                 "name_by_user": "door_kids",
-                "sw_version": "Zigbee2mqtt 1.8.0",
-                "via_device_id": null
+                "disabled_by": null
             },
             {
-                "area_id": "8a5441ef60f5424d9b23fe04dba6fb2c",
                 "config_entries": [
                     "22684bb071ec41678f1fc12f294caee5"
                 ],
                 "connections": [],
-                "id": "211b0827293648109cddaa8df18ebae4",
                 "identifiers": [
                     [
                         "mqtt",
@@ -518,18 +568,20 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "Aqara door & window contact sensor (MCCGQ11LM)",
-                "name": "0x00158d0001de657f",
+                "name": "Window_Kids",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "211b0827293648109cddaa8df18ebae4",
+                "via_device_id": null,
+                "area_id": "8a5441ef60f5424d9b23fe04dba6fb2c",
                 "name_by_user": "windows_kids",
-                "sw_version": "Zigbee2mqtt 1.8.0",
-                "via_device_id": null
+                "disabled_by": null
             },
             {
-                "area_id": "8a5441ef60f5424d9b23fe04dba6fb2c",
                 "config_entries": [
                     "22684bb071ec41678f1fc12f294caee5"
                 ],
                 "connections": [],
-                "id": "64ef6aac17a74154912ced27cf1e1976",
                 "identifiers": [
                     [
                         "mqtt",
@@ -538,18 +590,20 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "MiJia Honeywell smoke detector (JTYJ-GD-01LM/BW)",
-                "name": "0x00158d0001b71c0f",
+                "name": "Smoke_Kids",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "64ef6aac17a74154912ced27cf1e1976",
+                "via_device_id": null,
+                "area_id": "8a5441ef60f5424d9b23fe04dba6fb2c",
                 "name_by_user": "smoke_kids",
-                "sw_version": "Zigbee2mqtt 1.8.0",
-                "via_device_id": null
+                "disabled_by": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "22684bb071ec41678f1fc12f294caee5"
                 ],
                 "connections": [],
-                "id": "60d57377d1024da7943e59ba5b3a2461",
                 "identifiers": [
                     [
                         "mqtt",
@@ -558,13 +612,531 @@
                 ],
                 "manufacturer": "Xiaomi",
                 "model": "Aqara temperature, humidity and pressure sensor (WSDCGQ11LM)",
-                "name": "0x00158d0001f5367e",
+                "name": "Sensors_Living",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "60d57377d1024da7943e59ba5b3a2461",
+                "via_device_id": null,
+                "area_id": null,
                 "name_by_user": null,
-                "sw_version": "Zigbee2mqtt 1.8.0",
-                "via_device_id": null
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x0017880108d870bc"
+                    ]
+                ],
+                "manufacturer": "Philips",
+                "model": "Hue smart plug bluetooth (046677552343)",
+                "name": "HueSocket_Hall",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "912b7fef36ce45349faa9beed04939c6",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x0017880108612b46"
+                    ]
+                ],
+                "manufacturer": "Philips",
+                "model": "Hue smart plug bluetooth (046677552343)",
+                "name": "HueSocket_Bedroom",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "8747dcb33e6c4005bd17bd389d8691fd",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "0bdb8ec7bcc24cc5ac2d287be7003991"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mobile_app",
+                        "a72b4c30950d1978"
+                    ]
+                ],
+                "manufacturer": "samsung",
+                "model": "SM-G970F",
+                "name": "SM-G970F",
+                "sw_version": "29",
+                "entry_type": null,
+                "id": "a9793b7c084b4ac9ad7d670377086172",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0xccccccfffeeaa663"
+                    ]
+                ],
+                "manufacturer": "Immax",
+                "model": "NEO SMART plug (07048L)",
+                "name": "Power_Wine",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "c9a60e938cd241daa033657b088827db",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0xccccccfffed7291d"
+                    ]
+                ],
+                "manufacturer": "Immax",
+                "model": "NEO SMART plug (07048L)",
+                "name": "Power_AC_Rooms",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "4a836dfcae9c40e2a6909861b787b163",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "e36d7f80072011eba1412d30f1471900"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "broadlink",
+                        "24dfa727cdce"
+                    ]
+                ],
+                "manufacturer": "Broadlink",
+                "model": "RM mini 3",
+                "name": "broadlink_living",
+                "sw_version": 44059,
+                "entry_type": null,
+                "id": "e672bfda072011eb8cd05f6664ce209a",
+                "via_device_id": null,
+                "area_id": "298d882356634a30aeb7fccbacdad0e5",
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "fbe8e238072011eb95fa31a513fd1191"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "broadlink",
+                        "24dfa727bb98"
+                    ]
+                ],
+                "manufacturer": "Broadlink",
+                "model": "RM mini 3",
+                "name": "broadlink_bedroom",
+                "sw_version": 44057,
+                "entry_type": null,
+                "id": "feeef212072011ebb93699f022d2ccb5",
+                "via_device_id": null,
+                "area_id": "1e30cee584734a59b01a4c2cd357312f",
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "108d98a6072111eb8aa16defacd10e43"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "broadlink",
+                        "24dfa727cf26"
+                    ]
+                ],
+                "manufacturer": "Broadlink",
+                "model": "RM mini 3",
+                "name": "broadlink_kids",
+                "sw_version": 44057,
+                "entry_type": null,
+                "id": "1393201c072111ebbe0aed1f4fac6687",
+                "via_device_id": null,
+                "area_id": "8a5441ef60f5424d9b23fe04dba6fb2c",
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x04cf8cdf3c7d4560"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "Aqara Opple switch 3 bands (WXCJKG13LM)",
+                "name": "Button_Bedroom",
+                "sw_version": "Zigbee2MQTT 1.18.1",
+                "entry_type": null,
+                "id": "95ec5cc60d3a11ebab51a34965237fda",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x14b457fffe40d0c9"
+                    ]
+                ],
+                "manufacturer": "IKEA",
+                "model": "TRADFRI LED bulb GU10 400 lumen, dimmable (LED1837R5)",
+                "name": "LightBedroom_Jirka",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "89802d52179011eb9fa4bfcad5bce309",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x14b457fffe3f6c2c"
+                    ]
+                ],
+                "manufacturer": "IKEA",
+                "model": "TRADFRI LED bulb GU10 400 lumen, dimmable (LED1837R5)",
+                "name": "LightBedroom_Jarda",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "2a9e1c40179e11eb9d4d8d74b559a0a0",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0xccccccfffed72424"
+                    ]
+                ],
+                "manufacturer": "Immax",
+                "model": "NEO SMART plug (07048L)",
+                "name": "Power_AC_Living",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "1ce47914aa6a3fa6790e35212f8dbc36",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0xccccccfffeeaa607"
+                    ]
+                ],
+                "manufacturer": "Immax",
+                "model": "NEO SMART plug (07048L)",
+                "name": "Power_IT",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "0a8a0a305efe2473d27d47fa3b692052",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0xccccccfffed03819"
+                    ]
+                ],
+                "manufacturer": "Immax",
+                "model": "NEO SMART plug (07048L)",
+                "name": "Power_Fridge",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "e3d6144ba65dc2e7587fa362e06a0a13",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x5c0272fffe8a601b"
+                    ]
+                ],
+                "manufacturer": "Saswell",
+                "model": "Thermostatic radiator valve (SEA801-Zigbee/SEA802-Zigbee)",
+                "name": "TRV_Kids",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "fc9f4b321d631ae93490d92942e2622a",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x5c0272fffe8a5e10"
+                    ]
+                ],
+                "manufacturer": "Saswell",
+                "model": "Thermostatic radiator valve (SEA801-Zigbee/SEA802-Zigbee)",
+                "name": "TRV_Living",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "fa940924cdd4d9c9ba52514fc2362eb3",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x5c0272fffec24ee4"
+                    ]
+                ],
+                "manufacturer": "Saswell",
+                "model": "Thermostatic radiator valve (SEA801-Zigbee/SEA802-Zigbee)",
+                "name": "TRV_Bedroom",
+                "sw_version": "Zigbee2MQTT 1.19.1",
+                "entry_type": null,
+                "id": "afca089f2f0b496dc2c86f33310e0e82",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            },
+            {
+                "config_entries": [
+                    "36fb175bd6e68b551541006364790026"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "hacs",
+                        "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd"
+                    ]
+                ],
+                "manufacturer": "hacs.xyz",
+                "model": "",
+                "name": "HACS",
+                "sw_version": "1.12.4",
+                "entry_type": "service",
+                "id": "4c80c03981f0912f7904d45d689d1985",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null,
+                "disabled_by": null
+            }
+        ],
+        "deleted_devices": [
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x000d6f000e1b7ce1"
+                    ]
+                ],
+                "id": "6992a47c86ad4bc5a86204f71075cf59",
+                "orphaned_timestamp": null
+            },
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x000d6f001082b242"
+                    ]
+                ],
+                "id": "25cdb6018c2b42ebae15be4fdcb1c77f",
+                "orphaned_timestamp": null
+            },
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x842e14fffe295192"
+                    ]
+                ],
+                "id": "59e9b17535153acfa9d5e9415b9eb918",
+                "orphaned_timestamp": null
+            },
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00158d0003697a76"
+                    ]
+                ],
+                "id": "522647736d2b3bdc9a7001bd3347e34b",
+                "orphaned_timestamp": null
+            },
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00178801083d6f6b"
+                    ]
+                ],
+                "id": "0b8e5870c6f64857949849f65a46c448",
+                "orphaned_timestamp": null
+            },
+            {
+                "config_entries": [
+                    "22684bb071ec41678f1fc12f294caee5"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "zigbee2mqtt_0x00178801083d5bcd"
+                    ]
+                ],
+                "id": "305b31804b4249f0967611a5fb3fe7aa",
+                "orphaned_timestamp": null
+            },
+            {
+                "config_entries": [],
+                "connections": [
+                    [
+                        "mac",
+                        "e8:db:84:d7:ff:3a"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "shelly",
+                        "E8DB84D7FF3A"
+                    ]
+                ],
+                "id": "39e6b54b7e6b400b5ea026036a537fa8",
+                "orphaned_timestamp": 1623490832.4540465
+            },
+            {
+                "config_entries": [],
+                "connections": [
+                    [
+                        "mac",
+                        "e8:db:84:d4:3e:21"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "shelly",
+                        "E8DB84D43E21"
+                    ]
+                ],
+                "id": "c1c861beffc5ac424c1a9d55ab94f3a3",
+                "orphaned_timestamp": 1623490836.0713592
             }
         ]
-    },
-    "key": "core.device_registry",
-    "version": 1
+    }
 }

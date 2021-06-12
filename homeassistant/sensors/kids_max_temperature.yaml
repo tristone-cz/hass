@@ -1,7 +1,6 @@
 platform: template
 sensors:
   kids_max_temperature:
-    entity_id: sensor.0x00158d00020186c6_temperature
     value_template: >-
       {% if (now().hour)|int == 6 %}
         0

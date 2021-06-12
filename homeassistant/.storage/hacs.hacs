@@ -1,9 +1,9 @@
 {
-    "data": {
-        "compact": false,
-        "onboarding_done": true,
-        "view": "Table"
-    },
+    "version": "6",
     "key": "hacs.hacs",
-    "version": "6"
+    "data": {
+        "view": "Table",
+        "compact": false,
+        "onboarding_done": true
+    }
 }

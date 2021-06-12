@@ -1,0 +1,63 @@
+{
+    "version": "6",
+    "key": "hacs/171121354.hacs",
+    "data": {
+        "archived": false,
+        "authors": [
+            "@smartHomeHub"
+        ],
+        "category": "integration",
+        "content_in_root": false,
+        "country": [],
+        "config_flow": false,
+        "default_branch": "master",
+        "description": "Integration for Home Assistant to control climate, TV and fan devices via IR/RF controllers (Broadlink, Xiaomi, MQTT, LOOKin, ESPHome)",
+        "domain": "smartir",
+        "domains": [],
+        "downloads": 0,
+        "file_name": "",
+        "filename": "",
+        "first_install": false,
+        "fork": false,
+        "full_name": "smartHomeHub/SmartIR",
+        "hacs": null,
+        "hide": false,
+        "hide_default_branch": false,
+        "homeassistant": "0.115.0",
+        "id": "171121354",
+        "iot_class": null,
+        "installed": true,
+        "installed_commit": "40973e4",
+        "installed_version": "1.14.0",
+        "open_issues": 14,
+        "last_commit": "40973e4",
+        "last_version": "1.14.0",
+        "last_updated": "2021-01-06T10:26:37Z",
+        "manifest_name": "SmartIR",
+        "new": false,
+        "persistent_directory": "codes",
+        "pushed_at": "2021-01-06T10:26:37",
+        "releases": true,
+        "render_readme": false,
+        "published_tags": [
+            "1.14.0",
+            "1.13.2",
+            "1.13.1",
+            "1.12.0",
+            "1.11.0"
+        ],
+        "selected_tag": null,
+        "show_beta": false,
+        "stargazers_count": 623,
+        "topics": [
+            "broadlink",
+            "chuangmiir",
+            "esphome",
+            "homeassistant",
+            "iot",
+            "lookin",
+            "smarthome"
+        ],
+        "zip_release": false
+    }
+}

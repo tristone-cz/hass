@@ -1,47 +1,8 @@
 {
+    "version": 1,
+    "key": "lovelace",
     "data": {
         "config": {
-            "custom_header": {
-                "compact_mode": true,
-                "exceptions": [
-                    {
-                        "conditions": {
-                            "user": "Kiosk"
-                        },
-                        "config": {
-                            "default_tab": "KioskHome",
-                            "disable": false,
-                            "disable_sidebar": true,
-                            "hide_config": true,
-                            "hide_help": true,
-                            "hide_unused": true,
-                            "menu": false,
-                            "options": false,
-                            "show_tabs": "KioskHome,KioskSettings,KioskBedroom,KioskLiving,KioskKids",
-                            "swipe": true
-                        }
-                    },
-                    {
-                        "conditions": {
-                            "user_agent": "Android"
-                        },
-                        "config": {
-                            "default_tab": "MobilHome",
-                            "disable": false,
-                            "disable_sidebar": true,
-                            "hide_config": true,
-                            "hide_help": true,
-                            "hide_unused": true,
-                            "menu": false,
-                            "options": false,
-                            "show_tabs": "MobilHome,MobilStatus,KioskSettings,KioskBedroom,KioskLiving,KioskKids",
-                            "swipe": true
-                        }
-                    }
-                ],
-                "hide_help": true,
-                "voice_hide": true
-            },
             "title": "Home",
             "views": [
                 {
@@ -52,17 +13,38 @@
                             "cards": [
                                 {
                                     "card": {
-                                        "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_3",
+                                        "control": {
+                                            "hvac": {
+                                                "auto": false
+                                            }
+                                        },
+                                        "entity": "climate.trv_living",
                                         "fallback": "OFF",
                                         "sensors": [
                                             {
-                                                "entity": "sensor.thermostat_living_battery",
+                                                "entity": "binary_sensor.trv_living_battery_low",
                                                 "name": "Battery"
                                             }
                                         ],
-                                        "step_size": 0.5,
-                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
-                                        "type": "custom:simple-thermostat"
+                                        "step_size": "0.5",
+                                        "style": ".mode-item.active {\n    color: #000000 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "type": "custom:simple-thermostat",
+                                        "header": {
+                                            "name": "Heating - living room"
+                                        },
+                                        "label": {
+                                            "temperature": "Temperature"
+                                        },
+                                        "hide": {
+                                            "state": true
+                                        },
+                                        "layout": {
+                                            "mode": {
+                                                "names": true,
+                                                "icons": true,
+                                                "headings": false
+                                            }
+                                        }
                                     },
                                     "conditions": [
                                         {
@@ -75,7 +57,6 @@
                                 {
                                     "card": {
                                         "control": {
-                                            "_headings": true,
                                             "fan": {
                                                 "2step": {
                                                     "icon": "mdi:trending-down",
@@ -103,11 +84,21 @@
                                         },
                                         "entity": "climate.ac_living",
                                         "hide": {
-                                            "temperature": true
+                                            "temperature": true,
+                                            "state": true
                                         },
-                                        "name": "Air conditioning - living room",
+                                        "layout": {
+                                            "mode": {
+                                                "names": true,
+                                                "icons": true,
+                                                "headings": false
+                                            }
+                                        },
+                                        "header": {
+                                            "name": "Air conditioning - living room"
+                                        },
                                         "step_size": 1,
-                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "style": ".mode-item.active {\n    color: #000000 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
                                         "type": "custom:simple-thermostat"
                                     },
                                     "conditions": [
@@ -140,7 +131,7 @@
                                                     "color_thresholds_transition": "hard",
                                                     "decimals": 1,
                                                     "entities": [
-                                                        "sensor.0x00158d0001fa6e13_temperature"
+                                                        "sensor.0x00158d0001f5367e_temperature"
                                                     ],
                                                     "hour24": true,
                                                     "points_per_hour": 1,
@@ -167,7 +158,7 @@
                                                     "color_thresholds_transition": "hard",
                                                     "decimals": 0,
                                                     "entities": [
-                                                        "sensor.0x00158d0001fa6e13_humidity"
+                                                        "sensor.0x00158d0001f5367e_humidity"
                                                     ],
                                                     "hour24": true,
                                                     "points_per_hour": 1,
@@ -183,23 +174,57 @@
                                             "cards": [
                                                 {
                                                     "entity": "binary_sensor.0x00158d0001b959d8_contact",
-                                                    "hold_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "icon_height": "75px",
-                                                    "show_icon": true,
-                                                    "show_name": true,
-                                                    "type": "entity-button"
+                                                    "size": "50px",
+                                                    "type": "custom:button-card",
+                                                    "state": [
+                                                        {
+                                                            "value": "on",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "rgb(234, 175, 37)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "value": "off",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "rgb(53, 130, 181)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
                                                 },
                                                 {
                                                     "entity": "binary_sensor.0x00158d0001b95a13_contact",
-                                                    "hold_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "icon_height": "75px",
-                                                    "show_icon": true,
-                                                    "show_name": true,
-                                                    "type": "entity-button"
+                                                    "size": "50px",
+                                                    "type": "custom:button-card",
+                                                    "state": [
+                                                        {
+                                                            "value": "on",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "rgb(234, 175, 37)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "value": "off",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "rgb(53, 130, 181)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
                                                 }
                                             ],
                                             "type": "horizontal-stack"
@@ -229,17 +254,38 @@
                             "cards": [
                                 {
                                     "card": {
-                                        "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode",
+                                        "control": {
+                                            "hvac": {
+                                                "auto": false
+                                            }
+                                        },
+                                        "entity": "climate.trv_bedroom",
                                         "fallback": "OFF",
                                         "sensors": [
                                             {
-                                                "entity": "sensor.thermostat_bedroom_battery",
+                                                "entity": "binary_sensor.trv_bedroom_battery_low",
                                                 "name": "Battery"
                                             }
                                         ],
-                                        "step_size": 0.5,
-                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
-                                        "type": "custom:simple-thermostat"
+                                        "step_size": "0.5",
+                                        "style": ".mode-item.active {\n    color: #000000 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "type": "custom:simple-thermostat",
+                                        "header": {
+                                            "name": "Heating - bedroom"
+                                        },
+                                        "label": {
+                                            "temperature": "Temperature"
+                                        },
+                                        "hide": {
+                                            "state": true
+                                        },
+                                        "layout": {
+                                            "mode": {
+                                                "names": true,
+                                                "icons": true,
+                                                "headings": false
+                                            }
+                                        }
                                     },
                                     "conditions": [
                                         {
@@ -252,7 +298,6 @@
                                 {
                                     "card": {
                                         "control": {
-                                            "_headings": true,
                                             "fan": {
                                                 "2step": {
                                                     "icon": "mdi:trending-down",
@@ -278,13 +323,23 @@
                                                 "heat_cool": false
                                             }
                                         },
+                                        "layout": {
+                                            "mode": {
+                                                "names": true,
+                                                "icons": true,
+                                                "headings": false
+                                            }
+                                        },
                                         "entity": "climate.bedroom_ac",
                                         "hide": {
-                                            "temperature": true
+                                            "temperature": true,
+                                            "state": true
                                         },
-                                        "name": "Air conditioning - bedroom",
+                                        "header": {
+                                            "name": "Air conditioning - bedroom"
+                                        },
                                         "step_size": 1,
-                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "style": ".mode-item.active {\n    color: #000000 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
                                         "type": "custom:simple-thermostat"
                                     },
                                     "conditions": [
@@ -360,26 +415,47 @@
                                             "cards": [
                                                 {
                                                     "entity": "binary_sensor.0x00158d0001f406fb_contact",
-                                                    "hold_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "icon_height": "75px",
-                                                    "show_icon": true,
-                                                    "show_name": true,
-                                                    "type": "entity-button"
+                                                    "size": "50px",
+                                                    "type": "custom:button-card",
+                                                    "state": [
+                                                        {
+                                                            "value": "on",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "rgb(234, 175, 37)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "value": "off",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "rgb(53, 130, 181)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
                                                 },
                                                 {
                                                     "entity": "binary_sensor.0x00158d0001f406fb_contact",
-                                                    "hold_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "icon_height": "75px",
-                                                    "show_icon": false,
-                                                    "show_name": false,
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "entity-button"
+                                                    "size": "50px",
+                                                    "type": "custom:button-card",
+                                                    "styles": {
+                                                        "icon": [
+                                                            {
+                                                                "opacity": 0
+                                                            }
+                                                        ],
+                                                        "name": [
+                                                            {
+                                                                "opacity": 0
+                                                            }
+                                                        ]
+                                                    }
                                                 }
                                             ],
                                             "type": "horizontal-stack"
@@ -409,17 +485,38 @@
                             "cards": [
                                 {
                                     "card": {
-                                        "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_2",
+                                        "control": {
+                                            "hvac": {
+                                                "auto": false
+                                            }
+                                        },
+                                        "entity": "climate.trv_kids",
                                         "fallback": "OFF",
                                         "sensors": [
                                             {
-                                                "entity": "sensor.thermostat_kids_battery",
+                                                "entity": "binary_sensor.trv_kids_battery_low",
                                                 "name": "Battery"
                                             }
                                         ],
                                         "step_size": 0.5,
-                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
-                                        "type": "custom:simple-thermostat"
+                                        "style": ".mode-item.active {\n    color: #000000 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "type": "custom:simple-thermostat",
+                                        "header": {
+                                            "name": "Heating - kids room"
+                                        },
+                                        "label": {
+                                            "temperature": "Temperature"
+                                        },
+                                        "hide": {
+                                            "state": true
+                                        },
+                                        "layout": {
+                                            "mode": {
+                                                "names": true,
+                                                "icons": true,
+                                                "headings": false
+                                            }
+                                        }
                                     },
                                     "conditions": [
                                         {
@@ -432,7 +529,6 @@
                                 {
                                     "card": {
                                         "control": {
-                                            "_headings": true,
                                             "fan": {
                                                 "2step": {
                                                     "icon": "mdi:trending-down",
@@ -460,11 +556,21 @@
                                         },
                                         "entity": "climate.ac_kids",
                                         "hide": {
-                                            "temperature": true
+                                            "temperature": true,
+                                            "state": true
                                         },
-                                        "name": "Air conditioning - kids room",
+                                        "layout": {
+                                            "mode": {
+                                                "names": true,
+                                                "icons": true,
+                                                "headings": false
+                                            }
+                                        },
+                                        "header": {
+                                            "name": "Air conditioning - kids room"
+                                        },
                                         "step_size": 1,
-                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "style": ".mode-item.active {\n    color: #000000 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
                                         "type": "custom:simple-thermostat"
                                     },
                                     "conditions": [
@@ -540,23 +646,57 @@
                                             "cards": [
                                                 {
                                                     "entity": "binary_sensor.0x00158d0001de657f_contact",
-                                                    "hold_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "icon_height": "75px",
-                                                    "show_icon": true,
-                                                    "show_name": true,
-                                                    "type": "entity-button"
+                                                    "size": "50px",
+                                                    "type": "custom:button-card",
+                                                    "state": [
+                                                        {
+                                                            "value": "on",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "rgb(234, 175, 37)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "value": "off",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "rgb(53, 130, 181)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
                                                 },
                                                 {
                                                     "entity": "binary_sensor.0x00158d0001b7bc15_contact",
-                                                    "hold_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "icon_height": "75px",
-                                                    "show_icon": true,
-                                                    "show_name": true,
-                                                    "type": "entity-button"
+                                                    "size": "50px",
+                                                    "type": "custom:button-card",
+                                                    "state": [
+                                                        {
+                                                            "value": "on",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "rgb(234, 175, 37)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "value": "off",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "rgb(53, 130, 181)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
                                                 }
                                             ],
                                             "type": "horizontal-stack"
@@ -808,7 +948,7 @@
                             "type": "vertical-stack"
                         }
                     ],
-                    "icon": "mdi:hotel",
+                    "icon": "mdi:bed",
                     "path": "bedroom",
                     "title": "Bedroom"
                 },
@@ -1174,7 +1314,7 @@
                                     "color_thresholds_transition": "hard",
                                     "decimals": 1,
                                     "entities": [
-                                        "sensor.0x00158d0001fa6e13_temperature"
+                                        "sensor.0x00158d0001f5367e_temperature"
                                     ],
                                     "hour24": true,
                                     "hours_to_show": 72,
@@ -1338,93 +1478,210 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "zwave.zwaveme_zme_uzb1_usb_stick"
+                                    "entity": "switch.0x0017880108d870bc_switch"
                                 },
                                 {
-                                    "entity": "zwave.fibaro_system_fgs223_double_relay"
+                                    "entity": "switch.0x0017880108612b46_switch"
                                 },
                                 {
-                                    "entity": "zwave.everspring_an180_plugin_onoff_module"
+                                    "type": "divider"
                                 },
                                 {
-                                    "entity": "zwave.everspring_an180_plugin_onoff_module_2"
+                                    "entity": "switch.0xccccccfffeeaa607_switch"
                                 },
                                 {
-                                    "entity": "zwave.qubino_goap_zmnhadx_flush_1_relay"
+                                    "entity": "switch.0xccccccfffed03819"
                                 },
                                 {
-                                    "entity": "zwave.eurotronic_eur_spiritz_wall_radiator_thermostat"
+                                    "entity": "switch.0xccccccfffeeaa663_switch"
                                 },
                                 {
-                                    "entity": "zwave.eurotronic_eur_spiritz_wall_radiator_thermostat_3"
+                                    "entity": "switch.0xccccccfffed7291d_switch"
                                 },
                                 {
-                                    "entity": "zwave.eurotronic_eur_spiritz_wall_radiator_thermostat_2"
+                                    "entity": "switch.0xccccccfffed72424_switch"
                                 }
                             ],
                             "show_header_toggle": false,
-                            "title": "Z-Wave",
+                            "title": "Sockets",
                             "type": "entities"
                         },
                         {
                             "entities": [
                                 {
-                                    "entity": "light.gateway_light_7811dcb1f507"
+                                    "entity": "binary_sensor.trv_living_battery_low"
                                 },
                                 {
-                                    "entity": "sensor.illumination_7811dcb1f507"
+                                    "entity": "binary_sensor.trv_bedroom_battery_low"
                                 },
                                 {
-                                    "entity": "switch.qubino_goap_zmnhadx_flush_1_relay_switch"
+                                    "entity": "binary_sensor.trv_kids_battery_low"
+                                },
+                                {
+                                    "type": "divider"
+                                },
+                                {
+                                    "entity": "sensor.0x00158d0001b79326_battery"
+                                },
+                                {
+                                    "entity": "sensor.0x00158d0001b7f68b_battery"
+                                },
+                                {
+                                    "entity": "sensor.0x00158d0001b7d5c8_battery"
+                                },
+                                {
+                                    "entity": "sensor.0x00158d0001b71c0f_battery"
+                                },
+                                {
+                                    "type": "divider"
+                                },
+                                {
+                                    "entity": "sensor.0x00158d0001bb383d_battery"
+                                },
+                                {
+                                    "entity": "sensor.0x00158d0001bb71f5_battery"
+                                },
+                                {
+                                    "entity": "sensor.0x00158d0001bb7a09_battery"
+                                },
+                                {
+                                    "entity": "sensor.0x00158d0001bb7219_battery"
+                                },
+                                {
+                                    "type": "divider"
+                                },
+                                {
+                                    "entity": "sensor.0x00158d0001fa6e13_battery"
+                                },
+                                {
+                                    "entity": "sensor.0x00158d00020187f6_battery"
+                                },
+                                {
+                                    "entity": "sensor.0x00158d00020186c6_battery"
+                                },
+                                {
+                                    "entity": "sensor.0x00158d0001f5367e_battery"
+                                },
+                                {
+                                    "type": "divider"
+                                },
+                                {
+                                    "entity": "sensor.0x00158d0001b959d8_battery"
+                                },
+                                {
+                                    "entity": "sensor.0x00158d0001b95a13_battery"
+                                },
+                                {
+                                    "entity": "sensor.0x00158d0001f406fb_battery"
+                                },
+                                {
+                                    "entity": "sensor.0x00158d0001de657f_battery"
+                                },
+                                {
+                                    "entity": "sensor.0x00158d0001b7bc15_battery"
+                                },
+                                {
+                                    "type": "divider"
+                                },
+                                {
+                                    "entity": "sensor.0x04cf8cdf3c7d4560_battery"
+                                },
+                                {
+                                    "entity": "sensor.0x00158d0002030217_battery"
                                 }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Other items",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                "sensor.0x00158d0001b79326_battery",
-                                "sensor.0x00158d0001b7f68b_battery",
-                                "sensor.0x00158d0001b7d5c8_battery",
-                                "sensor.0x00158d0001b71c0f_battery",
-                                {
-                                    "type": "divider"
-                                },
-                                "sensor.0x00158d0001bb383d_battery",
-                                "sensor.0x00158d0001bb71f5_battery",
-                                "sensor.0x00158d0001bb7a09_battery",
-                                "sensor.0x00158d0001bb7219_battery",
-                                {
-                                    "type": "divider"
-                                },
-                                "sensor.thermostat_living_battery",
-                                "sensor.thermostat_bedroom_battery",
-                                "sensor.thermostat_kids_battery",
-                                {
-                                    "type": "divider"
-                                },
-                                "sensor.0x00158d0001fa6e13_battery",
-                                "sensor.0x00158d00020187f6_battery",
-                                "sensor.0x00158d00020186c6_battery",
-                                {
-                                    "type": "divider"
-                                },
-                                "sensor.0x00158d0001b959d8_battery",
-                                "sensor.0x00158d0001b95a13_battery",
-                                "sensor.0x00158d0001f406fb_battery",
-                                "sensor.0x00158d0001de657f_battery",
-                                "sensor.0x00158d0001b7bc15_battery",
-                                "sensor.0x00158d0002030217_battery"
                             ],
                             "show_header_toggle": false,
                             "title": "Baterie",
                             "type": "entities"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "light.0x14b457fffe40d0c9_light",
+                                    "name": "Lo\u017enice Ji\u0159ka",
+                                    "type": "light"
+                                },
+                                {
+                                    "entity": "light.0x14b457fffe3f6c2c_light",
+                                    "name": "Lo\u017enice Jarda",
+                                    "type": "light"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.0xccccccfffeeaa607_power",
+                                            "min": 0,
+                                            "max": 100,
+                                            "name": "Power IT"
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.0xccccccfffed03819_power",
+                                            "min": 0,
+                                            "max": 100,
+                                            "name": "Power fridge"
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.0xccccccfffeeaa663_power",
+                                            "min": 0,
+                                            "max": 100,
+                                            "name": "Power wine"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.0xccccccfffed72424_power",
+                                            "min": 0,
+                                            "max": 1000,
+                                            "name": "Power AC living room"
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.0xccccccfffed7291d_power",
+                                            "min": 0,
+                                            "max": 1000,
+                                            "name": "Power AC rooms"
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ],
-                    "icon": "mdi:settings",
+                    "icon": "mdi:cog",
                     "path": "settings",
                     "title": "Settings"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "css": ":host {\n  --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);\n  --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;\n  --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);\n  --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);\n  --zigbee2mqtt-networkmap-hover-color: #be385d;\n  --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);\n  --zigbee2mqtt-networkmap-label-color: #127862;\n  --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);\n  --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);\n  --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);\n}\n",
+                            "entity": "sensor.zigbee2mqtt_networkmap",
+                            "font_size": 16,
+                            "force": 4000,
+                            "height": 700,
+                            "link_width": 2,
+                            "mqtt_base_topic": "zigbee2mqtt",
+                            "node_size": 16,
+                            "type": "custom:zigbee2mqtt-networkmap"
+                        }
+                    ],
+                    "icon": "mdi:zigbee",
+                    "panel": true,
+                    "title": "Zigbee Network"
                 },
                 {
                     "badges": [],
@@ -1440,23 +1697,39 @@
                             "cards": [
                                 {
                                     "card": {
-                                        "control": [
-                                            "hvac",
-                                            {
-                                                "preset": false
+                                        "control": {
+                                            "hvac": {
+                                                "_name": " ",
+                                                "auto": false
                                             }
-                                        ],
-                                        "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_3",
+                                        },
+                                        "entity": "climate.trv_living",
                                         "fallback": "OFF",
                                         "sensors": [
                                             {
-                                                "entity": "sensor.thermostat_living_battery",
+                                                "entity": "binary_sensor.trv_living_battery_low",
                                                 "name": "Battery"
                                             }
                                         ],
-                                        "step_size": 0.5,
-                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
-                                        "type": "custom:simple-thermostat"
+                                        "step_size": "0.5",
+                                        "style": ".mode-item.active {\n    color: #000000 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "type": "custom:simple-thermostat",
+                                        "header": {
+                                            "name": "Heating - living room"
+                                        },
+                                        "label": {
+                                            "temperature": "Temperature"
+                                        },
+                                        "hide": {
+                                            "state": true
+                                        },
+                                        "layout": {
+                                            "mode": {
+                                                "names": true,
+                                                "icons": true,
+                                                "headings": false
+                                            }
+                                        }
                                     },
                                     "conditions": [
                                         {
@@ -1471,6 +1744,7 @@
                                         "control": {
                                             "_headings": true,
                                             "fan": {
+                                                "_name": " ",
                                                 "2step": {
                                                     "icon": "mdi:trending-down",
                                                     "name": "2-Step"
@@ -1489,6 +1763,7 @@
                                                 }
                                             },
                                             "hvac": {
+                                                "_name": " ",
                                                 "dry": false,
                                                 "fan_only": false,
                                                 "heat": false,
@@ -1497,12 +1772,22 @@
                                         },
                                         "entity": "climate.ac_living",
                                         "hide": {
-                                            "temperature": true
+                                            "temperature": true,
+                                            "state": true
                                         },
-                                        "name": "Air conditioning - living room",
+                                        "layout": {
+                                            "mode": {
+                                                "names": true,
+                                                "icons": true,
+                                                "headings": false
+                                            }
+                                        },
+                                        "header": {
+                                            "name": "Air conditioning - living room"
+                                        },
                                         "step_layout": "row",
                                         "step_size": 1,
-                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "style": ".mode-item.active {\n    color2: #000000 !important;\n    font-weight2: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
                                         "type": "custom:simple-thermostat"
                                     },
                                     "conditions": [
@@ -1520,23 +1805,39 @@
                             "cards": [
                                 {
                                     "card": {
-                                        "control": [
-                                            "hvac",
-                                            {
-                                                "preset": false
+                                        "control": {
+                                            "hvac": {
+                                                "_name": " ",
+                                                "auto": false
                                             }
-                                        ],
-                                        "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode",
+                                        },
+                                        "entity": "climate.trv_bedroom",
                                         "fallback": "OFF",
                                         "sensors": [
                                             {
-                                                "entity": "sensor.thermostat_bedroom_battery",
+                                                "entity": "binary_sensor.trv_bedroom_battery_low",
                                                 "name": "Battery"
                                             }
                                         ],
                                         "step_size": 0.5,
-                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
-                                        "type": "custom:simple-thermostat"
+                                        "style": ".mode-item.active {\n    color: #000000 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "type": "custom:simple-thermostat",
+                                        "header": {
+                                            "name": "Heating - bedroom"
+                                        },
+                                        "label": {
+                                            "temperature": "Temperature"
+                                        },
+                                        "hide": {
+                                            "state": true
+                                        },
+                                        "layout": {
+                                            "mode": {
+                                                "names": true,
+                                                "icons": true,
+                                                "headings": false
+                                            }
+                                        }
                                     },
                                     "conditions": [
                                         {
@@ -1551,6 +1852,7 @@
                                         "control": {
                                             "_headings": true,
                                             "fan": {
+                                                "_name": " ",
                                                 "2step": {
                                                     "icon": "mdi:trending-down",
                                                     "name": "2-Step"
@@ -1569,6 +1871,7 @@
                                                 }
                                             },
                                             "hvac": {
+                                                "_name": " ",
                                                 "dry": false,
                                                 "fan_only": false,
                                                 "heat": false,
@@ -1577,12 +1880,22 @@
                                         },
                                         "entity": "climate.bedroom_ac",
                                         "hide": {
-                                            "temperature": true
+                                            "temperature": true,
+                                            "state": true
                                         },
-                                        "name": "Air conditioning - bedroom",
+                                        "layout": {
+                                            "mode": {
+                                                "names": true,
+                                                "icons": true,
+                                                "headings": false
+                                            }
+                                        },
+                                        "header": {
+                                            "name": "Air conditioning - bedroom"
+                                        },
                                         "step_layout": "row",
                                         "step_size": 1,
-                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "style": ".mode-item.active {\n    color: #000000 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
                                         "type": "custom:simple-thermostat"
                                     },
                                     "conditions": [
@@ -1600,23 +1913,39 @@
                             "cards": [
                                 {
                                     "card": {
-                                        "control": [
-                                            "hvac",
-                                            {
-                                                "preset": false
+                                        "control": {
+                                            "hvac": {
+                                                "_name": " ",
+                                                "auto": false
                                             }
-                                        ],
-                                        "entity": "climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_2",
+                                        },
+                                        "entity": "climate.trv_kids",
                                         "fallback": "OFF",
                                         "sensors": [
                                             {
-                                                "entity": "sensor.thermostat_kids_battery",
+                                                "entity": "binary_sensor.trv_kids_battery_low",
                                                 "name": "Battery"
                                             }
                                         ],
                                         "step_size": 0.5,
-                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
-                                        "type": "custom:simple-thermostat"
+                                        "style": ".mode-item.active {\n    color: #000000 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "type": "custom:simple-thermostat",
+                                        "header": {
+                                            "name": "Heating - kids room"
+                                        },
+                                        "label": {
+                                            "temperature": "Temperature"
+                                        },
+                                        "hide": {
+                                            "state": true
+                                        },
+                                        "layout": {
+                                            "mode": {
+                                                "names": true,
+                                                "icons": true,
+                                                "headings": false
+                                            }
+                                        }
                                     },
                                     "conditions": [
                                         {
@@ -1631,6 +1960,7 @@
                                         "control": {
                                             "_headings": true,
                                             "fan": {
+                                                "_name": " ",
                                                 "2step": {
                                                     "icon": "mdi:trending-down",
                                                     "name": "2-Step"
@@ -1649,6 +1979,7 @@
                                                 }
                                             },
                                             "hvac": {
+                                                "_name": " ",
                                                 "dry": false,
                                                 "fan_only": false,
                                                 "heat": false,
@@ -1657,12 +1988,22 @@
                                         },
                                         "entity": "climate.ac_kids",
                                         "hide": {
-                                            "temperature": true
+                                            "temperature": true,
+                                            "state": true
                                         },
-                                        "name": "Air conditioning - kids room",
+                                        "layout": {
+                                            "mode": {
+                                                "names": true,
+                                                "icons": true,
+                                                "headings": false
+                                            }
+                                        },
+                                        "header": {
+                                            "name": "Air conditioning - kids room"
+                                        },
                                         "step_layout": "row",
                                         "step_size": 1,
-                                        "style": ".mode-item.active {\n    color: #FF7F00 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
+                                        "style": ".mode-item.active {\n    color: #000000 !important;\n    font-weight: bold !important;\n}\nha-card {\n  --st-mode-background: var(--light-primary-color);\n}\n",
                                         "type": "custom:simple-thermostat"
                                     },
                                     "conditions": [
@@ -1717,7 +2058,7 @@
                                                     "color_thresholds_transition": "hard",
                                                     "decimals": 1,
                                                     "entities": [
-                                                        "sensor.0x00158d0001fa6e13_temperature"
+                                                        "sensor.0x00158d0001f5367e_temperature"
                                                     ],
                                                     "hour24": true,
                                                     "points_per_hour": 1,
@@ -1744,7 +2085,7 @@
                                                     "color_thresholds_transition": "hard",
                                                     "decimals": 0,
                                                     "entities": [
-                                                        "sensor.0x00158d0001fa6e13_humidity"
+                                                        "sensor.0x00158d0001f5367e_humidity"
                                                     ],
                                                     "hour24": true,
                                                     "points_per_hour": 1,
@@ -1789,7 +2130,7 @@
                             "cards": [
                                 {
                                     "color_type": "label-card",
-                                    "icon": "mdi:hotel",
+                                    "icon": "mdi:bed",
                                     "layout": "icon_name",
                                     "name": "BEDROOM",
                                     "size": "15%",
@@ -2045,7 +2386,5 @@
                 }
             ]
         }
-    },
-    "key": "lovelace",
-    "version": 1
+    }
 }

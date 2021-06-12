@@ -1,0 +1,16 @@
+alias: Lights in bed - min both
+description: ''
+trigger:
+  - entity_id: sensor.0x00158d0002030217_click
+    platform: state
+    to: long
+  - entity_id: sensor.0x04cf8cdf3c7d4560_action
+    platform: state
+    to: button_4_hold
+action:
+  - service: light.turn_on
+    entity_id:
+      - light.0x14b457fffe3f6c2c_light
+      - light.0x14b457fffe40d0c9_light
+    data:
+      brightness: 10

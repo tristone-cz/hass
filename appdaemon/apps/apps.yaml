@@ -1,16 +1,3 @@
-#HassStatesSave:
-#  module: hass_states_save
-#  class: HassStatesSave
-#  path: /home/homeassistant/.homeassistant/hass_saved_states.ini
-#  isloaded_switch: input_boolean.hass_saved_states_loaded
-#  constrain_input_boolean: input_boolean.hass_saved_states_loaded
-
-#HassStatesLoad:
-#  module: hass_states_load
-#  class: HassStatesLoad
-#  path: /home/homeassistant/.homeassistant/hass_saved_states.ini
-#  isloaded_switch: input_boolean.hass_saved_states_loaded
-
 schedy_heating:
   module: hass_apps_loader
   class: SchedyApp
@@ -54,7 +41,8 @@ schedy_heating:
     bedroom:
       rescheduling_delay: 120
       actors:
-        climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode:
+        climate.trv_bedroom:
+          hvac_mode_on: heat
 
       watched_entities:
       - binary_sensor.bedroom_window_delayed
@@ -96,7 +84,8 @@ schedy_heating:
     living:
       rescheduling_delay: 120
       actors:
-        climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_3:
+        climate.trv_living:
+          hvac_mode_on: heat
 
       watched_entities:
       - binary_sensor.living_window_delayed
@@ -138,7 +127,8 @@ schedy_heating:
     kids:
       rescheduling_delay: 120
       actors:
-        climate.eurotronic_eur_spiritz_wall_radiator_thermostat_mode_2:
+        climate.trv_kids:
+          hvac_mode_on: heat
 
       watched_entities:
       - binary_sensor.kids_window_delayed

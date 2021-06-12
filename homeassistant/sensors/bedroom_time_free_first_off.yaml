@@ -3,7 +3,4 @@ sensors:
   bedroom_free_first_off:
     friendly_name: 'První čas vypnutí'
     icon_template: mdi:timer-sand
-    entity_id:
-      - input_number.bedroom_free_hour_first_off
-      - input_number.bedroom_free_minute_first_off
     value_template: '{{ states("input_number.bedroom_free_hour_first_off")|int * 60 + states("input_number.bedroom_free_minute_first_off")|int }}'

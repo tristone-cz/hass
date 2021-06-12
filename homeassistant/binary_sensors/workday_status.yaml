@@ -3,10 +3,6 @@ sensors:
   workday_status:
     friendly_name: Workday status
     icon_template: mdi:laptop
-    entity_id:
-      - binary_sensor.workday_sensor
-      - input_boolean.force_workday
-      - input_boolean.force_freeday
     value_template: >-
       {% if is_state('input_boolean.force_workday', 'off') and is_state('input_boolean.force_freeday', 'off')  %}
         {{ is_state('binary_sensor.workday_sensor', 'on') }}

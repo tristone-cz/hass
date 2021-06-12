@@ -1,41 +1,136 @@
 {
+    "version": 1,
+    "key": "core.config_entries",
     "data": {
         "entries": [
             {
-                "connection_class": "local_push",
+                "entry_id": "444c41ba243f4a21b652e1312c769cb5",
+                "version": 1,
+                "domain": "zwave",
+                "title": "Z-Wave (import from configuration.yaml)",
                 "data": {
-                    "network_key": "",
+                    "network_key": "0x43, 0x71, 0xAA, 0xFC, 0x85, 0x9C, 0xBF, 0x51, 0xA4, 0x85, 0x2E, 0x7B, 0x3B, 0x56, 0x65, 0x06",
                     "usb_path": "/dev/usbzwave"
                 },
-                "domain": "zwave",
-                "entry_id": "444c41ba243f4a21b652e1312c769cb5",
                 "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
                 "source": "import",
-                "title": "Z-Wave (import from configuration.yaml)",
-                "version": 1
+                "unique_id": null,
+                "disabled_by": "user"
             },
             {
-                "connection_class": "local_push",
-                "data": {},
-                "domain": "mqtt",
                 "entry_id": "22684bb071ec41678f1fc12f294caee5",
-                "options": {},
-                "source": "import",
+                "version": 1,
+                "domain": "mqtt",
                 "title": "configuration.yaml",
-                "version": 1
+                "data": {},
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "import",
+                "unique_id": null,
+                "disabled_by": null
             },
             {
-                "connection_class": "cloud_poll",
-                "data": {},
-                "domain": "hacs",
-                "entry_id": "230525ee78984120a28d7e084b2e638f",
+                "entry_id": "0bdb8ec7bcc24cc5ac2d287be7003991",
+                "version": 1,
+                "domain": "mobile_app",
+                "title": "SM-G970F",
+                "data": {
+                    "app_data": {
+                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPush/android/v1",
+                        "push_token": "dASkQxTmP2M:APA91bGwPC3KZaLvQWlyQz5uE2C598QBrHezuOy1Wn0T36AsurUvl2pzFsPMLc1ViZW7CqYiAO5QZI0uDb0us7tGaQI4WlvBuCN8mb1-ty2arGQ0RXHPiGqqIZf02SxEVc6IE-N6PbK5"
+                    },
+                    "app_id": "io.homeassistant.companion.android",
+                    "app_name": "Home Assistant",
+                    "app_version": "3.0.2-full (521)",
+                    "device_id": "a72b4c30950d1978",
+                    "device_name": "SM-G970F",
+                    "manufacturer": "samsung",
+                    "model": "SM-G970F",
+                    "os_name": "Android",
+                    "os_version": "29",
+                    "supports_encryption": false,
+                    "user_id": "404cb02973644bef9f4f31ff5ca74371",
+                    "webhook_id": "6c29c99689fe8ed6cc8f8ae0e4622ebe5853abcbdec419700a4dea0517363482"
+                },
                 "options": {},
-                "source": "import",
-                "title": "configuration.yaml",
-                "version": 1
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "registration",
+                "unique_id": "io.homeassistant.companion.android-a72b4c30950d1978",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "e36d7f80072011eba1412d30f1471900",
+                "version": 1,
+                "domain": "broadlink",
+                "title": "broadlink_living",
+                "data": {
+                    "host": "192.168.10.202",
+                    "mac": "24dfa727cdce",
+                    "type": 10039,
+                    "timeout": 5
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": "24dfa727cdce",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "fbe8e238072011eb95fa31a513fd1191",
+                "version": 1,
+                "domain": "broadlink",
+                "title": "broadlink_bedroom",
+                "data": {
+                    "host": "192.168.10.203",
+                    "mac": "24dfa727bb98",
+                    "type": 10039,
+                    "timeout": 5
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": "24dfa727bb98",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "108d98a6072111eb8aa16defacd10e43",
+                "version": 1,
+                "domain": "broadlink",
+                "title": "broadlink_kids",
+                "data": {
+                    "host": "192.168.10.204",
+                    "mac": "24dfa727cf26",
+                    "type": 10039,
+                    "timeout": 5
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": "24dfa727cf26",
+                "disabled_by": null
+            },
+            {
+                "entry_id": "36fb175bd6e68b551541006364790026",
+                "version": 1,
+                "domain": "hacs",
+                "title": "",
+                "data": {
+                    "token": "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"
+                },
+                "options": {},
+                "pref_disable_new_entities": false,
+                "pref_disable_polling": false,
+                "source": "user",
+                "unique_id": null,
+                "disabled_by": null
             }
         ]
-    },
-    "key": "core.config_entries",
-    "version": 1
+    }
 }

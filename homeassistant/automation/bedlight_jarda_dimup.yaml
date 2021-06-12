@@ -1,0 +1,17 @@
+alias: Lights in bed - Jarda up
+description: ''
+trigger:
+  - entity_id: sensor.0x04cf8cdf3c7d4560_action
+    platform: state
+    to: button_2_single
+action:
+  - service: light.turn_on
+    entity_id: light.0x14b457fffe3f6c2c_light
+    data_template:
+      brightness: >
+        {% set suggested = states.light['0x14b457fffe3f6c2c_light'].attributes.brightness|int + 50 %}
+        {% if suggested < 254 %}
+        {{ suggested }}
+        {% else %}
+        254
+        {% endif %}

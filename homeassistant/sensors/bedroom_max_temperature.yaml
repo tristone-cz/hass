@@ -1,7 +1,6 @@
 platform: template
 sensors:
   bedroom_max_temperature:
-    entity_id: sensor.0x00158d00020187f6_temperature
     value_template: >-
       {% if (now().hour)|int == 6 %}
         0

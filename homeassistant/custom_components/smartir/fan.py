@@ -9,7 +9,7 @@ from homeassistant.components.fan import (
     FanEntity, PLATFORM_SCHEMA, ATTR_SPEED, 
     SPEED_OFF, SPEED_LOW, SPEED_MEDIUM, SPEED_HIGH, 
     DIRECTION_REVERSE, DIRECTION_FORWARD,
-    SUPPORT_SET_SPEED, SUPPORT_DIRECTION)
+    SUPPORT_SET_SPEED, SUPPORT_DIRECTION, SUPPORT_OSCILLATE, ATTR_OSCILLATING )
 from homeassistant.const import (
     CONF_NAME, STATE_OFF, STATE_ON, STATE_UNKNOWN)
 from homeassistant.core import callback
@@ -17,15 +17,17 @@ from homeassistant.helpers.event import async_track_state_change
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.restore_state import RestoreEntity
 from . import COMPONENT_ABS_DIR, Helper
-from .controller import Controller
+from .controller import get_controller
 
 _LOGGER = logging.getLogger(__name__)
 
 DEFAULT_NAME = "SmartIR Fan"
+DEFAULT_DELAY = 0.5
 
 CONF_UNIQUE_ID = 'unique_id'
 CONF_DEVICE_CODE = 'device_code'
 CONF_CONTROLLER_DATA = "controller_data"
+CONF_DELAY = "delay"
 CONF_POWER_SENSOR = 'power_sensor'
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
@@ -33,6 +35,7 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Optional(CONF_NAME, default=DEFAULT_NAME): cv.string,
     vol.Required(CONF_DEVICE_CODE): cv.positive_int,
     vol.Required(CONF_CONTROLLER_DATA): cv.string,
+    vol.Optional(CONF_DELAY, default=DEFAULT_DELAY): cv.string,
     vol.Optional(CONF_POWER_SENSOR): cv.entity_id
 })
 
@@ -58,7 +61,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
                             "codes/fan/{}.json")
 
             await Helper.downloader(codes_source.format(device_code), device_json_path)
-        except:
+        except Exception:
             _LOGGER.error("There was an error while downloading the device Json file. " \
                           "Please check your internet connection or if the device code " \
                           "exists on GitHub. If the problem still exists please " \
@@ -68,7 +71,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
     with open(device_json_path) as j:
         try:
             device_data = json.load(j)
-        except:
+        except Exception:
             _LOGGER.error("The device JSON file is invalid")
             return
 
@@ -83,6 +86,7 @@ class SmartIRFan(FanEntity, RestoreEntity):
         self._name = config.get(CONF_NAME)
         self._device_code = config.get(CONF_DEVICE_CODE)
         self._controller_data = config.get(CONF_CONTROLLER_DATA)
+        self._delay = config.get(CONF_DELAY)
         self._power_sensor = config.get(CONF_POWER_SENSOR)
 
         self._manufacturer = device_data['manufacturer']
@@ -95,7 +99,7 @@ class SmartIRFan(FanEntity, RestoreEntity):
         self._speed = SPEED_OFF
         self._direction = None
         self._last_on_speed = None
-
+        self._oscillating = None
         self._support_flags = SUPPORT_SET_SPEED
 
         if (DIRECTION_REVERSE in self._commands and \
@@ -103,16 +107,22 @@ class SmartIRFan(FanEntity, RestoreEntity):
             self._direction = DIRECTION_REVERSE
             self._support_flags = (
                 self._support_flags | SUPPORT_DIRECTION)
+        if ('oscillate' in self._commands):
+            self._oscillating = False
+            self._support_flags = (
+                self._support_flags | SUPPORT_OSCILLATE)
+
 
         self._temp_lock = asyncio.Lock()
         self._on_by_remote = False
 
         #Init the IR/RF controller
-        self._controller = Controller(
+        self._controller = get_controller(
             self.hass,
             self._supported_controller, 
             self._commands_encoding,
-            self._controller_data)
+            self._controller_data,
+            self._delay)
 
     async def async_added_to_hass(self):
         """Run when entity about to be added."""
@@ -168,7 +178,7 @@ class SmartIRFan(FanEntity, RestoreEntity):
     @property
     def oscillating(self):
         """Return the oscillation state."""
-        return None
+        return self._oscillating
 
     @property
     def direction(self):
@@ -207,6 +217,13 @@ class SmartIRFan(FanEntity, RestoreEntity):
         await self.send_command()
         await self.async_update_ha_state()
 
+    async def async_oscillate(self, oscillating: bool) -> None:
+        """Set oscillation of the fan."""
+        self._oscillating = oscillating
+
+        await self.send_command()
+        await self.async_update_ha_state()
+
     async def async_set_direction(self, direction: str):
         """Set the direction of the fan"""
         self._direction = direction
@@ -232,9 +249,12 @@ class SmartIRFan(FanEntity, RestoreEntity):
             self._on_by_remote = False
             speed = self._speed
             direction = self._direction or 'default'
+            oscillating = self._oscillating
 
             if speed.lower() == SPEED_OFF:
                 command = self._commands['off']
+            elif oscillating:
+                command = self._commands['oscillate']
             else:
                 command = self._commands[direction][speed] 
 
@@ -246,6 +266,9 @@ class SmartIRFan(FanEntity, RestoreEntity):
     async def _async_power_sensor_changed(self, entity_id, old_state, new_state):
         """Handle power sensor changes."""
         if new_state is None:
+            return
+
+        if new_state.state == old_state.state:
             return
 
         if new_state.state == STATE_ON and self._speed == SPEED_OFF:

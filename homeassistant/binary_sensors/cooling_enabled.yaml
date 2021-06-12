@@ -3,9 +3,6 @@ sensors:
   cooling_enabled:
     friendly_name: Cooling enabled
     icon_template: mdi:air-conditioner
-    entity_id:
-      - input_boolean.vacation_mode
-      - input_boolean.cooling_season
     value_template: >-
       {{ is_state('input_boolean.vacation_mode', 'off') and is_state('input_boolean.cooling_season', 'on') }}
 

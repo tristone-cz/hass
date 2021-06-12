@@ -64,6 +64,3 @@ living_work_ac_active:
 living_free_ac_active:
   name: Living room - interval
 
-# Helping inputs
-hass_saved_states_loaded:
-  name: For HassState helper
