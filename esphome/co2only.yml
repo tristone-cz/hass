@@ -1,0 +1,151 @@
+esphome:
+  name: vindriktning-co2
+  # Turn on the LED at startup, pure white, no sensor indication yet
+  on_boot:
+    then:
+      - light.turn_on:
+          id: vindriktning_light
+          brightness: 0.2
+          red: 100%
+          green: 100%
+          blue: 100%
+
+# Definition of ESP board (generic dev)
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable default logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: "XXXXXXX"
+
+# Enable OTA FW upgrades
+ota:
+  password: "XXXXXXX"
+
+# WiFi setup
+wifi:
+  ssid: "XXXXXXX"
+  password: "XXXXXXX"
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Vindriktning CO2 Fallback Hotspot"
+    password: "XXXXXXX"
+
+# Enable fallback web UI
+captive_portal:
+
+# Enable I2C bus support
+i2c:
+
+# Enable UART bus support
+uart:
+  rx_pin: 16
+  tx_pin: 17
+  baud_rate: 9600
+
+# Enable the RGB LEDs
+light:
+  - platform: neopixelbus
+    type: GRB
+    variant: 800KBPS
+    pin: GPIO25
+    num_leds: 3
+    name: "Vindriktning LED"
+    id: vindriktning_light
+
+# Enable the fan
+switch:
+  - platform: gpio
+    pin: 12
+    name: "Vindriktning Fan"
+    id: vindriktning_fan
+
+# Define sensors and automations
+sensor:
+    # SCD41 sensor
+  - platform: scd4x
+    # CO2 value and automation
+    co2:
+      name: "Vindriktning CO2"
+      id: vindriktning_sensor
+      # On any value change evaluate and set the two upper LEDs
+      # Different brightness values for day and night based on sun position.
+      # 0-999 ppm Green, 1000-1999 ppm yellow, 2000+ ppm red
+      on_value:
+        then:
+          - light.addressable_set:
+              id: vindriktning_light
+              range_from: 0
+              range_to: 2
+              red: !lambda |-
+                if ((id(vindriktning_sensor).state) < 600) {
+                  return 0;
+                }
+                if ((id(vindriktning_sensor).state) >= 1400) {
+                  return 1;
+                } else {
+                  return (id(vindriktning_sensor).state - 600) / 800;
+                }
+              green: !lambda |-
+                if ((id(vindriktning_sensor).state) < 1400) {
+                  return 1;
+                }
+                if ((id(vindriktning_sensor).state) >= 2200) {
+                  return 0;
+                } else {
+                  return 1 - ((id(vindriktning_sensor).state - 1400) / 800);
+                }
+              blue: 0%
+              color_brightness: 25%
+
+    # Temperature value
+    temperature:
+      name: "Vindriktning Temperature"
+      filters:
+        - offset: -5.0
+    # Humidity value
+    humidity:
+      name: "Vindriktning Humidity"
+    # Update the values every minute
+    update_interval: 60s
+    # IKEA built-in sensor of dust
+  - platform: pm1006
+    # PM2.5 value and automation
+    pm_2_5:
+      name: "Vindriktning PM2.5"
+      id: vindriktning_pm25_sensor
+      # On any value change evaluate and set the bottom LED
+      # Different brightness values for day and night based on sun position.
+      # 0-12 mg Green, 13-25 mg yellow, 26+ mg red
+    # Update the values every minute
+    update_interval: 60s
+
+# Configure the time and NTP
+time:
+  - platform: sntp
+    id: sntp_time
+    servers:
+      - tik.cesnet.cz
+      - tak.cesnet.cz
+    timezone: Europe/Prague
+    update_interval: 60min
+    # Define automation for the PM2.5 fan (turn on once in 10 minutes)
+    on_time:
+      - seconds: 0
+        minutes: /10
+        then:
+          - switch.turn_on: vindriktning_fan
+      - seconds: 55
+        minutes: /10
+        then:
+          - switch.turn_off: vindriktning_fan
+
+# Configure location for sun position computation
+sun:
+  latitude: 50.00000°
+  longitude: 14.00000°
