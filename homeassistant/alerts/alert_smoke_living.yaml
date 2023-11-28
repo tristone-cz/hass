@@ -1,6 +1,6 @@
 name: Ohen - kour v obyvaku
 done_message: VYRESENO - Ohen - kour v obyvaku
-entity_id: binary_sensor.0x00158d0001b79326_smoke
+entity_id: binary_sensor.smoke_living_smoke
 state: 'on'
 can_acknowledge: true
 repeat:

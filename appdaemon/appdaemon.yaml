@@ -12,12 +12,12 @@ appdaemon:
       token: !secret ha_token
 logs:
   main_log:
-    filename: /var/log/appdaemon
+    filename: /conf/log/appdaemon
   error_log:
-    filename: /var/log/appdaemon.error
+    filename: /conf/log/appdaemon.error
   access_log:
-    filename: /var/log/appdaemon.access
+    filename: /conf/log/appdaemon.access
   diag_log:
-    filename: /var/log/appdaemon.diag
+    filename: /conf/log/appdaemon.diag
 http:
     url: http://127.0.0.1:5050

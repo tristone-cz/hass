@@ -1,5 +1,6 @@
 {
     "version": "6",
+    "minor_version": 1,
     "key": "hacs/215633404.hacs",
     "data": {
         "archived": false,
@@ -12,10 +13,10 @@
         "description": "\ud83d\udd12 Apply restrictions to Lovelace cards",
         "domain": null,
         "domains": [],
-        "downloads": 3368,
-        "etag_repository": "W/\"522d3bef0c4df5cc84feec0701f363583fd92cf3618402a79a2be61150876e33\"",
+        "downloads": 3709,
+        "etag_repository": "W/\"ce43c3713299bc551e532a14b46cd428de28cb28830fcdf027d942bcd3072017\"",
         "file_name": "restriction-card.js",
-        "filename": "",
+        "filename": null,
         "first_install": false,
         "fork": false,
         "full_name": "iantrich/restriction-card",
@@ -26,33 +27,33 @@
         "id": "215633404",
         "iot_class": null,
         "installed": true,
-        "installed_commit": "5320749",
-        "installed_version": "1.2.6",
-        "open_issues": 3,
-        "last_commit": "1f56db9",
-        "last_version": "1.2.6",
-        "last_updated": "2021-06-11T07:58:11Z",
+        "installed_commit": "55732c0",
+        "installed_version": "1.2.7",
+        "open_issues": 9,
+        "last_commit": "cc947c8",
+        "last_version": "1.2.7",
+        "last_updated": "2022-03-26T08:37:08Z",
         "manifest_name": null,
         "new": false,
         "persistent_directory": null,
-        "pushed_at": "2021-06-11T07:58:11",
+        "pushed_at": "2022-03-26T08:37:08",
         "releases": true,
         "render_readme": true,
         "published_tags": [
+            "1.2.7",
             "1.2.6",
             "1.2.5",
             "1.2.4",
-            "1.2.3",
-            "1.2.2"
+            "1.2.3"
         ],
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 79,
+        "stargazers_count": 149,
         "topics": [
-            "security",
+            "custom-card",
             "home-assistant",
             "lovelace",
-            "custom-card"
+            "security"
         ],
         "zip_release": false
     }

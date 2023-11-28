@@ -8,9 +8,9 @@ sensors:
     delay_off:
       seconds: 20
     value_template: >-
-      {{ is_state('binary_sensor.0x00158d0001f406fb_contact', 'on') }}
+      {{ is_state('binary_sensor.window_bedroom_contact', 'on') }}
     icon_template: >-
-      {% if is_state('binary_sensor.0x00158d0001f406fb_contact', 'on') %}
+      {% if is_state('binary_sensor.window_bedroom_contact', 'on') %}
         mdi:door-open
       {% else %}
         mdi:door-closed
@@ -23,9 +23,9 @@ sensors:
     delay_off:
       seconds: 20
     value_template: >-
-      {{ is_state('binary_sensor.0x00158d0001b959d8_contact', 'on') }}
+      {{ is_state('binary_sensor.window_living_contact', 'on') }}
     icon_template: >-
-      {% if is_state('binary_sensor.0x00158d0001b959d8_contact', 'on') %}
+      {% if is_state('binary_sensor.window_living_contact', 'on') %}
         mdi:door-open
       {% else %}
         mdi:door-closed
@@ -38,9 +38,9 @@ sensors:
     delay_on:
       seconds: 20
     value_template: >-
-      {{ is_state('binary_sensor.0x00158d0001b95a13_contact', 'on') }}
+      {{ is_state('binary_sensor.door_living_contact', 'on') }}
     icon_template: >-
-      {% if is_state('binary_sensor.0x00158d0001b95a13_contact', 'on') %}
+      {% if is_state('binary_sensor.door_living_contact', 'on') %}
         mdi:door-open
       {% else %}
         mdi:door-closed
@@ -53,9 +53,9 @@ sensors:
     delay_off:
       seconds: 20
     value_template: >-
-      {{ is_state('binary_sensor.0x00158d0001de657f_contact', 'on') }}
+      {{ is_state('binary_sensor.window_kids_contact', 'on') }}
     icon_template: >-
-      {% if is_state('binary_sensor.0x00158d0001de657f_contact', 'on') %}
+      {% if is_state('binary_sensor.window_kids_contact', 'on') %}
         mdi:door-open
       {% else %}
         mdi:door-closed
@@ -68,9 +68,9 @@ sensors:
     delay_on:
       seconds: 20
     value_template: >-
-      {{ is_state('binary_sensor.0x00158d0001b7bc15_contact', 'on') }}
+      {{ is_state('binary_sensor.door_kids_contact', 'on') }}
     icon_template: >-
-      {% if is_state('binary_sensor.0x00158d0001b7bc15_contact', 'on') %}
+      {% if is_state('binary_sensor.door_kids_contact', 'on') %}
         mdi:door-open
       {% else %}
         mdi:door-closed

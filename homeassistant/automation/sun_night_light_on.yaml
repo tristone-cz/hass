@@ -6,4 +6,4 @@ trigger:
 action:
   service: switch.turn_on
   data:
-    entity_id: switch.0x0017880108d870bc_switch
+    entity_id: switch.huesocket_hall_switch

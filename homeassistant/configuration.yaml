@@ -6,28 +6,31 @@ homeassistant:
   elevation: !secret home_elevation
   unit_system: metric
   time_zone: Europe/Prague
+  currency: CZK
+  country: CZ
   # Customization file
   customize: !include customize.yaml
   customize_glob: !include customize_glob.yaml
 
-#mobile_app:
-
 frontend:
   themes: !include_dir_merge_named themes
+  extra_module_url:
+    - /hacsfiles/lovelace-card-mod/card-mod.js
 config:
 system_health:
 http:
-
-# Checks for available updates
-updater:
-  # Optional, allows Home Assistant developers to focus on popular components.
-  # include_used_components: true
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 192.168.10.3
 
 logger:
   default: info
+  #logs:
+    # log level for MQTT integration
+    #homeassistant.components.mqtt: debug
 
 # Discover some devices automatically
-discovery:
+#discovery:
 
 # View all events in a logbook
 logbook:
@@ -53,26 +56,11 @@ climate:
     device_code: 1402
     controller_data: remote.broadlink_living_remote
 
-mqtt:
-  discovery: true
-  broker: 192.168.10.200
-  certificate: /home/homeassistant/MQTTCAcert.pem
-  client_id: homeassistant
-  client_key: /home/homeassistant/MQTThassClient.key
-  client_cert: /home/homeassistant/MQTThassClient.pem
-  birth_message:
-    topic: 'hass/status'
-    payload: 'online'
-  will_message:
-    topic: 'hass/status'
-    payload: 'offline'
-
-
-notify:
-  - name: pushover
-    platform: pushover
-    api_key: !secret pushover_apikey
-    user_key: !secret pushover_userkey
+#notify:
+#  - name: pushover
+#    platform: pushover
+#    api_key: !secret pushover_apikey
+#    user_key: !secret pushover_userkey
 
 
 automation: !include automations.yaml
@@ -91,23 +79,89 @@ binary_sensor: !include_dir_list binary_sensors
 history:
 # Tracked history is kept for 10 days
 recorder:
-  purge_interval: 1
+#  purge_interval: 1
 # Store data to InfluxDB
+#influxdb:
+#  username: !secret influx_user
+#  password: !secret influx_password
+#  tags_attributes:
+#    - friendly_name
+#  exclude:
+#    domains:
+#      - automation
 influxdb:
-  username: !secret influx_user
-  password: !secret influx_password
+  api_version: 2
+  host: localhost
+  port: 8086
+  ssl: false
+  token: !secret influx_token
+  organization: 4504f957723cc68c
+  bucket: HASS
   tags_attributes:
     - friendly_name
   exclude:
     domains:
       - automation
 
-webhook:
 
-zigbee2mqtt_networkmap:
-   #topic: your topic (optional, default zigbee2mqtt)
 panel_iframe:
-  networkmap:
-    title: 'Zigbee Map'
-    url: '/local/community/zigbee2mqtt_networkmap/map.html'
-    icon: 'mdi:graphql'
+  zigbee:
+    title: "Zigbee2MQTT"
+    url: "https://home.cernych.cz:8124"
+    icon: mdi:zigbee
+
+alarm_control_panel:
+  - platform: manual
+    name: home_alarm
+    code: "2607"
+    arming_time: 30
+    delay_time: 5
+    trigger_time: 120
+    disarmed:
+      trigger_time: 0
+    armed_home:
+      arming_time: 0
+      delay_time: 0
+
+weather:
+  - platform: template
+    name: "rounded"
+    condition_template: "{{ states('weather.openweathermap') }}"
+    temperature_template: "{{ state_attr('weather.openweathermap', 'temperature') | round(0, default=-99) }}"
+    humidity_template: "{{ state_attr('weather.openweathermap', 'humidity') | round(0, default=-99) }}"
+    forecast_hourly_template: >
+      {% set ns = namespace(z = []) %}
+      {% for x in state_attr('weather.openweathermap', 'forecast') %}
+        {% set ns.z = ns.z +
+          [{
+          'condition': x.condition,
+          'precipitation': x.precipitation,
+          'temperature': x.temperature | round(0, default=-99),
+          'datetime': x.datetime,
+          'wind_bearing': x.wind_bearing,
+          'wind_speed': x.wind_speed
+          }] %}
+       {% endfor %}
+       {{ ns.z }}
+  - platform: template
+    name: "rounded_chmu"
+    condition_template: "{{ states('weather.domov') }}"
+    temperature_template: "{{ state_attr('weather.domov', 'temperature') | round(0, default=-99) }}"
+    humidity_template: "{{ state_attr('weather.domov', 'humidity') | round(0, default=-99) }}"
+    forecast_hourly_template: >
+      {% set ns = namespace(z = [], count = 0) %}
+      {% for x in state_attr('weather.domov', 'forecast') %}
+        {% set ns.count = ns.count +1 %}
+        {% if ns.count in (1,4,7,10) %}
+          {% set ns.z = ns.z +
+            [{
+            'condition': x.condition,
+            'precipitation': x.precipitation,
+            'temperature': x.temperature | round(0, default=-99),
+            'datetime':  x.datetime.strftime("%Y-%m-%dT%H:%M:%S") ,
+            'wind_bearing': x.wind_bearing,
+            'wind_speed': x.wind_speed
+            }] %}
+         {% endif %}
+       {% endfor %}
+       {{ ns.z }}

@@ -1,5 +1,6 @@
 {
     "version": "6",
+    "minor_version": 1,
     "key": "hacs/256292682.hacs",
     "data": {
         "archived": false,
@@ -12,8 +13,8 @@
         "description": "Battery state card for Home Assistant",
         "domain": null,
         "domains": [],
-        "downloads": 9305,
-        "etag_repository": "W/\"e80fef7a11db295745c02fbc4ba90d6826dc2117c77f7b14e61dbc0a8cc17c50\"",
+        "downloads": 11925,
+        "etag_repository": "W/\"077aec9075785dcb5bf409fe2c74961bb42eb8b7332b367b41b27e923fe1707e\"",
         "file_name": "battery-state-card.js",
         "filename": "battery-state-card.js",
         "first_install": false,
@@ -26,34 +27,34 @@
         "id": "256292682",
         "iot_class": null,
         "installed": true,
-        "installed_commit": "43e0dbe",
-        "installed_version": "v1.6.4",
-        "open_issues": 22,
-        "last_commit": "8c92b94",
-        "last_version": "v1.6.4",
-        "last_updated": "2021-06-11T06:16:45Z",
+        "installed_commit": "b6e141f",
+        "installed_version": "v2.1.1",
+        "open_issues": 24,
+        "last_commit": "4931661",
+        "last_version": "v2.1.1",
+        "last_updated": "2022-05-25T15:13:09Z",
         "manifest_name": null,
         "new": false,
         "persistent_directory": null,
-        "pushed_at": "2021-06-11T06:16:45",
+        "pushed_at": "2022-05-25T15:13:09",
         "releases": true,
         "render_readme": true,
         "published_tags": [
-            "v1.6.4",
-            "v1.6.3",
-            "v1.6.2",
-            "v1.6.1",
-            "v1.6.0"
+            "v2.1.1",
+            "v2.1.0",
+            "v2.0.2",
+            "v2.0.1",
+            "v2.0.0"
         ],
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 263,
+        "stargazers_count": 408,
         "topics": [
             "battery",
-            "sensor",
-            "home-assistant",
             "hassio",
-            "lovelace-custom-card"
+            "home-assistant",
+            "lovelace-custom-card",
+            "sensor"
         ],
         "zip_release": false
     }

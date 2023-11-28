@@ -28,7 +28,7 @@
           } else {
             return "mdi:alarm-light";
           }
-    binary_sensor.*_contact*:
+    binary_sensor.door*_contact*:
       templates:
         icon_color: >
           if (state == "off") return 'rgb(53, 130, 181)';
@@ -37,6 +37,15 @@
         icon: >
           if (state == "off") return "mdi:door-closed";
           return "mdi:door-open";
+    binary_sensor.window*_contact*:
+      templates:
+        icon_color: >
+          if (state == "off") return 'rgb(53, 130, 181)';
+          return 'rgb(234, 175, 37)';
+        brightness2:  if (state == "off") return 71; return 92;
+        icon: >
+          if (state == "off") return "mdi:window-closed-variant";
+          return "mdi:window-open-variant";
 
     sensor.*_battery:
       templates:
@@ -62,6 +71,21 @@
           }
 
     binary_sensor.*_battery_low:
+      templates:
+        icon_color: >
+          if (state == "off") {
+            return 'rgb(22, 200, 38)';
+          } else {
+            return 'rgb(255, 22, 38)';
+          }
+        icon: >
+          if (state == "off") {
+            return "mdi:battery-80";
+          } else  {
+            return "mdi:battery-alert";
+          }
+
+    binary_sensor.*_battery_critical:
       templates:
         icon_color: >
           if (state == "off") {
@@ -107,4 +131,13 @@
             return 'rgb(22, 200, 38)';
           } else {
             return 'rgb(255, 22, 38)';
+          }
+
+    binary_sensor.*_door_sensor:
+      templates:
+        icon_color: >
+          if (state == "on") {
+            return 'rgb(244, 67, 54)';
+          } else {
+            return 'rgb(76, 175, 80)';
           }

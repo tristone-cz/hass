@@ -1,6 +1,6 @@
 name: Ohen - kour v loznici
 done_message: VYRESENO - Ohen - kour v loznici
-entity_id: binary_sensor.0x00158d0001b7f68b_smoke
+entity_id: binary_sensor.smoke_bedroom_smoke
 state: 'on'
 can_acknowledge: true
 repeat:

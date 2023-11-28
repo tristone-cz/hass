@@ -1,17 +1,36 @@
 {
-    "version": 1,
-    "key": "lovelace_dashboards",
-    "data": {
-        "items": [
-            {
-                "icon": "mdi:tablet-android",
-                "id": "lovelace_kiosk",
-                "mode": "storage",
-                "require_admin": false,
-                "show_in_sidebar": true,
-                "title": "Kiosk",
-                "url_path": "lovelace-kiosk"
-            }
-        ]
-    }
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace_dashboards",
+  "data": {
+    "items": [
+      {
+        "icon": "mdi:cellphone-cog",
+        "id": "lovelace_kiosk",
+        "mode": "storage",
+        "require_admin": false,
+        "show_in_sidebar": true,
+        "title": "Kiosk",
+        "url_path": "lovelace-kiosk"
+      },
+      {
+        "require_admin": false,
+        "show_in_sidebar": true,
+        "icon": "mdi:sun-thermometer-outline",
+        "title": "Weather",
+        "url_path": "lovelace-weather",
+        "mode": "storage",
+        "id": "lovelace_weather"
+      },
+      {
+        "show_in_sidebar": true,
+        "icon": "mdi:door-closed-lock",
+        "title": "Lock",
+        "require_admin": false,
+        "mode": "storage",
+        "url_path": "dashboard-lock",
+        "id": "dashboard_lock"
+      }
+    ]
+  }
 }

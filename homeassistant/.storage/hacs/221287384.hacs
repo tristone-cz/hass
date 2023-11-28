@@ -1,5 +1,6 @@
 {
     "version": "6",
+    "minor_version": 1,
     "key": "hacs/221287384.hacs",
     "data": {
         "archived": false,
@@ -13,9 +14,9 @@
         "domain": null,
         "domains": [],
         "downloads": 0,
-        "etag_repository": "W/\"83305506f6cd04b9346bba3e79ec29e93e2cb86c0bfec07ee5b72d47c0ffa1e3\"",
+        "etag_repository": "W/\"788a0c6a86cd1aa7dee0c21b19d6725983a9a3e408d871663aea3dd79b4fb298\"",
         "file_name": "clear.yaml",
-        "filename": "",
+        "filename": null,
         "first_install": false,
         "fork": false,
         "full_name": "naofireblade/clear-theme",
@@ -28,7 +29,7 @@
         "installed": true,
         "installed_commit": "9380685",
         "installed_version": "v1.1",
-        "open_issues": 2,
+        "open_issues": 3,
         "last_commit": "a9f68e1",
         "last_version": "v1.1",
         "last_updated": "2020-10-08T10:10:49Z",
@@ -44,7 +45,7 @@
         ],
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 18,
+        "stargazers_count": 20,
         "topics": [],
         "zip_release": false
     }

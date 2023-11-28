@@ -4,12 +4,12 @@
   "documentation": "https://github.com/smartHomeHub/SmartIR",
   "dependencies": [],
   "codeowners": ["@smartHomeHub"],
-  "requirements": ["aiofiles==0.6.0"],
-  "homeassistant": "0.115.0",
-  "version": "1.16.1",
+  "requirements": ["aiofiles>=0.6.0"],
+  "homeassistant": "2023.6.0",
+  "version": "1.17.8",
   "updater": {
-    "version": "1.16.1",
-    "releaseNotes": "-- Add version key to manifest file",
+    "version": "1.17.8",
+    "releaseNotes": "-- Fix self.async_update_ha_state() #1071",
     "files": [
       "__init__.py",
       "climate.py",

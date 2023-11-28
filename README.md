@@ -1,4 +1,4 @@
-﻿# Home HASS project
+# Home HASS project
 This is home automation for heating control and catching various home alerts using Home Assistant and some additional components.
 
 ## Purpose
@@ -19,6 +19,13 @@ And then air-conditioning comes in place (2020)  :snowflake:
  - Different logic needed compared to heating
  - Let UI show either heating or cooling settings only based on seasons
 
+Since that many small evolution steps happened :slightly_smiling_face:
+ - Smart lock added
+ - More sensors  and devices added or replaced
+ - YAML moving to GUI configs
+ - Family tools (shopping list, public transport)
+ - Etc. etc.
+
 ## Overview
 Whole solution is using quite common components.
 On software side:
@@ -28,6 +35,7 @@ On software side:
  - Zigbee2MQTT (https://www.zigbee2mqtt.io/)
  - Mosquitto MQTT broker (https://mosquitto.org/)
  - Schedy for HA (https://github.com/efficiosoft/hass-apps)
+ - ESPhome (https://esphome.io/)
  - CustomUI (https://github.com/andrey-git/home-assistant-custom-ui)
 
 On HW side:
@@ -35,9 +43,10 @@ On HW side:
  - TI C1352R-2 (USB dev board for Zigbee network)
  - various Xiaomi Aqara detectors (smoke sensors, flood sensors, door contacts, thermometers)
  - Saswell Zigbee TRVs
- - Zigbee sockets to extend coverage and meassure power (Hue, Immax)
+ - Zigbee sockets to extend coverage and meassure power (Hue, Tuya)
  - Broadlink RM3 Mini (WiFi capable remote infra controller)
  - Samsung WindFree air-conditioner
+ - Shelly relays
 
 Current status covered by this repo is  that all the goals are working.
 Once any alert is triggered by smoke or flood sensor alerts are sent via Pushover.

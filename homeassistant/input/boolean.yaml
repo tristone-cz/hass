@@ -10,6 +10,10 @@ cooling_season:
   name: Cooling season
   icon: mdi:weather-sunny
 
+cooling_autoon:
+  name: Cooling auto on
+  icon: mdi:refresh-auto
+
 force_workday:
   name: Force workday today
   icon: mdi:laptop-windows

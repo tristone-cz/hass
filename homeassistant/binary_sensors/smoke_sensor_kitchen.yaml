@@ -2,4 +2,4 @@ platform: template
 sensors:
   smoke_sensor_kitchen:
     device_class: smoke
-    value_template: "{{ states('sensor.0x00158d0001fa6e13_temperature')|float > 45}}"
+    value_template: "{{ states('sensor.sensors_kitchen_temperature')|float(default=0) > 45}}"

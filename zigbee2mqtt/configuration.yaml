@@ -1,0 +1,144 @@
+homeassistant: true
+permit_join: false
+frontend:
+  port: 8080
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://192.168.10.200:1883
+  client_id: zigbee2mqtt
+  keepalive: 60
+  reject_unauthorized: true
+  version: 4
+  include_device_information: false
+serial:
+  port: /dev/usbzigbee3
+advanced:
+  log_level: warn
+  report: true
+  pan_id: 51202
+  ext_pan_id:
+    - 200
+    - 1
+    - 200
+    - 2
+    - 200
+    - 3
+    - 200
+    - 4
+  network_key: '!secret.yaml network_key'
+  legacy_api: false
+  ikea_ota_use_test_url: true
+  log_syslog:
+    app_name: Zigbee2MQTT
+    eol: /n
+    host: localhost
+    localhost: localhost
+    path: /dev/log
+    pid: process.pid
+    port: 123
+    protocol: tcp4
+    type: '5424'
+  last_seen: ISO_8601_local
+devices:
+  '0x00158d0002030217':
+    friendly_name: Button_Xiaomi
+    legacy: false
+  '0x00158d0001b71c0f':
+    friendly_name: Smoke_Kids
+  '0x00158d0001b7d5c8':
+    friendly_name: Smoke_Hall
+  '0x00158d0001bb7219':
+    friendly_name: Water_Washmachine
+  '0x00158d0001bb383d':
+    friendly_name: Water_BasinLeft
+  '0x00158d0001bb71f5':
+    friendly_name: Water_BasinRight
+  '0x00158d0001b7bc15':
+    friendly_name: Door_Kids
+  '0x00158d0001de657f':
+    friendly_name: Window_Kids
+  '0x00158d0001b7f68b':
+    friendly_name: Smoke_Bedroom
+  '0x00158d0001f406fb':
+    friendly_name: Window_Bedroom
+  '0x00158d0001bb7a09':
+    friendly_name: Water_Sink
+  '0x00158d0001b95a13':
+    friendly_name: Door_Living
+  '0x00158d0001b959d8':
+    friendly_name: Window_Living
+  '0x0017880108d870bc':
+    friendly_name: HueSocket_Hall
+  '0x0017880108612b46':
+    friendly_name: HueSocket_Bedroom
+  '0x04cf8cdf3c7d4560':
+    friendly_name: Button_Bedroom
+    legacy: false
+  '0x14b457fffe40d0c9':
+    friendly_name: LightBedroom_Jirka
+  '0x14b457fffe3f6c2c':
+    friendly_name: LightBedroom_Jarda
+  '0x5c0272fffec24ee4':
+    friendly_name: TRV_Bedroom
+    legacy: false
+  '0x5c0272fffe8a601b':
+    friendly_name: TRV_Kids
+    legacy: false
+  '0x04cd15fffe02cbaf':
+    friendly_name: Power_IT
+  '0x00158d0007b06fb2':
+    friendly_name: Door_Entrance
+  '0x00158d0001b79326':
+    friendly_name: Smoke_Living
+  '0x003c84fffe8c8566':
+    friendly_name: Power_Wine
+    measurement_poll_interval: 15
+    power_calibration: 0
+  '0x84ba20fffe6552d3':
+    friendly_name: Power_Fridge
+    measurement_poll_interval: 15
+    power_calibration: 0
+  '0x003c84fffe85bfbe':
+    friendly_name: Power_TV
+    measurement_poll_interval: 15
+    power_calibration: 0
+  '0xa4c138d4ba1ab2a6':
+    friendly_name: Sensors_Bedroom
+  '0xa4c1382e3f34d34a':
+    friendly_name: Sensors_Living
+  '0xa4c13811c616f379':
+    friendly_name: Sensors_Kitchen
+  '0xa4c138c15e23ea7d':
+    friendly_name: Sensors_Kids
+  '0x84ba20fffe6737e2':
+    friendly_name: Power_AC_Living
+    measurement_poll_interval: 15
+    power_calibration: 0
+  '0x003c84fffe8c897d':
+    friendly_name: Power_AC_Rooms
+    measurement_poll_interval: 15
+    power_calibration: 0
+  '0xa4c1383ed91aeb24':
+    friendly_name: Sensors_Balcony
+    temperature_precision: 1
+    humidity_precision: 1
+  '0xb4e3f9fffe0c77a9':
+    friendly_name: TRV_Living
+  '0xa4c138ae515303cc':
+    friendly_name: Table_Tynka
+  '0xa4c138a5e989c7f7':
+    friendly_name: Table_Betka
+  '0xf082c0fffe160bcc':
+    friendly_name: LightLiving_Up
+  '0x54ef44100042bad4':
+    friendly_name: Button_Living
+  '0x001788010d5c8ba9':
+    friendly_name: LightLiving_Bottom
+  '0x00158d00053172e2':
+    friendly_name: Button_Tynka
+  '0x00158d0003d1408c':
+    friendly_name: Button_Betka
+  '0xa4c13886cbc75ea2':
+    friendly_name: Power_3D
+experimental:
+  transmit_power: 19

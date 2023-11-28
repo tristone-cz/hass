@@ -1,5 +1,6 @@
 {
     "version": "6",
+    "minor_version": 1,
     "key": "hacs/221288367.hacs",
     "data": {
         "archived": false,
@@ -13,9 +14,9 @@
         "domain": null,
         "domains": [],
         "downloads": 0,
-        "etag_repository": "W/\"1fbcf9a9fb566ed350c5344d4327ad93ac01ada0eff8efa616da1d552b995097\"",
+        "etag_repository": "W/\"5b291c4045a23c7e5793e5fa46b7c09068db8bf209acac988f7b0102acd2e368\"",
         "file_name": "clear-dark.yaml",
-        "filename": "",
+        "filename": null,
         "first_install": false,
         "fork": false,
         "full_name": "naofireblade/clear-theme-dark",
@@ -46,7 +47,7 @@
         ],
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 12,
+        "stargazers_count": 13,
         "topics": [],
         "zip_release": false
     }

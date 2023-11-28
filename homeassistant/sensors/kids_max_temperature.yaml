@@ -5,9 +5,9 @@ sensors:
       {% if (now().hour)|int == 6 %}
         0
       {% elif is_state('sensor.kids_max_temperature', 'unknown') %}
-        {{ states('sensor.0x00158d00020186c6_temperature') }}
-      {% elif states('sensor.0x00158d00020186c6_temperature')|float > states('sensor.kids_max_temperature')|float %}
-        {{ states('sensor.0x00158d00020186c6_temperature') }}
+        {{ states('sensor.sensors_kids_temperature') }}
+      {% elif states('sensor.sensors_kids_temperature')|float(default=0) > states('sensor.kids_max_temperature')|float(default=0) %}
+        {{ states('sensor.sensors_kids_temperature') }}
       {% else %}
         {{ states('sensor.kids_max_temperature') }}
       {% endif %}

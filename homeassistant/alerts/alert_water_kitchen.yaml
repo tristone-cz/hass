@@ -1,6 +1,6 @@
 name: Voda - unik pod drezem
 done_message: VYRESENO - Voda - pod drezem
-entity_id: binary_sensor.0x00158d0001bb7a09_water_leak
+entity_id: binary_sensor.water_sink_water_leak
 state: 'on'
 can_acknowledge: true
 repeat:

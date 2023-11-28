@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.lovelace_weather",
+  "data": {
+    "config": {
+      "kiosk_mode": {
+        "user_settings": [
+          {
+            "users": [
+              "weather"
+            ],
+            "kiosk": true,
+            "hide_sidebar": true,
+            "hide_header": true,
+            "hide_menubutton": true,
+            "hide_overflow": true
+          }
+        ]
+      },
+      "views": [
+        {
+          "title": "Home",
+          "cards": [
+            {
+              "type": "custom:simple-clock-card",
+              "hide_seconds": true,
+              "style": "ha-card {\n  text-align: right;\n}\nha-card div {\n  color: #DDDDDD;\n  font-size: 3rem !important;\n  padding: 20px 0px !important;\n}\n"
+            },
+            {
+              "type": "horizontal-stack",
+              "cards": [
+                {
+                  "type": "custom:button-card",
+                  "entity": "sensor.sensors_balcony_temperature",
+                  "aspect_ratio": "1/1",
+                  "show_state": false,
+                  "show_icon": false,
+                  "show_units": false,
+                  "label": "°C",
+                  "show_label": false,
+                  "show_name": true,
+                  "tap_action": "none",
+                  "name": "[[[ return parseFloat(entity.state).toFixed(0) ]]]",
+                  "style": "ha-card #container #name {\n  font-size: 100px;\n  font-weight: bold;\n}\nha-card #container.vertical.no-icon.no-state {\n  grid-template:\n      \"n\" 2fr\n      \"l\" 1fr / 1fr;\n}\n"
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "sensor.sensors_balcony_temperature",
+                  "aspect_ratio": "1/1",
+                  "size": "100%",
+                  "show_icon": true,
+                  "show_units": false,
+                  "show_label": false,
+                  "show_name": false,
+                  "tap_action": "none",
+                  "entity_picture": "/local/temperature_icon.svg",
+                  "show_entity_picture": true
+                }
+              ]
+            },
+            {
+              "type": "horizontal-stack",
+              "cards": [
+                {
+                  "type": "custom:button-card",
+                  "entity": "sensor.sensors_balcony_humidity",
+                  "aspect_ratio": "1/1",
+                  "size": "100%",
+                  "show_icon": false,
+                  "show_units": false,
+                  "show_label": false,
+                  "show_name": false,
+                  "tap_action": "none",
+                  "icon": "mdi:thermometer-lines",
+                  "entity_picture": "/local/humidity_icon.svg",
+                  "show_entity_picture": true
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "sensor.sensors_balcony_humidity",
+                  "aspect_ratio": "1/1",
+                  "show_state": false,
+                  "show_icon": false,
+                  "show_units": false,
+                  "label": "%",
+                  "show_label": false,
+                  "show_name": true,
+                  "tap_action": "none",
+                  "name": "[[[ return parseFloat(entity.state).toFixed(0) ]]]",
+                  "style": "ha-card #container #name {\n  font-size: 100px;\n  font-weight: bold;\n}\nha-card #container.vertical.no-icon.no-state {\n  grid-template:\n      \"n\" 2fr\n      \"l\" 1fr / 1fr;\n}\n"
+                }
+              ]
+            },
+            {
+              "type": "weather-forecast",
+              "entity": "weather.rounded_chmu",
+              "show_current": false,
+              "forecast_type": "hourly",
+              "style": "ha-card {\n  font-size: 20px;\n}\nha-card .forecast .temp {\n  font-size: 32px;\n  font-weight: bold;\n}\nha-card .forecast .forecast-image-icon > * {\n  width: 75px;\n  height: 75px;\n}\n"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

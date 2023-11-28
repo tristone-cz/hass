@@ -1,53 +1,74 @@
 {
-    "version": 1,
-    "key": "lovelace_resources",
-    "data": {
-        "items": [
-            {
-                "id": "6de11d54ead542809cf528982cb69918",
-                "type": "module",
-                "url": "/hacsfiles/mini-graph-card/mini-graph-card-bundle.js"
-            },
-            {
-                "id": "3829649ec0564ef0be0fa7030d7ea533",
-                "type": "module",
-                "url": "/hacsfiles/button-card/button-card.js"
-            },
-            {
-                "id": "db5c4d09796b4fbf8f88ca445b63b292",
-                "type": "module",
-                "url": "/hacsfiles/simple-thermostat/simple-thermostat.js"
-            },
-            {
-                "id": "7f5ab24b43d24b27a16d59009fabc997",
-                "type": "module",
-                "url": "/hacsfiles/lovelace-card-mod/card-mod.js"
-            },
-            {
-                "id": "f6ff2edd13964e82bed279ea37ffc765",
-                "type": "module",
-                "url": "/hacsfiles/lovelace-auto-entities/auto-entities.js"
-            },
-            {
-                "id": "5886c2a33db34987960ba034d634d737",
-                "type": "module",
-                "url": "/hacsfiles/restriction-card/restriction-card.js"
-            },
-            {
-                "id": "0785ceffd86d4b3288e00158fa0b8d04",
-                "type": "module",
-                "url": "/hacsfiles/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js"
-            },
-            {
-                "id": "8e2ca491c068472990d3c992c1cfc448",
-                "type": "module",
-                "url": "/hacsfiles/custom-ui/custom-ui.js"
-            },
-            {
-                "url": "/hacsfiles/battery-state-card/battery-state-card.js",
-                "type": "module",
-                "id": "482dc274a90a4828b9a063f461681771"
-            }
-        ]
-    }
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace_resources",
+  "data": {
+    "items": [
+      {
+        "id": "6de11d54ead542809cf528982cb69918",
+        "type": "module",
+        "url": "/hacsfiles/mini-graph-card/mini-graph-card-bundle.js?hacstag=1512800620110"
+      },
+      {
+        "id": "3829649ec0564ef0be0fa7030d7ea533",
+        "type": "module",
+        "url": "/hacsfiles/button-card/button-card.js?hacstag=146194325411"
+      },
+      {
+        "id": "db5c4d09796b4fbf8f88ca445b63b292",
+        "type": "module",
+        "url": "/hacsfiles/simple-thermostat/simple-thermostat.js?hacstag=158654878250"
+      },
+      {
+        "id": "7f5ab24b43d24b27a16d59009fabc997",
+        "type": "module",
+        "url": "/hacsfiles/lovelace-card-mod/card-mod.js?hacstag=190927524330"
+      },
+      {
+        "id": "f6ff2edd13964e82bed279ea37ffc765",
+        "type": "module",
+        "url": "/hacsfiles/lovelace-auto-entities/auto-entities.js?hacstag=1677445841121"
+      },
+      {
+        "id": "5886c2a33db34987960ba034d634d737",
+        "type": "module",
+        "url": "/hacsfiles/restriction-card/restriction-card.js?hacstag=215633404129"
+      },
+      {
+        "id": "8e2ca491c068472990d3c992c1cfc448",
+        "type": "module",
+        "url": "/hacsfiles/custom-ui/custom-ui.js?hacstag=26755814820230908"
+      },
+      {
+        "url": "/hacsfiles/battery-state-card/battery-state-card.js?hacstag=256292682301",
+        "type": "module",
+        "id": "482dc274a90a4828b9a063f461681771"
+      },
+      {
+        "url": "/hacsfiles/slider-button-card/slider-button-card.js?hacstag=4987940331130",
+        "type": "module",
+        "id": "85d7a2850f67400abb3146f2858d31eb"
+      },
+      {
+        "url": "/hacsfiles/kiosk-mode/kiosk-mode.js?hacstag=497319128450",
+        "type": "module",
+        "id": "79867d04ef164360bd7218f732812160"
+      },
+      {
+        "url": "/hacsfiles/simple-clock-card/simple-clock-card.js?hacstag=34193126617",
+        "type": "module",
+        "id": "2ad7b9c389df4d6f9b4c36350d7a8554"
+      },
+      {
+        "url": "/hacsfiles/history-explorer-card/history-explorer-card.js?hacstag=4403747941051",
+        "type": "module",
+        "id": "880b42bb025c4b8eb40e1d647561fc9d"
+      },
+      {
+        "id": "0ef561c294564d59b54d4bb5f9b47d62",
+        "url": "/hacsfiles/lovelace-rpi-monitor-card/rpi-monitor-card.js?hacstag=281214271142",
+        "type": "module"
+      }
+    ]
+  }
 }

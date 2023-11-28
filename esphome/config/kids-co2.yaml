@@ -1,0 +1,316 @@
+esphome:
+  name: kids-co2
+  on_boot:
+    then:
+      - light.turn_on:
+          id: kids_co2_light
+          brightness: 0.2
+          red: 100%
+          green: 100%
+          blue: 100%
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  #password: "password"
+  encryption:
+    key: "BBrlOF2ikllgOaizvFnWguv3qD2H9B0TkSCN+Ehk6Ww="
+
+ota:
+  password: "password"
+
+wifi:
+  ssid: "TriStone IoT"
+  password: "24iotWiFi920"
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Kids Co2 Fallback Hotspot"
+    password: "5ZCzK06uKY1U"
+
+captive_portal:
+
+i2c:
+
+uart:
+  rx_pin: 16
+  tx_pin: 17
+  baud_rate: 9600
+
+sensor:
+  - platform: scd4x
+    co2:
+      name: "Kids CO2"
+      id: kids_co2_sensor
+      on_value:
+        then:
+          - if:
+              condition:
+                and:
+                   - sun.is_above_horizon:
+                       elevation: -0.2236
+                   - sensor.in_range:
+                       id: kids_co2_sensor
+                       below: 999.9999
+              then:
+                - light.addressable_set:
+                    id: kids_co2_light
+                    range_from: 1
+                    range_to: 2
+                    red: 0%
+                    green: 100%
+                    blue: 0%
+                    color_brightness: 50%
+          - if:
+              condition:
+                and:
+                   - sun.is_below_horizon:
+                       elevation: -0.2236
+                   - sensor.in_range:
+                       id: kids_co2_sensor
+                       below: 1999.9999
+              then:
+                - light.addressable_set:
+                    id: kids_co2_light
+                    range_from: 1
+                    range_to: 2
+                    red: 0%
+                    green: 100%
+                    blue: 0%
+                    color_brightness: 20%
+
+          - if:
+              condition:
+                and:
+                   - sun.is_above_horizon:
+                       elevation: -0.2236
+                   - sensor.in_range:
+                       id: kids_co2_sensor
+                       above: 1000.0
+                       below: 1999.9999
+              then:
+                - light.addressable_set:
+                    id: kids_co2_light
+                    range_from: 1
+                    range_to: 2
+                    red: 100%
+                    green: 100%
+                    blue: 0%
+                    color_brightness: 50%
+          - if:
+              condition:
+                and:
+                   - sun.is_below_horizon:
+                       elevation: -0.2236
+                   - sensor.in_range:
+                       id: kids_co2_sensor
+                       above: 1000.0
+                       below: 1999.9999
+              then:
+                - light.addressable_set:
+                    id: kids_co2_light
+                    range_from: 1
+                    range_to: 2
+                    red: 100%
+                    green: 100%
+                    blue: 0%
+                    color_brightness: 20%
+
+          - if:
+              condition:
+                and:
+                   - sun.is_above_horizon:
+                       elevation: -0.2236
+                   - sensor.in_range:
+                       id: kids_co2_sensor
+                       above: 2000.0
+              then:
+                - light.addressable_set:
+                    id: kids_co2_light
+                    range_from: 1
+                    range_to: 2
+                    red: 100%
+                    green: 0%
+                    blue: 0%
+                    color_brightness: 50%
+          - if:
+              condition:
+                and:
+                   - sun.is_below_horizon:
+                       elevation: -0.2236
+                   - sensor.in_range:
+                       id: kids_co2_sensor
+                       above: 2000.0
+              then:
+                - light.addressable_set:
+                    id: kids_co2_light
+                    range_from: 1
+                    range_to: 2
+                    red: 100%
+                    green: 0%
+                    blue: 0%
+                    color_brightness: 20%
+
+    temperature:
+      name: "Kids Temperature"
+      filters:
+        - offset: -5.0
+    humidity:
+      name: "Kids Humidity"
+    update_interval: 60s
+  - platform: pm1006
+    pm_2_5:
+      name: "Kids PM2.5"
+      id: kids_pm25_sensor
+      on_value:
+        then:
+          - if:
+              condition:
+                and:
+                   - sun.is_above_horizon:
+                       elevation: -0.2236
+                   - sensor.in_range:
+                       id: kids_pm25_sensor
+                       below: 12
+              then:
+                - light.addressable_set:
+                    id: kids_co2_light
+                    range_from: 0
+                    range_to: 0
+                    red: 0%
+                    green: 100%
+                    blue: 0%
+                    color_brightness: 50%
+          - if:
+              condition:
+                and:
+                   - sun.is_below_horizon:
+                       elevation: -0.2236
+                   - sensor.in_range:
+                       id: kids_pm25_sensor
+                       below: 12
+              then:
+                - light.addressable_set:
+                    id: kids_co2_light
+                    range_from: 0
+                    range_to: 0
+                    red: 0%
+                    green: 100%
+                    blue: 0%
+                    color_brightness: 20%
+
+          - if:
+              condition:
+                and:
+                   - sun.is_above_horizon:
+                       elevation: -0.2236
+                   - sensor.in_range:
+                       id: kids_pm25_sensor
+                       above: 13
+                       below: 25
+              then:
+                - light.addressable_set:
+                    id: kids_co2_light
+                    range_from: 0
+                    range_to: 0
+                    red: 100%
+                    green: 100%
+                    blue: 0%
+                    color_brightness: 50%
+          - if:
+              condition:
+                and:
+                   - sun.is_below_horizon:
+                       elevation: -0.2236
+                   - sensor.in_range:
+                       id: kids_pm25_sensor
+                       above: 13
+                       below: 25
+              then:
+                - light.addressable_set:
+                    id: kids_co2_light
+                    range_from: 0
+                    range_to: 0
+                    red: 100%
+                    green: 100%
+                    blue: 0%
+                    color_brightness: 20%
+
+          - if:
+              condition:
+                and:
+                   - sun.is_above_horizon:
+                       elevation: -0.2236
+                   - sensor.in_range:
+                       id: kids_pm25_sensor
+                       above: 26
+              then:
+                - light.addressable_set:
+                    id: kids_co2_light
+                    range_from: 0
+                    range_to: 0
+                    red: 100%
+                    green: 0%
+                    blue: 0%
+                    color_brightness: 50%
+          - if:
+              condition:
+                and:
+                   - sun.is_below_horizon:
+                       elevation: -0.2236
+                   - sensor.in_range:
+                       id: kids_pm25_sensor
+                       above: 26
+              then:
+                - light.addressable_set:
+                    id: kids_co2_light
+                    range_from: 0
+                    range_to: 0
+                    red: 100%
+                    green: 0%
+                    blue: 0%
+                    color_brightness: 20%
+    update_interval: 60s
+
+light:
+  - platform: neopixelbus
+    type: GRB
+    variant: 800KBPS
+    pin: GPIO25
+    num_leds: 3
+    name: "Kids LED"
+    id: kids_co2_light
+
+switch:
+  - platform: gpio
+    pin: 12
+    name: "Kids Fan"
+    id: kids_fan
+
+time:
+  - platform: sntp
+    id: sntp_time
+    servers:
+      - tik.cesnet.cz
+      - tak.cesnet.cz
+    timezone: Europe/Prague
+    update_interval: 60min
+    on_time:
+      - seconds: 0
+        minutes: /10
+        then:
+          - switch.turn_on: kids_fan
+      - seconds: 55
+        minutes: /10
+        then:
+          - switch.turn_off: kids_fan
+
+sun:
+  latitude: 50.15690°
+  longitude: 14.52035°

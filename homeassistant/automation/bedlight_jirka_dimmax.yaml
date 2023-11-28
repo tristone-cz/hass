@@ -1,11 +1,11 @@
 alias: Lights in bed - Jirka max
 description: ''
 trigger:
-  - entity_id: sensor.0x04cf8cdf3c7d4560_action
+  - entity_id: sensor.button_bedroom_action
     platform: state
     to: button_1_hold
 action:
   - service: light.turn_on
-    entity_id: light.0x14b457fffe40d0c9_light
+    entity_id: light.lightbedroom_jirka_light
     data:
       brightness: 254

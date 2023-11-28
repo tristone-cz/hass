@@ -1,0 +1,240 @@
+esphome:
+  name: bedroom-co2
+  on_boot:
+    then:
+      - light.turn_on:
+          id: bedroom_co2_light
+          brightness: 0.2
+          red: 100%
+          green: 100%
+          blue: 100%
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  #password: "password"
+  encryption:
+    key: "HPw7SJxCO9EODgD3nVdcKYR3i7sqLc2bY/5ClQmnrjY="
+
+ota:
+  password: "password"
+
+wifi:
+  ssid: "TriStone IoT"
+  password: "24iotWiFi920"
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Bedroom Co2 Fallback Hotspot"
+    password: "5ZCzK06uKY1U"
+
+captive_portal:
+
+i2c:
+
+uart:
+  rx_pin: 16
+  tx_pin: 17
+  baud_rate: 9600
+
+sensor:
+  - platform: scd4x
+    co2:
+      name: "Bedroom CO2"
+      id: bedroom_co2_sensor
+      on_value:
+        then:
+          - light.addressable_set:
+              id: bedroom_co2_light
+              range_from: 1
+              range_to: 2
+              red: !lambda |-
+                if ((id(bedroom_co2_sensor).state) < 600) {
+                  return 0;
+                }
+                if ((id(bedroom_co2_sensor).state) >= 1400) {
+                  return 1;
+                } else {
+                  return (id(bedroom_co2_sensor).state - 600) / 800;
+                }
+              green: !lambda |-
+                if ((id(bedroom_co2_sensor).state) < 1400) {
+                  return 1;
+                }
+                if ((id(bedroom_co2_sensor).state) >= 2200) {
+                  return 0;
+                } else {
+                  return 1 - ((id(bedroom_co2_sensor).state - 1400) / 800);
+                }
+              blue: 0%
+              color_brightness: 0.2
+#              color_brightness: !lambda |-
+#                if (id(sun_sun).is_above_horizon) {
+#                  return 0.5;
+#                } else {
+#                  return 0.2;
+#                }
+
+    temperature:
+      name: "Bedroom Temperature"
+      filters:
+        - offset: -5.0
+    humidity:
+      name: "Bedroom Humidity"
+    update_interval: 60s
+  - platform: pm1006
+    pm_2_5:
+      name: "Bedroom PM2.5"
+      id: bedroom_pm25_sensor
+      on_value:
+        then:
+          - if:
+              condition:
+                and:
+                   - sun.is_above_horizon:
+                       elevation: -0.2236
+                   - sensor.in_range:
+                       id: bedroom_pm25_sensor
+                       below: 12
+              then:
+                - light.addressable_set:
+                    id: bedroom_co2_light
+                    range_from: 0
+                    range_to: 0
+                    red: 0%
+                    green: 100%
+                    blue: 0%
+          - if:
+              condition:
+                and:
+                   - sun.is_below_horizon:
+                       elevation: -0.2236
+                   - sensor.in_range:
+                       id: bedroom_pm25_sensor
+                       below: 12
+              then:
+                - light.addressable_set:
+                    id: bedroom_co2_light
+                    range_from: 0
+                    range_to: 0
+                    red: 0%
+                    green: 100%
+                    blue: 0%
+                    color_brightness: 20%
+
+          - if:
+              condition:
+                and:
+                   - sun.is_above_horizon:
+                       elevation: -0.2236
+                   - sensor.in_range:
+                       id: bedroom_pm25_sensor
+                       above: 13
+                       below: 25
+              then:
+                - light.addressable_set:
+                    id: bedroom_co2_light
+                    range_from: 0
+                    range_to: 0
+                    red: 100%
+                    green: 100%
+                    blue: 0%
+                    color_brightness: 50%
+          - if:
+              condition:
+                and:
+                   - sun.is_below_horizon:
+                       elevation: -0.2236
+                   - sensor.in_range:
+                       id: bedroom_pm25_sensor
+                       above: 13
+                       below: 25
+              then:
+                - light.addressable_set:
+                    id: bedroom_co2_light
+                    range_from: 0
+                    range_to: 0
+                    red: 100%
+                    green: 100%
+                    blue: 0%
+                    color_brightness: 20%
+
+          - if:
+              condition:
+                and:
+                   - sun.is_above_horizon:
+                       elevation: -0.2236
+                   - sensor.in_range:
+                       id: bedroom_pm25_sensor
+                       above: 26
+              then:
+                - light.addressable_set:
+                    id: bedroom_co2_light
+                    range_from: 0
+                    range_to: 0
+                    red: 100%
+                    green: 0%
+                    blue: 0%
+                    color_brightness: 50%
+          - if:
+              condition:
+                and:
+                   - sun.is_below_horizon:
+                       elevation: -0.2236
+                   - sensor.in_range:
+                       id: bedroom_pm25_sensor
+                       above: 26
+              then:
+                - light.addressable_set:
+                    id: bedroom_co2_light
+                    range_from: 0
+                    range_to: 0
+                    red: 100%
+                    green: 0%
+                    blue: 0%
+                    color_brightness: 20%
+    update_interval: 60s
+
+light:
+  - platform: neopixelbus
+    type: GRB
+    variant: 800KBPS
+    pin: GPIO25
+    num_leds: 3
+    name: "Bedroom LED"
+    id: bedroom_co2_light
+
+switch:
+  - platform: gpio
+    pin: 12
+    name: "Bedroom Fan"
+    id: bedroom_fan
+
+time:
+  - platform: sntp
+    id: sntp_time
+    servers:
+      - tik.cesnet.cz
+      - tak.cesnet.cz
+    timezone: Europe/Prague
+    update_interval: 60min
+    on_time:
+      - seconds: 0
+        minutes: /10
+        then:
+          - switch.turn_on: bedroom_fan
+      - seconds: 55
+        minutes: /10
+        then:
+          - switch.turn_off: bedroom_fan
+
+sun:
+  latitude: 50.15690°
+  longitude: 14.52035°
+  id: sun_sun

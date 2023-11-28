@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.165a32c7290f49cd6ab775771d3b1d42",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "kids-co2",
+      "friendly_name": "",
+      "mac_address": "40:91:51:A6:C6:14",
+      "compilation_time": "Feb 23 2023, 16:09:38",
+      "model": "esp32dev",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2023.2.1",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 0,
+      "voice_assistant_version": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 7
+    },
+    "switch": [
+      {
+        "object_id": "kids_fan",
+        "key": 2861632892,
+        "name": "Kids Fan",
+        "unique_id": "kids-co2switchkids_fan",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "assumed_state": false,
+        "device_class": ""
+      }
+    ],
+    "light": [
+      {
+        "object_id": "kids_led",
+        "key": 3263309876,
+        "name": "Kids LED",
+        "unique_id": "kids-co2lightkids_led",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "supported_color_modes": [
+          35
+        ],
+        "min_mireds": 0.0,
+        "max_mireds": 0.0,
+        "effects": [],
+        "legacy_supports_brightness": true,
+        "legacy_supports_rgb": true,
+        "legacy_supports_white_value": false,
+        "legacy_supports_color_temperature": false
+      }
+    ],
+    "sensor": [
+      {
+        "object_id": "kids_co2",
+        "key": 2894349431,
+        "name": "Kids CO2",
+        "unique_id": "kids-co2sensorkids_co2",
+        "disabled_by_default": false,
+        "icon": "mdi:molecule-co2",
+        "entity_category": 0,
+        "device_class": "carbon_dioxide",
+        "unit_of_measurement": "ppm",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "kids_pm25",
+        "key": 2174629671,
+        "name": "Kids PM2.5",
+        "unique_id": "kids-co2sensorkids_pm25",
+        "disabled_by_default": false,
+        "icon": "mdi:blur",
+        "entity_category": 0,
+        "device_class": "pm25",
+        "unit_of_measurement": "µg/m³",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "kids_temperature",
+        "key": 1081579293,
+        "name": "Kids Temperature",
+        "unique_id": "kids-co2sensorkids_temperature",
+        "disabled_by_default": false,
+        "icon": "mdi:thermometer",
+        "entity_category": 0,
+        "device_class": "temperature",
+        "unit_of_measurement": "°C",
+        "accuracy_decimals": 2,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "kids_humidity",
+        "key": 1240687778,
+        "name": "Kids Humidity",
+        "unique_id": "kids-co2sensorkids_humidity",
+        "disabled_by_default": false,
+        "icon": "mdi:water-percent",
+        "entity_category": 0,
+        "device_class": "humidity",
+        "unit_of_measurement": "%",
+        "accuracy_decimals": 2,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      }
+    ],
+    "text_sensor": []
+  }
+}

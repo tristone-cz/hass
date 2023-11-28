@@ -1,6 +1,6 @@
 name: Voda - unik pod umyvadlem vlevo
 done_message: VYRESENO - Voda - pod umyvadlem vlevo
-entity_id: binary_sensor.0x00158d0001bb383d_water_leak
+entity_id: binary_sensor.water_basinleft_water_leak
 state: 'on'
 can_acknowledge: true
 repeat:

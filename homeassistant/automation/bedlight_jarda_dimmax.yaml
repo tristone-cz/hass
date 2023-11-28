@@ -1,11 +1,11 @@
 alias: Lights in bed - Jarda max
 description: ''
 trigger:
-  - entity_id: sensor.0x04cf8cdf3c7d4560_action
+  - entity_id: sensor.button_bedroom_action
     platform: state
     to: button_2_hold
 action:
   - service: light.turn_on
-    entity_id: light.0x14b457fffe3f6c2c_light
+    entity_id: light.lightbedroom_jarda_light
     data:
       brightness: 254

@@ -1,5 +1,6 @@
 {
     "version": 1,
+    "minor_version": 1,
     "key": "frontend.user_data_404cb02973644bef9f4f31ff5ca74371",
     "data": {
         "core": {
@@ -7,7 +8,8 @@
         },
         "language": {
             "language": "en",
-            "number_format": "language"
+            "number_format": "language",
+            "time_format": "language"
         }
     }
 }

@@ -1,6 +1,6 @@
 name: Ohen - kour v pokojicku
 done_message: VYRESENO - Ohen - kour v pokojicku
-entity_id: binary_sensor.0x00158d0001b71c0f_smoke
+entity_id: binary_sensor.smoke_kids_smoke
 state: 'on'
 can_acknowledge: true
 repeat:

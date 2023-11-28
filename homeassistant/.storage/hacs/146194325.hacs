@@ -1,5 +1,6 @@
 {
     "version": "6",
+    "minor_version": 1,
     "key": "hacs/146194325.hacs",
     "data": {
         "archived": false,
@@ -12,8 +13,8 @@
         "description": "\u2747\ufe0f Lovelace button-card for home assistant",
         "domain": null,
         "domains": [],
-        "downloads": 30333,
-        "etag_repository": "W/\"ae421db4dbbcbfc9cf3182972d43fac4ec912a71876afaa357793dbb11d76d35\"",
+        "downloads": 103463,
+        "etag_repository": "W/\"69def7998369048d6dcb90c9d1b1ca90c5529f7710e19f3ec568205c6414b150\"",
         "file_name": "button-card.js",
         "filename": "button-card.js",
         "first_install": false,
@@ -28,14 +29,14 @@
         "installed": true,
         "installed_commit": "29b10a6",
         "installed_version": "v3.4.2",
-        "open_issues": 56,
+        "open_issues": 130,
         "last_commit": "29b10a6",
         "last_version": "v3.4.2",
-        "last_updated": "2021-06-10T08:24:20Z",
+        "last_updated": "2022-05-16T18:24:14Z",
         "manifest_name": null,
         "new": false,
         "persistent_directory": null,
-        "pushed_at": "2021-06-10T08:24:20",
+        "pushed_at": "2022-05-16T18:24:14",
         "releases": true,
         "render_readme": true,
         "published_tags": [
@@ -47,12 +48,12 @@
         ],
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 758,
+        "stargazers_count": 1109,
         "topics": [
-            "home-automation",
             "home-assistant",
-            "lovelace",
             "home-assistant-custom",
+            "home-automation",
+            "lovelace",
             "lovelace-ui"
         ],
         "zip_release": false

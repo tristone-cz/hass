@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.86441d5b8685bc775d9f8e9fcb75fa3e",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "bedroom-co2",
+      "friendly_name": "",
+      "mac_address": "40:91:51:A6:C5:C4",
+      "compilation_time": "Feb 23 2023, 16:07:40",
+      "model": "esp32dev",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2023.2.1",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 0,
+      "voice_assistant_version": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 7
+    },
+    "switch": [
+      {
+        "object_id": "bedroom_fan",
+        "key": 564862445,
+        "name": "Bedroom Fan",
+        "unique_id": "bedroom-co2switchbedroom_fan",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "assumed_state": false,
+        "device_class": ""
+      }
+    ],
+    "light": [
+      {
+        "object_id": "bedroom_led",
+        "key": 432215477,
+        "name": "Bedroom LED",
+        "unique_id": "bedroom-co2lightbedroom_led",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "supported_color_modes": [
+          35
+        ],
+        "min_mireds": 0.0,
+        "max_mireds": 0.0,
+        "effects": [],
+        "legacy_supports_brightness": true,
+        "legacy_supports_rgb": true,
+        "legacy_supports_white_value": false,
+        "legacy_supports_color_temperature": false
+      }
+    ],
+    "sensor": [
+      {
+        "object_id": "bedroom_co2",
+        "key": 263703826,
+        "name": "Bedroom CO2",
+        "unique_id": "bedroom-co2sensorbedroom_co2",
+        "disabled_by_default": false,
+        "icon": "mdi:molecule-co2",
+        "entity_category": 0,
+        "device_class": "carbon_dioxide",
+        "unit_of_measurement": "ppm",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "bedroom_pm25",
+        "key": 121457496,
+        "name": "Bedroom PM2.5",
+        "unique_id": "bedroom-co2sensorbedroom_pm25",
+        "disabled_by_default": false,
+        "icon": "mdi:blur",
+        "entity_category": 0,
+        "device_class": "pm25",
+        "unit_of_measurement": "µg/m³",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "bedroom_temperature",
+        "key": 4139085572,
+        "name": "Bedroom Temperature",
+        "unique_id": "bedroom-co2sensorbedroom_temperature",
+        "disabled_by_default": false,
+        "icon": "mdi:thermometer",
+        "entity_category": 0,
+        "device_class": "temperature",
+        "unit_of_measurement": "°C",
+        "accuracy_decimals": 2,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "bedroom_humidity",
+        "key": 655344241,
+        "name": "Bedroom Humidity",
+        "unique_id": "bedroom-co2sensorbedroom_humidity",
+        "disabled_by_default": false,
+        "icon": "mdi:water-percent",
+        "entity_category": 0,
+        "device_class": "humidity",
+        "unit_of_measurement": "%",
+        "accuracy_decimals": 2,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      }
+    ],
+    "text_sensor": []
+  }
+}

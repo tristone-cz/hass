@@ -1,136 +1,640 @@
 {
-    "version": 1,
-    "key": "core.config_entries",
-    "data": {
-        "entries": [
-            {
-                "entry_id": "444c41ba243f4a21b652e1312c769cb5",
-                "version": 1,
-                "domain": "zwave",
-                "title": "Z-Wave (import from configuration.yaml)",
-                "data": {
-                    "network_key": "0x43, 0x71, 0xAA, 0xFC, 0x85, 0x9C, 0xBF, 0x51, 0xA4, 0x85, 0x2E, 0x7B, 0x3B, 0x56, 0x65, 0x06",
-                    "usb_path": "/dev/usbzwave"
-                },
-                "options": {},
-                "pref_disable_new_entities": false,
-                "pref_disable_polling": false,
-                "source": "import",
-                "unique_id": null,
-                "disabled_by": "user"
-            },
-            {
-                "entry_id": "22684bb071ec41678f1fc12f294caee5",
-                "version": 1,
-                "domain": "mqtt",
-                "title": "configuration.yaml",
-                "data": {},
-                "options": {},
-                "pref_disable_new_entities": false,
-                "pref_disable_polling": false,
-                "source": "import",
-                "unique_id": null,
-                "disabled_by": null
-            },
-            {
-                "entry_id": "0bdb8ec7bcc24cc5ac2d287be7003991",
-                "version": 1,
-                "domain": "mobile_app",
-                "title": "SM-G970F",
-                "data": {
-                    "app_data": {
-                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPush/android/v1",
-                        "push_token": "dASkQxTmP2M:APA91bGwPC3KZaLvQWlyQz5uE2C598QBrHezuOy1Wn0T36AsurUvl2pzFsPMLc1ViZW7CqYiAO5QZI0uDb0us7tGaQI4WlvBuCN8mb1-ty2arGQ0RXHPiGqqIZf02SxEVc6IE-N6PbK5"
-                    },
-                    "app_id": "io.homeassistant.companion.android",
-                    "app_name": "Home Assistant",
-                    "app_version": "3.0.2-full (521)",
-                    "device_id": "a72b4c30950d1978",
-                    "device_name": "SM-G970F",
-                    "manufacturer": "samsung",
-                    "model": "SM-G970F",
-                    "os_name": "Android",
-                    "os_version": "29",
-                    "supports_encryption": false,
-                    "user_id": "404cb02973644bef9f4f31ff5ca74371",
-                    "webhook_id": "6c29c99689fe8ed6cc8f8ae0e4622ebe5853abcbdec419700a4dea0517363482"
-                },
-                "options": {},
-                "pref_disable_new_entities": false,
-                "pref_disable_polling": false,
-                "source": "registration",
-                "unique_id": "io.homeassistant.companion.android-a72b4c30950d1978",
-                "disabled_by": null
-            },
-            {
-                "entry_id": "e36d7f80072011eba1412d30f1471900",
-                "version": 1,
-                "domain": "broadlink",
-                "title": "broadlink_living",
-                "data": {
-                    "host": "192.168.10.202",
-                    "mac": "24dfa727cdce",
-                    "type": 10039,
-                    "timeout": 5
-                },
-                "options": {},
-                "pref_disable_new_entities": false,
-                "pref_disable_polling": false,
-                "source": "user",
-                "unique_id": "24dfa727cdce",
-                "disabled_by": null
-            },
-            {
-                "entry_id": "fbe8e238072011eb95fa31a513fd1191",
-                "version": 1,
-                "domain": "broadlink",
-                "title": "broadlink_bedroom",
-                "data": {
-                    "host": "192.168.10.203",
-                    "mac": "24dfa727bb98",
-                    "type": 10039,
-                    "timeout": 5
-                },
-                "options": {},
-                "pref_disable_new_entities": false,
-                "pref_disable_polling": false,
-                "source": "user",
-                "unique_id": "24dfa727bb98",
-                "disabled_by": null
-            },
-            {
-                "entry_id": "108d98a6072111eb8aa16defacd10e43",
-                "version": 1,
-                "domain": "broadlink",
-                "title": "broadlink_kids",
-                "data": {
-                    "host": "192.168.10.204",
-                    "mac": "24dfa727cf26",
-                    "type": 10039,
-                    "timeout": 5
-                },
-                "options": {},
-                "pref_disable_new_entities": false,
-                "pref_disable_polling": false,
-                "source": "user",
-                "unique_id": "24dfa727cf26",
-                "disabled_by": null
-            },
-            {
-                "entry_id": "36fb175bd6e68b551541006364790026",
-                "version": 1,
-                "domain": "hacs",
-                "title": "",
-                "data": {
-                    "token": "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"
-                },
-                "options": {},
-                "pref_disable_new_entities": false,
-                "pref_disable_polling": false,
-                "source": "user",
-                "unique_id": null,
-                "disabled_by": null
-            }
-        ]
-    }
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.config_entries",
+  "data": {
+    "entries": [
+      {
+        "entry_id": "e36d7f80072011eba1412d30f1471900",
+        "version": 1,
+        "domain": "broadlink",
+        "title": "broadlink_living",
+        "data": {
+          "host": "192.168.11.202",
+          "mac": "24dfa727cdce",
+          "type": 10039,
+          "timeout": 5
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "24dfa727cdce",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "fbe8e238072011eb95fa31a513fd1191",
+        "version": 1,
+        "domain": "broadlink",
+        "title": "broadlink_bedroom",
+        "data": {
+          "host": "192.168.11.203",
+          "mac": "24dfa727bb98",
+          "type": 10039,
+          "timeout": 5
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "24dfa727bb98",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "108d98a6072111eb8aa16defacd10e43",
+        "version": 1,
+        "domain": "broadlink",
+        "title": "broadlink_kids",
+        "data": {
+          "host": "192.168.11.204",
+          "mac": "24dfa727cf26",
+          "type": 10039,
+          "timeout": 5
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "24dfa727cf26",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "1feb591129f0efd6118a8be271eeb70e",
+        "version": 1,
+        "domain": "hacs",
+        "title": "",
+        "data": {
+          "token": "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"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "bb047226626d053d7924b8827bec290e",
+        "version": 1,
+        "domain": "mqtt",
+        "title": "configuration.yaml",
+        "data": {
+          "broker": "192.168.10.200",
+          "port": 1883,
+          "birth_message": {
+            "topic": "hass/status",
+            "payload": "online",
+            "qos": 0,
+            "retain": false
+          },
+          "will_message": {
+            "topic": "hass/status",
+            "payload": "offline",
+            "qos": 0,
+            "retain": false
+          },
+          "discovery": true,
+          "discovery_prefix": "homeassistant"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "import",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "f78a69e7a1159606b89272aa5e98b993",
+        "version": 1,
+        "domain": "shelly",
+        "title": "Shelly1Satna",
+        "data": {
+          "username": "admin",
+          "password": "dh67th34",
+          "host": "192.168.11.206",
+          "sleep_period": 0,
+          "model": "SHSW-1",
+          "gen": 1
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "E8DB84D7FF3A",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "25e55e861bf60d7974e2f507610dbb72",
+        "version": 1,
+        "domain": "shelly",
+        "title": "Shelly1Zachod",
+        "data": {
+          "username": "admin",
+          "password": "dh67th34",
+          "host": "192.168.11.205",
+          "sleep_period": 0,
+          "model": "SHSW-1",
+          "gen": 1
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "E8DB84D43E21",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "86441d5b8685bc775d9f8e9fcb75fa3e",
+        "version": 1,
+        "domain": "esphome",
+        "title": "bedroom-co2",
+        "data": {
+          "host": "192.168.11.207",
+          "port": 6053,
+          "password": "",
+          "noise_psk": "HPw7SJxCO9EODgD3nVdcKYR3i7sqLc2bY/5ClQmnrjY=",
+          "device_name": "bedroom-co2"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "40:91:51:a6:c5:c4",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "165a32c7290f49cd6ab775771d3b1d42",
+        "version": 1,
+        "domain": "esphome",
+        "title": "kids-co2",
+        "data": {
+          "host": "192.168.11.208",
+          "port": 6053,
+          "password": "",
+          "noise_psk": "BBrlOF2ikllgOaizvFnWguv3qD2H9B0TkSCN+Ehk6Ww=",
+          "device_name": "kids-co2"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "40:91:51:a6:c6:14",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "1e1fb4e5200f15890181bc3b66aee4b3",
+        "version": 2,
+        "domain": "openweathermap",
+        "title": "OpenWeatherMap",
+        "data": {
+          "api_key": "f19570d6e54b4693e42b45376d0b6f09",
+          "name": "OpenWeatherMap",
+          "latitude": 50.1569,
+          "longitude": 14.52035,
+          "mode": "onecall_hourly",
+          "language": "cz"
+        },
+        "options": {
+          "mode": "hourly",
+          "language": "cz"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "50.1569-14.52035",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "1fb792d2bfd0a925a0239830d4d045dd",
+        "version": 1,
+        "domain": "sun",
+        "title": "Sun",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "import",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "d548bbf6ffe6b019d775d6f5f272ae02",
+        "version": 2,
+        "domain": "utility_meter",
+        "title": "Power_IT_consumption",
+        "data": {},
+        "options": {
+          "name": "Power_IT_consumption",
+          "source": "sensor.power_it_energy",
+          "cycle": "monthly",
+          "offset": 0.0,
+          "tariffs": [],
+          "net_consumption": false,
+          "delta_values": false,
+          "periodically_resetting": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "acb16039450382c6773fe3375aedeb8c",
+        "version": 2,
+        "domain": "utility_meter",
+        "title": "Power_IT_consumption_daily",
+        "data": {},
+        "options": {
+          "name": "Power_IT_consumption_daily",
+          "source": "sensor.power_it_consumption",
+          "cycle": "daily",
+          "offset": 0.0,
+          "tariffs": [],
+          "net_consumption": false,
+          "delta_values": false,
+          "periodically_resetting": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "7a60794778df8e1549d0a5eb5aa558c9",
+        "version": 2,
+        "domain": "utility_meter",
+        "title": "Power_Fridge_consumption",
+        "data": {},
+        "options": {
+          "name": "Power_Fridge_consumption",
+          "source": "sensor.power_fridge_energy",
+          "cycle": "none",
+          "offset": 0.0,
+          "tariffs": [],
+          "net_consumption": false,
+          "delta_values": false,
+          "periodically_resetting": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "a63fdf8ec0e84a7f763eed03580e4068",
+        "version": 2,
+        "domain": "utility_meter",
+        "title": "Power_Fridge_consumption_daily",
+        "data": {},
+        "options": {
+          "name": "Power_Fridge_consumption_daily",
+          "source": "sensor.power_fridge_energy",
+          "cycle": "daily",
+          "offset": 0.0,
+          "tariffs": [],
+          "net_consumption": false,
+          "delta_values": false,
+          "periodically_resetting": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "13eac32a35f7a8857b4ac79558acac6c",
+        "version": 2,
+        "domain": "utility_meter",
+        "title": "Power_Wine_consumption",
+        "data": {},
+        "options": {
+          "name": "Power_Wine_consumption",
+          "source": "sensor.power_wine_energy",
+          "cycle": "none",
+          "offset": 0.0,
+          "tariffs": [],
+          "net_consumption": false,
+          "delta_values": false,
+          "periodically_resetting": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "eff7ba7d8abde5d83976c2af84a98d02",
+        "version": 2,
+        "domain": "utility_meter",
+        "title": "Power_Wine_consumption_daily",
+        "data": {},
+        "options": {
+          "name": "Power_Wine_consumption_daily",
+          "source": "sensor.power_wine_energy",
+          "cycle": "daily",
+          "offset": 0.0,
+          "tariffs": [],
+          "net_consumption": false,
+          "delta_values": false,
+          "periodically_resetting": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "d8f69df0247be79ae5b7fccdaf6e8f5a",
+        "version": 2,
+        "domain": "utility_meter",
+        "title": "Power_TV_consumption",
+        "data": {},
+        "options": {
+          "name": "Power_TV_consumption",
+          "source": "sensor.power_tv_energy",
+          "cycle": "none",
+          "offset": 0.0,
+          "tariffs": [],
+          "net_consumption": false,
+          "delta_values": false,
+          "periodically_resetting": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "f23b1f510a8b79bbc8d3002767e6566c",
+        "version": 2,
+        "domain": "utility_meter",
+        "title": "Power_TV_consumption_daily",
+        "data": {},
+        "options": {
+          "name": "Power_TV_consumption_daily",
+          "source": "sensor.power_tv_energy",
+          "cycle": "daily",
+          "offset": 0.0,
+          "tariffs": [],
+          "net_consumption": false,
+          "delta_values": false,
+          "periodically_resetting": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "c5e2d2a8b74d3fce5b7c6fc29105ac32",
+        "version": 1,
+        "domain": "bluetooth",
+        "title": "E4:5F:01:C2:DA:CE",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "integration_discovery",
+        "unique_id": "E4:5F:01:C2:DA:CE",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "7218d580aeb393e28300bed0221bb6b7",
+        "version": 1,
+        "domain": "heos",
+        "title": "Controller (192.168.10.24)",
+        "data": {
+          "host": "192.168.10.24"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "heos",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "5016445c56d8bcc376b7d804b124cf82",
+        "version": 1,
+        "domain": "cast",
+        "title": "Google Cast",
+        "data": {
+          "ignore_cec": [],
+          "known_hosts": [],
+          "uuid": [],
+          "user_id": "aa67832ebccd4bd89cb8e7ae3d1aa77f"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "zeroconf",
+        "unique_id": "cast",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "022dc3212a9fc1a310b45af76f9a58ea",
+        "version": 1,
+        "domain": "brother",
+        "title": "MFC-L2710DW E78324J1N669119",
+        "data": {
+          "host": "192.168.10.105"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ignore",
+        "unique_id": "e78324j1n669119",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "afeda7615fa8dd82dc30916ba172cb21",
+        "version": 1,
+        "domain": "ipp",
+        "title": "Brother MFC-L2710DW series",
+        "data": {
+          "host": "192.168.10.105",
+          "name": "Brother MFC-L2710DW series"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ignore",
+        "unique_id": "e3248000-80ce-11db-8000-b42200561182",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "f9fe11a5fa3cce0baa4809bb164dabd6",
+        "version": 1,
+        "domain": "ibeacon",
+        "title": "iBeacon Tracker",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ignore",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "d56a04003b94a3d41890da010c788bac",
+        "version": 1,
+        "domain": "workday",
+        "title": "Workday Sensor",
+        "data": {},
+        "options": {
+          "platform": "workday",
+          "country": "CZ",
+          "workdays": [
+            "wed",
+            "mon"
+          ],
+          "name": "Workday Sensor",
+          "add_holidays": [],
+          "excludes": [
+            "sat",
+            "sun",
+            "holiday"
+          ],
+          "days_offset": 0.0,
+          "remove_holidays": [],
+          "province": null
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "import",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "3e2367fe60318662db6f84ca7ed95432",
+        "version": 2,
+        "domain": "utility_meter",
+        "title": "Power_ACrooms_consumption_daily",
+        "data": {},
+        "options": {
+          "name": "Power_ACrooms_consumption_daily",
+          "source": "sensor.power_ac_rooms_energy",
+          "cycle": "daily",
+          "offset": 0.0,
+          "tariffs": [],
+          "net_consumption": false,
+          "delta_values": false,
+          "periodically_resetting": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "de6d51184d59bd1c4d8d00f1f97bf8cf",
+        "version": 2,
+        "domain": "utility_meter",
+        "title": "Power_ACliving_consumption_daily",
+        "data": {},
+        "options": {
+          "name": "Power_ACliving_consumption_daily",
+          "source": "sensor.power_ac_living_energy",
+          "cycle": "daily",
+          "offset": 0.0,
+          "tariffs": [],
+          "net_consumption": false,
+          "delta_values": false,
+          "periodically_resetting": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "668de5843dc4f595e69b5c3d8db6f7c7",
+        "version": 1,
+        "domain": "shopping_list",
+        "title": "Shopping List",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "shopping_list",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "04184d8920ba647bb5cd8578288564e3",
+        "version": 1,
+        "domain": "aladin_online",
+        "title": "Aladin online (Czech Republic)",
+        "data": {
+          "name": "Domov",
+          "latitude": 50.1569,
+          "longitude": 14.52035
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "Domov",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "a48e3680ec57f98b7393faed7cf2d248",
+        "version": 1,
+        "domain": "prazska_integrovana_doprava",
+        "title": "Pražská integrovaná doprava",
+        "data": {
+          "api_key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIyMCwiaWF0IjoxNjk5MDk3NDEyLCJleHAiOjExNjk5MDk3NDEyLCJpc3MiOiJnb2xlbWlvIiwianRpIjoiOGUwZWE3ZDgtNzIxMy00YTU0LWIwNTQtMjk0Y2NmN2VkM2NmIn0.NJ5lXB_ZU6hNEhX-sppCEAH7DZLIcTXjK-9CFjS84Vw",
+          "scan_interval": 1,
+          "stop_ids": [
+            "U1102Z1P",
+            "U1102Z2P"
+          ]
+        },
+        "options": {
+          "stop1": "Sídliště Čakovice",
+          "stop3": "",
+          "stop5": "",
+          "stop8": "",
+          "stop4": "",
+          "stop10": "",
+          "stop2": "",
+          "stop7": "",
+          "stop6": "",
+          "stop9": ""
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "daef374560ae911fa343bcfc3244ebec",
+        "version": 1,
+        "domain": "pushover",
+        "title": "Pushover",
+        "data": {
+          "name": "Pushover",
+          "api_key": "ak11nfdsq4j7zjikxtbxkpcxus4p6a",
+          "user_key": "unwgdqzmsjbjim9vknzfdo3yxuiau1"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      }
+    ]
+  }
 }

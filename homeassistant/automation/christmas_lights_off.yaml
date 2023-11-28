@@ -6,7 +6,7 @@ trigger:
     at: '8:00:00'
 action:
   - service: switch.turn_off
-    entity_id: switch.0xccccccfffed72424_switch
+    entity_id: switch.power_ac_living_switch
   - service: switch.turn_off
-    entity_id: switch.0xccccccfffed7291d_switch
+    entity_id: switch.power_ac_rooms_switch
 mode: single

@@ -3,4 +3,4 @@ sensors:
   living_ac_off:
     friendly_name: 'Čas vypnutí'
     icon_template: mdi:timer-sand
-    value_template: '{{ states("input_number.living_ac_hour_off")|int * 60 + states("living_ac_minute_off")|int }}'
+    value_template: '{{ states("input_number.living_ac_hour_off")|int * 60 + states("input_number.living_ac_minute_off")|int }}'
